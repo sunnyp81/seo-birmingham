@@ -1,0 +1,183 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object[];
+  ogType?: string;
+  noindex?: boolean;
+}
+
+const { title, description, canonical, schema = [], ogType = 'website', noindex = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+const siteUrl = 'https://seo-birmingham.uk';
+const fullCanonical = canonical || `${siteUrl}${currentPath}`;
+
+const breadcrumbItems = [];
+const pathParts = currentPath.split('/').filter(Boolean);
+let accumulated = '';
+breadcrumbItems.push({ name: 'Home', url: `${siteUrl}/` });
+for (const part of pathParts) {
+  accumulated += `/${part}`;
+  const name = part.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+  breadcrumbItems.push({ name, url: `${siteUrl}${accumulated}/` });
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbItems.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.name,
+    item: item.url,
+  })),
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: fullCanonical,
+  isPartOf: { '@type': 'WebSite', name: 'SEO Birmingham', url: siteUrl },
+};
+
+const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
+---
+
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={fullCanonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={fullCanonical} />
+  <meta property="og:site_name" content="SEO Birmingham" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  {allSchemas.map((s) => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="bg-brand text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors">
+        SEO Birmingham
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Main navigation">
+        <a href="/services/" class="hover:text-accent transition-colors">Services</a>
+        <a href="/areas/" class="hover:text-accent transition-colors">Areas</a>
+        <a href="/industries/" class="hover:text-accent transition-colors">Industries</a>
+        <a href="/seo-pricing-birmingham/" class="hover:text-accent transition-colors">Pricing</a>
+        <a href="/case-studies/" class="hover:text-accent transition-colors">Case Studies</a>
+        <a href="/about/" class="hover:text-accent transition-colors">About</a>
+        <a href="/contact/" class="hover:text-accent transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="/free-seo-audit-birmingham/" class="hidden sm:inline-block bg-accent text-brand-dark px-4 py-2 rounded font-bold text-sm hover:bg-accent-light transition-colors">
+          Free SEO Audit
+        </a>
+        <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-brand-light transition-colors" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden bg-brand-dark px-4 pb-4" aria-label="Mobile navigation">
+      <a href="/services/" class="block py-2 hover:text-accent transition-colors">Services</a>
+      <a href="/areas/" class="block py-2 hover:text-accent transition-colors">Areas</a>
+      <a href="/industries/" class="block py-2 hover:text-accent transition-colors">Industries</a>
+      <a href="/seo-pricing-birmingham/" class="block py-2 hover:text-accent transition-colors">Pricing</a>
+      <a href="/case-studies/" class="block py-2 hover:text-accent transition-colors">Case Studies</a>
+      <a href="/about/" class="block py-2 hover:text-accent transition-colors">About</a>
+      <a href="/contact/" class="block py-2 hover:text-accent transition-colors">Contact</a>
+      <a href="/free-seo-audit-birmingham/" class="block py-2 text-accent font-bold">Free SEO Audit</a>
+    </nav>
+  </header>
+
+  {currentPath !== '/' && (
+    <nav class="bg-surface border-b border-gray-200" aria-label="Breadcrumb">
+      <div class="max-w-3xl mx-auto px-4 py-2 text-sm text-text-muted">
+        {breadcrumbItems.map((item, i) => (
+          <>
+            {i > 0 && <span class="mx-1">/</span>}
+            {i === breadcrumbItems.length - 1 ? (
+              <span class="text-brand-dark font-medium">{item.name}</span>
+            ) : (
+              <a href={item.url.replace(siteUrl, '')} class="hover:text-brand transition-colors">{item.name}</a>
+            )}
+          </>
+        ))}
+      </div>
+    </nav>
+  )}
+
+  <main id="main" class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="bg-brand-dark text-white mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">SEO Birmingham</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Local SEO consultancy serving Birmingham, Solihull, and the West Midlands. Helping businesses rank higher in Google and get cited by AI search engines.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">Services</h3>
+          <ul class="text-sm text-gray-300 space-y-1.5">
+            <li><a href="/technical-seo-birmingham/" class="hover:text-accent transition-colors">Technical SEO</a></li>
+            <li><a href="/seo-audit-birmingham/" class="hover:text-accent transition-colors">SEO Audit</a></li>
+            <li><a href="/ai-search-optimisation-birmingham/" class="hover:text-accent transition-colors">AI Search Optimisation</a></li>
+            <li><a href="/seo-pricing-birmingham/" class="hover:text-accent transition-colors">Pricing</a></li>
+            <li><a href="/free-seo-audit-birmingham/" class="hover:text-accent transition-colors">Free SEO Audit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-white">Coverage</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Birmingham &middot; Solihull &middot; Edgbaston &middot; Digbeth &middot; Jewellery Quarter &middot; Sutton Coldfield &middot; Wolverhampton &middot; Coventry &middot; Walsall &middot; Dudley
+          </p>
+          <div class="mt-4">
+            <a href="/contact/" class="text-accent hover:text-accent-light text-sm font-medium transition-colors">Get in touch &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400">
+        <p>&copy; {new Date().getFullYear()} SEO Birmingham. All rights reserved.</p>
+        <div class="flex gap-4 mt-2 sm:mt-0">
+          <a href="/sitemap-index.xml" class="hover:text-accent transition-colors">Sitemap</a>
+          <span>Last updated: May 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

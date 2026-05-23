@@ -1,0 +1,362 @@
+---
+import Base from '../layouts/Base.astro';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SEO Services Birmingham",
+  "provider": {
+    "@type": "Organization",
+    "name": "SEO Birmingham"
+  },
+  "areaServed": "Birmingham, West Midlands",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SEO Pricing Plans",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Starter SEO",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "497",
+          "priceCurrency": "GBP",
+          "unitText": "monthly"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Growth SEO",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "997",
+          "priceCurrency": "GBP",
+          "unitText": "monthly"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Enterprise SEO",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1997",
+          "priceCurrency": "GBP",
+          "unitText": "monthly"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "One-Off SEO Audit",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "497",
+          "priceCurrency": "GBP",
+          "unitText": "one-off"
+        }
+      }
+    ]
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does SEO cost in Birmingham?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO pricing in Birmingham typically ranges from £497 to £2,500 per month depending on your business size, industry competition, and goals. This represents a 30-40% saving compared to equivalent London agency rates, with no compromise on quality or results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Birmingham SEO cheaper than London?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Birmingham SEO consultancies operate with significantly lower overheads than London agencies. Office space in the Colmore Business District costs roughly half of equivalent space in the City of London. These savings are passed directly to clients. Many Birmingham consultants have worked at top London agencies and bring the same expertise at a lower price point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any long-term contracts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All plans operate on a rolling monthly basis with no lock-in contracts. We recommend a minimum commitment of six months to see meaningful SEO results, but you are free to cancel at any time with 30 days notice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long before I see results from SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Birmingham businesses begin seeing measurable improvements within 3-6 months. Technical fixes and Google Business Profile optimisation can produce quicker wins within weeks. Competitive keywords in sectors like law or finance typically take 6-12 months to reach page one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the free SEO audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free SEO audit covers technical site health, Core Web Vitals performance, keyword opportunity analysis, competitor benchmarking, and a prioritised action plan. It is a genuine diagnostic report, not a sales pitch. You receive a written document you can act on with or without us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upgrade or downgrade my plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can move between Starter, Growth, and Enterprise plans at any time. Many clients begin with a one-off audit, move to Starter for the first three months, then upgrade to Growth once they see traction. Changes take effect from the next billing cycle."
+      }
+    }
+  ]
+};
+---
+
+<Base
+  title="SEO Pricing Birmingham | Transparent Costs"
+  description="Transparent SEO pricing for Birmingham businesses. Monthly retainers from £497 with no lock-in contracts. Save up to 40% compared to London agencies."
+  schema={[serviceSchema, faqSchema]}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12 prose">
+    <h1>SEO Pricing Birmingham</h1>
+
+    <p>SEO pricing in Birmingham is the cost a business pays for professional search engine optimisation services delivered by a consultant or agency based in the West Midlands. Birmingham businesses consistently pay 30-40% less than their London counterparts for equivalent SEO work, a direct result of lower operating costs across the city's business districts.</p>
+
+    <div class="quick-answer">
+      <strong>Quick answer:</strong> Birmingham SEO retainers range from <strong>£497 to £2,500 per month</strong> depending on scope and competition. That is roughly <strong>40% less than London agencies</strong> charging £1,500-£5,000+ for the same deliverables. One-off audits start at £497. The talent pool is identical &mdash; many Birmingham consultants cut their teeth at London agencies before relocating to the West Midlands.
+    </div>
+
+    <h2>Why SEO Pricing Varies Between Businesses</h2>
+
+    <p>There is no single price for SEO because no two businesses face the same competitive landscape. A Jewellery Quarter independent retailer targeting "bespoke engagement rings Birmingham" operates in a fundamentally different search environment to a Colmore Row law firm competing for "commercial solicitors West Midlands." The pricing reflects this reality.</p>
+
+    <p>Three factors determine where your business sits on the pricing spectrum:</p>
+
+    <ul>
+      <li><strong>Business size and website complexity.</strong> A 20-page brochure site requires less technical oversight than a 5,000-page e-commerce catalogue. Larger sites demand more crawl management, internal linking architecture, and content governance.</li>
+      <li><strong>Keyword competition.</strong> Local service terms like "plumber Solihull" are less contested than commercial terms like "business insurance Birmingham." Higher competition means more content production, stronger link building, and longer timelines.</li>
+      <li><strong>Industry regulation and trust signals.</strong> YMYL sectors (finance, health, legal) require demonstrable expertise, authoritative backlinks, and content reviewed by qualified professionals. This increases the cost of content production compared to less regulated industries.</li>
+    </ul>
+
+    <p>A transparent SEO consultant will explain exactly which of these factors apply to your business and why your quote sits where it does. If a provider cannot justify their pricing with specifics, that is a red flag.</p>
+
+    <h2>Birmingham vs London SEO Pricing Comparison</h2>
+
+    <p>The pricing gap between Birmingham and London is not about quality &mdash; it is about overheads. Office space in the <strong>Colmore Business District</strong> costs approximately £32 per square foot compared to £65+ in the City of London. Salaries, business rates, and operational costs follow the same pattern. These savings flow directly into client pricing.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>London</th>
+          <th>Birmingham</th>
+          <th>Saving</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monthly SEO retainer</td>
+          <td>£1,500 &ndash; £5,000+</td>
+          <td>£497 &ndash; £2,500</td>
+          <td>Up to 40%</td>
+        </tr>
+        <tr>
+          <td>One-off SEO audit</td>
+          <td>£1,000 &ndash; £3,000</td>
+          <td>£497 &ndash; £1,500</td>
+          <td>Up to 50%</td>
+        </tr>
+        <tr>
+          <td>Content strategy (per quarter)</td>
+          <td>£2,000 &ndash; £6,000</td>
+          <td>£1,000 &ndash; £3,500</td>
+          <td>Up to 42%</td>
+        </tr>
+        <tr>
+          <td>Technical SEO overhaul</td>
+          <td>£2,500 &ndash; £8,000</td>
+          <td>£1,200 &ndash; £4,000</td>
+          <td>Up to 50%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The talent argument is worth addressing directly. Birmingham is home to a deep pool of SEO professionals, many of whom spent years at London agencies &mdash; Distilled, Builtvisible, Impression, and others &mdash; before relocating. The expertise is the same. The postcode is different. Your rankings do not care where your consultant sits.</p>
+
+    <h2>SEO Pricing Plans</h2>
+
+    <p>Every plan includes transparent monthly reporting, no lock-in contracts, and direct access to a senior consultant. Choose the tier that matches your current growth stage.</p>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
+        <h3 class="text-lg font-bold text-brand-dark mb-1">Starter</h3>
+        <div class="text-3xl font-bold text-brand mb-1">£497<span class="text-base font-normal text-text-muted">/mo</span></div>
+        <p class="text-sm text-text-muted mb-4">For businesses building their SEO foundation.</p>
+        <ul class="text-sm space-y-2 mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Full technical audit</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Monthly performance report</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 5 target keywords</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Core Web Vitals monitoring</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Google Business Profile optimisation</li>
+        </ul>
+        <a href="/contact/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Get Started</a>
+      </div>
+
+      <div class="border-2 border-accent rounded-xl p-6 bg-surface-alt shadow-md flex flex-col relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-full">Recommended</span>
+        <h3 class="text-lg font-bold text-brand-dark mb-1">Growth</h3>
+        <div class="text-3xl font-bold text-brand mb-1">£997<span class="text-base font-normal text-text-muted">/mo</span></div>
+        <p class="text-sm text-text-muted mb-4">For businesses ready to scale organic traffic.</p>
+        <ul class="text-sm space-y-2 mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Everything in Starter</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Content strategy &amp; production</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 15 target keywords</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Link building outreach</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Monthly strategy call</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Competitor monitoring</li>
+        </ul>
+        <a href="/contact/" class="block text-center bg-accent text-brand-dark py-2.5 rounded-lg font-bold hover:bg-accent-light transition-colors text-sm">Get Started</a>
+      </div>
+
+      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
+        <h3 class="text-lg font-bold text-brand-dark mb-1">Enterprise</h3>
+        <div class="text-3xl font-bold text-brand mb-1">£1,997<span class="text-base font-normal text-text-muted">/mo</span></div>
+        <p class="text-sm text-text-muted mb-4">For established businesses dominating their sector.</p>
+        <ul class="text-sm space-y-2 mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Everything in Growth</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Dedicated account management</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 50+ target keywords</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> AI search optimisation</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Weekly reporting</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Priority support</li>
+        </ul>
+        <a href="/contact/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Get Started</a>
+      </div>
+
+      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
+        <h3 class="text-lg font-bold text-brand-dark mb-1">One-Off Audit</h3>
+        <div class="text-3xl font-bold text-brand mb-1">£497<span class="text-base font-normal text-text-muted"> once</span></div>
+        <p class="text-sm text-text-muted mb-4">A complete diagnostic before committing to a retainer.</p>
+        <ul class="text-sm space-y-2 mb-6 flex-1">
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Full technical audit</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Content gap analysis</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Competitor benchmarking</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Prioritised action plan</li>
+          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 60-minute walkthrough call</li>
+        </ul>
+        <a href="/seo-audit-birmingham/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Book Audit</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 prose">
+
+    <h2>What Every Plan Includes</h2>
+
+    <p>Regardless of which tier you choose, three commitments come as standard with every engagement:</p>
+
+    <ul>
+      <li><strong>Transparent reporting.</strong> You receive a monthly report showing exactly what was done, what moved, and what is planned next. No vanity metrics, no jargon &mdash; just data you can act on. Reports include Google Search Console data, ranking movements, traffic changes, and a plain-English summary.</li>
+      <li><strong>No lock-in contracts.</strong> Every plan runs on a rolling monthly basis. We recommend six months as a minimum to see meaningful SEO results, but you are never contractually bound. If the results are not there, you leave. That keeps us accountable.</li>
+      <li><strong>Direct access to your consultant.</strong> You will not be passed to a junior account manager after signing. You communicate directly with the person doing the work &mdash; by email, phone, or video call. Response times are measured in hours, not days.</li>
+    </ul>
+
+    <h2>ROI: What Birmingham Businesses Can Expect</h2>
+
+    <p>SEO is an investment, and the return depends on your starting position, industry, and how aggressively you pursue growth. Here are realistic benchmarks based on Birmingham businesses across different sectors:</p>
+
+    <ul>
+      <li><strong>Months 1-3:</strong> Technical foundations are repaired. Crawl errors resolved, site speed improved, Google Business Profile fully optimised. Quick wins from fixing existing issues can produce a 10-20% uplift in organic impressions.</li>
+      <li><strong>Months 3-6:</strong> Content strategy takes effect. New pages begin ranking, existing pages climb. Organic traffic typically grows 30-60% from baseline for businesses that had no prior SEO investment.</li>
+      <li><strong>Months 6-12:</strong> Compounding returns. Link building and content authority push competitive keywords onto page one. Businesses at this stage often see organic traffic double compared to their starting point, with corresponding growth in leads and revenue.</li>
+    </ul>
+
+    <p>The critical number is not traffic &mdash; it is revenue per pound spent. A <a href="/services/">well-executed SEO campaign</a> should return £3-£8 for every £1 invested within the first 12 months, with returns accelerating as domain authority compounds.</p>
+
+    <h2>Industries and Typical Budgets in Birmingham</h2>
+
+    <p>Birmingham's economy is diverse, and SEO requirements vary sharply between sectors. Here is what businesses in key Birmingham districts typically invest:</p>
+
+    <h3>Jewellery Quarter Retailers</h3>
+
+    <p>Independent jewellers and luxury retailers in the <strong>Jewellery Quarter</strong> typically invest £497-£997 per month. Competition is moderate for product-specific terms ("bespoke diamond ring Birmingham"), but margins are high enough that a single organic lead can pay for three months of SEO. Visual content, schema markup for products, and Google Shopping integration are priorities.</p>
+
+    <h3>Colmore Business District Law Firms and Professional Services</h3>
+
+    <p>Law firms and accountancy practices along <strong>Colmore Row</strong> and the wider business district face the stiffest SEO competition in Birmingham. Monthly budgets of £997-£1,997 are typical. The investment reflects the lifetime value of a single client &mdash; one commercial property instruction or corporate retainer easily justifies a year of SEO spend. Content must demonstrate genuine expertise to satisfy Google's E-E-A-T requirements for legal and financial topics.</p>
+
+    <h3>Digbeth Startups and Creative Agencies</h3>
+
+    <p><strong>Digbeth's</strong> tech and creative cluster tends toward the Starter tier at £497 per month, often beginning with a one-off audit to identify quick wins. Startups with venture backing may scale faster, but most bootstrap their SEO alongside other channels. The focus is usually on building topical authority in a niche before scaling content production.</p>
+
+    <h3>Trades and Local Services Across the West Midlands</h3>
+
+    <p>Electricians, plumbers, builders, and similar trades targeting Birmingham and surrounding areas (Solihull, Sutton Coldfield, Wolverhampton) typically need the Starter or Growth tier. <a href="/technical-seo-birmingham/">Technical SEO</a> and Google Business Profile optimisation deliver the fastest returns for service-area businesses.</p>
+
+    <h2>Claim Your Free SEO Audit</h2>
+
+    <p>Not sure which plan fits your business? Start with a <a href="/free-seo-audit-birmingham/">free SEO audit</a>. You will receive a comprehensive diagnostic covering technical health, keyword opportunities, competitor positioning, and a prioritised action plan. There is no obligation and no sales pressure &mdash; just a clear picture of where you stand and what it would take to improve.</p>
+
+    <p>The audit typically takes 3-5 working days to complete and is delivered as a written report with a 30-minute video walkthrough. It is the same quality as our paid <a href="/seo-audit-birmingham/">£497 audit</a>, focused on the highest-impact findings.</p>
+
+    <div class="cta-box">
+      <h3 class="text-xl font-bold text-white mb-2">Ready to Grow Your Birmingham Business?</h3>
+      <p class="text-gray-200 mb-0">Get a free, no-obligation SEO audit and discover exactly what it would take to rank higher in Birmingham.</p>
+      <a href="/free-seo-audit-birmingham/">Claim Your Free Audit</a>
+    </div>
+
+    <h2>Frequently Asked Questions About SEO Pricing</h2>
+
+    <div class="faq-section">
+      <details>
+        <summary>How much does SEO cost in Birmingham?</summary>
+        <div class="faq-answer">
+          <p>SEO pricing in Birmingham typically ranges from £497 to £2,500 per month depending on your business size, industry competition, and goals. This represents a 30-40% saving compared to equivalent London agency rates, with no compromise on quality or results. One-off audits start at £497.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why is Birmingham SEO cheaper than London?</summary>
+        <div class="faq-answer">
+          <p>Birmingham SEO consultancies operate with significantly lower overheads than London agencies. Office space in the Colmore Business District costs roughly half of equivalent space in the City of London. These savings are passed directly to clients. Many Birmingham consultants have worked at top London agencies and bring the same expertise at a lower price point.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Are there any long-term contracts?</summary>
+        <div class="faq-answer">
+          <p>No. All plans operate on a rolling monthly basis with no lock-in contracts. We recommend a minimum commitment of six months to see meaningful SEO results, but you are free to cancel at any time with 30 days notice.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long before I see results from SEO?</summary>
+        <div class="faq-answer">
+          <p>Most Birmingham businesses begin seeing measurable improvements within 3-6 months. Technical fixes and Google Business Profile optimisation can produce quicker wins within weeks. Competitive keywords in sectors like law or finance typically take 6-12 months to reach page one.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What is included in the free SEO audit?</summary>
+        <div class="faq-answer">
+          <p>The free SEO audit covers technical site health, Core Web Vitals performance, keyword opportunity analysis, competitor benchmarking, and a prioritised action plan. It is a genuine diagnostic report, not a sales pitch. You receive a written document you can act on with or without us.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I upgrade or downgrade my plan?</summary>
+        <div class="faq-answer">
+          <p>Yes. You can move between Starter, Growth, and Enterprise plans at any time. Many clients begin with a one-off audit, move to Starter for the first three months, then upgrade to Growth once they see traction. Changes take effect from the next billing cycle.</p>
+        </div>
+      </details>
+    </div>
+
+    <p>Still have questions about SEO pricing? <a href="/contact/">Get in touch</a> for a straightforward conversation about what your business needs and what it will cost. Browse our <a href="/case-studies/">case studies</a> to see the results we have delivered for other Birmingham businesses.</p>
+  </div>
+</Base>

@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'About — SEO Consultant Birmingham';
+const description = 'Sunny Patel is a data-driven SEO consultant serving Birmingham and the West Midlands. Specialising in local SEO, technical audits, and AI search optimisation.';
+
+const faqItems = [
+  {
+    question: 'What qualifications does Sunny Patel have in SEO?',
+    answer: 'Sunny brings years of hands-on experience managing SEO campaigns across multiple industries, including financial services, legal, e-commerce, and local service businesses. SEO is a practice-based discipline — results come from real-world experience with search data, technical implementation, and content strategy rather than classroom qualifications. Our portfolio of ranked sites and measurable client outcomes speaks for itself.',
+  },
+  {
+    question: 'Do you only work with Birmingham businesses?',
+    answer: 'Birmingham and the wider West Midlands are our primary focus, but we also work with UK businesses that want to strengthen their visibility in the Birmingham market. Our local SEO expertise covers Solihull, Edgbaston, Wolverhampton, Coventry, Sutton Coldfield, and the surrounding areas. For businesses outside the region, we offer technical SEO and AI search optimisation services remotely.',
+  },
+  {
+    question: 'How is your approach different from other Birmingham SEO agencies?',
+    answer: 'We are a specialist consultancy, not a generalist agency juggling dozens of services. Every recommendation is grounded in search data from Google Search Console and industry tools. We prioritise transparency — you see exactly what we do and why. We also specialise in AI search optimisation, which most traditional agencies have not yet adapted to.',
+  },
+  {
+    question: 'Can I see examples of your SEO work?',
+    answer: 'Yes. Visit our case studies page to see real examples of ranking improvements, traffic growth, and revenue impact for businesses across different industries. We show the data, the strategy, and the outcomes — not just testimonials.',
+  },
+  {
+    question: 'What does your typical client engagement look like?',
+    answer: 'Every engagement starts with an audit to understand your current position. From there, we build a prioritised strategy tailored to your business goals and budget. Most clients work with us on a monthly retainer that covers technical maintenance, content optimisation, local SEO management, and monthly reporting. We also offer one-off audits and project-based work for specific needs.',
+  },
+];
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Sunny Patel',
+  jobTitle: 'SEO Consultant',
+  url: 'https://seo-birmingham.uk/about/',
+  sameAs: ['https://sunnypatel.co.uk'],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'SEO Birmingham',
+    url: 'https://seo-birmingham.uk',
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Birmingham, West Midlands',
+  },
+  knowsAbout: ['Search Engine Optimisation', 'Local SEO', 'Technical SEO', 'AI Search Optimisation', 'Content Strategy'],
+};
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SEO Birmingham',
+  url: 'https://seo-birmingham.uk',
+  sameAs: ['https://sunnypatel.co.uk'],
+  founder: {
+    '@type': 'Person',
+    name: 'Sunny Patel',
+    url: 'https://seo-birmingham.uk/about/',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+const schema = [personSchema, orgSchema, faqSchema];
+---
+
+<Base title={title} description={description} schema={schema}>
+  <div class="max-w-3xl mx-auto px-4 py-12 prose">
+
+    <h1>About Sunny Patel — SEO Consultant Birmingham</h1>
+
+    <div class="quick-answer">
+      <strong>Quick Answer:</strong> Sunny Patel is an independent SEO consultant serving Birmingham and the West Midlands. Specialising in local SEO, technical site health, and AI search optimisation, Sunny helps businesses across sectors — from professional services firms in Colmore Business District to creative agencies in Digbeth — build sustainable organic visibility that drives qualified leads and revenue.
+    </div>
+
+    <section>
+      <p>Sunny Patel is a data-driven SEO consultant who works exclusively with businesses in Birmingham and the wider West Midlands region. Operating as the founder of SEO Birmingham, Sunny combines deep technical expertise with genuine local market knowledge to deliver search marketing strategies that produce measurable commercial outcomes. This is not a large agency with layers of account managers between you and the person doing the work. When you hire Sunny, you work directly with the strategist, the analyst, and the implementer.</p>
+
+      <p>The consultancy operates on a remote-first model, which keeps overheads low and allows those savings to be passed to clients. But remote working does not mean remote knowledge. Sunny has an intimate understanding of Birmingham's commercial geography — the industry clusters, the micro-markets, the competitive dynamics that shape local search behaviour across every part of the city and its surrounding boroughs.</p>
+    </section>
+
+    <section>
+      <h2>Background and Expertise</h2>
+
+      <p>Sunny's SEO career spans multiple disciplines across the search marketing spectrum. Starting with technical SEO — the unglamorous but critical foundation of site health, crawlability, and indexation — Sunny developed a systematic approach to diagnosing and resolving the technical issues that prevent websites from reaching their ranking potential.</p>
+
+      <p>From that technical base, Sunny expanded into content strategy, local SEO, and most recently, AI search optimisation. This breadth means clients receive a genuinely holistic approach rather than a narrow specialism that ignores critical aspects of their search presence.</p>
+
+      <h3>Core Competencies</h3>
+      <ul>
+        <li><strong>Technical SEO</strong> — site architecture, crawl budget optimisation, Core Web Vitals, structured data implementation, migration management</li>
+        <li><strong>Local SEO</strong> — Google Business Profile optimisation, local citation management, review strategy, location page architecture, local link building</li>
+        <li><strong>Content Strategy</strong> — keyword research, topical mapping, semantic content architecture, content auditing, editorial planning</li>
+        <li><strong>AI Search Optimisation</strong> — entity authority building, structured data for AI citation, content structuring for LLM retrieval, AI overview optimisation</li>
+        <li><strong>Analytics and Reporting</strong> — Google Search Console, GA4, custom dashboards, conversion attribution, ROI measurement</li>
+      </ul>
+
+      <p>This combination of skills means Sunny can identify whether a ranking issue stems from a technical crawling problem, a content gap, a local optimisation oversight, or a backlink deficiency — and fix it without needing to bring in separate specialists for each area. For more detail on specific service offerings, visit the <a href="/services/">services page</a>.</p>
+    </section>
+
+    <section>
+      <h2>Approach to SEO</h2>
+
+      <p>Every SEO decision Sunny makes follows three principles: it must be grounded in data, it must be transparent to the client, and it must prioritise local relevance.</p>
+
+      <h3>Data-Driven, Not Opinion-Driven</h3>
+      <p>SEO is awash with opinions. What separates effective consultants from the rest is a commitment to making decisions based on actual search data rather than assumptions or industry folklore. Sunny uses Google Search Console, Ahrefs, Bing Webmaster Tools, and proprietary monitoring systems to analyse performance, identify opportunities, and measure the impact of every change made.</p>
+
+      <p>This data-first approach eliminates wasted effort. Rather than optimising pages based on gut feeling, every action targets a specific, measurable opportunity identified through rigorous analysis. Monthly reporting shows clients exactly what was done, what data informed each decision, and what results followed.</p>
+
+      <h3>Transparent Communication</h3>
+      <p>Many businesses have been burned by SEO providers who operated as a black box — taking monthly payments while offering vague explanations of what was actually being done. Sunny operates on the opposite model. Clients receive detailed monthly reports, have direct access to the consultant doing the work, and are walked through every strategic recommendation before it is implemented.</p>
+
+      <p>If something is not working, you will hear about it directly along with a clear plan to adjust. If a competitor makes a move that changes the landscape, you will be informed and presented with options. There are no surprises and no hidden agendas.</p>
+
+      <h3>Local-First Strategy</h3>
+      <p>For Birmingham businesses, local relevance is not an afterthought — it is the starting point. Every strategy begins with understanding the local search landscape: what Birmingham consumers are searching for, which competitors are ranking, what local signals Google is weighing, and how the city's distinct commercial zones create separate micro-markets with their own keyword dynamics.</p>
+    </section>
+
+    <section>
+      <h2>Why Birmingham</h2>
+
+      <p>Birmingham is one of the most commercially diverse cities in the United Kingdom, and that diversity creates an endlessly interesting SEO challenge. The <strong>Colmore Business District</strong> alone contains hundreds of professional services firms competing for high-value local queries. The <strong>Jewellery Quarter</strong> represents one of the most concentrated retail clusters in the country, where organic visibility translates directly to footfall and sales.</p>
+
+      <p>Then there is <strong>Digbeth</strong>, which has transformed from an industrial area into Birmingham's creative and technology hub. The agencies, startups, and creative businesses operating there need SEO strategies that reflect their innovative positioning and target the right audience segments. The manufacturing heritage that still defines much of the wider West Midlands demands B2B SEO approaches that speak to procurement professionals and supply chain decision-makers, not consumers.</p>
+
+      <p>This variety is what makes Birmingham SEO genuinely challenging — and genuinely rewarding. A consultant who can help a Jewellery Quarter retailer, a Colmore Row solicitor, and a Digbeth tech startup all improve their search visibility needs to be adaptable, data-literate, and deeply familiar with how different industries and locations interact in local search results.</p>
+
+      <p>Birmingham also sits at the centre of the West Midlands conurbation, which means local SEO strategies must account for the overlapping search markets of Solihull, Wolverhampton, Coventry, Walsall, Dudley, and Sutton Coldfield. A business in Edgbaston competes with firms in both Birmingham city centre and Harborne. A company in Solihull appears in search results alongside both Birmingham and Coventry businesses. Managing these overlapping markets is a core part of what Sunny delivers for West Midlands clients.</p>
+    </section>
+
+    <section>
+      <h2>AI Search Expertise</h2>
+
+      <p>The search industry is undergoing its most significant transformation since Google replaced Yahoo as the default way people find information. AI-powered search tools — ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — are changing how consumers discover, evaluate, and choose businesses.</p>
+
+      <p>Sunny has been at the forefront of this shift, developing practical strategies for ensuring businesses are not just visible in traditional search results but are also cited, recommended, and referenced by AI systems. This is not theoretical work. It involves concrete actions: structuring content so large language models can extract and attribute information accurately, building entity authority through consistent structured data and authoritative citations, and ensuring your business's knowledge graph presence is accurate and comprehensive.</p>
+
+      <p>For Birmingham businesses, AI search optimisation is particularly important because local queries are among the most common use cases for AI search. When someone asks ChatGPT "who is the best accountant in Birmingham" or tells Perplexity to "find me a jeweller in the Jewellery Quarter," your business needs to be in the answer. Sunny's <a href="/ai-search-optimisation-birmingham/">AI search optimisation service</a> makes that happen.</p>
+    </section>
+
+    <section>
+      <h2>Working with Birmingham Businesses</h2>
+
+      <p>Sunny has worked with businesses across the full spectrum of Birmingham's economy. From single-location service businesses to multi-site operations spanning the West Midlands, the common thread is a focus on generating measurable commercial outcomes from organic search.</p>
+
+      <p>Every client engagement begins with a thorough audit and honest conversation about what SEO can realistically achieve for your specific business. Some businesses need a technical overhaul before any content or local optimisation work can take effect. Others have sound technical foundations but are losing ground to competitors with stronger content strategies. The audit determines where the real opportunities lie, and the strategy is built around those opportunities.</p>
+
+      <p>Sunny works as an extension of your team, not as an external vendor operating at arm's length. Whether you are a sole trader who needs guidance on your first SEO campaign or a marketing director who needs specialist support to complement your in-house team, the engagement is structured to fit your business. View our <a href="/case-studies/">case studies</a> for real-world examples of this approach in action.</p>
+    </section>
+
+    <div class="cta-box">
+      <h2 style="color: white; margin-top: 0;">Ready to Improve Your Birmingham Search Visibility?</h2>
+      <p>Whether you need a one-off audit, a monthly retainer, or specialist advice on AI search optimisation, get in touch to discuss how SEO can drive growth for your business.</p>
+      <a href="/contact/">Get in Touch</a>
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      {faqItems.map((item) => (
+        <details>
+          <summary>{item.question}</summary>
+          <div class="faq-answer">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </section>
+
+  </div>
+</Base>

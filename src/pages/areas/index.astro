@@ -1,0 +1,184 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const title = 'SEO Areas — Birmingham & West Midlands';
+const description = 'Expert SEO services covering Birmingham city centre, Solihull, Edgbaston, Digbeth, Jewellery Quarter, Sutton Coldfield, and the wider West Midlands.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Local SEO — Birmingham and West Midlands',
+  provider: {
+    '@type': 'Organization',
+    name: 'SEO Birmingham',
+    url: 'https://seo-birmingham.uk/',
+  },
+  serviceType: 'Local SEO',
+  areaServed: [
+    { '@type': 'City', name: 'Birmingham' },
+    { '@type': 'Place', name: 'Edgbaston' },
+    { '@type': 'Place', name: 'Digbeth' },
+    { '@type': 'Place', name: 'Jewellery Quarter' },
+    { '@type': 'Place', name: 'Solihull' },
+    { '@type': 'Place', name: 'Sutton Coldfield' },
+    { '@type': 'City', name: 'Wolverhampton' },
+    { '@type': 'City', name: 'Coventry' },
+    { '@type': 'City', name: 'Walsall' },
+    { '@type': 'City', name: 'Dudley' },
+    { '@type': 'Place', name: 'West Bromwich' },
+    { '@type': 'City', name: 'Tamworth' },
+    { '@type': 'City', name: 'Lichfield' },
+    { '@type': 'Place', name: 'Bromsgrove' },
+    { '@type': 'Place', name: 'Colmore Business District' },
+    { '@type': 'Place', name: 'Brindleyplace' },
+    { '@type': 'Place', name: 'Birmingham Business Park, Solihull' },
+    { '@type': 'Place', name: 'Innovation Birmingham Campus' },
+    { '@type': 'Place', name: 'Custard Factory' },
+  ],
+};
+
+const faqData = [
+  {
+    question: 'Do you offer SEO services outside Birmingham city centre?',
+    answer: 'Yes. We cover the entire West Midlands region including Solihull, Wolverhampton, Coventry, Walsall, Dudley, Tamworth, Lichfield, and Bromsgrove. Each area receives a tailored local SEO strategy based on its specific competitive landscape and search demand.',
+  },
+  {
+    question: 'Why does local SEO differ between Birmingham areas?',
+    answer: 'Each Birmingham district has a different business profile, competitive density, and customer search behaviour. A solicitor in Colmore Business District faces different local competitors to a trades business in Sutton Coldfield. Google\'s local algorithm weighs proximity, relevance, and prominence differently depending on the query and location, so the strategy must adapt accordingly.',
+  },
+  {
+    question: 'How do you handle multi-location SEO across the West Midlands?',
+    answer: 'We create dedicated landing pages for each location, optimise individual Google Business Profiles, build area-specific citations, and develop content that targets the search terms customers in each area actually use. This avoids the thin-content problem that generic multi-location pages create.',
+  },
+  {
+    question: 'Which Birmingham areas have the most SEO competition?',
+    answer: 'Colmore Business District and the city centre are the most competitive for professional services SEO. The Jewellery Quarter is intensely competitive for jewellery and retail terms. Solihull has strong competition across property, automotive, and professional services. Less densely commercial areas like Sutton Coldfield and Bromsgrove offer faster ranking opportunities.',
+  },
+  {
+    question: 'Can you help businesses that serve customers across the whole West Midlands?',
+    answer: 'Absolutely. For businesses with a regional service area, we build a hub-and-spoke content structure that establishes authority in Birmingham and extends visibility across surrounding towns and cities. This approach targets both broad West Midlands terms and hyper-local queries in each area you serve.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Base title={title} description={description} schema={[serviceSchema, faqSchema]}>
+  <div class="max-w-3xl mx-auto px-4 py-12 prose">
+    <h1>SEO Services Across Birmingham and the West Midlands</h1>
+
+    <div class="quick-answer">
+      <strong>Quick answer:</strong> SEO Birmingham delivers local search optimisation across Birmingham city centre, Solihull, Edgbaston, Digbeth, the Jewellery Quarter, Sutton Coldfield, and the wider West Midlands. Each area strategy is tailored to the local business landscape and competitive environment.
+    </div>
+
+    <section>
+      <p>Local SEO in Birmingham is not a single strategy applied uniformly across the city. Birmingham is a collection of distinct commercial districts, each with its own industries, customer demographics, and search competition. A business in Colmore Business District competes in an entirely different search landscape to one in Digbeth or Sutton Coldfield. Effective local SEO recognises these differences and builds strategies around them.</p>
+
+      <p>We provide SEO services across every major Birmingham district and the surrounding West Midlands towns. Every area strategy starts with local search data: what customers in that area are searching for, who currently ranks, and where the opportunities are. From there, we build the technical foundations, local citations, content, and authority signals needed to win visibility in each specific market.</p>
+    </section>
+
+    <section>
+      <h2>Birmingham City Centre</h2>
+
+      <p>Birmingham city centre is the commercial heart of the West Midlands and the most competitive local SEO environment in the region. Professional services firms, retailers, hospitality businesses, and tech companies all compete for visibility across overlapping search terms. The density of businesses means that Google's local pack results are fiercely contested, particularly for high-value queries like solicitors, accountants, and financial advisors.</p>
+
+      <p>City centre SEO requires a strong Google Business Profile, consistent NAP data across citations, and content that clearly signals your relevance to Birmingham. Businesses near the Bullring and Grand Central benefit from association with these high-authority landmarks in local search signals. We build city centre strategies that combine local and organic SEO to maximise total search visibility. View our full <a href="/services/">SEO services</a> for details.</p>
+    </section>
+
+    <section>
+      <h2>Birmingham Districts</h2>
+
+      <h3>Edgbaston</h3>
+      <p>Edgbaston is one of Birmingham's most affluent suburbs, home to healthcare facilities including the Queen Elizabeth Hospital and Edgbaston Medical Quarter, private education institutions, and high-end professional services. SEO competition is moderate but growing, particularly for medical, dental, and wellness terms. Local SEO here targets residents with high disposable income and specific service expectations.</p>
+
+      <h3>Digbeth</h3>
+      <p>Digbeth has transformed into Birmingham's creative and cultural quarter. Home to the Custard Factory, Zellig, and a growing cluster of independent businesses, the area attracts tech startups, creative agencies, and hospitality ventures. SEO for Digbeth businesses often targets younger demographics and involves building visibility for emerging brands that lack established domain authority. Content-led strategies and social signals play a stronger role here than in more traditional commercial districts.</p>
+
+      <h3>Jewellery Quarter</h3>
+      <p>The Jewellery Quarter produces approximately 40% of the UK's jewellery output and is home to over 500 businesses in the trade. SEO competition for jewellery terms is intense, with both local independents and national retailers vying for visibility. Effective SEO in the Quarter demands product-level structured data, image optimisation for visual search, and content that demonstrates genuine craft expertise. E-commerce SEO and Google Shopping optimisation are critical for retailers here.</p>
+
+      <h3>Solihull</h3>
+      <p>Solihull sits at the junction of Birmingham's commercial reach and the affluent commuter belt. Birmingham Business Park hosts major corporate tenants, while the town centre supports a strong independent retail and professional services market. SEO for Solihull businesses targets both the town itself and the broader South Birmingham corridor. Property, automotive, and professional services are the most competitive search verticals.</p>
+
+      <h3>Sutton Coldfield</h3>
+      <p>Sutton Coldfield is a distinct market within the Birmingham search landscape. Its Royal Town status and suburban character mean search behaviour skews toward local services, trades, and family-focused businesses. Competition is lower than the city centre, which creates opportunities for businesses that invest in local SEO early. Google Business Profile optimisation and local content targeting Sutton-specific queries deliver strong returns here.</p>
+    </section>
+
+    <section>
+      <h2>Wider West Midlands Coverage</h2>
+
+      <p>Our SEO services extend across the entire West Midlands conurbation. Each town and city has its own search dynamics, and we tailor the approach accordingly.</p>
+
+      <ul>
+        <li><strong>Wolverhampton</strong> — strong manufacturing and retail heritage. Growing digital economy with SEO competition rising for professional services and trades.</li>
+        <li><strong>Coventry</strong> — university city with a vibrant tech sector. UK City of Culture legacy has boosted tourism and hospitality search demand.</li>
+        <li><strong>Walsall</strong> — leather goods heritage transitioning to modern retail and services. Lower SEO competition creates fast-win opportunities for local businesses.</li>
+        <li><strong>Dudley</strong> — tourism (Black Country Living Museum, Dudley Zoo) plus established trades and manufacturing businesses seeking local visibility.</li>
+        <li><strong>West Bromwich</strong> — commercial centre with growing demand for professional services SEO and local search optimisation for retail businesses.</li>
+        <li><strong>Tamworth</strong> — commuter town with a strong local business community. Lower competition means faster results for businesses that invest in SEO.</li>
+        <li><strong>Lichfield</strong> — cathedral city with affluent demographics. Professional services, independent retail, and hospitality businesses compete for a discerning local audience.</li>
+        <li><strong>Bromsgrove</strong> — gateway between Birmingham and Worcestershire. Local businesses benefit from targeting both Birmingham-adjacent and Bromsgrove-specific search terms.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Birmingham Business Hubs</h2>
+
+      <p>Several dedicated business hubs within the Birmingham area deserve specific SEO consideration due to their commercial density and the types of businesses they host.</p>
+
+      <h3>Colmore Business District</h3>
+      <p>Birmingham's premier financial and professional services quarter, home to major banks, law firms, accountancy practices, and corporate headquarters. SEO competition here is the highest in the region. Businesses need strong domain authority, E-E-A-T signals, and content strategies that demonstrate sector expertise to rank against established competitors.</p>
+
+      <h3>Brindleyplace</h3>
+      <p>A mixed commercial and leisure development anchored by major corporate tenants. Businesses here benefit from the area's strong brand recognition in local search. Restaurant, bar, and leisure businesses compete for hospitality terms while professional services firms target corporate keywords.</p>
+
+      <h3>Birmingham Business Park</h3>
+      <p>Located in Solihull, this is one of the largest business parks in the UK and hosts technology, logistics, and professional services companies. SEO for businesses here often targets national rather than local terms, but a local SEO layer can capture the significant Solihull and South Birmingham search demand.</p>
+
+      <h3>Innovation Birmingham Campus</h3>
+      <p>The city's primary tech and innovation hub, home to startups, scale-ups, and R&D operations. SEO for campus businesses typically focuses on SaaS keywords, B2B lead generation, and thought leadership content that builds authority in emerging technology sectors.</p>
+
+      <h3>Custard Factory</h3>
+      <p>Digbeth's creative hub housing independent businesses, agencies, and makers. SEO strategies for Custard Factory tenants lean heavily on brand building, content marketing, and social visibility alongside traditional search optimisation.</p>
+    </section>
+
+    <section>
+      <h2>Why Local SEO Varies by Area</h2>
+
+      <p>Google's local algorithm evaluates three primary factors: proximity (how close your business is to the searcher), relevance (how well your listing matches the query), and prominence (how well-known and authoritative your business is). These factors play out differently in each Birmingham area.</p>
+
+      <p>In dense commercial zones like Colmore Business District, proximity matters less because many similar businesses cluster together. Prominence and relevance become the deciding factors, which means stronger reviews, more authoritative citations, and better-optimised content win. In suburban areas like Sutton Coldfield, proximity carries more weight, so businesses can dominate their immediate area with solid fundamentals.</p>
+
+      <p>We analyse these dynamics for every area we work in and adjust the strategy accordingly. There is no point running the same playbook in Wolverhampton as in the Jewellery Quarter. The competition, the customer, and the search intent are all different. That is why our <a href="/services/">SEO services</a> start with data from your specific area.</p>
+    </section>
+
+    <div class="cta-box">
+      <h2 style="color: white; margin-top: 0;">Get Found in Your Area</h2>
+      <p>Whether you are in the city centre, the suburbs, or the wider West Midlands, we will build a local SEO strategy that puts your business in front of customers searching in your area.</p>
+      <a href="/free-seo-audit-birmingham/">Request Free Audit</a>
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqData.map((faq) => (
+        <details>
+          <summary>{faq.question}</summary>
+          <div class="faq-answer">
+            <p>{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </section>
+  </div>
+</Base>

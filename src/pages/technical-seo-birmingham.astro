@@ -1,0 +1,256 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'What is technical SEO and why does it matter for Birmingham businesses?',
+    a: 'Technical SEO covers the behind-the-scenes elements that help search engines crawl, index, and rank your website. For Birmingham businesses competing in sectors like manufacturing, retail, and professional services, poor technical foundations mean lost visibility in both Google and AI search results.',
+  },
+  {
+    q: 'How long does a technical SEO audit take?',
+    a: 'A thorough technical audit typically takes 5 to 10 working days depending on the size and complexity of your site. Large e-commerce sites with thousands of product pages take longer than a 20-page corporate brochure site.',
+  },
+  {
+    q: 'How much does technical SEO cost in Birmingham?',
+    a: 'Technical SEO audits start from £500 for small business sites. Ongoing technical SEO retainers for Birmingham businesses typically range from £500 to £2,000 per month depending on site complexity and the scope of work required.',
+  },
+  {
+    q: 'Can technical SEO help my site appear in AI search results?',
+    a: 'Yes. AI search engines like Google AI Overviews, ChatGPT, and Perplexity rely on well-structured, fast-loading pages with clean markup. Technical SEO ensures your site is machine-readable and eligible for citation in AI-generated answers.',
+  },
+  {
+    q: 'What are Core Web Vitals and do they affect rankings?',
+    a: 'Core Web Vitals are Google\'s metrics for page experience: Largest Contentful Paint (loading speed), Interaction to Next Paint (responsiveness), and Cumulative Layout Shift (visual stability). They are a confirmed ranking factor and directly impact user experience on your Birmingham business website.',
+  },
+  {
+    q: 'Do I need technical SEO if I already have a WordPress site?',
+    a: 'WordPress sites often need technical SEO the most. Common issues include bloated plugins slowing page speed, duplicate content from tag and category archives, poor mobile rendering, and missing structured data. A technical audit identifies and resolves these problems.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Technical SEO Birmingham',
+  description: 'Technical SEO services for Birmingham businesses including site audits, Core Web Vitals optimisation, crawlability fixes, and structured data implementation.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'SEO Birmingham',
+    url: 'https://seo-birmingham.uk',
+    areaServed: {
+      '@type': 'City',
+      name: 'Birmingham',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'West Midlands' },
+    },
+  },
+  serviceType: 'Technical SEO',
+  areaServed: {
+    '@type': 'City',
+    name: 'Birmingham',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'West Midlands' },
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '500',
+    priceCurrency: 'GBP',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: '500',
+      priceCurrency: 'GBP',
+      unitText: 'per audit',
+      description: 'Starting from £500 per technical SEO audit',
+    },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<Base
+  title="Technical SEO Birmingham | Site Audits"
+  description="Technical SEO services for Birmingham businesses. Site speed, Core Web Vitals, crawlability, structured data, and mobile-first audits from £500."
+  schema={[serviceSchema, faqSchema]}
+  ogType="website"
+>
+  <div class="max-w-3xl mx-auto px-4 py-12 prose">
+    <h1>Technical SEO Birmingham</h1>
+
+    <p>Technical SEO is the foundation that determines whether search engines can find, crawl, and rank your Birmingham business website. Without solid technical infrastructure, even the best content and strongest backlinks cannot deliver consistent organic visibility across Google, Bing, and AI search platforms.</p>
+
+    <div class="quick-answer">
+      <strong>Quick Answer:</strong> Technical SEO fixes the invisible barriers stopping search engines from indexing your site properly. For Birmingham businesses, this means faster page speeds, clean site architecture, proper structured data, and mobile-first design that converts local searchers into customers. Audits start from <a href="/seo-pricing-birmingham/">£500</a>.
+    </div>
+
+    <section>
+      <h2>What Technical SEO Means for Birmingham Businesses</h2>
+
+      <p>Technical SEO addresses everything that happens behind the scenes of your website: server response times, crawl efficiency, indexation control, structured data, and security protocols. It is the difference between a site that Google can read effortlessly and one that gets buried under competitors.</p>
+
+      <p>Birmingham is one of the most competitive commercial markets outside London. Whether you operate from the Colmore Business District, sell handcrafted jewellery from the <a href="/areas/">Jewellery Quarter</a>, or run an events business near the NEC, your website competes against hundreds of local rivals for the same search queries. Technical SEO ensures your site does not lose rankings to competitors with better infrastructure.</p>
+
+      <p>Common technical problems we find on Birmingham business websites include slow server response times from budget hosting, orphaned pages that search engines cannot discover, duplicate content across product variants, and missing or incorrect structured data. Each of these issues costs you rankings and revenue.</p>
+    </section>
+
+    <section>
+      <h2>Core Web Vitals for Birmingham Businesses</h2>
+
+      <p>Core Web Vitals are Google's measurable benchmarks for page experience. They directly influence rankings and determine how users perceive your site within the first few seconds of loading.</p>
+
+      <h3>Largest Contentful Paint (LCP)</h3>
+      <p>LCP measures how quickly the main content of your page becomes visible. Google expects this to happen within 2.5 seconds. Corporate websites in the Colmore Business District often fail LCP due to unoptimised hero images and render-blocking scripts from legacy CMS platforms. Custard Factory startups running modern frameworks tend to perform better here, but still trip up on third-party widget loading.</p>
+
+      <h3>Interaction to Next Paint (INP)</h3>
+      <p>INP measures how quickly your site responds to user interactions like clicks, taps, and key presses. E-commerce sites in Birmingham's Bullring and Grand Central often struggle with INP because of heavy JavaScript from product filtering, live stock checkers, and payment integrations.</p>
+
+      <h3>Cumulative Layout Shift (CLS)</h3>
+      <p>CLS tracks unexpected visual movement on the page. When elements jump around as a page loads, users lose trust. This is particularly damaging for service businesses where a shifting layout can cause visitors to click the wrong button or abandon the page entirely.</p>
+    </section>
+
+    <section>
+      <h2>Crawlability and Indexation</h2>
+
+      <p>If search engines cannot crawl your site efficiently, your pages will not appear in search results regardless of content quality. Crawlability issues are among the most common technical problems we diagnose in <a href="/seo-audit-birmingham/">Birmingham SEO audits</a>.</p>
+
+      <h3>Common Crawl Issues for Birmingham E-Commerce</h3>
+      <p>Birmingham has a thriving retail and e-commerce sector, from independent Jewellery Quarter retailers selling online to Bullring brands expanding into direct-to-consumer channels. These sites frequently suffer from:</p>
+
+      <ul>
+        <li>Faceted navigation creating thousands of duplicate URLs that waste crawl budget</li>
+        <li>Session IDs appended to URLs, generating infinite crawl loops</li>
+        <li>Orphaned product pages from discontinued stock that remain indexed</li>
+        <li>Pagination handled without proper rel=next/prev or canonical signals</li>
+        <li>Broken internal links from site redesigns or platform migrations</li>
+      </ul>
+
+      <h3>Indexation Control</h3>
+      <p>Not every page on your site should be indexed. Admin pages, staging environments, thin filter pages, and internal search results dilute your site's quality signals. We implement precise indexation controls using robots.txt directives, meta robots tags, and canonical URLs to ensure Google only indexes pages that deserve to rank.</p>
+    </section>
+
+    <section>
+      <h2>Structured Data and Schema Markup</h2>
+
+      <p>Structured data tells search engines exactly what your content represents. For Birmingham businesses, the right schema markup can trigger rich results that dramatically increase click-through rates.</p>
+
+      <h3>Essential Schema Types for Birmingham Companies</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Schema Type</th>
+            <th>Best For</th>
+            <th>Rich Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LocalBusiness</td>
+            <td>Any Birmingham business with a physical location</td>
+            <td>Knowledge panel, local pack</td>
+          </tr>
+          <tr>
+            <td>Product</td>
+            <td>Jewellery Quarter retailers, Bullring e-commerce</td>
+            <td>Price, availability, reviews in SERPs</td>
+          </tr>
+          <tr>
+            <td>Service</td>
+            <td>Professional services, Colmore consultancies</td>
+            <td>Service details in knowledge panel</td>
+          </tr>
+          <tr>
+            <td>FAQPage</td>
+            <td>Any page with frequently asked questions</td>
+            <td>Expandable FAQ in search results</td>
+          </tr>
+          <tr>
+            <td>Event</td>
+            <td>NEC exhibitions, Digbeth venue operators</td>
+            <td>Event listings with dates and tickets</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We implement all structured data as JSON-LD inline on each page, following Google's current best practices. Every schema block is validated against the Schema.org specification before deployment.</p>
+    </section>
+
+    <section>
+      <h2>Site Architecture for Multi-Location Birmingham Businesses</h2>
+
+      <p>Birmingham businesses that operate across multiple locations need a site architecture that serves both users and search engines. A solicitor with offices in Colmore Row, Solihull, and Sutton Coldfield requires dedicated location pages with unique content, not templated copies with the town name swapped.</p>
+
+      <p>Effective multi-location architecture includes a clear URL hierarchy (e.g., /areas/solihull/, /areas/sutton-coldfield/), internal linking between location pages and <a href="/services/">service pages</a>, and locally relevant content that demonstrates genuine presence in each area. This structure also supports <a href="/ai-search-optimisation-birmingham/">AI search optimisation</a> by providing clear geographic context for machine learning models.</p>
+    </section>
+
+    <section>
+      <h2>Mobile-First for Local Search</h2>
+
+      <p>Google uses mobile-first indexing, meaning it primarily crawls and ranks the mobile version of your site. For Birmingham local search, this is critical because the majority of "near me" searches happen on mobile devices from people physically in Birmingham.</p>
+
+      <p>A user standing on New Street searching "solicitor near me" expects your site to load instantly, display your phone number prominently, and show your Birmingham address clearly. If your mobile site loads slowly, has tiny tap targets, or hides contact information behind a hamburger menu, you lose that potential customer to a competitor with better mobile UX.</p>
+
+      <p>We test every Birmingham client site across real devices, not just Chrome DevTools emulation. Real-world performance on mid-range Android devices over 4G connections is the benchmark that matters for local searchers.</p>
+    </section>
+
+    <section>
+      <h2>HTTPS and Security</h2>
+
+      <p>HTTPS is a baseline ranking signal. Every page on your Birmingham business website must load over a valid SSL/TLS certificate with no mixed content warnings. Beyond rankings, HTTPS protects your customers' data and builds trust, particularly important for e-commerce and service businesses handling enquiry forms or payment details.</p>
+
+      <p>Common security issues we find include expired certificates, mixed content from legacy HTTP image URLs, insecure form submissions, and missing security headers like Content-Security-Policy and X-Frame-Options.</p>
+    </section>
+
+    <section>
+      <h2>International SEO for Birmingham's Manufacturing Sector</h2>
+
+      <p>Birmingham has a significant export-oriented manufacturing sector, from precision engineering in Aston to automotive components across the wider West Midlands. Businesses selling internationally need technical SEO that handles multiple languages and regional targeting correctly.</p>
+
+      <p>This includes hreflang implementation to signal language and regional variants to Google, country-specific domain or subdirectory strategies, currency and unit localisation, and server-side content negotiation. Getting hreflang wrong can result in the German version of your product page outranking the English version for UK searchers, or vice versa.</p>
+    </section>
+
+    <section>
+      <h2>How Technical SEO Supports AI Search Visibility</h2>
+
+      <p>AI search engines like Google AI Overviews, ChatGPT, and Perplexity crawl and cite well-structured websites. The technical foundations that help traditional search engines also help AI models understand and reference your content.</p>
+
+      <p>Clean HTML semantics, comprehensive schema markup, fast page speeds, and logical site architecture all contribute to AI search visibility. Sites with poor technical health are less likely to be crawled by AI training pipelines and less likely to be cited in AI-generated answers. Learn more about preparing for this shift on our <a href="/ai-search-optimisation-birmingham/">AI search optimisation</a> page.</p>
+    </section>
+
+    <div class="cta-box">
+      <h2 style="color: white; margin-top: 0;">Get a Technical SEO Audit for Your Birmingham Business</h2>
+      <p>Find out what is holding your site back. Our technical audit covers speed, crawlability, structured data, mobile experience, and security.</p>
+      <a href="/seo-audit-birmingham/">Book Your Audit from £500</a>
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((faq) => (
+        <details>
+          <summary>{faq.q}</summary>
+          <div class="faq-answer">
+            <p>{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <section>
+      <h2>Related Services</h2>
+      <ul>
+        <li><a href="/">SEO Birmingham</a> — full SEO services overview</li>
+        <li><a href="/services/">All SEO Services</a></li>
+        <li><a href="/seo-audit-birmingham/">SEO Audit Birmingham</a> — comprehensive site audit</li>
+        <li><a href="/ai-search-optimisation-birmingham/">AI Search Optimisation Birmingham</a></li>
+        <li><a href="/industries/">Industry-Specific SEO</a></li>
+        <li><a href="/seo-pricing-birmingham/">SEO Pricing</a></li>
+      </ul>
+    </section>
+  </div>
+</Base>

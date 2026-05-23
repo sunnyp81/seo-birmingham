@@ -1,0 +1,239 @@
+---
+import Base from '../layouts/Base.astro';
+
+const faqs = [
+  {
+    q: 'What do I get in the free SEO audit?',
+    a: 'You receive a quick health check covering your indexation status, mobile usability, Core Web Vitals scores, Google Business Profile review, and three prioritised quick wins you can implement immediately. The report is emailed to you within 48 hours.',
+  },
+  {
+    q: 'How is the free audit different from the paid audit?',
+    a: 'The free audit is an automated snapshot covering five key areas. The paid audit (£497) is a comprehensive, manually reviewed analysis covering technical SEO, content quality, backlink profile, local SEO, and competitor benchmarking, with a detailed PDF report and a 30-minute walkthrough call. See the full paid audit details.',
+  },
+  {
+    q: 'Do I need to give you access to my website?',
+    a: 'No. The free audit runs using publicly available data from your live website. We do not need CMS access, Google Search Console, or Google Analytics for the free version.',
+  },
+  {
+    q: 'Is there any obligation after the free audit?',
+    a: 'None at all. The free audit is genuinely free with no strings attached. If you want to discuss the findings or explore a full audit, we are happy to chat, but there is no sales follow-up unless you request it.',
+  },
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Free SEO Audit Birmingham',
+  description: 'Free SEO health check for Birmingham businesses covering indexation, mobile usability, Core Web Vitals, Google Business Profile, and quick wins.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'SEO Birmingham',
+    url: 'https://seo-birmingham.uk',
+    areaServed: {
+      '@type': 'City',
+      name: 'Birmingham',
+      containedInPlace: { '@type': 'AdministrativeArea', name: 'West Midlands' },
+    },
+  },
+  serviceType: 'Free SEO Audit',
+  areaServed: {
+    '@type': 'City',
+    name: 'Birmingham',
+    containedInPlace: { '@type': 'AdministrativeArea', name: 'West Midlands' },
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'GBP',
+    availability: 'https://schema.org/InStock',
+    description: 'Free automated SEO health check for Birmingham businesses',
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<Base
+  title="Free SEO Audit Birmingham | Quick Check"
+  description="Claim your free SEO audit for Birmingham businesses. We check indexation, mobile usability, Core Web Vitals, and Google Business Profile with 3 quick wins."
+  schema={[serviceSchema, faqSchema]}
+  ogType="website"
+>
+  <div class="max-w-3xl mx-auto px-4 py-12 prose">
+    <h1>Free SEO Audit Birmingham</h1>
+
+    <p>The free SEO audit is a quick health check designed for Birmingham businesses that want to understand their current search visibility without any financial commitment. It covers the five most critical ranking factors and delivers three specific actions you can take immediately to improve your organic performance.</p>
+
+    <div class="quick-answer">
+      <strong>Quick Answer:</strong> Submit your website below and receive a free SEO health check within 48 hours. The report covers indexation status, mobile usability, Core Web Vitals, your Google Business Profile, and three prioritised quick wins. No cost, no obligation, no sales follow-up.
+    </div>
+
+    <section>
+      <h2>What the Free Audit Covers</h2>
+
+      <p>The free audit focuses on five areas that have the greatest impact on whether your Birmingham business appears in search results.</p>
+
+      <h3>Indexation Status</h3>
+      <p>We check how many of your pages Google has indexed versus how many exist on your site. If Google is only indexing a fraction of your content, you have a fundamental visibility problem that needs addressing before anything else.</p>
+
+      <h3>Mobile Usability</h3>
+      <p>With the majority of local searches in Birmingham happening on mobile devices, your site must render perfectly on smartphones. We test your site on mobile and flag any usability issues that could be costing you rankings and conversions.</p>
+
+      <h3>Core Web Vitals</h3>
+      <p>We measure your page speed, interactivity, and visual stability against Google's Core Web Vitals thresholds. These metrics are a confirmed ranking factor and directly affect user experience. Slow sites lose visitors, particularly in competitive Birmingham markets where searchers have plenty of alternatives.</p>
+
+      <h3>Google Business Profile Review</h3>
+      <p>For Birmingham businesses targeting local customers, your Google Business Profile is as important as your website. We check your profile for completeness, category accuracy, review volume, and common mistakes that prevent you from appearing in the local 3-pack.</p>
+
+      <h3>Three Quick Wins</h3>
+      <p>Every free audit includes three specific, actionable recommendations you can implement immediately. These are not vague suggestions. They are precise changes with clear instructions, selected because they offer the highest impact for the least effort on your particular site.</p>
+    </section>
+
+    <section>
+      <h2>What the Free Audit Does Not Cover</h2>
+
+      <p>The free audit is an automated snapshot, not a comprehensive analysis. It does not include:</p>
+
+      <ul>
+        <li>Manual content quality review</li>
+        <li>Backlink profile analysis</li>
+        <li>Competitor benchmarking</li>
+        <li>Detailed technical crawl of every page</li>
+        <li>Keyword cannibalisation checks</li>
+        <li>Walkthrough call with an SEO consultant</li>
+      </ul>
+
+      <p>If you need a thorough, manually reviewed audit with a detailed action plan, our <a href="/seo-audit-birmingham/">paid SEO audit</a> at £497 covers all of the above. The free audit is a useful first step to understand whether a deeper investigation is worthwhile.</p>
+    </section>
+
+    <section>
+      <h2>Who This Is For</h2>
+
+      <p>The free audit is designed for Birmingham businesses in any of these situations:</p>
+
+      <ul>
+        <li>You have never had an SEO audit and want to understand where you stand</li>
+        <li>You are considering investing in SEO but want evidence of specific issues first</li>
+        <li>You recently launched a new website and want a quick sanity check</li>
+        <li>You are a Digbeth startup, Jewellery Quarter retailer, or Colmore professional who wants a baseline reading before committing to ongoing SEO</li>
+        <li>You want to compare your site health against Birmingham competitors</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Request Your Free Audit</h2>
+
+      <p>Fill in the form below and we will send your free SEO health check within 48 hours.</p>
+
+      <!-- Form connects to backend endpoint -->
+      <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm mt-6 mb-8">
+        <div class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-brand-dark mb-1.5">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Jane Smith"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-semibold text-brand-dark mb-1.5">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="jane@example.co.uk"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+            />
+          </div>
+
+          <div>
+            <label for="website" class="block text-sm font-semibold text-brand-dark mb-1.5">Website URL</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              required
+              placeholder="https://www.yourbusiness.co.uk"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+            />
+          </div>
+
+          <div>
+            <label for="business_type" class="block text-sm font-semibold text-brand-dark mb-1.5">Business Type</label>
+            <select
+              id="business_type"
+              name="business_type"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow appearance-none"
+            >
+              <option value="" disabled selected>Select your industry</option>
+              <option value="professional-services">Professional Services (Legal, Accounting, Consulting)</option>
+              <option value="retail-ecommerce">Retail and E-Commerce</option>
+              <option value="hospitality">Hospitality (Restaurants, Hotels, Bars)</option>
+              <option value="healthcare">Healthcare and Medical</option>
+              <option value="construction-trades">Construction and Trades</option>
+              <option value="manufacturing">Manufacturing and Engineering</option>
+              <option value="education-training">Education and Training</option>
+              <option value="technology">Technology and SaaS</option>
+              <option value="property">Property and Estate Agents</option>
+              <option value="events-entertainment">Events and Entertainment</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-brand text-white font-bold py-3.5 px-6 rounded-lg hover:bg-brand-light transition-colors text-base cursor-pointer shadow-md hover:shadow-lg"
+          >
+            Get My Free SEO Audit
+          </button>
+
+          <p class="text-xs text-text-muted text-center mt-3">No spam. No obligation. Your report arrives within 48 hours.</p>
+        </div>
+      </form>
+    </section>
+
+    <div class="cta-box">
+      <h2 style="color: white; margin-top: 0;">Need a Deeper Analysis?</h2>
+      <p>The free audit is a great starting point. For a comprehensive, manually reviewed audit with a full action plan and walkthrough call, explore our paid SEO audit.</p>
+      <a href="/seo-audit-birmingham/">Full SEO Audit — £497</a>
+    </div>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((faq) => (
+        <details>
+          <summary>{faq.q}</summary>
+          <div class="faq-answer">
+            <p>{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </section>
+
+    <section>
+      <h2>Related Pages</h2>
+      <ul>
+        <li><a href="/">SEO Birmingham</a> — full services overview</li>
+        <li><a href="/services/">All SEO Services</a></li>
+        <li><a href="/seo-audit-birmingham/">Paid SEO Audit Birmingham</a> — comprehensive analysis</li>
+        <li><a href="/seo-pricing-birmingham/">SEO Pricing</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul>
+    </section>
+  </div>
+</Base>
