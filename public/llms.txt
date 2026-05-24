@@ -1,20 +1,20 @@
-# Colmore SEO
+# SEO Birmingham
 
-> Colmore SEO is a data-led SEO consultancy serving businesses in Birmingham, Solihull, and the West Midlands. We specialise in technical SEO, AI search optimisation, and local search marketing that delivers measurable organic growth.
+> SEO Birmingham is a Birmingham-based SEO agency. We handle technical SEO, AI search optimisation, and local search marketing for businesses across Birmingham, Solihull, and the West Midlands.
 
 ## Pages
 
-- [Home](https://seo-birmingham.uk/): Colmore SEO homepage — local search marketing for West Midlands businesses
-- [Services](https://seo-birmingham.uk/services/): Full list of SEO services available to Birmingham businesses
-- [Areas We Serve](https://seo-birmingham.uk/areas/): SEO coverage across Birmingham districts and the West Midlands
-- [Industries](https://seo-birmingham.uk/industries/): Industry-specific SEO for Birmingham's dominant sectors
-- [Technical SEO Birmingham](https://seo-birmingham.uk/technical-seo-birmingham/): Technical SEO audits and remediation for Birmingham businesses
-- [SEO Audit Birmingham](https://seo-birmingham.uk/seo-audit-birmingham/): Comprehensive paid SEO audit service
-- [Free SEO Audit Birmingham](https://seo-birmingham.uk/free-seo-audit-birmingham/): Request a complimentary SEO health check for your Birmingham business
-- [SEO Pricing Birmingham](https://seo-birmingham.uk/seo-pricing-birmingham/): Transparent SEO pricing with Birmingham vs London cost comparison
-- [AI Search Optimisation Birmingham](https://seo-birmingham.uk/ai-search-optimisation-birmingham/): How to gain citations in ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews
-- [Case Studies](https://seo-birmingham.uk/case-studies/): SEO case studies from Birmingham businesses
-- [Jewellery Quarter Retailer Case Study](https://seo-birmingham.uk/case-studies/jewellery-quarter-retailer-organic-growth/): How a Jewellery Quarter retailer achieved 340% organic traffic growth
-- [Colmore Law Firm Case Study](https://seo-birmingham.uk/case-studies/colmore-law-firm-local-pack/): How a Colmore Business District law firm dominated the local pack
-- [About](https://seo-birmingham.uk/about/): About Colmore SEO — data-led SEO consultancy for Birmingham and the West Midlands
-- [Contact](https://seo-birmingham.uk/contact/): Contact Colmore SEO for a proposal
+- [Home](https://seo-birmingham.uk/): SEO Birmingham — local search marketing for West Midlands businesses
+- [Services](https://seo-birmingham.uk/services/): Every SEO service we offer to Birmingham businesses
+- [Areas We Serve](https://seo-birmingham.uk/areas/): SEO coverage across Birmingham districts and the wider West Midlands
+- [Industries](https://seo-birmingham.uk/industries/): Sector-specific SEO for Birmingham's key industries
+- [Technical SEO Birmingham](https://seo-birmingham.uk/technical-seo-birmingham/): Technical SEO audits, fixes, and ongoing monitoring
+- [SEO Audit Birmingham](https://seo-birmingham.uk/seo-audit-birmingham/): Full paid SEO audit with action plan
+- [Free SEO Audit Birmingham](https://seo-birmingham.uk/free-seo-audit-birmingham/): Get a free SEO health check for your site
+- [SEO Pricing Birmingham](https://seo-birmingham.uk/seo-pricing-birmingham/): Transparent pricing — Birmingham vs London cost comparison
+- [AI Search Optimisation Birmingham](https://seo-birmingham.uk/ai-search-optimisation-birmingham/): Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews
+- [Case Studies](https://seo-birmingham.uk/case-studies/): SEO results from Birmingham businesses
+- [Jewellery Quarter Retailer Case Study](https://seo-birmingham.uk/case-studies/jewellery-quarter-retailer-organic-growth/): 340% organic traffic growth for a Jewellery Quarter retailer
+- [Colmore Law Firm Case Study](https://seo-birmingham.uk/case-studies/colmore-law-firm-local-pack/): Local pack dominance for a Colmore Business District law firm
+- [About](https://seo-birmingham.uk/about/): Who we are and how we work
+- [Contact](https://seo-birmingham.uk/contact/): Get in touch

@@ -1,32 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Contact Colmore SEO | Birmingham';
-const description = 'Contact Colmore SEO to request a proposal for your Birmingham business. We respond within one business day. Data-led SEO for the West Midlands.';
+const title = 'Contact SEO Birmingham | Talk to Us';
+const description = 'Get in touch with SEO Birmingham. Fill in the form or email hello@seo-birmingham.uk. We reply within one business day. No sales pressure.';
 
 const faqItems = [
   {
-    question: 'How quickly does Colmore SEO respond to enquiries?',
-    answer: 'We respond to all enquiries within one business day. Messages received before 3pm are typically answered the same day. If your requirement is time-sensitive, note this in your submission and we will prioritise accordingly.',
+    question: 'How quickly do you respond?',
+    answer: 'Within one business day. Messages received before 3pm are usually answered the same day. If it\'s urgent, say so in your message and we\'ll prioritise it.',
   },
   {
-    question: 'Does Colmore SEO offer a free initial assessment?',
-    answer: 'Yes. We provide a complimentary initial assessment covering your current search visibility and competitive positioning in the Birmingham market. You can also request a detailed SEO audit through our dedicated audit page. There is no obligation to proceed after the assessment.',
+    question: 'Do you offer a free initial assessment?',
+    answer: 'Yes. We provide a complimentary assessment of your search visibility and competitive positioning in Birmingham. You can also request a full audit through our dedicated audit page. No obligation to proceed.',
   },
   {
-    question: 'Does Colmore SEO work with businesses outside Birmingham?',
-    answer: 'Our primary coverage area is Birmingham, Solihull, and the wider West Midlands. We also serve UK businesses that need to strengthen their organic presence in the Birmingham market. Technical SEO and AI search optimisation services are delivered remotely regardless of location.',
+    question: 'Do you work with businesses outside Birmingham?',
+    answer: 'Our core patch is Birmingham, Solihull, and the wider West Midlands. We also work with UK businesses that need organic visibility in the Birmingham market. Technical SEO and AI search services are delivered remotely regardless of location.',
   },
   {
-    question: 'What information should we prepare before making contact?',
-    answer: 'Having your website URL, a brief description of your business, and an outline of your objectives will help us respond with a relevant initial assessment. If you have access to Google Search Console or Google Analytics, that accelerates our evaluation. If you do not have these details to hand, we will guide you through what we need during our first exchange.',
+    question: 'What should we prepare before getting in touch?',
+    answer: 'Your website URL, a brief description of your business, and your objectives. Access to Google Search Console or Google Analytics speeds things up. Don\'t have that to hand? No problem. We\'ll guide you through what we need.',
   },
 ];
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Colmore SEO',
+  name: 'SEO Birmingham',
   url: 'https://seo-birmingham.uk',
   email: 'hello@seo-birmingham.uk',
   sameAs: [],
@@ -61,19 +61,17 @@ const faqSchema = {
 
 <Base title={title} description={description} schema={[localBusinessSchema, faqSchema]}>
   <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Contact Colmore SEO</h1>
+    <h1>Talk to Us</h1>
 
     <div class="quick-answer">
-      <strong>Request a proposal:</strong> Complete the form below or email us at <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We respond within one business day. No obligation, no sales pressure — just a data-backed assessment of your organic search opportunity.
+      <strong>Get in touch:</strong> Fill in the form below or email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We reply within one business day. No obligation. No sales pressure.
     </div>
 
-    <p>Colmore SEO delivers specialist search optimisation for businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or guidance on AI search readiness, submit your details and our team will respond with an initial assessment tailored to your market.</p>
+    <p>We work with businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or AI search readiness — tell us what you're after. We'll come back with an honest assessment.</p>
 
-    <p>We work with businesses across the region — from professional services firms in <strong>Colmore Business District</strong> and retailers in the <strong>Jewellery Quarter</strong> to technology companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement begins with understanding your commercial objectives and your current search performance.</p>
+    <p>We serve professional services firms in <strong>Colmore Business District</strong>, retailers in the <strong>Jewellery Quarter</strong>, tech companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement starts with understanding your goals and your current search performance.</p>
 
     <h2>Coverage Areas</h2>
-
-    <p>Our services cover the following areas across Birmingham and the West Midlands:</p>
 
     <ul>
       <li>Birmingham city centre (Colmore Business District, Bullring, Grand Central)</li>
@@ -85,9 +83,9 @@ const faqSchema = {
       <li>Wider West Midlands (Wolverhampton, Coventry, Walsall, Dudley)</li>
     </ul>
 
-    <p>If your business operates within these areas, our <a href="/services/">local SEO services</a> are designed to increase your organic visibility where your customers are searching.</p>
+    <p>If you operate in these areas, our <a href="/services/">SEO services</a> are built to increase your organic visibility where your customers search.</p>
 
-    <h2>Submit Your Details</h2>
+    <h2>Send Us Your Details</h2>
 
     <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 mb-8">
       <div class="grid sm:grid-cols-2 gap-5 mb-5">
@@ -112,24 +110,24 @@ const faqSchema = {
       </div>
       <div class="mb-5">
         <label for="message" class="block text-sm font-semibold text-brand-dark mb-1.5">Message <span class="text-red-500">*</span></label>
-        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow resize-y" placeholder="Describe your business, your current search performance, and what you are looking to achieve."></textarea>
+        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow resize-y" placeholder="Tell us about your business, your current search performance, and what you want to achieve."></textarea>
       </div>
       <button type="submit" class="w-full sm:w-auto bg-accent hover:bg-accent-light text-brand-dark font-bold px-8 py-3 rounded-lg transition-colors text-base cursor-pointer shadow-sm hover:shadow-md">
-        Request a Proposal
+        Talk to Us
       </button>
     </form>
 
     <h2>Email Us Directly</h2>
 
-    <p>Prefer email? Contact us at <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We monitor this inbox throughout the working day and respond within one business day.</p>
+    <p>Prefer email? Write to <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We monitor the inbox throughout the working day and reply within one business day.</p>
 
     <h3>Working Hours</h3>
 
-    <p>Monday to Friday, 9am to 5pm. Birmingham-based, remote-first operation.</p>
+    <p>Monday to Friday, 9am to 5pm. Birmingham-based, remote-first.</p>
 
     <h2>Our Location</h2>
 
-    <p>Colmore SEO operates from Birmingham and serves businesses across the city and the wider West Midlands region.</p>
+    <p>We operate from Birmingham and serve businesses across the city and the wider West Midlands.</p>
 
     <div class="not-prose rounded-xl overflow-hidden shadow-sm border border-gray-200 mb-8">
       <iframe
@@ -145,9 +143,9 @@ const faqSchema = {
     </div>
 
     <div class="cta-box">
-      <h2 class="text-white text-xl font-bold mt-0">Request a Proposal</h2>
-      <p class="text-gray-200 mb-0">Receive a data-backed assessment of your organic search opportunity in the Birmingham market. No obligation.</p>
-      <a href="/free-seo-audit-birmingham/">Request a Proposal</a>
+      <h2 class="text-white text-xl font-bold mt-0">Get the Audit</h2>
+      <p class="text-gray-200 mb-0">Find out how your site performs against Birmingham competitors. No obligation.</p>
+      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
     </div>
 
     <h2>Frequently Asked Questions</h2>
@@ -163,6 +161,6 @@ const faqSchema = {
       ))}
     </div>
 
-    <p>Question not addressed above? Email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a> or use the form above. Our <a href="/seo-pricing-birmingham/">pricing page</a> provides detailed breakdowns of packages and investment levels.</p>
+    <p>Question not covered? Email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a> or use the form above. Our <a href="/seo-pricing-birmingham/">pricing page</a> has detailed package breakdowns.</p>
   </div>
 </Base>

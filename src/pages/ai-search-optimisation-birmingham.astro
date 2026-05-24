@@ -4,35 +4,35 @@ import Base from '../layouts/Base.astro';
 const faqs = [
   {
     q: 'What is AI search optimisation?',
-    a: 'AI search optimisation is the discipline of structuring website content, technical infrastructure, and entity signals so that AI-powered search engines — including ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AI Overviews — can discover, interpret, and cite a business in their generated responses. It integrates traditional SEO foundations with techniques specific to AI retrieval: llms.txt files, entity disambiguation, and direct-answer content architecture.',
+    a: 'AI search optimisation makes your website visible to AI-powered search engines — ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AI Overviews. It combines traditional SEO foundations with AI-specific techniques: llms.txt files, entity disambiguation, and direct-answer content architecture. The goal is citation, not just ranking.',
   },
   {
     q: 'How do I get my Birmingham business cited by ChatGPT?',
-    a: 'ChatGPT retrieves information from web sources via Bing and its own browsing capability. To increase citation probability, ensure your website presents clear entity data (business name, location, services), comprehensive content that directly addresses common queries, structured data markup, and consistent references across authoritative third-party sources. GPTBot must be permitted in your robots.txt to enable direct content crawling.',
+    a: 'ChatGPT pulls from Bing and its own browsing. To get cited: present clear entity data (name, location, services), write content that directly answers common queries, deploy structured data markup, and build consistent references across authoritative third-party sources. Permit GPTBot in your robots.txt. Without that, ChatGPT cannot see you.',
   },
   {
     q: 'What is llms.txt and do I need it?',
-    a: 'llms.txt is a proposed standard (llmstxt.org) that provides a machine-readable summary of a website specifically for large language models. It resides at the domain root alongside robots.txt and gives AI systems a structured overview of the business, its services, and its most important pages. While still an emerging standard, implementation is low-effort and high-signal, positioning a site ahead of competitors that have not adopted it.',
+    a: 'llms.txt is a proposed standard (llmstxt.org) that gives AI models a machine-readable summary of your website. It sits at the domain root alongside robots.txt. Low effort, high signal. Most competitors have not adopted it. That is your window.',
   },
   {
     q: 'Is AI search optimisation different from regular SEO?',
-    a: 'Yes, though the two share considerable overlap. Traditional SEO targets ranking within Google\'s organic listings. AI search optimisation targets citation within AI-generated answers. The key differences: AI systems prioritise entity clarity and direct statements over keyword density; structured data carries greater weight because machines parse it directly; and citation signals from third-party mentions influence visibility beyond traditional backlink metrics.',
+    a: 'Yes. Traditional SEO targets blue-link rankings. AI search optimisation targets citation inside AI-generated answers. AI systems care about entity clarity and direct statements, not keyword density. Structured data carries more weight because machines parse it directly. Third-party mentions matter beyond traditional backlink metrics.',
   },
   {
     q: 'How long does it take to appear in AI search results?',
-    a: 'There is no fixed timeline because AI search engines do not follow a predictable indexing cycle. ChatGPT and Perplexity retrieve real-time web results, so improvements to content structure and entity clarity can surface within days. Google AI Overviews depend on existing organic rankings, following the same 4-12 week timeline as traditional SEO. Building entity authority through third-party citations is a longer process, typically 3-6 months.',
+    a: 'No fixed timeline. ChatGPT and Perplexity retrieve real-time web results, so structural improvements can surface within days. Google AI Overviews depend on organic rankings — same 4-12 week cycle as traditional SEO. Entity authority through third-party citations takes 3-6 months to compound.',
   },
   {
     q: 'Do I need to allow AI crawlers on my website?',
-    a: 'Yes, if the objective is AI search citation. Many websites inadvertently block AI crawlers through default robots.txt rules or restrictive security configurations. GPTBot (ChatGPT), ClaudeBot (Claude), PerplexityBot (Perplexity), and Bingbot (Microsoft Copilot) should all be explicitly permitted. Blocking these user agents prevents content from being retrieved or cited.',
+    a: 'Yes. Many sites block AI crawlers by default through robots.txt or overzealous security plugins. GPTBot, ClaudeBot, PerplexityBot, and Bingbot must all be explicitly permitted. Block them and you are invisible. It is that simple.',
   },
   {
     q: 'What is AEO vs GEO vs LLM SEO?',
-    a: 'AEO (Answer Engine Optimisation) targets content selection as the source for direct answers in AI and voice search. GEO (Generative Engine Optimisation) is the broader discipline of optimising for generative AI search interfaces. LLM SEO specifically targets large language model systems such as ChatGPT and Claude. In practice, all three overlap substantially, and a comprehensive AI search strategy addresses all of them.',
+    a: 'AEO (Answer Engine Optimisation) targets direct-answer selection. GEO (Generative Engine Optimisation) covers all generative AI search interfaces. LLM SEO specifically targets large language models like ChatGPT and Claude. In practice, they overlap heavily. A solid AI search strategy covers all three.',
   },
   {
     q: 'How much does AI search optimisation cost in Birmingham?',
-    a: 'AI search optimisation services for Birmingham businesses start from £750 for a one-off audit and implementation. Ongoing retainers range from £500 to £2,000 per month depending on scope. Deliverables include entity optimisation, structured data deployment, llms.txt configuration, content restructuring for AI citation, and monitoring across AI search platforms.',
+    a: 'One-off audit and implementation from £750. Ongoing retainers from £500 to £2,000 per month. That covers entity optimisation, structured data, llms.txt, content restructuring, and monitoring across AI platforms.',
   },
 ];
 
@@ -40,10 +40,10 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Search Optimisation Birmingham',
-  description: 'AI search optimisation services for Birmingham businesses. Achieve citation by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews through AEO and GEO strategy.',
+  description: 'AI search optimisation for Birmingham businesses. Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews through AEO and GEO strategy.',
   provider: {
     '@type': 'Organization',
-    name: 'Colmore SEO',
+    name: 'SEO Birmingham',
     url: 'https://seo-birmingham.uk',
     email: 'hello@seo-birmingham.uk',
     sameAs: [],
@@ -72,14 +72,14 @@ const articleSchema = {
   headline: 'AI Search Optimisation Birmingham',
   author: {
     '@type': 'Organization',
-    name: 'Colmore SEO',
+    name: 'SEO Birmingham',
     url: 'https://seo-birmingham.uk',
     sameAs: [],
   },
   datePublished: '2026-05-23',
   publisher: {
     '@type': 'Organization',
-    name: 'Colmore SEO',
+    name: 'SEO Birmingham',
     url: 'https://seo-birmingham.uk',
   },
 };
@@ -87,53 +87,55 @@ const articleSchema = {
 
 <Base
   title="AI Search Optimisation Birmingham | AEO"
-  description="AI search optimisation for Birmingham businesses. Achieve citation by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews with proven AEO strategy."
+  description="AI search optimisation for Birmingham businesses. Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews. Proven AEO strategy from SEO Birmingham."
   schema={[serviceSchema, faqSchema, articleSchema]}
   ogType="article"
 >
   <div class="max-w-3xl mx-auto px-4 py-12 prose">
     <h1>AI Search Optimisation Birmingham</h1>
 
-    <p>AI search optimisation is the process of making a Birmingham business visible, citable, and authoritative across AI-powered search engines: ChatGPT, Google AI Overviews, Perplexity, Microsoft Copilot, and Claude. These platforms are replacing traditional search for millions of daily queries. Birmingham businesses that do not optimise for AI search risk disappearing from the fastest-growing discovery channel in a generation.</p>
+    <p>ChatGPT answers 100 million queries a day. Google AI Overviews sit above every organic result. Perplexity is the fastest-growing search engine in a decade. If your Birmingham business is not showing up in these answers, you are handing leads to competitors who are.</p>
+
+    <p>AI search optimisation makes that stop.</p>
 
     <div class="quick-answer">
-      <strong>Quick Answer:</strong> AI search optimisation (also termed AEO, GEO, or LLM SEO) ensures a Birmingham business is cited when AI tools answer questions about its industry, services, or locality. The discipline encompasses entity clarity, structured data, direct-answer content architecture, llms.txt implementation, and citation signal development across authoritative sources. In traditional SEO, the objective is a blue-link ranking. In AI search optimisation, the objective is being named as a trusted source inside the AI-generated answer itself.
+      <strong>Quick Answer:</strong> AI search optimisation (AEO, GEO, LLM SEO) gets your Birmingham business cited when AI tools answer questions about your industry, services, or location. Entity clarity. Structured data. Direct-answer content. llms.txt. Citation signals. In traditional SEO, you chase a blue link. In AI search optimisation, you become the source the AI quotes.
     </div>
 
     <!-- Section 1: What Is AI Search Optimisation? -->
     <section>
       <h2>What Is AI Search Optimisation?</h2>
 
-      <p>AI search optimisation is the discipline of preparing a website and wider digital presence so that large language models and AI-powered search interfaces can discover, interpret, and reference its content in generated responses. It operates at the intersection of three overlapping fields:</p>
+      <p>AI search optimisation prepares your website and digital presence so that large language models can find, understand, and cite your content. Three fields converge here:</p>
 
       <ul>
-        <li><strong>AEO (Answer Engine Optimisation)</strong> — structuring content to be selected as the definitive answer in AI and voice search results. AEO centres on concise, authoritative statements that AI systems can extract and present without modification.</li>
-        <li><strong>GEO (Generative Engine Optimisation)</strong> — the broader practice of optimising for any search engine that generates synthesised answers rather than listing links. This includes Google AI Overviews, Perplexity, and conversational assistants.</li>
-        <li><strong>LLM SEO</strong> — specifically targeting the large language models (GPT-4, Claude, Gemini) that power modern AI search, ensuring content is either included in training data or retrieved during real-time search augmentation.</li>
+        <li><strong>AEO (Answer Engine Optimisation)</strong> &mdash; structuring content to be selected as the definitive answer in AI and voice search. Concise, authoritative statements the AI can extract verbatim.</li>
+        <li><strong>GEO (Generative Engine Optimisation)</strong> &mdash; optimising for any search engine that generates synthesised answers instead of listing links. Google AI Overviews, Perplexity, conversational assistants.</li>
+        <li><strong>LLM SEO</strong> &mdash; targeting the large language models (GPT-4, Claude, Gemini) that power modern AI search. Ensuring content is either in training data or retrieved during real-time search.</li>
       </ul>
 
       <h3>How AI Search Differs from Traditional Google Rankings</h3>
 
-      <p>Traditional SEO operates on a straightforward model: optimise a page, wait for Google to crawl it, and if execution is correct, the page appears as one of ten blue links on a results page. The user clicks through. The site earns traffic.</p>
+      <p>Traditional SEO: optimise a page, Google crawls it, you appear as one of ten blue links. User clicks. You get traffic.</p>
 
-      <p>AI search changes this model at a structural level. Instead of listing links, AI search engines read multiple sources, synthesise an answer, and present it directly to the user. The source website may be cited, but the user may never visit the page. This creates two critical shifts for Birmingham businesses:</p>
+      <p>AI search breaks that model. Instead of listing links, AI engines read multiple sources, synthesise an answer, and present it directly. The user may never visit your site. Two shifts matter for Birmingham businesses:</p>
 
       <ol>
-        <li><strong>Citation replaces ranking.</strong> Being named as a source in an AI answer delivers brand authority even without a click-through. When ChatGPT states "according to [your company], the recommended approach is..." that carries more weight than appearing at position seven on a traditional results page.</li>
-        <li><strong>Entity clarity replaces keyword density.</strong> AI models do not match keywords to pages. They understand entities &mdash; businesses, concepts, locations. A website that clearly establishes what the business is, what it does, and where it operates enables AI systems to reference it accurately. Vague, keyword-stuffed content is disregarded.</li>
+        <li><strong>Citation replaces ranking.</strong> Being named as a source in an AI answer delivers brand authority even without a click. When ChatGPT says "according to [your company]..." that carries more weight than position seven on a traditional results page.</li>
+        <li><strong>Entity clarity replaces keyword density.</strong> AI models do not match keywords to pages. They understand entities &mdash; businesses, concepts, locations. A site that clearly states what the business is, what it does, and where it operates gets referenced. Vague, keyword-stuffed content gets ignored.</li>
       </ol>
 
       <h3>The Six Major AI Search Surfaces</h3>
 
-      <p>Birmingham businesses must consider visibility across six distinct AI search platforms, each with a different retrieval mechanism:</p>
+      <p>Birmingham businesses need visibility across six platforms. Each retrieves differently:</p>
 
       <ol>
-        <li><strong>ChatGPT (OpenAI)</strong> — the most widely adopted AI assistant globally. ChatGPT retrieves real-time web results via Bing and its own browsing infrastructure. It actively cites sources with links when answering factual queries.</li>
-        <li><strong>Perplexity</strong> — a dedicated AI search engine positioned as a research tool. Perplexity cites sources with numbered references and is notably transparent about information provenance. Usage is growing rapidly among professionals and researchers.</li>
-        <li><strong>Claude (Anthropic)</strong> — deployed extensively in professional and enterprise contexts. Claude accesses web content when enabled and is increasingly embedded in business workflows where procurement decisions occur.</li>
-        <li><strong>Microsoft Copilot</strong> — integrated into Bing, Windows, Edge, and Microsoft 365. For Birmingham businesses whose clients operate in corporate environments using Microsoft infrastructure, Copilot visibility is critical. Recommendations surface inside the applications where decisions are made.</li>
-        <li><strong>Google AI Overviews (AIO)</strong> — Google's AI-generated summaries displayed above traditional search results. AIO draws from pages that already rank organically, making it the bridge between traditional SEO and AI search. It is the highest-volume AI search surface because it intercepts existing Google traffic.</li>
-        <li><strong>Apple Intelligence</strong> — Apple's AI layer across iPhone, iPad, and Mac. As Apple integrates AI-powered search into Safari and Siri, businesses visible to Apple's systems access the premium consumer demographic that Apple's user base represents.</li>
+        <li><strong>ChatGPT (OpenAI)</strong> &mdash; most widely adopted AI assistant globally. Retrieves real-time results via Bing and its own browsing. Cites sources with links.</li>
+        <li><strong>Perplexity</strong> &mdash; AI search engine built for research. Numbered source citations. Transparent provenance. Growing fast among professionals.</li>
+        <li><strong>Claude (Anthropic)</strong> &mdash; strong in enterprise and professional contexts. Accesses web content when enabled. Embedded in business workflows where buying decisions happen.</li>
+        <li><strong>Microsoft Copilot</strong> &mdash; integrated into Bing, Windows, Edge, and Microsoft 365. For Birmingham businesses whose clients run Microsoft infrastructure, Copilot visibility is non-negotiable. Recommendations surface inside the apps where decisions are made.</li>
+        <li><strong>Google AI Overviews (AIO)</strong> &mdash; AI summaries above organic results. Draws from pages already ranking organically. Highest-volume AI surface because it intercepts existing Google traffic.</li>
+        <li><strong>Apple Intelligence</strong> &mdash; Apple's AI layer across iPhone, iPad, Mac. As AI-powered search integrates into Safari and Siri, businesses visible here access the premium consumer demographic.</li>
       </ol>
     </section>
 
@@ -141,79 +143,79 @@ const articleSchema = {
     <section>
       <h2>Why Birmingham Businesses Need AI Search Optimisation</h2>
 
-      <p>AI search adoption is accelerating faster than any previous shift in search behaviour. ChatGPT reached 100 million users faster than any consumer application in history. Google AI Overviews now appear on over 30% of search queries. Perplexity processes millions of queries daily. For Birmingham businesses, ignoring AI search in 2026 is equivalent to ignoring mobile search in 2015 &mdash; a strategic error that compounds over time.</p>
+      <p>ChatGPT hit 100 million users faster than any app in history. Google AI Overviews appear on 30%+ of queries. Perplexity processes millions daily. Ignoring AI search in 2026 is like ignoring mobile in 2015. The cost compounds every month you wait.</p>
 
-      <h3>The Birmingham-Specific Opportunity</h3>
+      <h3>The Birmingham Opportunity</h3>
 
-      <p>Birmingham is the UK's second-largest city and the most economically diverse metropolitan area outside London. This creates sector-specific AI search opportunities across the city's distinct commercial districts:</p>
+      <p>Birmingham is the UK's second city. Most economically diverse metro outside London. That creates sector-specific AI search opportunities across distinct commercial districts:</p>
 
       <ul>
-        <li><strong>Colmore Business District</strong> — Birmingham's financial and professional services hub. Accountancy firms, solicitors, and consultancies are already subjects of AI search queries. A user prompting ChatGPT with "best corporate solicitor in Birmingham" receives an AI-generated recommendation. Firms absent from the cited sources cede that positioning to competitors.</li>
-        <li><strong>Jewellery Quarter</strong> — home to over 700 jewellery-related businesses and the largest concentration of jewellery enterprises in Europe. When a customer queries Perplexity for "best engagement ring shops in Birmingham Jewellery Quarter", the AI cites whichever businesses present the clearest entity signals and most authoritative content.</li>
-        <li><strong>Digbeth</strong> — Birmingham's creative and technology quarter, hosting startups, agencies, and independent businesses. Founders in Digbeth stand to gain disproportionately from AI search because their customer base already uses AI tools as a primary discovery mechanism.</li>
-        <li><strong>Broad Street and Brindleyplace</strong> — the leisure, hospitality, and events corridor. Restaurant recommendations, venue comparisons, and bar reviews rank among the most frequent query categories posed to AI assistants.</li>
-        <li><strong>Aston and the wider manufacturing belt</strong> — Birmingham's manufacturing sector serves global supply chains. B2B buyers increasingly use AI tools to research suppliers, compare specifications, and shortlist vendors. A precision engineering firm in Aston that appears in ChatGPT's sourcing recommendations gains a measurable competitive advantage.</li>
+        <li><strong>Colmore Business District</strong> &mdash; financial and professional services hub. When someone asks ChatGPT "best corporate solicitor in Birmingham," it generates a recommendation. Firms not cited cede that ground to competitors. Every time.</li>
+        <li><strong>Jewellery Quarter</strong> &mdash; 700+ jewellery businesses, largest concentration in Europe. When a customer queries Perplexity for "best engagement ring shops Birmingham Jewellery Quarter," the AI cites whoever presents the clearest entity signals. Not the biggest brand. The clearest signal.</li>
+        <li><strong>Digbeth</strong> &mdash; tech and creative quarter. Startups here gain disproportionately from AI search because their customer base already uses AI tools as a primary discovery channel.</li>
+        <li><strong>Broad Street and Brindleyplace</strong> &mdash; leisure, hospitality, events. Restaurant recommendations and venue comparisons are among the most frequent AI query categories.</li>
+        <li><strong>Aston and the manufacturing belt</strong> &mdash; B2B buyers use AI tools to research suppliers, compare specs, and shortlist vendors. A precision engineering firm in Aston that appears in ChatGPT sourcing recommendations wins business that competitors never even knew existed.</li>
       </ul>
 
       <h3>The Zero-Click Problem</h3>
 
-      <p>AI search creates a "zero-click" challenge that is already affecting Birmingham businesses. When Google AI Overviews or ChatGPT answer a question directly, the user frequently obtains the information they require without visiting any website. Research indicates that AI Overviews reduce click-through rates by 30-60% for informational queries.</p>
+      <p>AI search creates a zero-click problem. When Google AI Overviews or ChatGPT answer a question directly, the user gets what they need without visiting any website. Research shows AI Overviews cut click-through rates by 30-60% for informational queries.</p>
 
-      <p>For a Birmingham accountant whose website previously ranked position three for "capital gains tax rates UK", the traffic from that ranking may have halved as Google now answers the question directly via an AI Overview. The solution is not to resist the AI Overview but to become the source it cites. When Google's AI Overview states "according to [your firm]..." the business gains brand authority and the citation link, even as aggregate click volume declines.</p>
+      <p>For a Birmingham accountant who ranked position three for "capital gains tax rates UK," traffic from that ranking may have halved. Google now answers it directly via AI Overview. The fix is not fighting the AI Overview. The fix is becoming its source. When Google's AI Overview says "according to [your firm]..." you win brand authority and the citation link, even as total clicks decline.</p>
 
-      <p>Consider a practical scenario: a couple planning their wedding asks ChatGPT, "best jewellery shops in Birmingham Jewellery Quarter for engagement rings." ChatGPT generates a curated list of four or five shops with brief descriptions. If a shop is absent from that list, the couple will never discover it. That is the commercial reality of AI search in 2026.</p>
+      <p>Practical scenario: a couple asks ChatGPT "best jewellery shops in Birmingham Jewellery Quarter for engagement rings." ChatGPT names four or five shops. If you are not on that list, the couple never discovers you. That is the commercial reality of AI search in 2026.</p>
     </section>
 
     <!-- Section 3: How AI Search Engines Find and Cite Sources -->
     <section>
       <h2>How AI Search Engines Find and Cite Sources</h2>
 
-      <p>Understanding how AI search engines select sources for citation is foundational to any optimisation strategy. The process diverges significantly from traditional search engine crawling and indexing.</p>
+      <p>Understanding the selection mechanism is everything. It works differently from traditional crawling and indexing.</p>
 
       <h3>Crawling and Training Data</h3>
 
-      <p>Large language models are trained on extensive datasets comprising web pages, books, academic papers, and other text corpora. This training establishes the model's baseline knowledge. However, training data has a cutoff date, meaning the model's representation of a website may be months or years old. This limitation makes real-time retrieval critical.</p>
+      <p>LLMs train on vast datasets: web pages, books, papers. This sets baseline knowledge. But training data has a cutoff date &mdash; the model's picture of your site may be months old. That makes real-time retrieval critical.</p>
 
-      <p>AI search platforms such as ChatGPT and Perplexity supplement training data with live web retrieval. When a user submits a query, the system searches the web in real time, retrieves relevant pages, and synthesises an answer from combined sources. This retrieval mechanism is termed RAG &mdash; Retrieval-Augmented Generation.</p>
+      <p>ChatGPT and Perplexity supplement training data with live web retrieval. User submits a query. System searches the web in real time. Retrieves relevant pages. Synthesises an answer. This is RAG &mdash; Retrieval-Augmented Generation.</p>
 
-      <h3>RAG and How It Selects Sources</h3>
+      <h3>RAG: How It Selects Sources</h3>
 
-      <p>Retrieval-Augmented Generation operates in three stages:</p>
+      <p>Three stages:</p>
 
       <ol>
-        <li><strong>Query interpretation</strong> — the AI system analyses the user's question to identify core intent and the entities involved (e.g., "jewellery shops" + "Birmingham" + "engagement rings").</li>
-        <li><strong>Source retrieval</strong> — the system searches the web (typically via Bing or a proprietary index) and retrieves top-matching pages. Pages that clearly correspond to the query's entities and intent are prioritised.</li>
-        <li><strong>Answer generation</strong> — the AI reads retrieved pages and synthesises an answer, citing the sources from which it drew. Pages containing clear, direct statements are easier for the AI to extract from and more likely to receive citation.</li>
+        <li><strong>Query interpretation</strong> &mdash; the AI parses intent and entities (e.g., "jewellery shops" + "Birmingham" + "engagement rings").</li>
+        <li><strong>Source retrieval</strong> &mdash; searches the web (typically Bing or a proprietary index), retrieves top-matching pages. Pages that clearly match the query's entities win.</li>
+        <li><strong>Answer generation</strong> &mdash; reads retrieved pages, synthesises an answer, cites its sources. Clear, direct statements are easier to extract and more likely to receive citation.</li>
       </ol>
 
       <h3>What Makes a Source Citable</h3>
 
-      <p>Through extensive testing across AI search platforms, five factors consistently determine whether a source receives citation:</p>
+      <p>Five factors. Consistently. Across every AI platform we have tested:</p>
 
       <ul>
-        <li><strong>Authority</strong> — the source is recognised as credible. Domain authority, backlink profile, and entity mentions across the web all contribute. A Birmingham solicitor referenced on The Law Society website carries more weight than one with no third-party validation.</li>
-        <li><strong>Structure</strong> — content is well-organised with clear headings, declarative statements, and logical hierarchy. AI systems struggle to extract useful information from unstructured blocks of text.</li>
-        <li><strong>Freshness</strong> — recently updated content signals relevance. Pages with visible publish and update dates are favoured over undated material.</li>
-        <li><strong>Entity clarity</strong> — the source makes it unambiguous who is speaking, what they offer, and where they operate. A page stating "Smith &amp; Partners is a Birmingham-based accountancy firm specialising in R&amp;D tax credits" is materially more citable than one vaguely discussing accounting services.</li>
-        <li><strong>Direct answers</strong> — content that directly addresses probable questions in clear, concise language. The "Quick Answer" pattern (a brief, definitive statement at the top of a section) is highly effective because AI systems can extract it verbatim.</li>
+        <li><strong>Authority</strong> &mdash; domain strength, backlink profile, third-party entity mentions. A Birmingham solicitor referenced on The Law Society website beats one with no third-party validation.</li>
+        <li><strong>Structure</strong> &mdash; clear headings, declarative statements, logical hierarchy. AI struggles with unstructured text blocks.</li>
+        <li><strong>Freshness</strong> &mdash; recently updated content signals relevance. Visible publish and update dates outperform undated pages.</li>
+        <li><strong>Entity clarity</strong> &mdash; "Smith &amp; Partners is a Birmingham-based accountancy firm specialising in R&amp;D tax credits" is citable. "We offer accounting services" is not.</li>
+        <li><strong>Direct answers</strong> &mdash; content that addresses probable questions in clear, concise language. The Quick Answer pattern (brief definitive statement at the top) works because AI can extract it verbatim.</li>
       </ul>
 
       <h3>The Role of Structured Data</h3>
 
-      <p>Schema.org structured data provides a machine-readable layer that AI systems parse directly. While traditional search engines use structured data primarily for rich results, AI systems use it to understand entity relationships, verify factual claims, and determine the scope of a business's services and geographic coverage.</p>
+      <p>Schema.org structured data gives AI systems a machine-readable layer they parse directly. Traditional search uses it for rich results. AI uses it to understand entity relationships, verify facts, and scope a business's services and geography.</p>
 
-      <p>For Birmingham businesses, <a href="/technical-seo-birmingham/">deploying LocalBusiness, Service, FAQPage, and Product schema</a> creates a structured data fingerprint that AI systems can match against user queries with high confidence.</p>
+      <p>For Birmingham businesses, <a href="/technical-seo-birmingham/">deploying LocalBusiness, Service, FAQPage, and Product schema</a> creates a structured fingerprint AI can match against queries with high confidence.</p>
 
       <h3>llms.txt and Machine-Readable Content</h3>
 
-      <p>Beyond schema markup, a new generation of machine-readable content standards is emerging. The llms.txt file (detailed in Section 5 below) provides AI systems with a curated summary of a website's most important content. Combined with clean HTML semantics and accessible content structure, these signals form the foundation of AI search visibility.</p>
+      <p>Beyond schema, a new standard is emerging. The llms.txt file (Section 5 below) gives AI systems a curated summary of your site. Combined with clean HTML semantics and accessible content structure, these signals form the foundation of AI search visibility.</p>
     </section>
 
     <!-- Section 4: The AI Search Optimisation Framework -->
     <section>
       <h2>The AI Search Optimisation Framework</h2>
 
-      <p>Effective AI search optimisation follows a five-stage framework. Each stage builds on its predecessor, creating a compounding effect that increases visibility across all AI search platforms simultaneously.</p>
+      <p>Five stages. Each builds on the last. Skip one and the chain weakens.</p>
 
       <!-- Inline SVG: Framework Diagram -->
       <svg width="100%" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Search Optimisation Framework: Entity Clarity leads to Structured Data, then Content Authority, Citation Signals, and finally AI Visibility">
@@ -266,68 +268,68 @@ const articleSchema = {
 
       <h3>Stage 1: Entity Clarity</h3>
 
-      <p>Entity clarity is the foundation of AI search visibility. AI models do not operate on keywords. They operate on entities &mdash; distinct, identifiable things: a business, a location, a concept. The objective is to make a business an unambiguous entity that AI systems can identify and reference with confidence.</p>
+      <p>AI models do not operate on keywords. They operate on entities &mdash; distinct, identifiable things. The objective: make your business an unambiguous entity AI can reference with confidence.</p>
 
-      <p>For a Birmingham business, entity clarity requires:</p>
+      <p>For a Birmingham business, that means:</p>
 
       <ul>
-        <li><strong>NAP consistency</strong> — Name, Address, and Phone number must be identical across the website, Google Business Profile, Companies House listing, Yell.com, and every directory or platform where the business appears. Inconsistencies create entity confusion for AI systems.</li>
-        <li><strong>Google Knowledge Panel</strong> — claiming and optimising the Knowledge Panel establishes the business as a recognised entity in Google's Knowledge Graph, which feeds into AI Overviews.</li>
-        <li><strong>Wikidata and Wikipedia</strong> — for larger Birmingham businesses, a Wikidata entry creates a persistent entity reference that AI training data captures. This is the gold standard for entity recognition.</li>
-        <li><strong>Definitive "About" page</strong> — the <a href="/about/">about page</a> should contain a structured description that reads like an encyclopaedia entry: what the business is, what it does, where it operates, when it was established, and why it holds authority in its field.</li>
+        <li><strong>NAP consistency</strong> &mdash; Name, Address, Phone identical across your website, Google Business Profile, Companies House, Yell.com, every directory. Inconsistencies create entity confusion. AI gets confused, AI moves on.</li>
+        <li><strong>Google Knowledge Panel</strong> &mdash; claim and optimise it. Establishes your business in Google's Knowledge Graph, which feeds directly into AI Overviews.</li>
+        <li><strong>Wikidata and Wikipedia</strong> &mdash; for larger Birmingham businesses, a Wikidata entry creates a persistent entity reference that AI training captures. Gold standard for recognition.</li>
+        <li><strong>Definitive About page</strong> &mdash; your <a href="/about/">about page</a> should read like an encyclopaedia entry. What the business is. What it does. Where it operates. When it started. Why it holds authority.</li>
       </ul>
 
       <h3>Stage 2: Structured Data</h3>
 
-      <p>Structured data provides the machine-readable schema that AI systems use to verify and categorise a business. While traditional SEO uses structured data for rich results, AI search uses it as a factual backbone.</p>
+      <p>Structured data provides the machine-readable schema AI uses to verify and categorise a business. Traditional SEO uses it for rich results. AI search uses it as a factual backbone.</p>
 
-      <p>Essential schema types for AI search optimisation:</p>
+      <p>Essential schema types:</p>
 
       <ul>
-        <li><strong>LocalBusiness or Organization</strong> — establishes the business entity with name, address, contact details, and service area.</li>
-        <li><strong>Service</strong> — defines each service offered, linking it to the business entity and geographic coverage.</li>
-        <li><strong>FAQPage</strong> — marks up questions and answers for direct AI extraction. FAQ schema is particularly effective for AI citation because it pre-formats content in the exact question-answer structure AI models use.</li>
-        <li><strong>HowTo</strong> — structured step-by-step instructions that AI systems can present as procedural answers.</li>
-        <li><strong>Product</strong> — for Birmingham retailers, product schema with pricing, availability, and reviews provides the structured data AI shopping assistants require.</li>
+        <li><strong>LocalBusiness or Organization</strong> &mdash; establishes the entity with name, address, contact, service area.</li>
+        <li><strong>Service</strong> &mdash; defines each service, links it to the entity and geography.</li>
+        <li><strong>FAQPage</strong> &mdash; marks up Q&amp;A for direct AI extraction. Highly effective because it pre-formats content in the exact structure AI models use.</li>
+        <li><strong>HowTo</strong> &mdash; step-by-step instructions AI can present as procedural answers.</li>
+        <li><strong>Product</strong> &mdash; for Birmingham retailers, product schema with pricing, availability, and reviews gives AI shopping assistants what they need.</li>
       </ul>
 
       <h3>Stage 3: Content Authority</h3>
 
-      <p>Content authority for AI search differs from content authority in traditional SEO. AI systems do not reward word count or keyword frequency. They reward comprehensiveness, directness, and verifiability.</p>
+      <p>AI does not reward word count or keyword frequency. It rewards comprehensiveness, directness, and verifiability.</p>
 
-      <p>Authoritative content for AI search follows these principles:</p>
+      <p>Rules:</p>
 
       <ul>
-        <li>Open every section with a declarative statement that could be quoted verbatim by an AI system.</li>
-        <li>Include specific, verifiable data points rather than vague claims. "Birmingham has over 700 jewellery businesses in the Jewellery Quarter" is citable. "Birmingham has a thriving jewellery scene" is not.</li>
-        <li>Structure content with clear heading hierarchies that signal topic relationships.</li>
-        <li>Answer the most common questions about the topic directly, without requiring the reader or AI system to infer the answer from surrounding context.</li>
-        <li>Update content regularly with visible timestamps. AI systems prioritise fresh sources.</li>
+        <li>Open every section with a declarative statement an AI can quote verbatim.</li>
+        <li>Include specific, verifiable data. "Birmingham has over 700 jewellery businesses in the Jewellery Quarter" is citable. "Birmingham has a thriving jewellery scene" is not.</li>
+        <li>Structure content with clear heading hierarchies.</li>
+        <li>Answer common questions directly. Do not make the reader or the AI infer the answer.</li>
+        <li>Update regularly with visible timestamps. AI prioritises fresh sources.</li>
       </ul>
 
       <h3>Stage 4: Citation Signals</h3>
 
-      <p>Citation signals are the AI-era equivalent of backlinks. When a business is mentioned consistently across authoritative third-party sources, AI systems treat those mentions as validation of the entity's authority and accuracy.</p>
+      <p>Citation signals are the AI-era backlinks. Consistent mentions across authoritative third-party sources tell AI your entity is real, trusted, and accurate.</p>
 
       <p>Effective citation signals for Birmingham businesses:</p>
 
       <ul>
-        <li>Mentions on industry bodies (The Law Society, ICAEW, RICS, relevant trade associations)</li>
-        <li>Features in local and national media (Birmingham Mail, Birmingham Live, BBC Midlands)</li>
-        <li>Consistent directory listings (Yell, Bark, Clutch, Trustpilot, Google Business Profile)</li>
-        <li>Guest content on authoritative sites within the relevant sector</li>
-        <li>Client testimonials and reviews that reference the business name and location</li>
+        <li>Industry bodies (The Law Society, ICAEW, RICS, trade associations)</li>
+        <li>Local and national media (Birmingham Mail, Birmingham Live, BBC Midlands)</li>
+        <li>Directory listings (Yell, Bark, Clutch, Trustpilot, Google Business Profile)</li>
+        <li>Guest content on authoritative sector sites</li>
+        <li>Client reviews that reference business name and location</li>
       </ul>
 
       <h3>Stage 5: AI Visibility</h3>
 
-      <p>The final stage ensures AI systems can physically access and process content. This involves technical implementation that many Birmingham businesses overlook:</p>
+      <p>The final stage: make sure AI systems can physically access and process your content. Most Birmingham businesses overlook this.</p>
 
       <ul>
-        <li>llms.txt file at the domain root (detailed below)</li>
+        <li>llms.txt file at domain root (detailed below)</li>
         <li>robots.txt configured to permit AI crawlers</li>
-        <li>Content formatted for direct extraction (quick answer boxes, tables, numbered lists)</li>
-        <li>Regular monitoring of AI search platforms to track citation frequency and accuracy</li>
+        <li>Content formatted for extraction (quick answer boxes, tables, numbered lists)</li>
+        <li>Regular monitoring of AI platforms to track citation frequency and accuracy</li>
       </ul>
     </section>
 
@@ -335,46 +337,42 @@ const articleSchema = {
     <section>
       <h2>llms.txt &mdash; The New Standard for AI Discoverability</h2>
 
-      <p>llms.txt is a proposed web standard (documented at llmstxt.org) that gives large language models a structured, human-readable summary of a website. It functions as a counterpart to robots.txt for AI comprehension &mdash; where robots.txt controls which pages can be crawled, llms.txt tells AI systems what the website is about and which pages contain the most important content.</p>
+      <p>llms.txt is a proposed web standard (llmstxt.org) that gives LLMs a structured, human-readable summary of a website. Where robots.txt controls which pages can be crawled, llms.txt tells AI systems what the site is about and which pages matter most.</p>
 
       <h3>How llms.txt Works</h3>
 
-      <p>The llms.txt file resides at the domain root (e.g., yourbusiness.co.uk/llms.txt) and contains a Markdown-formatted summary. It typically includes:</p>
+      <p>The file sits at the domain root (e.g., yourbusiness.co.uk/llms.txt). Markdown format. Contains:</p>
 
       <ul>
-        <li>A one-paragraph description of the business and its services</li>
-        <li>Core services and geographic coverage areas</li>
-        <li>Links to the most important pages with brief descriptions</li>
-        <li>Key facts that AI systems should associate with the business</li>
+        <li>One-paragraph business description and services</li>
+        <li>Core services and geographic coverage</li>
+        <li>Links to most important pages with brief descriptions</li>
+        <li>Key facts AI should associate with the business</li>
         <li>Contact information and service area boundaries</li>
       </ul>
 
-      <h3>What to Include in llms.txt for a Birmingham Business</h3>
-
-      <p>A well-structured llms.txt for a Birmingham business should contain:</p>
+      <h3>What to Include for a Birmingham Business</h3>
 
       <ol>
-        <li><strong>Business identity</strong> &mdash; "Smith &amp; Partners is a chartered accountancy firm based in the Colmore Business District, Birmingham, West Midlands. Established 2004."</li>
-        <li><strong>Service summary</strong> &mdash; a concise list of core services with one-sentence descriptions.</li>
-        <li><strong>Geographic scope</strong> &mdash; "We serve businesses across Birmingham, Solihull, the Black Country, and the wider West Midlands region."</li>
-        <li><strong>Authority signals</strong> &mdash; professional accreditations, awards, and notable clients (where permitted).</li>
-        <li><strong>Key pages</strong> &mdash; direct links to service pages, about page, and contact page with brief annotations.</li>
+        <li><strong>Business identity</strong> &mdash; "Smith &amp; Partners is a chartered accountancy firm in the Colmore Business District, Birmingham, West Midlands. Established 2004."</li>
+        <li><strong>Service summary</strong> &mdash; concise list, one-sentence descriptions.</li>
+        <li><strong>Geographic scope</strong> &mdash; "We serve businesses across Birmingham, Solihull, the Black Country, and the wider West Midlands."</li>
+        <li><strong>Authority signals</strong> &mdash; accreditations, awards, notable clients (where permitted).</li>
+        <li><strong>Key pages</strong> &mdash; direct links with brief annotations.</li>
       </ol>
 
-      <h3>How llms.txt Differs from robots.txt</h3>
+      <h3>llms.txt vs robots.txt</h3>
 
-      <p>robots.txt is a directive file that instructs crawlers which pages they may or may not access. It is a gatekeeper. llms.txt is an informational file that provides context and guidance to AI systems. It is a guide. The two serve complementary purposes: robots.txt controls access; llms.txt provides understanding. Both should exist at the domain root.</p>
+      <p>robots.txt is a gatekeeper: which pages can crawlers access? llms.txt is a guide: what is this site about? The two are complementary. robots.txt controls access. llms.txt provides understanding. Both belong at the domain root.</p>
     </section>
 
     <!-- Section 6: Robots.txt for AI Crawlers -->
     <section>
       <h2>Robots.txt Configuration for AI Crawlers</h2>
 
-      <p>The robots.txt file determines whether AI search engines can access website content. Many Birmingham businesses inadvertently block AI crawlers through overly restrictive default configurations or security plugins that classify AI bots as threats.</p>
+      <p>Your robots.txt determines whether AI search engines can see your content. Many Birmingham businesses block AI crawlers by accident &mdash; restrictive defaults, security plugins treating AI bots as threats.</p>
 
       <h3>AI Crawler User Agents to Allow</h3>
-
-      <p>The following user agents should be explicitly permitted in robots.txt for AI search visibility:</p>
 
       <table>
         <thead>
@@ -393,131 +391,131 @@ const articleSchema = {
           <tr>
             <td>ChatGPT-User</td>
             <td>ChatGPT browsing</td>
-            <td>User-initiated browsing within ChatGPT conversations</td>
+            <td>User-initiated browsing within conversations</td>
           </tr>
           <tr>
             <td>ClaudeBot</td>
             <td>Claude (Anthropic)</td>
-            <td>Web retrieval for Claude's search capabilities</td>
+            <td>Web retrieval for search capabilities</td>
           </tr>
           <tr>
             <td>PerplexityBot</td>
             <td>Perplexity</td>
-            <td>Source retrieval for Perplexity search answers</td>
+            <td>Source retrieval for search answers</td>
           </tr>
           <tr>
             <td>Bingbot</td>
             <td>Microsoft Copilot / Bing</td>
-            <td>Feeds into Copilot and Bing Chat responses</td>
+            <td>Feeds Copilot and Bing Chat responses</td>
           </tr>
           <tr>
             <td>Googlebot</td>
             <td>Google AI Overviews</td>
-            <td>Standard Googlebot &mdash; AIO uses existing index</td>
+            <td>AIO uses the existing Google index</td>
           </tr>
           <tr>
             <td>Applebot</td>
             <td>Apple Intelligence / Siri</td>
-            <td>Powers Apple's AI features and search suggestions</td>
+            <td>Powers Apple AI features and search</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>Common Configuration Errors</h3>
+      <h3>Common Mistakes</h3>
 
-      <p>The most frequent robots.txt mistakes our team encounters on Birmingham business websites:</p>
+      <p>We see these on Birmingham business sites constantly:</p>
 
       <ul>
-        <li><strong>Blanket disallow for unknown bots</strong> &mdash; security plugins that block any unrecognised user agent will block AI crawlers by default. This is the single most common reason Birmingham businesses are invisible to AI search.</li>
-        <li><strong>Blocking with Cloudflare or WAF rules</strong> &mdash; web application firewalls that challenge or block automated requests can prevent AI crawlers from accessing content, even when robots.txt permits them.</li>
-        <li><strong>Omitting ChatGPT-User</strong> &mdash; GPTBot and ChatGPT-User are separate user agents. Allowing GPTBot but blocking ChatGPT-User means content is available for training but not for real-time user queries.</li>
-        <li><strong>No robots.txt at all</strong> &mdash; while this technically allows all crawlers, it forfeits the opportunity to direct them toward the most important content using Sitemap directives.</li>
+        <li><strong>Blanket disallow for unknown bots</strong> &mdash; security plugins block any unrecognised user agent. AI crawlers get caught. This is the single most common reason Birmingham businesses are invisible to AI search.</li>
+        <li><strong>Cloudflare or WAF blocking</strong> &mdash; firewalls that challenge automated requests prevent AI crawlers from reaching content, even when robots.txt allows them.</li>
+        <li><strong>Omitting ChatGPT-User</strong> &mdash; GPTBot and ChatGPT-User are separate agents. Allow GPTBot but block ChatGPT-User and your content is available for training but not for real-time user queries. That defeats the purpose.</li>
+        <li><strong>No robots.txt at all</strong> &mdash; technically allows all crawlers, but you lose the ability to direct them via Sitemap directives.</li>
       </ul>
 
       <h3>Verifying AI Crawler Access</h3>
 
-      <p>To confirm AI crawlers can access a Birmingham business website: test the robots.txt using Google's robots.txt tester (available in Search Console), manually review user agent rules for each AI bot listed above, and examine server logs for crawl activity from GPTBot, ClaudeBot, and PerplexityBot. For Cloudflare-protected sites, review firewall analytics for blocked requests from AI user agents. The <a href="/technical-seo-birmingham/">technical SEO</a> configuration should ensure these bots have unimpeded access.</p>
+      <p>Test with Google's robots.txt tester in Search Console. Review user agent rules for each AI bot listed above. Check server logs for GPTBot, ClaudeBot, and PerplexityBot activity. On Cloudflare, review firewall analytics for blocked AI requests. <a href="/technical-seo-birmingham/">Technical SEO</a> should ensure these bots have unimpeded access.</p>
     </section>
 
     <!-- Section 7: Content Structure for AI Citation -->
     <section>
       <h2>Content Structure for AI Citation</h2>
 
-      <p>Content structure directly determines whether AI systems can extract and cite information. AI models perform well with structured, declarative content and poorly with ambiguous, conversational, or disorganised text.</p>
+      <p>Structure determines citation. AI performs well with declarative, organised content. It performs poorly with vague, conversational text.</p>
 
       <h3>Declarative First Sentences</h3>
 
-      <p>Every major section should open with a declarative statement that defines the topic. This is the sentence most likely to be quoted by an AI system. Compare:</p>
+      <p>Every section should open with a declarative statement. This is the sentence an AI will quote. Compare:</p>
 
       <ul>
         <li><strong>Weak:</strong> "You might be wondering what makes a good accountant in Birmingham..."</li>
         <li><strong>Strong:</strong> "A chartered accountant in Birmingham provides tax compliance, financial reporting, and advisory services to businesses across the West Midlands."</li>
       </ul>
 
-      <p>The strong version can be extracted verbatim by an AI system and presented as a factual answer. The weak version is conversational filler that AI models discard.</p>
+      <p>The strong version can be extracted verbatim. The weak version is filler. AI discards filler.</p>
 
       <h3>FAQ Sections with Direct Answers</h3>
 
-      <p>FAQ sections are among the most effective content structures for AI search. They mirror the question-answer format AI systems use natively. Each answer should:</p>
+      <p>FAQs mirror the question-answer format AI uses natively. Each answer should:</p>
 
       <ul>
-        <li>Begin with a direct answer in the first sentence</li>
-        <li>Provide supporting detail in 2-3 additional sentences</li>
-        <li>Include specific facts, figures, or examples where available</li>
-        <li>Be self-contained &mdash; the answer should be comprehensible without reading the rest of the page</li>
+        <li>Start with a direct answer in sentence one</li>
+        <li>Add 2-3 sentences of supporting detail</li>
+        <li>Include specific facts or figures where available</li>
+        <li>Be self-contained &mdash; comprehensible without reading the rest of the page</li>
       </ul>
 
       <h3>Tables and Structured Comparisons</h3>
 
-      <p>HTML tables are highly effective for AI citation because they present information in a structured format machines can parse directly. Price comparisons, feature matrices, and service breakdowns formatted as tables are materially more likely to be cited than the same data embedded in paragraph text.</p>
+      <p>HTML tables present data in a format machines parse directly. Price comparisons, feature matrices, service breakdowns in table format are far more likely to be cited than the same data buried in paragraphs.</p>
 
       <h3>The Quick Answer Pattern</h3>
 
-      <p>The Quick Answer pattern positions a concise, authoritative summary at the top of a page or section, preceding detailed content. This mirrors how AI Overviews function &mdash; they present a brief answer with the option to explore further. Structuring content this way pre-formats it for AI extraction. The callout box at the top of this page demonstrates the pattern.</p>
+      <p>A concise, authoritative summary at the top of a page, before the detailed content. This mirrors how AI Overviews work: brief answer, option to dig deeper. Pre-formats your content for extraction. The callout at the top of this page demonstrates it.</p>
 
       <h3>Eliminating Low-Value Content</h3>
 
-      <p>AI systems deprioritise content that lacks substance. Phrases such as "we are passionate about delivering excellence" or "our team of dedicated professionals" are invisible to AI citation algorithms because they contain no extractable information. Every sentence should either state a fact, answer a question, or provide a specific insight. If a sentence could apply to any business in any city, it does not belong on the page.</p>
+      <p>AI deprioritises content with no substance. "We are passionate about delivering excellence" contains zero extractable information. Kill it. Every sentence must state a fact, answer a question, or deliver a specific insight. If a sentence could apply to any business in any city, delete it.</p>
     </section>
 
     <!-- Section 8: Google AI Overviews -->
     <section>
       <h2>Google AI Overviews and Birmingham Businesses</h2>
 
-      <p>Google AI Overviews (AIO) represent the most immediately impactful AI search surface for Birmingham businesses. They intercept existing Google search traffic. When a user searches Google and an AI Overview appears, it sits above all organic results, fundamentally altering which sources receive attention.</p>
+      <p>Google AI Overviews are the most immediately impactful AI search surface. They sit above all organic results. They intercept existing Google traffic. They are live now.</p>
 
       <h3>How AI Overviews Work</h3>
 
-      <p>Google generates AI Overviews by selecting content from pages that already rank organically for the query. The AI reads these pages, synthesises a summary, and cites source pages with links. Strong <a href="/seo-audit-birmingham/">traditional SEO performance</a> is therefore a prerequisite for AIO visibility &mdash; a page cannot appear in an AI Overview if it does not rank organically for the underlying query.</p>
+      <p>Google selects content from pages already ranking organically. Reads them. Synthesises a summary. Cites sources with links. Strong <a href="/seo-audit-birmingham/">traditional SEO performance</a> is a prerequisite &mdash; a page cannot appear in an AI Overview if it does not rank organically for the underlying query.</p>
 
-      <p>AI Overviews typically trigger for informational and commercial investigation queries. A search for "how much does a kitchen extension cost in Birmingham" will likely generate an AIO that draws cost estimates from local builder and surveyor websites. A search for "best pizza Birmingham" may produce an AIO synthesising reviews and recommendations.</p>
+      <p>AI Overviews trigger for informational and commercial investigation queries. "How much does a kitchen extension cost in Birmingham" generates an AIO pulling estimates from local builders. "Best pizza Birmingham" produces a synthesised recommendation.</p>
 
-      <h3>How to Achieve AI Overview Citation</h3>
+      <h3>How to Get Cited in AI Overviews</h3>
 
-      <p>Based on analysis of thousands of AI Overview citations, the following factors increase citation probability:</p>
+      <p>Based on analysis of thousands of AIO citations:</p>
 
       <ol>
-        <li><strong>Rank on page one organically</strong> &mdash; AIO almost exclusively cites pages from the top 10 organic results. Businesses not yet ranking should focus on <a href="/services/">traditional SEO services</a> first.</li>
-        <li><strong>Provide direct, specific answers</strong> &mdash; AIO favours content that addresses the query in 2-3 sentences, with supporting detail below.</li>
-        <li><strong>Include Birmingham-specific data</strong> &mdash; for local queries, AIO prioritises sources containing locally relevant information over generic national content.</li>
-        <li><strong>Use structured headings that match query intent</strong> &mdash; if the query is "cost of loft conversion Birmingham", an H2 reading "Loft Conversion Costs in Birmingham" creates a strong match signal.</li>
-        <li><strong>Maintain fresh, dated content</strong> &mdash; AIO favours recently updated sources, particularly for topics where information changes (pricing, regulations, availability).</li>
+        <li><strong>Rank on page one organically.</strong> AIO almost exclusively cites top-10 results. Not there yet? Focus on <a href="/services/">traditional SEO</a> first.</li>
+        <li><strong>Provide direct, specific answers.</strong> AIO favours content addressing the query in 2-3 sentences with detail below.</li>
+        <li><strong>Include Birmingham-specific data.</strong> For local queries, AIO prioritises locally relevant sources over generic national content.</li>
+        <li><strong>Match heading to query intent.</strong> Query is "cost of loft conversion Birmingham"? Your H2 should read "Loft Conversion Costs in Birmingham."</li>
+        <li><strong>Keep content fresh and dated.</strong> AIO favours recently updated sources, especially for pricing, regulations, and availability.</li>
       </ol>
 
       <h3>AIO Impact on Birmingham Local Search</h3>
 
-      <p>Local search queries increasingly trigger AI Overviews. Searches such as "plumber near me Birmingham", "best restaurant Brindleyplace", and "solicitor Colmore Row" now frequently generate AI-synthesised answers combining Google Business Profile data with website content. For Birmingham businesses, this means website content and Google Business Profile must present a consistent narrative that AI can synthesise coherently.</p>
+      <p>Local queries increasingly trigger AI Overviews. "Plumber near me Birmingham." "Best restaurant Brindleyplace." "Solicitor Colmore Row." These now generate AI-synthesised answers combining Google Business Profile data with website content. Your site and your GBP must tell the same story.</p>
 
-      <h3>AIO vs Traditional Featured Snippets</h3>
+      <h3>AIO vs Featured Snippets</h3>
 
-      <p>Featured snippets extract a single source and display it prominently. AI Overviews synthesise multiple sources into a generated answer. This means AI Overviews can cite a business that would not have won a traditional featured snippet, but the citation shares space with competitors. The strategic response is to ensure content is the most specific, authoritative, and locally relevant source available for target queries.</p>
+      <p>Featured snippets extract one source. AI Overviews synthesise multiple sources. You can get cited in an AI Overview even if you would not have won the featured snippet &mdash; but you share space with competitors. The response: be the most specific, authoritative, and locally relevant source for your target queries.</p>
     </section>
 
     <!-- Section 9: AI Search Landscape Comparison SVG -->
     <section>
       <h2>AI Search Platform Comparison</h2>
 
-      <p>Each AI search platform exhibits different capabilities and behaviours. Understanding these distinctions helps Birmingham businesses prioritise optimisation efforts effectively.</p>
+      <p>Different platforms, different behaviours. Knowing the distinctions lets you prioritise.</p>
 
       <svg width="100%" viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparison matrix of AI search platforms: ChatGPT, Perplexity, Claude, Microsoft Copilot, and Google AIO across four capability dimensions">
         <!-- Header row -->
@@ -572,42 +570,42 @@ const articleSchema = {
         <rect x="0" y="0" width="780" height="325" rx="6" fill="none" stroke="#d1d5db" stroke-width="1" />
       </svg>
 
-      <p>Microsoft Copilot and Google AIO currently provide the strongest local awareness because they integrate with Bing Places and Google Business Profile respectively. ChatGPT and Perplexity are improving local capabilities but depend more heavily on web content than structured local data. For Birmingham businesses, this means Google Business Profile optimisation and Bing Places verification remain essential alongside AI-specific content optimisation.</p>
+      <p>Copilot and Google AIO have the strongest local awareness because they integrate with Bing Places and Google Business Profile. ChatGPT and Perplexity are catching up but lean harder on web content than structured local data. For Birmingham businesses: Google Business Profile and Bing Places verification remain essential alongside AI-specific content work.</p>
     </section>
 
     <!-- Section 10: Measuring AI Search Performance -->
     <section>
       <h2>Measuring AI Search Performance</h2>
 
-      <p>Measuring AI search performance differs fundamentally from tracking traditional SEO metrics. There is no equivalent of Google Search Console for AI citations &mdash; yet. However, effective measurement is achievable through a combination of manual monitoring and emerging tooling.</p>
+      <p>No Google Search Console for AI citations. Not yet. But measurement is still possible through manual monitoring and emerging tools.</p>
 
       <h3>Manual Citation Tracking</h3>
 
-      <p>The most reliable method for tracking AI search visibility is structured manual testing. Run target queries across ChatGPT, Perplexity, Copilot, and Google (for AIO) and record whether the business is cited. Key query categories to monitor for a Birmingham business:</p>
+      <p>Run target queries across ChatGPT, Perplexity, Copilot, and Google (for AIO). Record whether your business is cited. Key query categories for a Birmingham business:</p>
 
       <ul>
-        <li>Brand name queries (e.g., "tell me about [business name] Birmingham")</li>
-        <li>Core service + location (e.g., "best [service] in Birmingham")</li>
-        <li>Comparison queries (e.g., "[service A] vs [service B] Birmingham")</li>
-        <li>Informational queries in the relevant niche (e.g., "how much does [service] cost in Birmingham")</li>
+        <li>Brand name queries ("tell me about [business] Birmingham")</li>
+        <li>Service + location ("best [service] in Birmingham")</li>
+        <li>Comparison queries ("[service A] vs [service B] Birmingham")</li>
+        <li>Cost queries ("how much does [service] cost in Birmingham")</li>
       </ul>
 
-      <p>Execute these tests weekly and log outcomes systematically. Over time, patterns emerge: which platforms cite most frequently, which queries the business is absent from, and how visibility shifts as optimisation progresses.</p>
+      <p>Run weekly. Log systematically. Patterns emerge fast: which platforms cite, which queries miss, how visibility shifts as you optimise.</p>
 
       <h3>Emerging Monitoring Tools</h3>
 
-      <p>Several tools are emerging to automate AI search monitoring, including Otterly.ai, HubSpot's AI Search Grader, and custom scripts that query AI APIs and parse responses for brand mentions. While tooling is still maturing, early adoption provides Birmingham businesses with a data advantage over competitors that are not tracking AI visibility at all.</p>
+      <p>Otterly.ai, HubSpot AI Search Grader, and custom scripts that query AI APIs and parse for brand mentions. Tooling is still maturing. Early adoption gives Birmingham businesses a data advantage over competitors not tracking AI visibility at all.</p>
 
       <h3>KPIs for AI Search</h3>
 
-      <p>Our team recommends the following measurable KPIs for AI search optimisation programmes:</p>
+      <p>Track these monthly:</p>
 
       <ul>
-        <li><strong>Citation frequency</strong> &mdash; how often the business is mentioned in AI answers for target queries. Track monthly.</li>
-        <li><strong>Citation accuracy</strong> &mdash; whether the AI's description of the business is factually correct. Inaccurate citations can be more damaging than no citation at all.</li>
-        <li><strong>Source link inclusion</strong> &mdash; whether the AI provides a link to the website alongside the citation. Linked citations drive traffic; unlinked citations drive brand awareness only.</li>
-        <li><strong>Competitive share of voice</strong> &mdash; how citation frequency compares to Birmingham competitors for the same queries.</li>
-        <li><strong>Referral traffic from AI sources</strong> &mdash; analytics data for traffic from chat.openai.com, perplexity.ai, and bing.com/chat domains.</li>
+        <li><strong>Citation frequency</strong> &mdash; how often your business appears in AI answers for target queries.</li>
+        <li><strong>Citation accuracy</strong> &mdash; whether the AI describes your business correctly. Wrong citations can hurt more than no citations.</li>
+        <li><strong>Source link inclusion</strong> &mdash; does the AI link to your site? Linked citations drive traffic. Unlinked citations drive brand awareness only.</li>
+        <li><strong>Competitive share of voice</strong> &mdash; your citation frequency versus Birmingham competitors for the same queries.</li>
+        <li><strong>AI referral traffic</strong> &mdash; analytics data from chat.openai.com, perplexity.ai, and bing.com/chat domains.</li>
       </ul>
     </section>
 
@@ -615,41 +613,41 @@ const articleSchema = {
     <section>
       <h2>AI Search Optimisation Services for Birmingham</h2>
 
-      <p>Colmore SEO's AI search optimisation service is built for Birmingham businesses that recognise the structural shift occurring in search and intend to lead rather than follow. Whether the client is a Colmore Row solicitor observing declining organic traffic from AI Overviews, a Jewellery Quarter retailer seeking ChatGPT recommendations, or a Digbeth technology company whose prospects use Perplexity for vendor research, our team develops a strategy tailored to the specific commercial context.</p>
+      <p>SEO Birmingham's AI search optimisation service is built for businesses that see the shift and want to lead it. Whether you are a Colmore Row solicitor watching organic traffic bleed to AI Overviews, a Jewellery Quarter retailer chasing ChatGPT recommendations, or a Digbeth tech company whose prospects live in Perplexity &mdash; we build a strategy for your specific commercial context.</p>
 
       <h3>What the Service Includes</h3>
 
       <ul>
-        <li><strong>AI search audit</strong> &mdash; our team tests visibility across all major AI search platforms, documents where the business appears and where it is absent, and identifies the specific gaps preventing citation.</li>
-        <li><strong>Entity optimisation</strong> &mdash; NAP consistency audit, Google Knowledge Panel strategy, Wikidata entry (where appropriate), and structured "About" content that establishes the entity clearly.</li>
-        <li><strong>Structured data implementation</strong> &mdash; comprehensive JSON-LD schema deployment including LocalBusiness, Service, FAQPage, Product, and Article schema as applicable.</li>
-        <li><strong>Content restructuring</strong> &mdash; rewriting key pages to follow AI citation best practices: declarative statements, quick answer patterns, FAQ sections, and direct-answer formatting.</li>
-        <li><strong>llms.txt and robots.txt configuration</strong> &mdash; creating the llms.txt file and ensuring all AI crawlers have unimpeded access to content.</li>
-        <li><strong>Citation building</strong> &mdash; securing consistent mentions across authoritative sources including directories, industry bodies, and local media.</li>
-        <li><strong>Ongoing monitoring</strong> &mdash; monthly AI search visibility reports tracking citation frequency, accuracy, and competitive share of voice across all platforms.</li>
+        <li><strong>AI search audit</strong> &mdash; we test visibility across every major AI platform, document where you appear and where you do not, and identify exactly what is blocking citation.</li>
+        <li><strong>Entity optimisation</strong> &mdash; NAP consistency audit, Knowledge Panel strategy, Wikidata entry where appropriate, structured About content that nails the entity.</li>
+        <li><strong>Structured data deployment</strong> &mdash; comprehensive JSON-LD: LocalBusiness, Service, FAQPage, Product, Article schema as needed.</li>
+        <li><strong>Content restructuring</strong> &mdash; rewriting key pages for AI citation: declarative statements, quick answer patterns, FAQ sections, direct-answer formatting.</li>
+        <li><strong>llms.txt and robots.txt</strong> &mdash; creating llms.txt and ensuring every AI crawler has unimpeded access.</li>
+        <li><strong>Citation building</strong> &mdash; securing consistent mentions across directories, industry bodies, and local media.</li>
+        <li><strong>Monthly monitoring</strong> &mdash; AI search visibility reports tracking citation frequency, accuracy, and competitive share of voice.</li>
       </ul>
 
-      <h3>Who This Service Is For</h3>
+      <h3>Who This Is For</h3>
 
-      <p>AI search optimisation delivers the highest return for Birmingham businesses that meet one or more of these criteria:</p>
+      <p>AI search optimisation delivers the highest return for Birmingham businesses that match one or more of these:</p>
 
       <ul>
         <li>Organic traffic has declined and AI Overviews or AI search alternatives are the suspected cause</li>
-        <li>Competitors are appearing in AI search results and the business is not</li>
-        <li>The business operates in a high-value service sector where a single AI-sourced lead justifies the investment</li>
-        <li>The customer base includes professionals and knowledge workers who use AI tools daily</li>
-        <li>The business seeks early-mover advantage in AI search before Birmingham competitors adopt similar strategies</li>
+        <li>Competitors appear in AI search results and you do not</li>
+        <li>You operate in a high-value service sector where one AI-sourced lead justifies the investment</li>
+        <li>Your customers are professionals who use AI tools daily</li>
+        <li>You want early-mover advantage before Birmingham competitors catch up</li>
       </ul>
 
       <h3>Pricing</h3>
 
-      <p>AI search optimisation packages start from £750 for a one-off audit and implementation. Ongoing retainers for continued optimisation, monitoring, and content updates are available from £500 per month. See our full <a href="/seo-pricing-birmingham/">SEO pricing</a> page for detailed breakdowns, or <a href="/contact/">request a proposal</a> to assess current AI search visibility.</p>
+      <p>One-off audit and implementation from £750. Ongoing retainers from £500 per month. See <a href="/seo-pricing-birmingham/">SEO pricing</a> for full breakdowns, or <a href="/contact/">get the audit</a> to assess your current AI search visibility.</p>
     </section>
 
     <div class="cta-box">
       <h2 style="color: white; margin-top: 0;">Get Your Birmingham Business Cited by AI Search</h2>
-      <p>Determine whether ChatGPT, Perplexity, and Google AI Overviews are recommending your business or your competitors. Our team will assess your current AI search visibility and deliver a clear action plan.</p>
-      <a href="/contact/">Request a Proposal</a>
+      <p>Find out whether ChatGPT, Perplexity, and Google AI Overviews are recommending your business or your competitors. We will assess your current AI search visibility and deliver a clear action plan.</p>
+      <a href="/contact/">Get the Audit</a>
     </div>
 
     <!-- FAQ Section -->
@@ -671,13 +669,13 @@ const articleSchema = {
       <ul>
         <li><a href="/">SEO Birmingham</a> &mdash; full SEO services for Birmingham businesses</li>
         <li><a href="/services/">All SEO Services</a></li>
-        <li><a href="/technical-seo-birmingham/">Technical SEO Birmingham</a> &mdash; the technical foundations that support AI visibility</li>
-        <li><a href="/seo-audit-birmingham/">SEO Audit Birmingham</a> &mdash; comprehensive site audit including AI readiness</li>
-        <li><a href="/free-seo-audit-birmingham/">Free SEO Audit</a> &mdash; request a complimentary assessment</li>
-        <li><a href="/seo-pricing-birmingham/">SEO Pricing Birmingham</a> &mdash; transparent pricing for all services</li>
-        <li><a href="/case-studies/">Case Studies</a> &mdash; results delivered for Birmingham clients</li>
-        <li><a href="/about/">About Colmore SEO</a> &mdash; our team and methodology</li>
-        <li><a href="/contact/">Contact</a> &mdash; request a proposal or discuss AI search strategy</li>
+        <li><a href="/technical-seo-birmingham/">Technical SEO Birmingham</a> &mdash; technical foundations that support AI visibility</li>
+        <li><a href="/seo-audit-birmingham/">SEO Audit Birmingham</a> &mdash; comprehensive audit including AI readiness</li>
+        <li><a href="/free-seo-audit-birmingham/">Free SEO Audit</a> &mdash; complimentary assessment</li>
+        <li><a href="/seo-pricing-birmingham/">SEO Pricing Birmingham</a> &mdash; transparent pricing</li>
+        <li><a href="/case-studies/">Case Studies</a> &mdash; results for Birmingham clients</li>
+        <li><a href="/about/">About SEO Birmingham</a> &mdash; methodology and approach</li>
+        <li><a href="/contact/">Contact</a> &mdash; get the audit or discuss AI search strategy</li>
         <li><a href="/areas/">Areas We Serve</a> &mdash; Birmingham and West Midlands coverage</li>
         <li><a href="/industries/">Industry-Specific SEO</a> &mdash; sector-focused strategies</li>
       </ul>
