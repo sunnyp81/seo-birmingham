@@ -1,34 +1,35 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Contact — SEO Birmingham';
-const description = 'Contact SEO Birmingham for expert search optimisation services across Birmingham and the West Midlands. Free initial consultation for local businesses.';
+const title = 'Contact Colmore SEO | Birmingham';
+const description = 'Contact Colmore SEO to request a proposal for your Birmingham business. We respond within one business day. Data-led SEO for the West Midlands.';
 
 const faqItems = [
   {
-    question: 'How quickly will you respond?',
-    answer: 'We aim to respond to all enquiries within one working day. Most messages sent before 3pm are answered the same day. If your project is urgent, mention it in your message and we will prioritise accordingly.',
+    question: 'How quickly does Colmore SEO respond to enquiries?',
+    answer: 'We respond to all enquiries within one business day. Messages received before 3pm are typically answered the same day. If your requirement is time-sensitive, note this in your submission and we will prioritise accordingly.',
   },
   {
-    question: 'Do you offer free consultations?',
-    answer: 'Yes. We offer a free initial consultation where we review your current search visibility and discuss your goals. You can also request a free SEO audit through our dedicated audit page. There is no obligation to proceed after the consultation.',
+    question: 'Does Colmore SEO offer a free initial assessment?',
+    answer: 'Yes. We provide a complimentary initial assessment covering your current search visibility and competitive positioning in the Birmingham market. You can also request a detailed SEO audit through our dedicated audit page. There is no obligation to proceed after the assessment.',
   },
   {
-    question: 'Do you work with businesses outside Birmingham?',
-    answer: 'Our primary focus is Birmingham, Solihull, and the wider West Midlands, but we also work with UK businesses that want to improve their visibility in the Birmingham market. Technical SEO and AI search optimisation services are available remotely regardless of location.',
+    question: 'Does Colmore SEO work with businesses outside Birmingham?',
+    answer: 'Our primary coverage area is Birmingham, Solihull, and the wider West Midlands. We also serve UK businesses that need to strengthen their organic presence in the Birmingham market. Technical SEO and AI search optimisation services are delivered remotely regardless of location.',
   },
   {
-    question: 'What information should I have ready?',
-    answer: 'It helps to have your website URL, a brief description of your business, and an idea of your goals — whether that is more local visibility, higher rankings for specific terms, or improved lead generation. If you have access to Google Search Console or Google Analytics, that speeds up our initial assessment. Do not worry if you do not have everything prepared; we can guide you through what we need.',
+    question: 'What information should we prepare before making contact?',
+    answer: 'Having your website URL, a brief description of your business, and an outline of your objectives will help us respond with a relevant initial assessment. If you have access to Google Search Console or Google Analytics, that accelerates our evaluation. If you do not have these details to hand, we will guide you through what we need during our first exchange.',
   },
 ];
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'SEO Birmingham',
+  name: 'Colmore SEO',
   url: 'https://seo-birmingham.uk',
-  email: '2012.infinite@gmail.com',
+  email: 'hello@seo-birmingham.uk',
+  sameAs: [],
   openingHours: 'Mo-Fr 09:00-17:00',
   areaServed: [
     { '@type': 'City', name: 'Birmingham' },
@@ -39,7 +40,7 @@ const localBusinessSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: '2012.infinite@gmail.com',
+    email: 'hello@seo-birmingham.uk',
     availableLanguage: 'English',
   },
 };
@@ -60,22 +61,22 @@ const faqSchema = {
 
 <Base title={title} description={description} schema={[localBusinessSchema, faqSchema]}>
   <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Contact SEO Birmingham</h1>
+    <h1>Contact Colmore SEO</h1>
 
     <div class="quick-answer">
-      <strong>Get in touch:</strong> Fill in the form below or email us directly at <a href="mailto:2012.infinite@gmail.com">2012.infinite@gmail.com</a>. We respond within one working day and offer a free initial consultation for businesses in Birmingham and the West Midlands.
+      <strong>Request a proposal:</strong> Complete the form below or email us at <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We respond within one business day. No obligation, no sales pressure — just a data-backed assessment of your organic search opportunity.
     </div>
 
-    <p>SEO Birmingham provides local search marketing consultancy across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, local SEO strategy, or guidance on AI search optimisation, we are here to help your business grow its organic visibility.</p>
+    <p>Colmore SEO delivers specialist search optimisation for businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or guidance on AI search readiness, submit your details and our team will respond with an initial assessment tailored to your market.</p>
 
-    <p>We work with businesses of all sizes across the region — from independent shops in the <a href="/areas/">Jewellery Quarter</a> and Digbeth to established firms in Edgbaston and Solihull. Every engagement starts with understanding your goals and your current search performance.</p>
+    <p>We work with businesses across the region — from professional services firms in <strong>Colmore Business District</strong> and retailers in the <strong>Jewellery Quarter</strong> to technology companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement begins with understanding your commercial objectives and your current search performance.</p>
 
-    <h2>Areas We Serve</h2>
+    <h2>Coverage Areas</h2>
 
-    <p>Our consultancy covers the following areas in and around Birmingham:</p>
+    <p>Our services cover the following areas across Birmingham and the West Midlands:</p>
 
     <ul>
-      <li>Birmingham city centre</li>
+      <li>Birmingham city centre (Colmore Business District, Bullring, Grand Central)</li>
       <li>Edgbaston</li>
       <li>Digbeth</li>
       <li>Jewellery Quarter</li>
@@ -84,9 +85,9 @@ const faqSchema = {
       <li>Wider West Midlands (Wolverhampton, Coventry, Walsall, Dudley)</li>
     </ul>
 
-    <p>If your business serves customers in these areas, our <a href="/services/">local SEO services</a> can help you reach them through search.</p>
+    <p>If your business operates within these areas, our <a href="/services/">local SEO services</a> are designed to increase your organic visibility where your customers are searching.</p>
 
-    <h2>Send Us a Message</h2>
+    <h2>Submit Your Details</h2>
 
     <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 mb-8">
       <div class="grid sm:grid-cols-2 gap-5 mb-5">
@@ -101,8 +102,8 @@ const faqSchema = {
       </div>
       <div class="grid sm:grid-cols-2 gap-5 mb-5">
         <div>
-          <label for="phone" class="block text-sm font-semibold text-brand-dark mb-1.5">Phone <span class="text-text-muted text-xs font-normal">(optional)</span></label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="07xxx xxxxxx" />
+          <label for="company" class="block text-sm font-semibold text-brand-dark mb-1.5">Company <span class="text-text-muted text-xs font-normal">(optional)</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="Your company name" />
         </div>
         <div>
           <label for="website" class="block text-sm font-semibold text-brand-dark mb-1.5">Website URL <span class="text-text-muted text-xs font-normal">(optional)</span></label>
@@ -111,24 +112,24 @@ const faqSchema = {
       </div>
       <div class="mb-5">
         <label for="message" class="block text-sm font-semibold text-brand-dark mb-1.5">Message <span class="text-red-500">*</span></label>
-        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow resize-y" placeholder="Tell us about your business and what you are looking to achieve with SEO..."></textarea>
+        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow resize-y" placeholder="Describe your business, your current search performance, and what you are looking to achieve."></textarea>
       </div>
       <button type="submit" class="w-full sm:w-auto bg-accent hover:bg-accent-light text-brand-dark font-bold px-8 py-3 rounded-lg transition-colors text-base cursor-pointer shadow-sm hover:shadow-md">
-        Send Message
+        Request a Proposal
       </button>
     </form>
 
-    <h2>Other Ways to Reach Us</h2>
+    <h2>Email Us Directly</h2>
 
-    <p>Prefer email? Contact us directly at <a href="mailto:2012.infinite@gmail.com">2012.infinite@gmail.com</a>. We monitor this inbox throughout the working day.</p>
+    <p>Prefer email? Contact us at <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We monitor this inbox throughout the working day and respond within one business day.</p>
 
     <h3>Working Hours</h3>
 
-    <p>Remote-first consultancy. Available Monday to Friday, 9am-5pm.</p>
+    <p>Monday to Friday, 9am to 5pm. Birmingham-based, remote-first operation.</p>
 
-    <h2>Find Us</h2>
+    <h2>Our Location</h2>
 
-    <p>We are based in Birmingham and serve businesses across the city and the wider West Midlands region.</p>
+    <p>Colmore SEO operates from Birmingham and serves businesses across the city and the wider West Midlands region.</p>
 
     <div class="not-prose rounded-xl overflow-hidden shadow-sm border border-gray-200 mb-8">
       <iframe
@@ -144,9 +145,9 @@ const faqSchema = {
     </div>
 
     <div class="cta-box">
-      <h2 class="text-white text-xl font-bold mt-0">Ready to Improve Your Search Rankings?</h2>
-      <p class="text-gray-200 mb-0">Request a free SEO audit and find out where your website stands in Birmingham search results.</p>
-      <a href="/free-seo-audit-birmingham/">Get Your Free SEO Audit</a>
+      <h2 class="text-white text-xl font-bold mt-0">Request a Proposal</h2>
+      <p class="text-gray-200 mb-0">Receive a data-backed assessment of your organic search opportunity in the Birmingham market. No obligation.</p>
+      <a href="/free-seo-audit-birmingham/">Request a Proposal</a>
     </div>
 
     <h2>Frequently Asked Questions</h2>
@@ -162,6 +163,6 @@ const faqSchema = {
       ))}
     </div>
 
-    <p>Have a question not covered here? <a href="mailto:2012.infinite@gmail.com">Email us</a> or use the form above. You can also explore our <a href="/seo-pricing-birmingham/">pricing page</a> for details on packages and costs.</p>
+    <p>Question not addressed above? Email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a> or use the form above. Our <a href="/seo-pricing-birmingham/">pricing page</a> provides detailed breakdowns of packages and investment levels.</p>
   </div>
 </Base>

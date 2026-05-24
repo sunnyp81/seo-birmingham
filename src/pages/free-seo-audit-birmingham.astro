@@ -3,20 +3,20 @@ import Base from '../layouts/Base.astro';
 
 const faqs = [
   {
-    q: 'What do I get in the free SEO audit?',
-    a: 'You receive a quick health check covering your indexation status, mobile usability, Core Web Vitals scores, Google Business Profile review, and three prioritised quick wins you can implement immediately. The report is emailed to you within 48 hours.',
+    q: 'What is included in the free SEO audit?',
+    a: 'The free audit delivers a health check covering indexation status, mobile usability, Core Web Vitals scores, Google Business Profile review, and three prioritised quick wins for immediate implementation. The report is delivered via email within 48 hours.',
   },
   {
-    q: 'How is the free audit different from the paid audit?',
-    a: 'The free audit is an automated snapshot covering five key areas. The paid audit (£497) is a comprehensive, manually reviewed analysis covering technical SEO, content quality, backlink profile, local SEO, and competitor benchmarking, with a detailed PDF report and a 30-minute walkthrough call. See the full paid audit details.',
+    q: 'How does the free audit compare to the paid audit?',
+    a: 'The free audit is an automated snapshot covering five key areas. The paid audit (£497) is a comprehensive, manually conducted analysis covering technical SEO, content quality, backlink profile, local SEO, and competitor benchmarking, delivered as a detailed PDF report with a 30-minute walkthrough call.',
   },
   {
-    q: 'Do I need to give you access to my website?',
-    a: 'No. The free audit runs using publicly available data from your live website. We do not need CMS access, Google Search Console, or Google Analytics for the free version.',
+    q: 'Is website access required for the free audit?',
+    a: 'No. The free audit runs using publicly available data from the live website. CMS access, Google Search Console, and Google Analytics are not required for the free version.',
   },
   {
-    q: 'Is there any obligation after the free audit?',
-    a: 'None at all. The free audit is genuinely free with no strings attached. If you want to discuss the findings or explore a full audit, we are happy to chat, but there is no sales follow-up unless you request it.',
+    q: 'Is there any obligation after receiving the free audit?',
+    a: 'None. The free audit carries no obligation and no strings attached. If the client wishes to discuss findings or explore a full audit, our team is available, but there is no unsolicited follow-up.',
   },
 ];
 
@@ -26,9 +26,10 @@ const serviceSchema = {
   name: 'Free SEO Audit Birmingham',
   description: 'Free SEO health check for Birmingham businesses covering indexation, mobile usability, Core Web Vitals, Google Business Profile, and quick wins.',
   provider: {
-    '@type': 'LocalBusiness',
-    name: 'SEO Birmingham',
+    '@type': 'Organization',
+    name: 'Colmore SEO',
     url: 'https://seo-birmingham.uk',
+    sameAs: [],
     areaServed: {
       '@type': 'City',
       name: 'Birmingham',
@@ -62,39 +63,39 @@ const faqSchema = {
 ---
 
 <Base
-  title="Free SEO Audit Birmingham | Quick Check"
-  description="Claim your free SEO audit for Birmingham businesses. We check indexation, mobile usability, Core Web Vitals, and Google Business Profile with 3 quick wins."
+  title="Free SEO Audit Birmingham | Colmore SEO"
+  description="Free SEO audit for Birmingham businesses. We check indexation, mobile usability, Core Web Vitals, and Google Business Profile with 3 prioritised quick wins."
   schema={[serviceSchema, faqSchema]}
   ogType="website"
 >
   <div class="max-w-3xl mx-auto px-4 py-12 prose">
     <h1>Free SEO Audit Birmingham</h1>
 
-    <p>The free SEO audit is a quick health check designed for Birmingham businesses that want to understand their current search visibility without any financial commitment. It covers the five most critical ranking factors and delivers three specific actions you can take immediately to improve your organic performance.</p>
+    <p>Our free SEO audit is a rapid health check built for Birmingham businesses that need to assess their current search visibility without financial commitment. It covers the five most critical ranking factors and delivers three specific actions for immediate implementation.</p>
 
     <div class="quick-answer">
-      <strong>Quick Answer:</strong> Submit your website below and receive a free SEO health check within 48 hours. The report covers indexation status, mobile usability, Core Web Vitals, your Google Business Profile, and three prioritised quick wins. No cost, no obligation, no sales follow-up.
+      <strong>Quick Answer:</strong> Submit a website below and receive a free SEO health check within 48 hours. The report covers indexation status, mobile usability, Core Web Vitals, Google Business Profile, and three prioritised quick wins. No cost. No obligation. No unsolicited follow-up.
     </div>
 
     <section>
       <h2>What the Free Audit Covers</h2>
 
-      <p>The free audit focuses on five areas that have the greatest impact on whether your Birmingham business appears in search results.</p>
+      <p>The free audit focuses on five areas that have the greatest measurable impact on whether a Birmingham business appears in search results.</p>
 
       <h3>Indexation Status</h3>
-      <p>We check how many of your pages Google has indexed versus how many exist on your site. If Google is only indexing a fraction of your content, you have a fundamental visibility problem that needs addressing before anything else.</p>
+      <p>We check how many pages Google has indexed versus how many exist on the site. If Google is indexing only a fraction of the content, there is a fundamental visibility problem that must be addressed before any other optimisation work begins.</p>
 
       <h3>Mobile Usability</h3>
-      <p>With the majority of local searches in Birmingham happening on mobile devices, your site must render perfectly on smartphones. We test your site on mobile and flag any usability issues that could be costing you rankings and conversions.</p>
+      <p>The majority of local searches in Birmingham originate from mobile devices. A site must render correctly on smartphones. We test mobile performance and flag usability issues that cost rankings and conversions.</p>
 
       <h3>Core Web Vitals</h3>
-      <p>We measure your page speed, interactivity, and visual stability against Google's Core Web Vitals thresholds. These metrics are a confirmed ranking factor and directly affect user experience. Slow sites lose visitors, particularly in competitive Birmingham markets where searchers have plenty of alternatives.</p>
+      <p>We measure page speed, interactivity, and visual stability against Google's Core Web Vitals thresholds. These metrics are a confirmed ranking factor and directly affect user experience. Slow-loading sites lose visitors, particularly in competitive Birmingham markets where searchers have immediate alternatives.</p>
 
       <h3>Google Business Profile Review</h3>
-      <p>For Birmingham businesses targeting local customers, your Google Business Profile is as important as your website. We check your profile for completeness, category accuracy, review volume, and common mistakes that prevent you from appearing in the local 3-pack.</p>
+      <p>For Birmingham businesses targeting local customers, the Google Business Profile carries weight equal to the website itself. We check profile completeness, category accuracy, review volume, and common configuration errors that prevent appearance in the local 3-pack.</p>
 
-      <h3>Three Quick Wins</h3>
-      <p>Every free audit includes three specific, actionable recommendations you can implement immediately. These are not vague suggestions. They are precise changes with clear instructions, selected because they offer the highest impact for the least effort on your particular site.</p>
+      <h3>Three Prioritised Quick Wins</h3>
+      <p>Every free audit includes three specific, actionable recommendations for immediate implementation. These are not generic suggestions. They are precise changes with clear instructions, selected because they deliver the highest impact for the least effort on the specific site audited.</p>
     </section>
 
     <section>
@@ -108,32 +109,31 @@ const faqSchema = {
         <li>Competitor benchmarking</li>
         <li>Detailed technical crawl of every page</li>
         <li>Keyword cannibalisation checks</li>
-        <li>Walkthrough call with an SEO consultant</li>
+        <li>Walkthrough call with our team</li>
       </ul>
 
-      <p>If you need a thorough, manually reviewed audit with a detailed action plan, our <a href="/seo-audit-birmingham/">paid SEO audit</a> at £497 covers all of the above. The free audit is a useful first step to understand whether a deeper investigation is worthwhile.</p>
+      <p>For a thorough, manually reviewed audit with a detailed action plan, our <a href="/seo-audit-birmingham/">paid SEO audit</a> at £497 covers all of the above. The free audit serves as a useful first step to determine whether a deeper investigation is warranted.</p>
     </section>
 
     <section>
-      <h2>Who This Is For</h2>
+      <h2>Who This Audit Is For</h2>
 
-      <p>The free audit is designed for Birmingham businesses in any of these situations:</p>
+      <p>The free audit is designed for Birmingham organisations in any of the following situations:</p>
 
       <ul>
-        <li>You have never had an SEO audit and want to understand where you stand</li>
-        <li>You are considering investing in SEO but want evidence of specific issues first</li>
-        <li>You recently launched a new website and want a quick sanity check</li>
-        <li>You are a Digbeth startup, Jewellery Quarter retailer, or Colmore professional who wants a baseline reading before committing to ongoing SEO</li>
-        <li>You want to compare your site health against Birmingham competitors</li>
+        <li>No prior SEO audit has been conducted and a baseline assessment is needed</li>
+        <li>Investment in SEO is under consideration but evidence of specific issues is required first</li>
+        <li>A new website has recently launched and a quick sanity check is needed</li>
+        <li>A Digbeth startup, Jewellery Quarter retailer, or Colmore professional firm wants a baseline reading before committing to ongoing SEO</li>
+        <li>A comparison of site health against Birmingham competitors is needed</li>
       </ul>
     </section>
 
     <section>
       <h2>Request Your Free Audit</h2>
 
-      <p>Fill in the form below and we will send your free SEO health check within 48 hours.</p>
+      <p>Complete the form below. Our team will deliver the free SEO health check within 48 hours to the email address provided.</p>
 
-      <!-- Form connects to backend endpoint -->
       <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm mt-6 mb-8">
         <div class="space-y-5">
           <div>
@@ -199,18 +199,18 @@ const faqSchema = {
             type="submit"
             class="w-full bg-brand text-white font-bold py-3.5 px-6 rounded-lg hover:bg-brand-light transition-colors text-base cursor-pointer shadow-md hover:shadow-lg"
           >
-            Get My Free SEO Audit
+            Request Free SEO Audit
           </button>
 
-          <p class="text-xs text-text-muted text-center mt-3">No spam. No obligation. Your report arrives within 48 hours.</p>
+          <p class="text-xs text-text-muted text-center mt-3">No spam. No obligation. Report delivered within 48 hours to hello@seo-birmingham.uk.</p>
         </div>
       </form>
     </section>
 
     <div class="cta-box">
-      <h2 style="color: white; margin-top: 0;">Need a Deeper Analysis?</h2>
-      <p>The free audit is a great starting point. For a comprehensive, manually reviewed audit with a full action plan and walkthrough call, explore our paid SEO audit.</p>
-      <a href="/seo-audit-birmingham/">Full SEO Audit — £497</a>
+      <h2 style="color: white; margin-top: 0;">Need a Comprehensive Analysis?</h2>
+      <p>The free audit provides a starting point. For a full, manually reviewed audit with a detailed action plan and walkthrough call, explore our paid SEO audit.</p>
+      <a href="/seo-audit-birmingham/">Request a Proposal</a>
     </div>
 
     <section class="faq-section">
@@ -230,7 +230,7 @@ const faqSchema = {
       <ul>
         <li><a href="/">SEO Birmingham</a> — full services overview</li>
         <li><a href="/services/">All SEO Services</a></li>
-        <li><a href="/seo-audit-birmingham/">Paid SEO Audit Birmingham</a> — comprehensive analysis</li>
+        <li><a href="/seo-audit-birmingham/">SEO Audit Birmingham</a> — comprehensive analysis</li>
         <li><a href="/seo-pricing-birmingham/">SEO Pricing</a></li>
         <li><a href="/contact/">Contact Us</a></li>
       </ul>

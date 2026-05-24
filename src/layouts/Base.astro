@@ -42,7 +42,7 @@ const webPageSchema = {
   name: title,
   description,
   url: fullCanonical,
-  isPartOf: { '@type': 'WebSite', name: 'SEO Birmingham', url: siteUrl },
+  isPartOf: { '@type': 'WebSite', name: 'Colmore SEO', url: siteUrl },
 };
 
 const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
@@ -60,7 +60,7 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
   <meta property="og:description" content={description} />
   <meta property="og:type" content={ogType} />
   <meta property="og:url" content={fullCanonical} />
-  <meta property="og:site_name" content="SEO Birmingham" />
+  <meta property="og:site_name" content="Colmore SEO" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
@@ -75,8 +75,8 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
 
   <header class="bg-brand text-white sticky top-0 z-50 shadow-md">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors">
-        SEO Birmingham
+      <a href="/" class="text-xl font-bold tracking-tight hover:text-accent transition-colors" style="font-family: 'Space Grotesk', sans-serif;">
+        Colmore SEO
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Main navigation">
         <a href="/services/" class="hover:text-accent transition-colors">Services</a>
@@ -88,8 +88,8 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
         <a href="/contact/" class="hover:text-accent transition-colors">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="/free-seo-audit-birmingham/" class="hidden sm:inline-block bg-accent text-brand-dark px-4 py-2 rounded font-bold text-sm hover:bg-accent-light transition-colors">
-          Free SEO Audit
+        <a href="/free-seo-audit-birmingham/" class="hidden sm:inline-block bg-accent text-white px-4 py-2 rounded font-bold text-sm hover:bg-accent-light transition-colors">
+          Request a Proposal
         </a>
         <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-brand-light transition-colors" aria-label="Toggle menu" aria-expanded="false">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -104,7 +104,7 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
       <a href="/case-studies/" class="block py-2 hover:text-accent transition-colors">Case Studies</a>
       <a href="/about/" class="block py-2 hover:text-accent transition-colors">About</a>
       <a href="/contact/" class="block py-2 hover:text-accent transition-colors">Contact</a>
-      <a href="/free-seo-audit-birmingham/" class="block py-2 text-accent font-bold">Free SEO Audit</a>
+      <a href="/free-seo-audit-birmingham/" class="block py-2 text-accent font-bold">Request a Proposal</a>
     </nav>
   </header>
 
@@ -117,7 +117,7 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
             {i === breadcrumbItems.length - 1 ? (
               <span class="text-brand-dark font-medium">{item.name}</span>
             ) : (
-              <a href={item.url.replace(siteUrl, '')} class="hover:text-brand transition-colors">{item.name}</a>
+              <a href={item.url.replace(siteUrl, '')} class="hover:text-accent transition-colors">{item.name}</a>
             )}
           </>
         ))}
@@ -133,9 +133,9 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">SEO Birmingham</h3>
+          <h3 class="text-lg font-bold mb-3 text-white" style="font-family: 'Space Grotesk', sans-serif;">Colmore SEO</h3>
           <p class="text-sm text-gray-300 leading-relaxed">
-            Local SEO consultancy serving Birmingham, Solihull, and the West Midlands. Helping businesses rank higher in Google and get cited by AI search engines.
+            Data-led SEO consultancy for Birmingham, Solihull, and the West Midlands. We deliver measurable organic growth and AI search visibility for businesses that demand results.
           </p>
         </div>
         <div>
@@ -154,12 +154,12 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
             Birmingham &middot; Solihull &middot; Edgbaston &middot; Digbeth &middot; Jewellery Quarter &middot; Sutton Coldfield &middot; Wolverhampton &middot; Coventry &middot; Walsall &middot; Dudley
           </p>
           <div class="mt-4">
-            <a href="/contact/" class="text-accent hover:text-accent-light text-sm font-medium transition-colors">Get in touch &rarr;</a>
+            <a href="/contact/" class="text-accent hover:text-accent-light text-sm font-medium transition-colors">Request a proposal &rarr;</a>
           </div>
         </div>
       </div>
       <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400">
-        <p>&copy; {new Date().getFullYear()} SEO Birmingham. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Colmore SEO. All rights reserved.</p>
         <div class="flex gap-4 mt-2 sm:mt-0">
           <a href="/sitemap-index.xml" class="hover:text-accent transition-colors">Sitemap</a>
           <span>Last updated: May 2026</span>

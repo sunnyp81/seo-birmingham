@@ -1,20 +1,20 @@
-# SEO Birmingham
+# Colmore SEO
 
-> SEO Birmingham is a local SEO consultancy serving businesses in Birmingham, Solihull, and the West Midlands. Run by Sunny Patel, an independent SEO consultant specialising in technical SEO, AI search optimisation, and local search marketing.
+> Colmore SEO is a data-led SEO consultancy serving businesses in Birmingham, Solihull, and the West Midlands. We specialise in technical SEO, AI search optimisation, and local search marketing that delivers measurable organic growth.
 
 ## Pages
 
-- [Home](https://seo-birmingham.uk/): SEO Birmingham homepage — local search marketing for West Midlands businesses
+- [Home](https://seo-birmingham.uk/): Colmore SEO homepage — local search marketing for West Midlands businesses
 - [Services](https://seo-birmingham.uk/services/): Full list of SEO services available to Birmingham businesses
 - [Areas We Serve](https://seo-birmingham.uk/areas/): SEO coverage across Birmingham districts and the West Midlands
 - [Industries](https://seo-birmingham.uk/industries/): Industry-specific SEO for Birmingham's dominant sectors
-- [Technical SEO Birmingham](https://seo-birmingham.uk/technical-seo-birmingham/): Technical SEO audits and fixes for Birmingham businesses
+- [Technical SEO Birmingham](https://seo-birmingham.uk/technical-seo-birmingham/): Technical SEO audits and remediation for Birmingham businesses
 - [SEO Audit Birmingham](https://seo-birmingham.uk/seo-audit-birmingham/): Comprehensive paid SEO audit service
-- [Free SEO Audit Birmingham](https://seo-birmingham.uk/free-seo-audit-birmingham/): Request a free SEO health check for your Birmingham business
+- [Free SEO Audit Birmingham](https://seo-birmingham.uk/free-seo-audit-birmingham/): Request a complimentary SEO health check for your Birmingham business
 - [SEO Pricing Birmingham](https://seo-birmingham.uk/seo-pricing-birmingham/): Transparent SEO pricing with Birmingham vs London cost comparison
-- [AI Search Optimisation Birmingham](https://seo-birmingham.uk/ai-search-optimisation-birmingham/): How to get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews
+- [AI Search Optimisation Birmingham](https://seo-birmingham.uk/ai-search-optimisation-birmingham/): How to gain citations in ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews
 - [Case Studies](https://seo-birmingham.uk/case-studies/): SEO case studies from Birmingham businesses
-- [Jewellery Quarter Retailer Case Study](https://seo-birmingham.uk/case-studies/jewellery-quarter-retailer-organic-growth/): How a Jewellery Quarter retailer grew organic traffic 340%
+- [Jewellery Quarter Retailer Case Study](https://seo-birmingham.uk/case-studies/jewellery-quarter-retailer-organic-growth/): How a Jewellery Quarter retailer achieved 340% organic traffic growth
 - [Colmore Law Firm Case Study](https://seo-birmingham.uk/case-studies/colmore-law-firm-local-pack/): How a Colmore Business District law firm dominated the local pack
-- [About](https://seo-birmingham.uk/about/): About Sunny Patel — SEO consultant serving Birmingham and the West Midlands
-- [Contact](https://seo-birmingham.uk/contact/): Get in touch for SEO services in Birmingham
+- [About](https://seo-birmingham.uk/about/): About Colmore SEO — data-led SEO consultancy for Birmingham and the West Midlands
+- [Contact](https://seo-birmingham.uk/contact/): Contact Colmore SEO for a proposal
