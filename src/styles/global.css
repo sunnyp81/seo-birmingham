@@ -34,6 +34,18 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
+.bg-brand h1, .bg-brand h2, .bg-brand h3, .bg-brand h4,
+.bg-brand-light h1, .bg-brand-light h2, .bg-brand-light h3, .bg-brand-light h4,
+.stat-card h1, .stat-card h2, .stat-card h3, .stat-card h4,
+.cta-box h2 {
+  color: white;
+}
+
+.bg-brand p, .bg-brand li { color: #A1A1AA; }
+.bg-brand strong { color: white; }
+.bg-brand .service-card h3, .bg-brand .service-card h4 { color: white; }
+.bg-brand .service-card p { color: #A1A1AA; }
+
 /* ── Prose ── */
 
 .prose h2 {
