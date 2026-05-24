@@ -122,201 +122,319 @@ const faqSchema = {
   description="Transparent SEO pricing for Birmingham businesses. Monthly retainers from £497. No lock-in. Save up to 40% versus London agencies."
   schema={[serviceSchema, faqSchema]}
 >
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>SEO Pricing Birmingham</h1>
 
-    <p>London charges £3,000. We charge £997. Same work. Better results. Birmingham businesses pay 30-40% less than London for equivalent SEO because our overheads are lower. Not our standards.</p>
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-[0.08] blur-[80px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">SEO Pricing Birmingham</h1>
+      <p class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 fade-up stagger-child" style="--i:1">London charges £3,000. We charge £997. Same work. Better results. Birmingham businesses pay 30-40% less than London for equivalent SEO because our overheads are lower. Not our standards.</p>
+      <div class="flex flex-wrap justify-center gap-8 fade-up stagger-child" style="--i:2">
+        <div class="stat-card rounded-lg px-8 py-6">
+          <div class="counter-value" data-count="40" data-suffix="%">0%</div>
+          <div class="text-sm text-zinc-400 mt-2 font-medium">Below London Rates</div>
+        </div>
+        <div class="stat-card rounded-lg px-8 py-6">
+          <div class="counter-value text-white" style="font-size: 2.5rem;">£497</div>
+          <div class="text-sm text-zinc-400 mt-2 font-medium">Starting Monthly</div>
+        </div>
+        <div class="stat-card rounded-lg px-8 py-6">
+          <div class="counter-value" data-count="0" data-suffix="">0</div>
+          <div class="text-sm text-zinc-400 mt-2 font-medium">Lock-in Contracts</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="quick-answer">
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-10 fade-up">
+    <div class="quick-answer rounded-none md:rounded-lg shadow-xl">
       <strong>Quick answer:</strong> Birmingham SEO retainers run <strong>£497 to £2,500 per month</strong>. That is roughly <strong>40% below London agencies</strong> quoting £1,500-£5,000+ for identical work. One-off audits start at £497. The talent pool is the same &mdash; many Birmingham practitioners built careers at top London agencies before relocating to the West Midlands.
     </div>
+  </section>
 
-    <h2>Why Pricing Varies Between Businesses</h2>
+  <!-- Why Pricing Varies -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Why Pricing Varies Between Businesses</h2>
+      <p class="text-lg text-text-muted mb-6 fade-up">Every business faces a different fight. A Jewellery Quarter retailer chasing "bespoke engagement rings Birmingham" lives in a different world from a Colmore Row solicitor targeting "commercial solicitors West Midlands." Pricing reflects that gap.</p>
+      <p class="text-lg text-text-muted mb-8 fade-up">Three things set your price:</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:0">
+        <div class="w-12 h-12 bg-surface flex items-center justify-center rounded-lg mb-4">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Site size and technical debt</h3>
+        <p class="text-text-muted text-sm">A 20-page brochure site needs less work than a 5,000-product catalogue. Bigger sites mean more crawl management, internal linking, and content governance.</p>
+      </div>
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:1">
+        <div class="w-12 h-12 bg-surface flex items-center justify-center rounded-lg mb-4">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Keyword competition</h3>
+        <p class="text-text-muted text-sm">"Plumber Solihull" is easier than "business insurance Birmingham." Harder keywords demand more content, stronger links, and longer timelines.</p>
+      </div>
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:2">
+        <div class="w-12 h-12 bg-surface flex items-center justify-center rounded-lg mb-4">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Industry regulation</h3>
+        <p class="text-text-muted text-sm">Finance, health, and legal sites need demonstrable expertise, authoritative backlinks, and professionally reviewed content. That costs more than a standard service page.</p>
+      </div>
+    </div>
+    <p class="text-text-muted max-w-3xl fade-up">We explain exactly which factors apply to you and why the number is what it is. If an agency cannot justify its quote with specifics, walk away.</p>
+  </section>
 
-    <p>Every business faces a different fight. A Jewellery Quarter retailer chasing "bespoke engagement rings Birmingham" lives in a different world from a Colmore Row solicitor targeting "commercial solicitors West Midlands." Pricing reflects that gap.</p>
+  <!-- Birmingham vs London — dark section -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 relative">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Birmingham vs London SEO Pricing</h2>
+      <p class="text-lg text-zinc-300 max-w-3xl mb-10 fade-up">This is not a quality gap. It is an overheads gap. Office space in the <strong class="text-white">Colmore Business District</strong> runs about £32 per square foot. City of London charges £65+. Salaries and rates follow. We pass those savings straight to clients.</p>
 
-    <p>Three things set your price:</p>
-
-    <ul>
-      <li><strong>Site size and technical debt.</strong> A 20-page brochure site needs less work than a 5,000-product catalogue. Bigger sites mean more crawl management, internal linking, and content governance.</li>
-      <li><strong>Keyword competition.</strong> "Plumber Solihull" is easier than "business insurance Birmingham." Harder keywords demand more content, stronger links, and longer timelines.</li>
-      <li><strong>Industry regulation.</strong> Finance, health, and legal sites need demonstrable expertise, authoritative backlinks, and professionally reviewed content. That costs more than a standard service page.</li>
-    </ul>
-
-    <p>We explain exactly which factors apply to you and why the number is what it is. If an agency cannot justify its quote with specifics, walk away.</p>
-
-    <h2>Birmingham vs London SEO Pricing</h2>
-
-    <p>This is not a quality gap. It is an overheads gap. Office space in the <strong>Colmore Business District</strong> runs about £32 per square foot. City of London charges £65+. Salaries and rates follow. We pass those savings straight to clients.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>London</th>
-          <th>Birmingham</th>
-          <th>Saving</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Monthly SEO retainer</td>
-          <td>£1,500 &ndash; £5,000+</td>
-          <td>£497 &ndash; £2,500</td>
-          <td>Up to 40%</td>
-        </tr>
-        <tr>
-          <td>One-off SEO audit</td>
-          <td>£1,000 &ndash; £3,000</td>
-          <td>£497 &ndash; £1,500</td>
-          <td>Up to 50%</td>
-        </tr>
-        <tr>
-          <td>Content strategy (per quarter)</td>
-          <td>£2,000 &ndash; £6,000</td>
-          <td>£1,000 &ndash; £3,500</td>
-          <td>Up to 42%</td>
-        </tr>
-        <tr>
-          <td>Technical SEO overhaul</td>
-          <td>£2,500 &ndash; £8,000</td>
-          <td>£1,200 &ndash; £4,000</td>
-          <td>Up to 50%</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>The talent question. Birmingham has a deep bench of SEO professionals. Many spent years at London agencies &mdash; Distilled, Builtvisible, Impression &mdash; before relocating. The expertise is identical. The postcode differs. Rankings do not care where the consultant sits.</p>
-
-    <h2>SEO Pricing Plans</h2>
-
-    <p>Every SEO Birmingham plan includes monthly reporting, no lock-in, and direct access to a senior practitioner. Pick the tier that matches your growth stage.</p>
-  </div>
-
-  <div class="max-w-5xl mx-auto px-4 py-8">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
-        <h3 class="text-lg font-bold text-brand-dark mb-1">Starter</h3>
-        <div class="text-3xl font-bold text-brand mb-1">£497<span class="text-base font-normal text-text-muted">/mo</span></div>
-        <p class="text-sm text-text-muted mb-4">Build the foundation. Fix what is broken.</p>
-        <ul class="text-sm space-y-2 mb-6 flex-1">
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Full technical audit</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Monthly performance report</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 5 target keywords</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Core Web Vitals monitoring</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Google Business Profile optimisation</li>
-        </ul>
-        <a href="/contact/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Get the Audit</a>
+      <div class="overflow-x-auto fade-up">
+        <table class="w-full text-sm md:text-base border-collapse">
+          <thead>
+            <tr>
+              <th class="text-left py-4 px-5 text-accent font-bold border-b border-zinc-700" style="font-family: var(--font-heading);">Service</th>
+              <th class="text-left py-4 px-5 text-zinc-400 font-bold border-b border-zinc-700" style="font-family: var(--font-heading);">London</th>
+              <th class="text-left py-4 px-5 text-white font-bold border-b border-zinc-700" style="font-family: var(--font-heading);">Birmingham</th>
+              <th class="text-left py-4 px-5 text-accent font-bold border-b border-zinc-700" style="font-family: var(--font-heading);">Saving</th>
+            </tr>
+          </thead>
+          <tbody class="text-zinc-300">
+            <tr class="border-b border-zinc-800 hover:bg-zinc-900/50 transition-colors">
+              <td class="py-3.5 px-5 font-medium text-white">Monthly SEO retainer</td>
+              <td class="py-3.5 px-5 line-through decoration-zinc-600">£1,500 &ndash; £5,000+</td>
+              <td class="py-3.5 px-5 font-bold text-white">£497 &ndash; £2,500</td>
+              <td class="py-3.5 px-5 text-accent font-bold">Up to 40%</td>
+            </tr>
+            <tr class="border-b border-zinc-800 hover:bg-zinc-900/50 transition-colors">
+              <td class="py-3.5 px-5 font-medium text-white">One-off SEO audit</td>
+              <td class="py-3.5 px-5 line-through decoration-zinc-600">£1,000 &ndash; £3,000</td>
+              <td class="py-3.5 px-5 font-bold text-white">£497 &ndash; £1,500</td>
+              <td class="py-3.5 px-5 text-accent font-bold">Up to 50%</td>
+            </tr>
+            <tr class="border-b border-zinc-800 hover:bg-zinc-900/50 transition-colors">
+              <td class="py-3.5 px-5 font-medium text-white">Content strategy (per quarter)</td>
+              <td class="py-3.5 px-5 line-through decoration-zinc-600">£2,000 &ndash; £6,000</td>
+              <td class="py-3.5 px-5 font-bold text-white">£1,000 &ndash; £3,500</td>
+              <td class="py-3.5 px-5 text-accent font-bold">Up to 42%</td>
+            </tr>
+            <tr class="hover:bg-zinc-900/50 transition-colors">
+              <td class="py-3.5 px-5 font-medium text-white">Technical SEO overhaul</td>
+              <td class="py-3.5 px-5 line-through decoration-zinc-600">£2,500 &ndash; £8,000</td>
+              <td class="py-3.5 px-5 font-bold text-white">£1,200 &ndash; £4,000</td>
+              <td class="py-3.5 px-5 text-accent font-bold">Up to 50%</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <div class="border-2 border-accent rounded-xl p-6 bg-surface-alt shadow-md flex flex-col relative">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-full">Recommended</span>
-        <h3 class="text-lg font-bold text-brand-dark mb-1">Growth</h3>
-        <div class="text-3xl font-bold text-brand mb-1">£997<span class="text-base font-normal text-text-muted">/mo</span></div>
-        <p class="text-sm text-text-muted mb-4">Scale organic traffic. Outrank competitors.</p>
-        <ul class="text-sm space-y-2 mb-6 flex-1">
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Everything in Starter</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Content strategy &amp; production</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 15 target keywords</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Link building outreach</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Monthly strategy call</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Competitor monitoring</li>
+      <p class="text-zinc-300 max-w-3xl mt-10 fade-up">The talent question. Birmingham has a deep bench of SEO professionals. Many spent years at London agencies &mdash; Distilled, Builtvisible, Impression &mdash; before relocating. The expertise is identical. The postcode differs. Rankings do not care where the consultant sits.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">SEO Pricing Plans</h2>
+      <p class="text-lg text-text-muted max-w-2xl mx-auto fade-up">Every SEO Birmingham plan includes monthly reporting, no lock-in, and direct access to a senior practitioner. Pick the tier that matches your growth stage.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5">
+
+      <!-- Starter -->
+      <div class="service-card rounded-xl flex flex-col fade-up stagger-child group" style="--i:0">
+        <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Starter</h3>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-4xl font-extrabold" style="font-family: var(--font-heading); letter-spacing: -0.04em;">£497</span>
+          <span class="text-text-muted text-sm font-medium">/mo</span>
+        </div>
+        <p class="text-sm text-text-muted mb-5">Build the foundation. Fix what is broken.</p>
+        <ul class="text-sm space-y-2.5 mb-8 flex-1">
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Full technical audit</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Monthly performance report</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> 5 target keywords</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Core Web Vitals monitoring</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Google Business Profile optimisation</li>
         </ul>
-        <a href="/contact/" class="block text-center bg-accent text-brand-dark py-2.5 rounded-lg font-bold hover:bg-accent-light transition-colors text-sm">Get the Audit</a>
+        <a href="/contact/" class="btn-shimmer text-center !py-2.5 !text-xs !shadow-sm rounded-lg block">Get the Audit</a>
       </div>
 
-      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
-        <h3 class="text-lg font-bold text-brand-dark mb-1">Enterprise</h3>
-        <div class="text-3xl font-bold text-brand mb-1">£1,997<span class="text-base font-normal text-text-muted">/mo</span></div>
-        <p class="text-sm text-text-muted mb-4">Dominate your sector. Own page one.</p>
-        <ul class="text-sm space-y-2 mb-6 flex-1">
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Everything in Growth</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Dedicated account management</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 50+ target keywords</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> AI search optimisation</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Weekly reporting</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Priority support</li>
+      <!-- Growth (popular) -->
+      <div class="service-card rounded-xl flex flex-col relative fade-up stagger-child group" style="--i:1; border-top: 4px solid var(--color-accent); transform: scale(1.03); box-shadow: 0 0 40px rgba(245,158,11,0.12), 0 12px 40px rgba(0,0,0,0.08); z-index: 2;">
+        <span class="absolute -top-0.5 left-1/2 -translate-x-1/2 -translate-y-full bg-accent text-brand text-xs font-extrabold px-4 py-1.5 rounded-t-lg tracking-wide uppercase" style="font-family: var(--font-heading);">Recommended</span>
+        <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Growth</h3>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-4xl font-extrabold" style="font-family: var(--font-heading); letter-spacing: -0.04em;">£997</span>
+          <span class="text-text-muted text-sm font-medium">/mo</span>
+        </div>
+        <p class="text-sm text-text-muted mb-5">Scale organic traffic. Outrank competitors.</p>
+        <ul class="text-sm space-y-2.5 mb-8 flex-1">
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Everything in Starter</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Content strategy &amp; production</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> 15 target keywords</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Link building outreach</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Monthly strategy call</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Competitor monitoring</li>
         </ul>
-        <a href="/contact/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Get the Audit</a>
+        <a href="/contact/" class="btn-shimmer text-center !py-2.5 !text-xs rounded-lg block">Get the Audit</a>
       </div>
 
-      <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm flex flex-col">
-        <h3 class="text-lg font-bold text-brand-dark mb-1">One-Off Audit</h3>
-        <div class="text-3xl font-bold text-brand mb-1">£497<span class="text-base font-normal text-text-muted"> once</span></div>
-        <p class="text-sm text-text-muted mb-4">Know exactly where you stand. No commitment.</p>
-        <ul class="text-sm space-y-2 mb-6 flex-1">
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Full technical audit</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Content gap analysis</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Competitor benchmarking</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> Prioritised action plan</li>
-          <li class="flex items-start gap-2"><span class="text-accent font-bold">&#10003;</span> 60-minute walkthrough call</li>
+      <!-- Enterprise -->
+      <div class="service-card rounded-xl flex flex-col fade-up stagger-child group" style="--i:2">
+        <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Enterprise</h3>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-4xl font-extrabold" style="font-family: var(--font-heading); letter-spacing: -0.04em;">£1,997</span>
+          <span class="text-text-muted text-sm font-medium">/mo</span>
+        </div>
+        <p class="text-sm text-text-muted mb-5">Dominate your sector. Own page one.</p>
+        <ul class="text-sm space-y-2.5 mb-8 flex-1">
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Everything in Growth</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Dedicated account management</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> 50+ target keywords</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> AI search optimisation</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Weekly reporting</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Priority support</li>
         </ul>
-        <a href="/seo-audit-birmingham/" class="block text-center bg-brand text-white py-2.5 rounded-lg font-semibold hover:bg-brand-light transition-colors text-sm">Get the Audit</a>
+        <a href="/contact/" class="btn-shimmer text-center !py-2.5 !text-xs !shadow-sm rounded-lg block">Get the Audit</a>
+      </div>
+
+      <!-- One-Off Audit -->
+      <div class="service-card rounded-xl flex flex-col fade-up stagger-child group" style="--i:3">
+        <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">One-Off Audit</h3>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-4xl font-extrabold" style="font-family: var(--font-heading); letter-spacing: -0.04em;">£497</span>
+          <span class="text-text-muted text-sm font-medium"> once</span>
+        </div>
+        <p class="text-sm text-text-muted mb-5">Know exactly where you stand. No commitment.</p>
+        <ul class="text-sm space-y-2.5 mb-8 flex-1">
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Full technical audit</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Content gap analysis</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Competitor benchmarking</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> Prioritised action plan</li>
+          <li class="flex items-start gap-2.5"><span class="text-accent font-bold mt-0.5">&#10003;</span> 60-minute walkthrough call</li>
+        </ul>
+        <a href="/seo-audit-birmingham/" class="btn-shimmer text-center !py-2.5 !text-xs !shadow-sm rounded-lg block">Get the Audit</a>
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <div class="max-w-3xl mx-auto px-4 prose">
-
-    <h2>What Every Plan Includes</h2>
-
-    <p>Three commitments. Every tier. No exceptions.</p>
-
-    <ul>
-      <li><strong>Transparent reporting.</strong> Monthly. Google Search Console data, position tracking, traffic numbers, and a plain-English summary. No vanity metrics. No jargon. You see exactly what moved and why.</li>
-      <li><strong>No lock-in.</strong> Rolling monthly. 30 days notice to leave. We recommend six months so compounding takes hold, but you are never trapped. If we stop delivering, you stop paying. Simple.</li>
-      <li><strong>Direct access.</strong> You talk to the person doing the work. No account manager buffer. Email, phone, video. Response in hours, not days.</li>
-    </ul>
-
-    <h2>ROI: What Birmingham Businesses Can Expect</h2>
-
-    <p>SEO is an investment. Here is what the return curve looks like across Birmingham businesses we have worked with:</p>
-
-    <ul>
-      <li><strong>Months 1-3:</strong> Technical fixes. Crawl errors gone. Site speed up. Google Business Profile optimised. This alone drives 10-20% more impressions.</li>
-      <li><strong>Months 3-6:</strong> Content strategy lands. New pages rank. Old pages climb. Expect 30-60% organic traffic growth from baseline if you had zero prior SEO.</li>
-      <li><strong>Months 6-12:</strong> Compounding hits. Links build authority. Competitive keywords reach page one. Organic traffic doubles. Leads follow.</li>
-    </ul>
-
-    <p>The metric that matters is revenue per pound spent. A <a href="/services/">well-run SEO campaign</a> returns £3-£8 for every £1 within 12 months. Returns accelerate as domain authority compounds.</p>
-
-    <h2>Industries and Typical Budgets in Birmingham</h2>
-
-    <p>Birmingham is diverse. SEO budgets reflect that. Here is what different sectors typically invest.</p>
-
-    <h3>Jewellery Quarter Retailers</h3>
-
-    <p>Independent jewellers in the <strong>Jewellery Quarter</strong> invest £497-£997 per month. Competition is moderate for product terms like "bespoke diamond ring Birmingham." Margins are high enough that one organic lead pays for three months of SEO. Visual content, product schema, and Google Shopping integration drive the work.</p>
-
-    <h3>Colmore Business District Professional Services</h3>
-
-    <p>Law firms and accountants on <strong>Colmore Row</strong> face the fiercest SEO competition in Birmingham. £997-£1,997 per month is standard. One commercial property instruction or corporate retainer pays for a full year of fees. Content must prove genuine expertise to satisfy Google's E-E-A-T requirements for legal and financial topics.</p>
-
-    <h3>Digbeth Startups and Creative Agencies</h3>
-
-    <p><strong>Digbeth</strong> tech and creative businesses gravitate to Starter at £497 per month. Many begin with the one-off audit to find quick wins. The priority is building topical authority in a tight niche before scaling content.</p>
-
-    <h3>Trades and Local Services Across the West Midlands</h3>
-
-    <p>Electricians, plumbers, builders targeting Birmingham, Solihull, Sutton Coldfield, and Wolverhampton need Starter or Growth. <a href="/technical-seo-birmingham/">Technical SEO</a> and Google Business Profile optimisation deliver the fastest returns for service-area businesses.</p>
-
-    <h2>Get a Free SEO Audit</h2>
-
-    <p>Not sure which plan fits? Start with a <a href="/free-seo-audit-birmingham/">free SEO audit</a>. Technical health. Keyword gaps. Competitor positioning. Prioritised actions. No obligation. No pressure. Just a clear picture of where you stand and what it takes to move.</p>
-
-    <p>The audit takes 3-5 working days. Delivered as a written report with a 30-minute video walkthrough. Same quality as our <a href="/seo-audit-birmingham/">paid £497 audit</a>, focused on the biggest wins.</p>
-
-    <div class="cta-box">
-      <h3 class="text-xl font-bold text-white mb-2">Ready to Grow Your Birmingham Business?</h3>
-      <p class="text-gray-200 mb-0">Find out exactly what it takes to outrank your competitors in Birmingham.</p>
-      <a href="/contact/">Get the Audit</a>
+  <!-- What Every Plan Includes -->
+  <section class="bg-surface border-y border-zinc-200">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">What Every Plan Includes</h2>
+      <p class="text-lg text-text-muted mb-10 fade-up">Three commitments. Every tier. No exceptions.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:0">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center rounded-lg mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Transparent reporting</h3>
+          <p class="text-sm text-text-muted">Monthly. Google Search Console data, position tracking, traffic numbers, and a plain-English summary. No vanity metrics. No jargon. You see exactly what moved and why.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:1">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center rounded-lg mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">No lock-in</h3>
+          <p class="text-sm text-text-muted">Rolling monthly. 30 days notice to leave. We recommend six months so compounding takes hold, but you are never trapped. If we stop delivering, you stop paying. Simple.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:2">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center rounded-lg mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Direct access</h3>
+          <p class="text-sm text-text-muted">You talk to the person doing the work. No account manager buffer. Email, phone, video. Response in hours, not days.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <h2>Frequently Asked Questions About SEO Pricing</h2>
+  <!-- ROI — dark section -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 relative">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">ROI: What Birmingham Businesses Can Expect</h2>
+      <p class="text-lg text-zinc-300 max-w-3xl mb-12 fade-up">SEO is an investment. Here is what the return curve looks like across Birmingham businesses we have worked with:</p>
 
-    <div class="faq-section">
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="stat-card rounded-lg p-8 fade-up stagger-child" style="--i:0">
+          <div class="counter-value mb-3" data-count="3" data-suffix=" mo">0 mo</div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Months 1-3</h3>
+          <p class="text-zinc-400 text-sm">Technical fixes. Crawl errors gone. Site speed up. Google Business Profile optimised. This alone drives 10-20% more impressions.</p>
+        </div>
+        <div class="stat-card rounded-lg p-8 fade-up stagger-child" style="--i:1">
+          <div class="counter-value mb-3" data-count="60" data-suffix="%">0%</div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Months 3-6</h3>
+          <p class="text-zinc-400 text-sm">Content strategy lands. New pages rank. Old pages climb. Expect 30-60% organic traffic growth from baseline if you had zero prior SEO.</p>
+        </div>
+        <div class="stat-card rounded-lg p-8 fade-up stagger-child" style="--i:2">
+          <div class="counter-value mb-3" data-count="2" data-suffix="x">0x</div>
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Months 6-12</h3>
+          <p class="text-zinc-400 text-sm">Compounding hits. Links build authority. Competitive keywords reach page one. Organic traffic doubles. Leads follow.</p>
+        </div>
+      </div>
+
+      <p class="text-zinc-300 max-w-3xl fade-up">The metric that matters is revenue per pound spent. A <a href="/services/" class="text-accent hover:text-accent-light underline underline-offset-4 decoration-2">well-run SEO campaign</a> returns £3-£8 for every £1 within 12 months. Returns accelerate as domain authority compounds.</p>
+    </div>
+  </section>
+
+  <!-- Industries and Typical Budgets -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Industries and Typical Budgets in Birmingham</h2>
+    <p class="text-lg text-text-muted mb-12 max-w-3xl fade-up">Birmingham is diverse. SEO budgets reflect that. Here is what different sectors typically invest.</p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:0">
+        <h3 class="text-xl font-bold mb-3" style="font-family: var(--font-heading);">Jewellery Quarter Retailers</h3>
+        <div class="text-accent font-extrabold text-lg mb-3" style="font-family: var(--font-heading);">£497-£997/mo</div>
+        <p class="text-sm text-text-muted">Independent jewellers in the <strong>Jewellery Quarter</strong> invest £497-£997 per month. Competition is moderate for product terms like "bespoke diamond ring Birmingham." Margins are high enough that one organic lead pays for three months of SEO. Visual content, product schema, and Google Shopping integration drive the work.</p>
+      </div>
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:1">
+        <h3 class="text-xl font-bold mb-3" style="font-family: var(--font-heading);">Colmore Business District Professional Services</h3>
+        <div class="text-accent font-extrabold text-lg mb-3" style="font-family: var(--font-heading);">£997-£1,997/mo</div>
+        <p class="text-sm text-text-muted">Law firms and accountants on <strong>Colmore Row</strong> face the fiercest SEO competition in Birmingham. £997-£1,997 per month is standard. One commercial property instruction or corporate retainer pays for a full year of fees. Content must prove genuine expertise to satisfy Google's E-E-A-T requirements for legal and financial topics.</p>
+      </div>
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:2">
+        <h3 class="text-xl font-bold mb-3" style="font-family: var(--font-heading);">Digbeth Startups and Creative Agencies</h3>
+        <div class="text-accent font-extrabold text-lg mb-3" style="font-family: var(--font-heading);">£497/mo</div>
+        <p class="text-sm text-text-muted"><strong>Digbeth</strong> tech and creative businesses gravitate to Starter at £497 per month. Many begin with the one-off audit to find quick wins. The priority is building topical authority in a tight niche before scaling content.</p>
+      </div>
+      <div class="service-card rounded-lg fade-up stagger-child" style="--i:3">
+        <h3 class="text-xl font-bold mb-3" style="font-family: var(--font-heading);">Trades and Local Services Across the West Midlands</h3>
+        <div class="text-accent font-extrabold text-lg mb-3" style="font-family: var(--font-heading);">Starter or Growth</div>
+        <p class="text-sm text-text-muted">Electricians, plumbers, builders targeting Birmingham, Solihull, Sutton Coldfield, and Wolverhampton need Starter or Growth. <a href="/technical-seo-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand">Technical SEO</a> and Google Business Profile optimisation deliver the fastest returns for service-area businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Audit + CTA -->
+  <section class="bg-surface border-y border-zinc-200">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Get a Free SEO Audit</h2>
+        <p class="text-lg text-text-muted mb-4 fade-up">Not sure which plan fits? Start with a <a href="/free-seo-audit-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand">free SEO audit</a>. Technical health. Keyword gaps. Competitor positioning. Prioritised actions. No obligation. No pressure. Just a clear picture of where you stand and what it takes to move.</p>
+        <p class="text-lg text-text-muted mb-10 fade-up">The audit takes 3-5 working days. Delivered as a written report with a 30-minute video walkthrough. Same quality as our <a href="/seo-audit-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand">paid £497 audit</a>, focused on the biggest wins.</p>
+      </div>
+
+      <div class="cta-box rounded-lg fade-up">
+        <h3 class="text-xl font-bold text-white mb-2" style="font-family: var(--font-heading); position: relative; z-index: 1;">Ready to Grow Your Birmingham Business?</h3>
+        <p class="text-gray-200 mb-0">Find out exactly what it takes to outrank your competitors in Birmingham.</p>
+        <a href="/contact/">Get the Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-10 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Frequently Asked Questions About SEO Pricing</h2>
+
+    <div class="faq-section max-w-3xl fade-up">
       <details>
         <summary>How much does SEO cost in Birmingham?</summary>
         <div class="faq-answer">
@@ -360,6 +478,7 @@ const faqSchema = {
       </details>
     </div>
 
-    <p>More questions about SEO pricing? <a href="/contact/">Get in touch</a> for a direct conversation. See our <a href="/case-studies/">case studies</a> for results delivered to other Birmingham businesses.</p>
-  </div>
+    <p class="text-text-muted mt-8 max-w-3xl fade-up">More questions about SEO pricing? <a href="/contact/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand">Get in touch</a> for a direct conversation. See our <a href="/case-studies/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand">case studies</a> for results delivered to other Birmingham businesses.</p>
+  </section>
+
 </Base>

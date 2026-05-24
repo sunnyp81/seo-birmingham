@@ -86,207 +86,440 @@ const schema = [orgSchema, localBusinessSchema, faqSchema];
 ---
 
 <Base title={title} description={description} schema={schema}>
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
 
-    <h1>Birmingham SEO Agency — Rank Higher. Get Found. Grow Revenue.</h1>
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden min-h-[90vh] flex items-center">
+    <!-- Aurora blobs -->
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-[0.07] blur-[100px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%); animation: aurora-1 8s ease-in-out infinite;"></div>
+    <div class="absolute bottom-[-15%] right-[-5%] w-[400px] h-[400px] rounded-full opacity-[0.05] blur-[80px]"
+         style="background: radial-gradient(circle, #FBBF24, transparent 70%); animation: aurora-2 12s ease-in-out infinite;"></div>
+    <!-- Dot grid -->
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
 
-    <div class="quick-answer">
+    <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: copy -->
+        <div>
+          <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">SEO Birmingham</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 fade-up" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">
+            Rank Higher.<br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Get Found.</span><br/>
+            Grow Revenue.
+          </h1>
+          <p class="text-zinc-400 text-lg md:text-xl max-w-lg mb-8 fade-up stagger-child" style="--i:2;">
+            We get West Midlands businesses found on Google, Google Maps, and AI search platforms. Technical SEO, local search, and AI optimisation — measured by what matters.
+          </p>
+          <div class="flex flex-wrap gap-4 fade-up stagger-child" style="--i:3;">
+            <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+            <a href="/contact/" class="inline-block border-2 border-zinc-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-accent hover:text-accent transition-colors duration-200" style="font-family: var(--font-heading);">Talk to Us</a>
+          </div>
+        </div>
+
+        <!-- Right: growth chart SVG -->
+        <div class="fade-up stagger-child" style="--i:4;">
+          <div class="relative bg-brand-light/50 border border-zinc-800 p-6 md:p-8" style="backdrop-filter: blur(10px);">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-4 font-bold">Organic Growth — 12 Months</p>
+            <svg viewBox="0 0 400 200" class="w-full h-auto" aria-label="Growth chart showing organic traffic increase over 12 months">
+              <!-- Grid lines -->
+              <line x1="40" y1="20" x2="40" y2="170" stroke="#27272A" stroke-width="1"/>
+              <line x1="40" y1="170" x2="380" y2="170" stroke="#27272A" stroke-width="1"/>
+              <line x1="40" y1="120" x2="380" y2="120" stroke="#27272A" stroke-width="0.5" stroke-dasharray="4"/>
+              <line x1="40" y1="70" x2="380" y2="70" stroke="#27272A" stroke-width="0.5" stroke-dasharray="4"/>
+              <!-- Y labels -->
+              <text x="35" y="175" fill="#71717A" font-size="10" text-anchor="end">0</text>
+              <text x="35" y="125" fill="#71717A" font-size="10" text-anchor="end">50%</text>
+              <text x="35" y="75" fill="#71717A" font-size="10" text-anchor="end">100%</text>
+              <text x="35" y="25" fill="#71717A" font-size="10" text-anchor="end">150%</text>
+              <!-- X labels -->
+              <text x="70" y="188" fill="#71717A" font-size="9" text-anchor="middle">M1</text>
+              <text x="155" y="188" fill="#71717A" font-size="9" text-anchor="middle">M4</text>
+              <text x="240" y="188" fill="#71717A" font-size="9" text-anchor="middle">M7</text>
+              <text x="325" y="188" fill="#71717A" font-size="9" text-anchor="middle">M10</text>
+              <text x="370" y="188" fill="#71717A" font-size="9" text-anchor="middle">M12</text>
+              <!-- Area fill -->
+              <path d="M70,165 C100,160 130,150 155,140 C180,130 210,110 240,90 C270,70 300,50 340,35 L370,25 L370,170 L70,170 Z"
+                    fill="url(#areaGradient)" opacity="0.3"/>
+              <!-- Growth line -->
+              <path class="growth-line"
+                    d="M70,165 C100,160 130,150 155,140 C180,130 210,110 240,90 C270,70 300,50 340,35 L370,25"
+                    fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+              <!-- Dot at end -->
+              <circle cx="370" cy="25" r="5" fill="#F59E0B" class="growth-line" style="stroke-dasharray:0;stroke-dashoffset:0;opacity:0;transition:opacity 0.5s 2s;">
+                <animate attributeName="opacity" from="0" to="1" begin="2s" dur="0.5s" fill="freeze"/>
+              </circle>
+              <circle cx="370" cy="25" r="10" fill="none" stroke="#F59E0B" opacity="0.3">
+                <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <defs>
+                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="flex justify-between items-center mt-4 pt-4 border-t border-zinc-800">
+              <span class="text-zinc-500 text-xs">Baseline</span>
+              <span class="text-accent font-extrabold text-lg" style="font-family: var(--font-heading);">+147% organic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats row -->
+  <section class="bg-brand border-y border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center fade-up" style="--i:0;">
+        <div class="counter-value" data-count="46" data-suffix="%">0%</div>
+        <p class="text-zinc-400 text-sm mt-2">of searches carry local intent</p>
+      </div>
+      <div class="text-center fade-up" style="--i:1;">
+        <div class="counter-value" data-count="78" data-suffix="%">0%</div>
+        <p class="text-zinc-400 text-sm mt-2">local mobile searches convert in 24h</p>
+      </div>
+      <div class="text-center fade-up" style="--i:2;">
+        <div class="counter-value" data-count="40" data-suffix="k+">0</div>
+        <p class="text-zinc-400 text-sm mt-2">businesses in Birmingham</p>
+      </div>
+      <div class="text-center fade-up" style="--i:3;">
+        <div class="counter-value" data-count="28" data-suffix="bn">0</div>
+        <p class="text-zinc-400 text-sm mt-2">annual GDP contribution</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick answer -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="quick-answer fade-up">
       <strong>Quick Answer:</strong> We're SEO Birmingham. We get West Midlands businesses found on Google, Google Maps, and AI search platforms. Technical SEO, local search, and AI optimisation — all measured by what matters: traffic, leads, and revenue. No fluff. No guesswork. Just results.
     </div>
+  </section>
 
-    <section>
-      <p>We solve one problem. We make Birmingham businesses visible where their customers search. We operate from England's second city and serve the entire West Midlands. Our clients include professional services firms in <strong>Colmore Business District</strong>, creative agencies in <strong>Digbeth</strong>, retailers near the <strong>Bullring</strong>, and manufacturers across the wider region. Each faces different competition. We build strategies that reflect that.</p>
+  <!-- Why Birmingham needs local SEO -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <div class="prose">
+      <h2 class="fade-up">Why Birmingham Businesses Need Local SEO</h2>
 
-      <p>Birmingham isn't one market. It's dozens. The independent workshops of the <strong>Jewellery Quarter</strong> have nothing in common with the corporate tenancies of <strong>The Mailbox</strong>. The footfall-driven retail around <strong>Grand Central</strong> operates under completely different search dynamics to the B2B corridors of the Black Country. A jeweller targeting "engagement rings Birmingham" needs a fundamentally different approach to an accountancy practice chasing "chartered accountant Colmore Row". Generic SEO fails here.</p>
+      <div class="fade-up">
+        <p>Birmingham contributes over 28 billion pounds to the UK economy annually. More than 40,000 businesses are registered here. The <strong>NEC</strong> draws millions of visitors each year. <strong>HS2</strong> is transforming connectivity. Regeneration across Digbeth, Eastside, and Smithfield is accelerating commercial activity. The market is expanding. Search competition is intensifying with it.</p>
 
-      <p>We bring granular knowledge of Birmingham's commercial geography, industry clusters, and search behaviour to every engagement. We know which postcodes generate high-intent queries. We know which sectors face the steepest competition. We know how Google arbitrates the overlapping local markets across the West Midlands. That intelligence drives every strategy we build.</p>
-    </section>
-
-    <section>
-      <h2>Why Birmingham Businesses Need Local SEO</h2>
-
-      <p>Birmingham contributes over 28 billion pounds to the UK economy annually. More than 40,000 businesses are registered here. The <strong>NEC</strong> draws millions of visitors each year. <strong>HS2</strong> is transforming connectivity. Regeneration across Digbeth, Eastside, and Smithfield is accelerating commercial activity. The market is expanding. Search competition is intensifying with it.</p>
-
-      <p>Despite this, too many Birmingham businesses still rely on referrals, legacy brand recognition, or paid ads as their only acquisition channels. Their competitors are investing in organic search and claiming the positions that drive revenue. The numbers are clear:</p>
-
-      <ul>
-        <li><strong>46% of Google searches carry local intent</strong> — nearly half of all queries come from users seeking a nearby provider. For Birmingham businesses, that's a massive pool of untapped demand.</li>
-        <li><strong>78% of local mobile searches convert within 24 hours</strong> — local searchers aren't browsing. They're ready to buy, book, or visit.</li>
-        <li><strong>The local map pack dominates page one</strong> — for service queries in Birmingham, map results sit above organic listings. Without local optimisation, you're invisible in the most valuable real estate on the page.</li>
-        <li><strong>AI search is redistributing discovery</strong> — ChatGPT, Perplexity, and Google AI Overviews generate direct answers that bypass traditional results. No structured data? No entity signals? You're excluded.</li>
-      </ul>
-
-      <p>Market position in Birmingham search isn't about company size or trading history. It's about technical quality, locally optimised content, Google Business Profile strength, and entity authority. Local SEO gives small and mid-sized Birmingham businesses the structural edge to outperform national competitors in their own backyard.</p>
-    </section>
-
-    <section>
-      <h2>What Makes Birmingham SEO Different</h2>
-
-      <p>Birmingham isn't a monolithic search market. It's a mesh of overlapping commercial zones. Each has distinct competitive characteristics and customer profiles. Effective SEO here demands micro-market awareness.</p>
-
-      <h3>Overlapping Catchment Areas</h3>
-      <p>A plumber in Solihull competes with providers in Birmingham city centre, Shirley, and Knowle simultaneously. Google's service area logic doesn't follow council boundaries. We account for these overlaps and target the specific geographies where your customers actually search.</p>
-
-      <h3>Industry Concentration Zones</h3>
-      <p><strong>Colmore Business District</strong> houses one of the UK's densest clusters of financial and professional services firms outside London. The <strong>Jewellery Quarter</strong> packs more than 400 jewellery businesses into a single square mile. <strong>Digbeth</strong> is the city's creative and tech hub. Each zone creates a unique competitive dynamic. Each needs tailored keyword research and content architecture.</p>
-
-      <h3>Multi-Location Coordination</h3>
-      <p>Many Birmingham businesses operate across several West Midlands locations. A dental group with clinics in Edgbaston and Solihull. A law firm serving clients from the city centre while targeting Wolverhampton and Coventry. Multi-location SEO demands precise coordination — Google Business Profiles, location pages, citation consistency — to prevent cannibalisation and rank each location for its intended geography.</p>
-
-      <h3>National Brand Competition</h3>
-      <p>Birmingham businesses regularly compete against national operators with massive SEO budgets. Local SEO levels the field. Google actively favours locally relevant results for queries with local intent. A properly optimised Birmingham business can outrank a national chain for "accountant Birmingham" regardless of the chain's domain authority.</p>
-    </section>
-
-    <section>
-      <h2>Our SEO Services for Birmingham Businesses</h2>
-
-      <p>We deliver focused SEO services built for Birmingham and West Midlands businesses. Every service ties to measurable commercial outcomes. Every result is documented.</p>
-
-      <h3>Local SEO</h3>
-      <p>Our core discipline. Google Business Profile management, citation building, review strategy, and geo-targeted content. We put your business in the local map pack and organic results for your priority areas across Birmingham. <a href="/services/">View all services</a>.</p>
-
-      <h3>Technical SEO</h3>
-      <p>Rankings start with infrastructure. We fix site speed, crawlability, indexation errors, mobile usability, and structured data gaps. Technical SEO removes the barriers stopping Google from processing and ranking your content. <a href="/technical-seo-birmingham/">Technical SEO details</a>.</p>
-
-      <h3>SEO Audits</h3>
-      <p>Every engagement starts with evidence. We evaluate technical health, on-page optimisation, content quality, backlink authority, competitor positioning, and local presence. The output is a prioritised action plan with impact estimates for each recommendation. <a href="/seo-audit-birmingham/">Request an SEO audit</a>.</p>
-
-      <h3>AI Search Optimisation</h3>
-      <p>Search is fragmenting. ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot are changing how people find businesses. We optimise your content, structured data, and entity authority so your Birmingham business gets cited by AI platforms. <a href="/ai-search-optimisation-birmingham/">AI search optimisation details</a>.</p>
-
-      <h3>Content Strategy</h3>
-      <p>We target specific keyword clusters, answer verified user queries, and build topical authority in your vertical. Every piece is grounded in search data, structured for both traditional and AI retrieval, and produced in-house. We don't outsource content.</p>
-
-      <h3>Link Building and Digital PR</h3>
-      <p>Backlinks still move rankings. We earn relevant, authoritative links through digital PR, local partnerships, industry directories, and content-led outreach. We prioritise relevance over volume — links that produce measurable ranking movement for Birmingham queries.</p>
-    </section>
-
-    <section>
-      <h2>Areas We Cover Across the West Midlands</h2>
-
-      <p>Birmingham city centre is our base. Our coverage extends across the full West Midlands metropolitan area. Every strategy is calibrated to local search dynamics.</p>
-
-      <ul>
-        <li><strong>Birmingham City Centre</strong> — Colmore Business District, Bullring, Grand Central, The Mailbox, Eastside</li>
-        <li><strong>Edgbaston</strong> — professional services, healthcare, higher education</li>
-        <li><strong>Jewellery Quarter</strong> — retail jewellers, creative businesses, hospitality</li>
-        <li><strong>Digbeth</strong> — tech companies, creative agencies, food and drink</li>
-        <li><strong>Solihull</strong> — retail, professional services, automotive</li>
-        <li><strong>Sutton Coldfield</strong> — residential services, retail, medical practices</li>
-        <li><strong>Wolverhampton</strong> — manufacturing, professional services, retail</li>
-        <li><strong>Coventry</strong> — automotive, engineering, education</li>
-        <li><strong>Walsall, Dudley, West Bromwich, and Sandwell</strong> — manufacturing, trade services, retail</li>
-      </ul>
-
-      <p>Search patterns and competitive intensity differ sharply between these areas. A Solihull business faces a different competitive set to one in Wolverhampton. The keyword landscape shifts accordingly. We build area-specific strategies that account for those differences. <a href="/areas/">View all areas we cover</a>.</p>
-    </section>
-
-    <section>
-      <h2>Industries We Serve</h2>
-
-      <p>Birmingham's economy spans dozens of sectors. Each presents distinct SEO challenges. We've worked across these verticals:</p>
-
-      <h3>Financial and Professional Services</h3>
-      <p>Colmore Business District holds one of the UK's highest concentrations of financial and professional services firms outside London. We position accountants, solicitors, financial advisers, and consultants for high-value commercial queries in a fiercely competitive local market.</p>
-
-      <h3>Legal Services</h3>
-      <p>Birmingham has one of the highest ratios of solicitors per capita outside London. Standing out in legal search demands precise keyword targeting, authoritative content, and strong local signals. We cover practice areas from family law to commercial dispute resolution.</p>
-
-      <h3>Jewellery and Luxury Retail</h3>
-      <p>The Jewellery Quarter is an internationally recognised centre for jewellery design and manufacture. We drive rankings for high-intent queries like "engagement rings Birmingham" and "bespoke jewellery West Midlands" where organic visibility converts directly into footfall and sales.</p>
-
-      <h3>Manufacturing and Engineering</h3>
-      <p>Birmingham's manufacturing base remains a major economic driver. B2B manufacturers need SEO that reaches procurement managers and technical specifiers, not consumers. We build content and architectures that generate qualified enquiries from supply chain decision-makers.</p>
-
-      <h3>Healthcare and Dental</h3>
-      <p>Medical and dental practices across Birmingham face intense local competition. We handle YMYL compliance, clinical accuracy requirements, and the outsized impact of Google Business Profile reviews on patient acquisition.</p>
-
-      <h3>Hospitality and Food</h3>
-      <p>Birmingham's dining scene has boomed, with Digbeth, the Jewellery Quarter, and Brindleyplace established as destination areas. We capture high-intent local searches that turn into reservations and covers. <a href="/industries/">View all industries</a>.</p>
-    </section>
-
-    <section>
-      <h2>Why Birmingham Businesses Choose Us</h2>
-
-      <p>Picking an SEO partner is a commercial decision. It demands evidence. Here's what sets us apart:</p>
-
-      <ul>
-        <li><strong>Deep Birmingham market knowledge</strong> — we operate in this market daily. We understand the industry clusters, the micro-markets, and the search patterns unique to West Midlands consumers. Our strategies are built on local insight, not templates.</li>
-        <li><strong>Data-driven approach</strong> — every recommendation is backed by search data from Google Search Console, Ahrefs, and our own monitoring tools. We don't guess. We measure, analyse, and act on evidence.</li>
-        <li><strong>Full transparency</strong> — you see exactly what we do, why we do it, and what it produces. No black boxes. No unexplained line items.</li>
-        <li><strong>AI search capability</strong> — we ensure your business stays visible across ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot alongside traditional organic results.</li>
-        <li><strong>No lock-in</strong> — we keep clients through performance, not contracts. You stay because the work delivers ROI, not because a penalty clause says you must.</li>
-      </ul>
-
-      <p><a href="/about/">Read more about how we work</a>.</p>
-    </section>
-
-    <div class="cta-box">
-      <h2 style="color: white; margin-top: 0;">Get the Audit</h2>
-      <p>Find out how your site stacks up against Birmingham competitors. We audit technical infrastructure, local optimisation, content quality, and competitive positioning — with prioritised actions you can implement straight away.</p>
-      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
+        <p>Despite this, too many Birmingham businesses still rely on referrals, legacy brand recognition, or paid ads as their only acquisition channels. Their competitors are investing in organic search and claiming the positions that drive revenue.</p>
+      </div>
     </div>
+  </section>
 
-    <section>
-      <h2>Our SEO Process</h2>
+  <!-- What makes Birmingham SEO different - Bento grid -->
+  <section class="bg-surface py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">What Makes Birmingham SEO Different</h2>
 
-      <p>We follow a structured, repeatable process that delivers consistent outcomes. No shortcuts. No guesswork. Every phase is documented and measurable.</p>
-
-      <ol>
-        <li><strong>Audit and Discovery</strong> — we evaluate your search performance, technical health, content, and competitive environment. This sets the baseline and identifies the biggest opportunities.</li>
-        <li><strong>Strategy and Prioritisation</strong> — using audit data and your commercial goals, we build a prioritised SEO roadmap. Every action has a clear rationale and projected impact.</li>
-        <li><strong>Technical Remediation</strong> — we fix the technical issues holding back your rankings. Site speed, mobile performance, crawlability, indexation, structured data.</li>
-        <li><strong>Content Production and Optimisation</strong> — we create and refine content targeting your priority keyword clusters. Every page is built to satisfy intent, demonstrate expertise, and build topical authority.</li>
-        <li><strong>Local Search Optimisation</strong> — we manage your Google Business Profile, build authoritative citations, run review strategy, and produce location-targeted content for your priority areas across Birmingham and the West Midlands.</li>
-        <li><strong>Performance Monitoring and Reporting</strong> — we track rankings, traffic, and conversions continuously. Monthly reports detail completed work, performance data, and strategic adjustments based on results.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Birmingham SEO in the AI Search Era</h2>
-
-      <p>Search is changing faster than at any point since Google launched. AI platforms are reshaping how people find and evaluate businesses. ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot generate synthesised answers that increasingly replace traditional organic listings.</p>
-
-      <p>For Birmingham businesses, this creates a binary outcome. Fail to optimise for AI search and your visibility erodes as AI discovery grows. Adapt systematically and you secure a durable competitive edge. Our <a href="/ai-search-optimisation-birmingham/">AI search optimisation service</a> ensures your business gets structured, cited, and recommended by the AI platforms your customers already use.</p>
-
-      <p>This isn't a future problem. AI search is redistributing traffic and influencing buying decisions right now. The Birmingham businesses that invest today are the ones AI systems will learn to trust and surface consistently.</p>
-    </section>
-
-    <section>
-      <h2>Realistic SEO Expectations for Birmingham Businesses</h2>
-
-      <p>We set expectations based on data, not promises. SEO is a disciplined acquisition channel that compounds over time. Here's a realistic trajectory:</p>
-
-      <ul>
-        <li><strong>Months 1-2:</strong> Technical fixes, audit completion, strategy locked in. Early movement on lower-competition keywords.</li>
-        <li><strong>Months 3-4:</strong> Content and optimisation work kicks in. Target keywords start climbing. Local map pack visibility improves.</li>
-        <li><strong>Months 5-6:</strong> Organic traffic growth becomes measurable. Lead volume from organic search increases. AI search citations start appearing.</li>
-        <li><strong>Months 6-12:</strong> Compounding returns. Domain authority builds, rankings stabilise higher, and organic search becomes a reliable, cost-efficient acquisition channel.</li>
-      </ul>
-
-      <p>The exact trajectory depends on your starting position, sector competitiveness, and campaign scope. We provide data-backed projections during the audit phase and revise them monthly against actual performance.</p>
-    </section>
-
-    <section>
-      <h2>Start Ranking in Birmingham Search Results</h2>
-
-      <p>Every day without local search optimisation, you're handing revenue to competitors who've already invested. Whether you need a <a href="/technical-seo-birmingham/">technical SEO overhaul</a>, a <a href="/seo-audit-birmingham/">comprehensive audit</a>, or a full <a href="/services/">local SEO campaign</a>, we're ready to drive organic growth for your Birmingham business.</p>
-
-      <p>We work with businesses of all sizes across the West Midlands — from owner-operators in Sutton Coldfield to multi-location enterprises spanning Birmingham, Solihull, Wolverhampton, and Coventry. Check our <a href="/seo-pricing-birmingham/">transparent pricing</a>, examine our <a href="/case-studies/">case studies</a>, or <a href="/contact/">talk to us</a> about your requirements.</p>
-    </section>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions About Birmingham SEO</h2>
-
-      {faqItems.map((item) => (
-        <details>
-          <summary>{item.question}</summary>
-          <div class="faq-answer">
-            <p>{item.answer}</p>
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- Tall left card -->
+        <div class="service-card md:row-span-2 fade-up" style="--i:0;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-        </details>
-      ))}
-    </section>
+          <h3 class="text-xl font-extrabold mb-3" style="font-family: var(--font-heading);">Overlapping Catchment Areas</h3>
+          <p class="text-text-muted leading-relaxed">A plumber in Solihull competes with providers in Birmingham city centre, Shirley, and Knowle simultaneously. Google's service area logic doesn't follow council boundaries. We account for these overlaps and target the specific geographies where your customers actually search.</p>
+          <p class="text-text-muted leading-relaxed mt-4">Birmingham isn't a monolithic search market. It's a mesh of overlapping commercial zones. Each has distinct competitive characteristics and customer profiles. Effective SEO here demands micro-market awareness.</p>
+        </div>
+        <!-- Top right -->
+        <div class="service-card fade-up stagger-child" style="--i:1;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-xl font-extrabold mb-3" style="font-family: var(--font-heading);">Industry Concentration Zones</h3>
+          <p class="text-text-muted leading-relaxed"><strong>Colmore Business District</strong> houses one of the UK's densest clusters of financial firms outside London. The <strong>Jewellery Quarter</strong> packs 400+ businesses into a single square mile. <strong>Digbeth</strong> is the city's creative and tech hub. Each needs tailored keyword research.</p>
+        </div>
+        <!-- Bottom right row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="service-card fade-up stagger-child" style="--i:2;">
+            <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            </div>
+            <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Multi-Location</h3>
+            <p class="text-text-muted text-sm">Precise coordination across Google Business Profiles, location pages, and citations to prevent cannibalisation.</p>
+          </div>
+          <div class="service-card fade-up stagger-child" style="--i:3;">
+            <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            </div>
+            <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Beat National Brands</h3>
+            <p class="text-text-muted text-sm">Google favours locally relevant results. A properly optimised local business outranks chains for Birmingham queries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Services section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Our SEO Services</h2>
+      <p class="text-text-muted max-w-2xl mb-12 fade-up stagger-child" style="--i:1;">Focused SEO services built for Birmingham and West Midlands businesses. Every service ties to measurable commercial outcomes.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/" class="service-card group fade-up stagger-child" style="--i:0;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Local SEO</h3>
+          <p class="text-text-muted text-sm leading-relaxed">GBP management, citation building, review strategy, and geo-targeted content. We put your business in the local map pack.</p>
+          <span class="inline-block mt-4 text-accent text-sm font-bold group-hover:translate-x-1 transition-transform duration-200">View services &rarr;</span>
+        </a>
+
+        <a href="/technical-seo-birmingham/" class="service-card group fade-up stagger-child" style="--i:1;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Technical SEO</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Site speed, crawlability, indexation errors, mobile usability, and structured data. Remove the barriers blocking your rankings.</p>
+          <span class="inline-block mt-4 text-accent text-sm font-bold group-hover:translate-x-1 transition-transform duration-200">Learn more &rarr;</span>
+        </a>
+
+        <a href="/seo-audit-birmingham/" class="service-card group fade-up stagger-child" style="--i:2;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">SEO Audits</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Technical health, on-page optimisation, content quality, backlink authority. Prioritised actions with impact estimates.</p>
+          <span class="inline-block mt-4 text-accent text-sm font-bold group-hover:translate-x-1 transition-transform duration-200">Request audit &rarr;</span>
+        </a>
+
+        <a href="/ai-search-optimisation-birmingham/" class="service-card group fade-up stagger-child" style="--i:3;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">AI Search Optimisation</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Get cited by ChatGPT, Perplexity, Google AI Overviews, and Copilot. Structured data and entity authority for AI discovery.</p>
+          <span class="inline-block mt-4 text-accent text-sm font-bold group-hover:translate-x-1 transition-transform duration-200">Learn more &rarr;</span>
+        </a>
+
+        <div class="service-card fade-up stagger-child" style="--i:4;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Content Strategy</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Targeted keyword clusters, verified user queries, topical authority. Grounded in search data and structured for AI retrieval.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:5;">
+          <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">Link Building & Digital PR</h3>
+          <p class="text-text-muted text-sm leading-relaxed">Relevant, authoritative links through digital PR, local partnerships, and content-led outreach. Relevance over volume.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas we cover -->
+  <section class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Areas We Cover</h2>
+      <p class="text-zinc-400 max-w-2xl mb-12 fade-up stagger-child" style="--i:1;">Birmingham city centre is our base. Our coverage extends across the full West Midlands metropolitan area.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {[
+          { area: 'Birmingham City Centre', desc: 'Colmore, Bullring, Grand Central, The Mailbox, Eastside' },
+          { area: 'Edgbaston', desc: 'Professional services, healthcare, higher education' },
+          { area: 'Jewellery Quarter', desc: 'Retail jewellers, creative businesses, hospitality' },
+          { area: 'Digbeth', desc: 'Tech companies, creative agencies, food and drink' },
+          { area: 'Solihull', desc: 'Retail, professional services, automotive' },
+          { area: 'Sutton Coldfield', desc: 'Residential services, retail, medical practices' },
+          { area: 'Wolverhampton', desc: 'Manufacturing, professional services, retail' },
+          { area: 'Coventry', desc: 'Automotive, engineering, education' },
+          { area: 'Walsall & Dudley', desc: 'Manufacturing, trade services, retail' },
+        ].map((item, i) => (
+          <div class="border border-zinc-800 p-4 hover:border-accent/40 transition-colors duration-200 fade-up stagger-child" style={`--i:${i}`}>
+            <h3 class="font-bold text-white text-sm mb-1" style="font-family: var(--font-heading);">{item.area}</h3>
+            <p class="text-zinc-500 text-xs">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 fade-up">
+        <a href="/areas/" class="text-accent font-bold text-sm hover:text-accent-light transition-colors">View all areas we cover &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Industries We Serve</h2>
+      <p class="text-text-muted max-w-2xl mb-12 fade-up stagger-child" style="--i:1;">Birmingham's economy spans dozens of sectors. Each presents distinct SEO challenges.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { name: 'Financial & Professional Services', desc: 'Colmore Business District — accountants, solicitors, financial advisers positioned for high-value commercial queries.' },
+          { name: 'Legal Services', desc: 'One of the highest solicitor ratios outside London. Precise targeting from family law to commercial dispute resolution.' },
+          { name: 'Jewellery & Luxury Retail', desc: 'Internationally recognised Jewellery Quarter. High-intent queries that convert directly into footfall and sales.' },
+          { name: 'Manufacturing & Engineering', desc: 'B2B content and architectures that generate qualified enquiries from supply chain decision-makers.' },
+          { name: 'Healthcare & Dental', desc: 'YMYL compliance, clinical accuracy, and GBP review management for patient acquisition.' },
+          { name: 'Hospitality & Food', desc: 'Digbeth, Jewellery Quarter, Brindleyplace. High-intent searches that turn into reservations and covers.' },
+        ].map((item, i) => (
+          <div class="service-card fade-up stagger-child" style={`--i:${i}`}>
+            <h3 class="text-lg font-extrabold mb-2" style="font-family: var(--font-heading);">{item.name}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 fade-up">
+        <a href="/industries/" class="text-accent font-bold text-sm hover:text-accent-dark transition-colors">View all industries &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="bg-surface py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Why Birmingham Businesses Choose Us</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Deep Local Knowledge', desc: 'We operate in this market daily. Industry clusters, micro-markets, and search patterns unique to West Midlands consumers.' },
+          { icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', title: 'Data-Driven', desc: 'Every recommendation backed by GSC, Ahrefs, and our own monitoring tools. We measure, analyse, and act on evidence.' },
+          { icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z', title: 'Full Transparency', desc: 'You see exactly what we do, why we do it, and what it produces. No black boxes. No unexplained line items.' },
+          { icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z', title: 'AI Search Ready', desc: 'Visible across ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot alongside traditional organic results.' },
+          { icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'No Lock-In', desc: 'We keep clients through performance, not contracts. You stay because the work delivers ROI.' },
+          { icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6', title: 'Compounding Returns', desc: 'SEO builds a durable traffic asset. Over 12 months, organic delivers lower cost per acquisition than any paid channel.' },
+        ].map((item, i) => (
+          <div class="flex gap-4 fade-up stagger-child" style={`--i:${i}`}>
+            <div class="w-10 h-10 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/></svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold mb-1" style="font-family: var(--font-heading);">{item.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 fade-up">
+        <a href="/about/" class="text-accent font-bold text-sm hover:text-accent-dark transition-colors">Read more about how we work &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2 style="color: white; margin-top: 0; font-family: var(--font-heading); font-size: 2rem; letter-spacing: -0.03em;" class="fade-up">Get the Audit</h2>
+    <p class="fade-up stagger-child" style="--i:1;">Find out how your site stacks up against Birmingham competitors. We audit technical infrastructure, local optimisation, content quality, and competitive positioning — with prioritised actions you can implement straight away.</p>
+    <a href="/free-seo-audit-birmingham/" class="fade-up stagger-child" style="--i:2;">Get the Audit</a>
   </div>
+
+  <!-- Process -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Our SEO Process</h2>
+
+      <div class="space-y-0">
+        {[
+          { step: '01', title: 'Audit & Discovery', desc: 'Evaluate search performance, technical health, content, and competitive environment. Set the baseline and identify opportunities.' },
+          { step: '02', title: 'Strategy & Prioritisation', desc: 'Build a prioritised SEO roadmap from audit data and your commercial goals. Every action has clear rationale and projected impact.' },
+          { step: '03', title: 'Technical Remediation', desc: 'Fix site speed, mobile performance, crawlability, indexation, and structured data issues holding back your rankings.' },
+          { step: '04', title: 'Content Production', desc: 'Create and refine content targeting priority keyword clusters. Built to satisfy intent and build topical authority.' },
+          { step: '05', title: 'Local Optimisation', desc: 'GBP management, citations, review strategy, and location-targeted content for your priority areas across the West Midlands.' },
+          { step: '06', title: 'Monitor & Report', desc: 'Track rankings, traffic, and conversions. Monthly reports with completed work, performance data, and strategic adjustments.' },
+        ].map((item, i) => (
+          <div class="flex gap-6 py-6 border-b border-zinc-200 last:border-b-0 fade-up stagger-child" style={`--i:${i}`}>
+            <span class="text-accent font-extrabold text-2xl flex-shrink-0 w-12" style="font-family: var(--font-heading);">{item.step}</span>
+            <div>
+              <h3 class="font-extrabold text-lg mb-1" style="font-family: var(--font-heading);">{item.title}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- AI search era -->
+  <section class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] rounded-full opacity-[0.06] blur-[80px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%); animation: aurora-2 10s ease-in-out infinite;"></div>
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="relative max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Birmingham SEO in the AI Search Era</h2>
+      <div class="text-zinc-300 space-y-4 fade-up stagger-child" style="--i:1;">
+        <p>Search is changing faster than at any point since Google launched. AI platforms are reshaping how people find and evaluate businesses. ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot generate synthesised answers that increasingly replace traditional organic listings.</p>
+        <p>For Birmingham businesses, this creates a binary outcome. Fail to optimise for AI search and your visibility erodes as AI discovery grows. Adapt systematically and you secure a durable competitive edge.</p>
+        <p>This isn't a future problem. AI search is redistributing traffic and influencing buying decisions right now. The Birmingham businesses that invest today are the ones AI systems will learn to trust and surface consistently.</p>
+      </div>
+      <div class="mt-8 fade-up stagger-child" style="--i:2;">
+        <a href="/ai-search-optimisation-birmingham/" class="btn-shimmer">AI Search Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Realistic SEO Timeline</h2>
+
+      <div class="space-y-6">
+        {[
+          { months: 'Months 1-2', desc: 'Technical fixes, audit completion, strategy locked in. Early movement on lower-competition keywords.', progress: '15%' },
+          { months: 'Months 3-4', desc: 'Content and optimisation kicks in. Target keywords start climbing. Local map pack visibility improves.', progress: '40%' },
+          { months: 'Months 5-6', desc: 'Organic traffic growth becomes measurable. Lead volume increases. AI search citations start appearing.', progress: '65%' },
+          { months: 'Months 6-12', desc: 'Compounding returns. Domain authority builds, rankings stabilise higher, organic search becomes reliable.', progress: '100%' },
+        ].map((item, i) => (
+          <div class="fade-up stagger-child" style={`--i:${i}`}>
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-extrabold" style="font-family: var(--font-heading);">{item.months}</h3>
+              <span class="text-accent font-bold text-sm">{item.progress}</span>
+            </div>
+            <div class="w-full bg-zinc-100 h-2 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-accent-dark to-accent transition-all duration-1000" style={`width: ${item.progress}`}></div>
+            </div>
+            <p class="text-text-muted text-sm mt-2">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-surface py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Start Ranking in Birmingham</h2>
+      <p class="text-text-muted max-w-2xl mx-auto mb-8 fade-up stagger-child" style="--i:1;">Every day without local search optimisation, you're handing revenue to competitors who've already invested. Whether you need a technical overhaul, a comprehensive audit, or a full local SEO campaign — we're ready.</p>
+      <div class="flex flex-wrap justify-center gap-4 fade-up stagger-child" style="--i:2;">
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+        <a href="/seo-pricing-birmingham/" class="inline-block border-2 border-brand text-brand px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-brand hover:text-white transition-colors duration-200" style="font-family: var(--font-heading);">View Pricing</a>
+        <a href="/case-studies/" class="inline-block border-2 border-brand text-brand px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-brand hover:text-white transition-colors duration-200" style="font-family: var(--font-heading);">Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Frequently Asked Questions</h2>
+
+      <div class="faq-section">
+        {faqItems.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <div class="faq-answer">
+              <p>{item.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
 </Base>

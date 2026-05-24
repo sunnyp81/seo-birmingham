@@ -60,80 +60,141 @@ const faqSchema = {
 ---
 
 <Base title={title} description={description} schema={[localBusinessSchema, faqSchema]}>
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Talk to Us</h1>
 
-    <div class="quick-answer">
-      <strong>Get in touch:</strong> Fill in the form below or email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We reply within one business day. No obligation. No sales pressure.
+  <!-- Hero -->
+  <section class="bg-brand relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 sm:py-20 text-center">
+      <h1 class="text-white text-4xl sm:text-5xl mb-4 fade-up">Talk to Us</h1>
+      <div class="w-16 h-1 bg-accent mx-auto mb-6 fade-up"></div>
+      <p class="text-zinc-300 text-lg max-w-2xl mx-auto fade-up">Fill in the form below or email <a href="mailto:hello@seo-birmingham.uk" class="text-accent hover:text-accent-light transition-colors font-semibold underline underline-offset-4 decoration-accent/50">hello@seo-birmingham.uk</a>. We reply within one business day. No obligation. No sales pressure.</p>
     </div>
+  </section>
 
-    <p>We work with businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or AI search readiness — tell us what you're after. We'll come back with an honest assessment.</p>
+  <!-- Two-Column: Info + Form -->
+  <section class="max-w-6xl mx-auto px-4 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-5 gap-10 lg:gap-14">
 
-    <p>We serve professional services firms in <strong>Colmore Business District</strong>, retailers in the <strong>Jewellery Quarter</strong>, tech companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement starts with understanding your goals and your current search performance.</p>
+      <!-- Left Column: Info & Benefits -->
+      <div class="lg:col-span-2 flex flex-col gap-6">
 
-    <h2>Coverage Areas</h2>
-
-    <ul>
-      <li>Birmingham city centre (Colmore Business District, Bullring, Grand Central)</li>
-      <li>Edgbaston</li>
-      <li>Digbeth</li>
-      <li>Jewellery Quarter</li>
-      <li>Solihull</li>
-      <li>Sutton Coldfield</li>
-      <li>Wider West Midlands (Wolverhampton, Coventry, Walsall, Dudley)</li>
-    </ul>
-
-    <p>If you operate in these areas, our <a href="/services/">SEO services</a> are built to increase your organic visibility where your customers search.</p>
-
-    <h2>Send Us Your Details</h2>
-
-    <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 shadow-sm border border-gray-200 mb-8">
-      <div class="grid sm:grid-cols-2 gap-5 mb-5">
-        <div>
-          <label for="name" class="block text-sm font-semibold text-brand-dark mb-1.5">Name <span class="text-red-500">*</span></label>
-          <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="Your name" />
+        <div class="fade-up">
+          <p class="text-text leading-relaxed mb-6">We work with businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or AI search readiness — tell us what you're after. We'll come back with an honest assessment.</p>
+          <p class="text-text leading-relaxed">We serve professional services firms in <strong>Colmore Business District</strong>, retailers in the <strong>Jewellery Quarter</strong>, tech companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement starts with understanding your goals and your current search performance.</p>
         </div>
-        <div>
-          <label for="email" class="block text-sm font-semibold text-brand-dark mb-1.5">Email <span class="text-red-500">*</span></label>
-          <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="you@example.com" />
+
+        <!-- Email Card -->
+        <div class="service-card fade-up" style="--i:1">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-3" style="font-family: var(--font-heading);">Email Us Directly</h3>
+          <a href="mailto:hello@seo-birmingham.uk" class="text-lg font-bold text-brand-dark hover:text-accent transition-colors" style="font-family: var(--font-heading);">hello@seo-birmingham.uk</a>
+          <p class="text-text-muted text-sm mt-2">We monitor the inbox throughout the working day and reply within one business day.</p>
+        </div>
+
+        <!-- Hours Card -->
+        <div class="service-card fade-up" style="--i:2">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-3" style="font-family: var(--font-heading);">Working Hours</h3>
+          <p class="text-lg font-bold text-brand-dark" style="font-family: var(--font-heading);">Monday to Friday, 9am to 5pm</p>
+          <p class="text-text-muted text-sm mt-2">Birmingham-based, remote-first.</p>
+        </div>
+
+        <!-- Location Card -->
+        <div class="service-card fade-up" style="--i:3">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-3" style="font-family: var(--font-heading);">Our Location</h3>
+          <p class="text-text-muted text-sm">We operate from Birmingham and serve businesses across the city and the wider West Midlands.</p>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="grid grid-cols-2 gap-4 fade-up" style="--i:4">
+          <div class="stat-card">
+            <div class="counter-value" data-count="1" data-suffix="">1</div>
+            <p class="text-zinc-400 text-xs mt-2 font-medium uppercase tracking-wider relative z-10">Business Day Reply</p>
+          </div>
+          <div class="stat-card">
+            <div class="counter-value" data-count="0" data-suffix="">0</div>
+            <p class="text-zinc-400 text-xs mt-2 font-medium uppercase tracking-wider relative z-10">Sales Pressure</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Form -->
+      <div class="lg:col-span-3 fade-up">
+        <div class="bg-brand rounded-none p-8 sm:p-10 border-t-4 border-accent relative overflow-hidden">
+          <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 20px 20px;"></div>
+          <div class="relative z-10">
+            <h2 class="text-white text-2xl sm:text-3xl font-extrabold mb-1 tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em; border: none; display: block; padding: 0;">Send Us Your Details</h2>
+            <p class="text-zinc-400 text-sm mb-8">All fields marked <span class="text-red-400">*</span> are required.</p>
+
+            <form action="#" method="POST" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="name" class="block text-xs font-bold uppercase tracking-widest text-accent mb-2">Name <span class="text-red-400">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-3 bg-brand-light border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-shadow" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="email" class="block text-xs font-bold uppercase tracking-widest text-accent mb-2">Email <span class="text-red-400">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-3 bg-brand-light border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-shadow" placeholder="you@example.com" />
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="company" class="block text-xs font-bold uppercase tracking-widest text-accent mb-2">Company <span class="text-zinc-500 text-xs font-normal normal-case tracking-normal">(optional)</span></label>
+                  <input type="text" id="company" name="company" autocomplete="organization" class="w-full px-4 py-3 bg-brand-light border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-shadow" placeholder="Your company name" />
+                </div>
+                <div>
+                  <label for="website" class="block text-xs font-bold uppercase tracking-widest text-accent mb-2">Website URL <span class="text-zinc-500 text-xs font-normal normal-case tracking-normal">(optional)</span></label>
+                  <input type="url" id="website" name="website" autocomplete="url" class="w-full px-4 py-3 bg-brand-light border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-shadow" placeholder="https://yoursite.co.uk" />
+                </div>
+              </div>
+              <div>
+                <label for="message" class="block text-xs font-bold uppercase tracking-widest text-accent mb-2">Message <span class="text-red-400">*</span></label>
+                <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-brand-light border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-shadow resize-y" placeholder="Tell us about your business, your current search performance, and what you want to achieve."></textarea>
+              </div>
+              <button type="submit" class="btn-shimmer w-full sm:w-auto cursor-pointer">
+                Talk to Us
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="grid sm:grid-cols-2 gap-5 mb-5">
-        <div>
-          <label for="company" class="block text-sm font-semibold text-brand-dark mb-1.5">Company <span class="text-text-muted text-xs font-normal">(optional)</span></label>
-          <input type="text" id="company" name="company" autocomplete="organization" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="Your company name" />
-        </div>
-        <div>
-          <label for="website" class="block text-sm font-semibold text-brand-dark mb-1.5">Website URL <span class="text-text-muted text-xs font-normal">(optional)</span></label>
-          <input type="url" id="website" name="website" autocomplete="url" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow" placeholder="https://yoursite.co.uk" />
-        </div>
+
+    </div>
+  </section>
+
+  <!-- Coverage Areas -->
+  <section class="bg-surface-alt">
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-20">
+      <h2 class="text-3xl font-extrabold tracking-tight mb-2 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Coverage Areas</h2>
+      <div class="w-12 h-1 bg-accent mb-8 fade-up"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          'Birmingham city centre (Colmore Business District, Bullring, Grand Central)',
+          'Edgbaston',
+          'Digbeth',
+          'Jewellery Quarter',
+          'Solihull',
+          'Sutton Coldfield',
+          'Wider West Midlands (Wolverhampton, Coventry, Walsall, Dudley)',
+        ].map((area, i) => (
+          <div class="service-card fade-up stagger-child" style={`--i:${i}`}>
+            <div class="flex items-start gap-3">
+              <span class="inline-block w-2 h-2 bg-accent mt-2 flex-shrink-0"></span>
+              <span class="text-sm font-medium text-text">{area}</span>
+            </div>
+          </div>
+        ))}
       </div>
-      <div class="mb-5">
-        <label for="message" class="block text-sm font-semibold text-brand-dark mb-1.5">Message <span class="text-red-500">*</span></label>
-        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-shadow resize-y" placeholder="Tell us about your business, your current search performance, and what you want to achieve."></textarea>
-      </div>
-      <button type="submit" class="w-full sm:w-auto bg-accent hover:bg-accent-light text-brand-dark font-bold px-8 py-3 rounded-lg transition-colors text-base cursor-pointer shadow-sm hover:shadow-md">
-        Talk to Us
-      </button>
-    </form>
+      <p class="text-text-muted mt-8 fade-up">If you operate in these areas, our <a href="/services/" class="text-brand font-semibold underline decoration-accent decoration-2 underline-offset-3 hover:decoration-brand transition-colors">SEO services</a> are built to increase your organic visibility where your customers search.</p>
+    </div>
+  </section>
 
-    <h2>Email Us Directly</h2>
-
-    <p>Prefer email? Write to <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a>. We monitor the inbox throughout the working day and reply within one business day.</p>
-
-    <h3>Working Hours</h3>
-
-    <p>Monday to Friday, 9am to 5pm. Birmingham-based, remote-first.</p>
-
-    <h2>Our Location</h2>
-
-    <p>We operate from Birmingham and serve businesses across the city and the wider West Midlands.</p>
-
-    <div class="not-prose rounded-xl overflow-hidden shadow-sm border border-gray-200 mb-8">
+  <!-- Map -->
+  <section class="max-w-6xl mx-auto px-4 py-16 sm:py-20 fade-up">
+    <div class="overflow-hidden border border-zinc-200 shadow-sm">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78219.42992867908!2d-1.9536041!3d52.4796992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham!5e0!3m2!1sen!2suk!4v1"
         width="100%"
-        height="300"
+        height="350"
         style="border:0;"
         allowfullscreen
         loading="lazy"
@@ -141,26 +202,36 @@ const faqSchema = {
         title="Map showing Birmingham city centre">
       </iframe>
     </div>
+  </section>
 
+  <!-- CTA Box -->
+  <section class="max-w-6xl mx-auto px-4 pb-16 fade-up">
     <div class="cta-box">
       <h2 class="text-white text-xl font-bold mt-0">Get the Audit</h2>
       <p class="text-gray-200 mb-0">Find out how your site performs against Birmingham competitors. No obligation.</p>
       <a href="/free-seo-audit-birmingham/">Get the Audit</a>
     </div>
+  </section>
 
-    <h2>Frequently Asked Questions</h2>
+  <!-- FAQ -->
+  <section class="bg-surface-alt">
+    <div class="max-w-3xl mx-auto px-4 py-16 sm:py-20">
+      <h2 class="text-3xl font-extrabold tracking-tight mb-2 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Frequently Asked Questions</h2>
+      <div class="w-12 h-1 bg-accent mb-8 fade-up"></div>
 
-    <div class="faq-section not-prose">
-      {faqItems.map((item) => (
-        <details>
-          <summary>{item.question}</summary>
-          <div class="faq-answer">
-            <p>{item.answer}</p>
-          </div>
-        </details>
-      ))}
+      <div class="faq-section fade-up">
+        {faqItems.map((item) => (
+          <details>
+            <summary>{item.question}</summary>
+            <div class="faq-answer">
+              <p>{item.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <p class="text-text-muted mt-8 fade-up">Question not covered? Email <a href="mailto:hello@seo-birmingham.uk" class="text-brand font-semibold underline decoration-accent decoration-2 underline-offset-3 hover:decoration-brand transition-colors">hello@seo-birmingham.uk</a> or use the form above. Our <a href="/seo-pricing-birmingham/" class="text-brand font-semibold underline decoration-accent decoration-2 underline-offset-3 hover:decoration-brand transition-colors">pricing page</a> has detailed package breakdowns.</p>
     </div>
+  </section>
 
-    <p>Question not covered? Email <a href="mailto:hello@seo-birmingham.uk">hello@seo-birmingham.uk</a> or use the form above. Our <a href="/seo-pricing-birmingham/">pricing page</a> has detailed package breakdowns.</p>
-  </div>
 </Base>

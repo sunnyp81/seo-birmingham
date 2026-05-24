@@ -59,76 +59,138 @@ const schema = [collectionSchema, faqSchema];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="website">
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Birmingham SEO Case Studies</h1>
 
-    <div class="quick-answer">
-      <strong>Numbers talk. These do.</strong> Two Birmingham businesses. One got 340% more organic traffic. The other took #1 in the local pack for 8 practice areas. Here is exactly how.
+  <!-- Hero -->
+  <section class="bg-brand relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-[0.06] blur-[80px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-20 md:py-28 text-center">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">Case Studies</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] text-white mb-6 fade-up stagger-child" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">Birmingham SEO Case Studies</h1>
+      <div class="max-w-2xl mx-auto fade-up stagger-child" style="--i:2;">
+        <div class="quick-answer">
+          <strong>Numbers talk. These do.</strong> Two Birmingham businesses. One got 340% more organic traffic. The other took #1 in the local pack for 8 practice areas. Here is exactly how.
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 mt-8 fade-up stagger-child" style="--i:3;">
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+        <a href="/services/" class="inline-block border border-zinc-600 text-white px-6 py-3 rounded-lg font-semibold hover:border-accent hover:text-accent transition-colors">Our Services</a>
+      </div>
     </div>
+  </section>
 
-    <p>Birmingham has 46,000+ registered businesses. Standing out takes precision, not guesswork. We audit. We prioritise. We execute. Then we measure. These case studies show what that process delivers in the West Midlands market.</p>
+  <!-- Stats bar -->
+  <section class="bg-[#111] border-y border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="stat-card text-center fade-up stagger-child" style="--i:0;">
+          <span class="counter-value" data-count="340" data-suffix="%">0%</span>
+          <p class="text-zinc-400 text-sm mt-1">Traffic Growth</p>
+        </div>
+        <div class="stat-card text-center fade-up stagger-child" style="--i:1;">
+          <span class="counter-value" data-count="8" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-1">Practice Areas at #1</p>
+        </div>
+        <div class="stat-card text-center fade-up stagger-child" style="--i:2;">
+          <span class="counter-value" data-count="3" data-suffix="x">0x</span>
+          <p class="text-zinc-400 text-sm mt-1">Lead Volume Increase</p>
+        </div>
+        <div class="stat-card text-center fade-up stagger-child" style="--i:3;">
+          <span class="counter-value" data-count="46000" data-suffix="+">0+</span>
+          <p class="text-zinc-400 text-sm mt-1">Birmingham Businesses</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>Every engagement starts the same way: data first. See our <a href="/services/">SEO services</a> for the full scope.</p>
-  </div>
+  <!-- Intro -->
+  <section class="max-w-3xl mx-auto px-4 py-16">
+    <p class="text-lg text-zinc-700 leading-relaxed fade-up" style="font-family: var(--font-body);">Birmingham has 46,000+ registered businesses. Standing out takes precision, not guesswork. We audit. We prioritise. We execute. Then we measure. These case studies show what that process delivers in the West Midlands market.</p>
+    <p class="text-lg text-zinc-700 leading-relaxed mt-4 fade-up stagger-child" style="--i:1; font-family: var(--font-body);">Every engagement starts the same way: data first. See our <a href="/services/" class="text-accent font-semibold hover:underline">SEO services</a> for the full scope.</p>
+  </section>
 
-  <section class="max-w-4xl mx-auto px-4 py-8">
-    <div class="grid md:grid-cols-2 gap-6">
-      <a href="/case-studies/jewellery-quarter-retailer-organic-growth/" class="block bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-accent transition-all group">
-        <span class="text-sm font-semibold text-accent uppercase tracking-wide">Retail</span>
-        <h2 class="text-xl font-bold text-brand-dark mt-2 mb-3 group-hover:text-brand transition-colors">Jewellery Quarter Retailer: 340% Organic Traffic Growth</h2>
-        <p class="text-text-muted text-sm mb-4">Independent jeweller in Birmingham's Jewellery Quarter. Broken site. Zero local visibility. We fixed the foundations and the traffic followed.</p>
-        <div class="flex items-center gap-4">
-          <span class="bg-surface-alt px-3 py-1 rounded-full text-sm font-bold text-brand-dark">+340% traffic</span>
-          <span class="bg-surface-alt px-3 py-1 rounded-full text-sm font-bold text-brand-dark">12 months</span>
+  <!-- Case study cards -->
+  <section class="max-w-5xl mx-auto px-4 pb-16">
+    <div class="grid md:grid-cols-2 gap-8">
+      <a href="/case-studies/jewellery-quarter-retailer-organic-growth/" class="service-card block group fade-up stagger-child" style="--i:0;">
+        <span class="text-xs font-bold text-accent uppercase tracking-widest" style="font-family: var(--font-heading);">Retail</span>
+        <h2 class="text-xl font-extrabold mt-3 mb-3 group-hover:text-accent transition-colors" style="font-family: var(--font-heading); color: var(--color-brand);">Jewellery Quarter Retailer: 340% Organic Traffic Growth</h2>
+        <p class="text-zinc-600 text-sm mb-5 leading-relaxed">Independent jeweller in Birmingham's Jewellery Quarter. Broken site. Zero local visibility. We fixed the foundations and the traffic followed.</p>
+        <div class="flex items-center gap-3">
+          <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-bold">+340% traffic</span>
+          <span class="bg-zinc-100 text-zinc-700 px-3 py-1 rounded-full text-sm font-bold">12 months</span>
         </div>
       </a>
 
-      <a href="/case-studies/colmore-law-firm-local-pack/" class="block bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-accent transition-all group">
-        <span class="text-sm font-semibold text-accent uppercase tracking-wide">Legal</span>
-        <h2 class="text-xl font-bold text-brand-dark mt-2 mb-3 group-hover:text-brand transition-colors">Colmore Law Firm: #1 Local Pack in 8 Months</h2>
-        <p class="text-text-muted text-sm mb-4">Mid-size Colmore Business District law firm. Invisible in local search. We put them at #1 for 8 practice areas and tripled their leads.</p>
-        <div class="flex items-center gap-4">
-          <span class="bg-surface-alt px-3 py-1 rounded-full text-sm font-bold text-brand-dark">#1 local pack</span>
-          <span class="bg-surface-alt px-3 py-1 rounded-full text-sm font-bold text-brand-dark">8 months</span>
+      <a href="/case-studies/colmore-law-firm-local-pack/" class="service-card block group fade-up stagger-child" style="--i:1;">
+        <span class="text-xs font-bold text-accent uppercase tracking-widest" style="font-family: var(--font-heading);">Legal</span>
+        <h2 class="text-xl font-extrabold mt-3 mb-3 group-hover:text-accent transition-colors" style="font-family: var(--font-heading); color: var(--color-brand);">Colmore Law Firm: #1 Local Pack in 8 Months</h2>
+        <p class="text-zinc-600 text-sm mb-5 leading-relaxed">Mid-size Colmore Business District law firm. Invisible in local search. We put them at #1 for 8 practice areas and tripled their leads.</p>
+        <div class="flex items-center gap-3">
+          <span class="bg-amber-50 text-amber-800 px-3 py-1 rounded-full text-sm font-bold">#1 local pack</span>
+          <span class="bg-zinc-100 text-zinc-700 px-3 py-1 rounded-full text-sm font-bold">8 months</span>
         </div>
       </a>
     </div>
   </section>
 
-  <div class="max-w-3xl mx-auto px-4 prose">
-    <h2>Why Birmingham SEO Needs a Local-First Approach</h2>
+  <!-- Why local-first -->
+  <section class="bg-[#FAFAFA] border-y border-zinc-200">
+    <div class="max-w-5xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4 fade-up" style="font-family: var(--font-heading); color: var(--color-brand); letter-spacing: -0.03em;">Why Birmingham SEO Needs a Local-First Approach</h2>
+      <p class="text-zinc-600 text-lg mb-12 max-w-2xl fade-up stagger-child" style="--i:1;">Birmingham is not London. It is not Manchester. The SEO landscape here is different. Three things set it apart.</p>
 
-    <p>Birmingham is not London. It is not Manchester. The SEO landscape here is different. Three things set it apart.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card fade-up stagger-child" style="--i:0;">
+          <h3 class="text-lg font-extrabold mb-3" style="font-family: var(--font-heading); color: var(--color-brand);">Concentrated Local Competition</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">The UK's second city. National brands and local independents fight for the same terms. The Bullring, Grand Central, and the Mailbox anchor commercial traffic. Digbeth and the Jewellery Quarter sustain specialist businesses that need hyper-local visibility. A generic SEO approach fails here.</p>
+        </div>
 
-    <h3>Concentrated Local Competition</h3>
-    <p>The UK's second city. National brands and local independents fight for the same terms. The Bullring, Grand Central, and the Mailbox anchor commercial traffic. Digbeth and the Jewellery Quarter sustain specialist businesses that need hyper-local visibility. A generic SEO approach fails here.</p>
+        <div class="service-card fade-up stagger-child" style="--i:1;">
+          <h3 class="text-lg font-extrabold mb-3" style="font-family: var(--font-heading); color: var(--color-brand);">Broad Industry Mix</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">Financial services on Colmore Row. Manufacturing in Aston and Tyseley. Creative industries in Digbeth. Retail across the city centre. Each sector has different search patterns, different competition, different conversion paths. One template does not fit.</p>
+        </div>
 
-    <h3>Broad Industry Mix</h3>
-    <p>Financial services on Colmore Row. Manufacturing in Aston and Tyseley. Creative industries in Digbeth. Retail across the city centre. Each sector has different search patterns, different competition, different conversion paths. One template does not fit.</p>
+        <div class="service-card fade-up stagger-child" style="--i:2;">
+          <h3 class="text-lg font-extrabold mb-3" style="font-family: var(--font-heading); color: var(--color-brand);">The West Midlands Factor</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">Birmingham businesses serve the wider conurbation — Solihull, Wolverhampton, Walsall, Dudley, Coventry. Good local SEO balances city-centre targeting with regional reach. Service businesses especially need this dual coverage.</p>
+        </div>
+      </div>
 
-    <h3>The West Midlands Factor</h3>
-    <p>Birmingham businesses serve the wider conurbation — Solihull, Wolverhampton, Walsall, Dudley, Coventry. Good local SEO balances city-centre targeting with regional reach. Service businesses especially need this dual coverage.</p>
-
-    <p>Our case studies reflect strategies built for these dynamics. Want to know where your business stands? <a href="/free-seo-audit-birmingham/">Get the audit</a>.</p>
-
-    <div class="cta-box">
-      <h2 class="text-white text-2xl font-bold">Want Numbers Like These?</h2>
-      <p class="text-gray-200">We will find your highest-value opportunities and map the path to growth. No fluff. Just data.</p>
-      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
+      <p class="text-zinc-700 text-lg mt-12 fade-up">Our case studies reflect strategies built for these dynamics. Want to know where your business stands? <a href="/free-seo-audit-birmingham/" class="text-accent font-semibold hover:underline">Get the audit</a>.</p>
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      {faqData.map((faq) => (
-        <details>
-          <summary>{faq.question}</summary>
-          <div class="faq-answer">
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-extrabold mb-8 fade-up" style="font-family: var(--font-heading); color: var(--color-brand); letter-spacing: -0.03em;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faqData.map((faq, i) => (
+        <details class="group border border-zinc-200 rounded-xl bg-white fade-up stagger-child" style={`--i:${i};`}>
+          <summary class="cursor-pointer px-6 py-4 font-bold text-zinc-900 flex items-center justify-between" style="font-family: var(--font-heading);">
+            {faq.question}
+            <svg class="w-5 h-5 text-accent shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-5 text-zinc-600 leading-relaxed">
             <p>{faq.answer}</p>
           </div>
         </details>
       ))}
-    </section>
+    </div>
+  </section>
 
-    <p>See our <a href="/services/">full range of SEO services</a> or <a href="/contact/">get in touch</a>. We work with businesses across Birmingham and the West Midlands from <a href="/">our base in the city</a>.</p>
-  </div>
+  <!-- CTA -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <div class="cta-box fade-up">
+      <h2 class="text-white text-2xl font-bold">Want Numbers Like These?</h2>
+      <p class="text-gray-200">We will find your highest-value opportunities and map the path to growth. No fluff. Just data.</p>
+      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
+    </div>
+  </section>
+
+  <!-- Footer link -->
+  <section class="max-w-3xl mx-auto px-4 pb-16 text-center">
+    <p class="text-zinc-600 fade-up">See our <a href="/services/" class="text-accent font-semibold hover:underline">full range of SEO services</a> or <a href="/contact/" class="text-accent font-semibold hover:underline">get in touch</a>. We work with businesses across Birmingham and the West Midlands from <a href="/" class="text-accent font-semibold hover:underline">our base in the city</a>.</p>
+  </section>
+
 </Base>

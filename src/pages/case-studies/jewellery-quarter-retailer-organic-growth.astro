@@ -62,100 +62,243 @@ const schema = [articleSchema, reviewSchema, faqSchema];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="article">
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Jewellery Quarter Retailer: 340% Organic Traffic Growth</h1>
 
-    <p class="text-sm text-text-muted italic border-l-2 border-gray-300 pl-4 mb-6">This case study is illustrative, drawn from composite results across real client engagements. Business details have been anonymised.</p>
+  <!-- Hero -->
+  <section class="bg-brand text-white py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(245,158,11,0.06)_1px,transparent_1px)] bg-[length:20px_20px] pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10 text-center fade-up">
+      <p class="text-accent font-heading font-bold uppercase tracking-widest text-sm mb-4">Case Study</p>
+      <h1 class="text-4xl md:text-6xl font-heading font-extrabold tracking-tight mb-6">Jewellery Quarter Retailer: <span class="text-accent">340%</span> Organic Traffic Growth</h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">An independent Jewellery Quarter retailer went from invisible to dominant in 12 months. Here is exactly what happened.</p>
+    </div>
+  </section>
 
+  <!-- Disclaimer -->
+  <div class="max-w-4xl mx-auto px-4 mt-8 fade-up">
+    <p class="text-sm text-text-muted italic border-l-2 border-gray-300 pl-4">This case study is illustrative, drawn from composite results across real client engagements. Business details have been anonymised.</p>
+  </div>
+
+  <!-- Quick Answer -->
+  <div class="max-w-4xl mx-auto px-4 mt-8 fade-up">
     <div class="quick-answer">
       <strong>340% more organic traffic. 156% more enquiries. 12 keywords in the top 3.</strong> An independent Jewellery Quarter retailer went from invisible to dominant in 12 months. Here is exactly what happened.
     </div>
-
-    <h2>The Problem</h2>
-
-    <p>Birmingham's Jewellery Quarter produces 40% of all UK-manufactured jewellery. That means fierce competition. This retailer had 15 years of trading behind them. Strong local reputation. Terrible website.</p>
-
-    <ul>
-      <li><strong>6-second load time.</strong> Three times Google's threshold.</li>
-      <li><strong>Zero schema markup.</strong> Competitors showed prices and ratings in search. This retailer got plain blue links.</li>
-      <li><strong>200+ broken internal links.</strong> Orphaned product pages from discontinued lines.</li>
-      <li><strong>Weak local SEO.</strong> Incomplete Google Business Profile. No Birmingham directory listings. No Jewellery Quarter BID connection.</li>
-      <li><strong>No content.</strong> Product descriptions under 50 words. No guides. No educational content.</li>
-    </ul>
-
-    <p>Ernest Jones and Goldsmiths owned the search results. Online competitors like Brilliant Earth and Vashi took the rest. This retailer was nowhere for "engagement rings Birmingham" or "bespoke jewellery Jewellery Quarter".</p>
-
-    <h2>What We Did</h2>
-
-    <h3>Fixed the Technical Foundations</h3>
-    <p>Compressed images. Implemented lazy loading. Minified CSS and JavaScript. Migrated hosting. Load time dropped from 6 seconds to 1.8. Resolved all 200+ crawl errors. Set 301 redirects for discontinued products. Submitted a clean XML sitemap to Search Console. More on our approach to <a href="/technical-seo-birmingham/">technical SEO in Birmingham</a>.</p>
-
-    <h3>Deployed Product Schema</h3>
-    <p>Every product page got structured data — Product, Offer, and AggregateRating schemas. Google started showing prices, availability, and customer ratings directly in search listings. For a visual category like jewellery, that drives clicks.</p>
-
-    <h3>Rebuilt Local SEO</h3>
-    <p>Rewrote the Google Business Profile. Professional photography. Accurate hours. Precise categories. Weekly posts featuring new collections. Secured listings with the Jewellery Quarter BID, Birmingham Chamber of Commerce, and specialist jewellery trade directories. Audited and corrected citation consistency across all platforms.</p>
-
-    <h3>Built a Content Hub</h3>
-    <p>Buying guides for engagement rings, wedding bands, anniversary gifts. Care guides for metals and gemstones. Birmingham-specific content on wedding jewellery traditions and Jewellery Quarter history. Every piece linked to relevant product pages.</p>
-
-    <h3>Optimised Image SEO</h3>
-    <p>Jewellery is visual. Descriptive alt text on every product image. Image sitemap built. WebP with JPEG fallback. This opened Google Image Search as a major traffic channel — customers browse visually before they buy.</p>
   </div>
 
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold text-brand-dark text-center mb-8">What Happened</h2>
+  <!-- Stat Counters -->
+  <section class="max-w-5xl mx-auto px-4 py-16">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">340%</span>
-        <span class="text-sm text-text-muted mt-1 block">Organic traffic increase</span>
-        <span class="text-xs text-text-muted">(12 months)</span>
+      <div class="stat-card fade-up stagger-child" style="--i:0">
+        <span class="counter-value" data-count="340" data-suffix="%">0%</span>
+        <span class="text-sm text-gray-300 mt-2 block">Organic traffic increase</span>
+        <span class="text-xs text-gray-400">(12 months)</span>
       </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">156%</span>
-        <span class="text-sm text-text-muted mt-1 block">More online enquiries</span>
+      <div class="stat-card fade-up stagger-child" style="--i:1">
+        <span class="counter-value" data-count="156" data-suffix="%">0%</span>
+        <span class="text-sm text-gray-300 mt-2 block">More online enquiries</span>
       </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">12</span>
-        <span class="text-sm text-text-muted mt-1 block">Keywords in top 3</span>
+      <div class="stat-card fade-up stagger-child" style="--i:2">
+        <span class="counter-value" data-count="12" data-suffix="">0</span>
+        <span class="text-sm text-gray-300 mt-2 block">Keywords in top 3</span>
       </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">AI Overview</span>
-        <span class="text-sm text-text-muted mt-1 block">Featured for "engagement rings Birmingham"</span>
+      <div class="stat-card fade-up stagger-child" style="--i:3">
+        <span class="counter-value text-2xl md:text-3xl">AI Overview</span>
+        <span class="text-sm text-gray-300 mt-2 block">Featured for "engagement rings Birmingham"</span>
       </div>
     </div>
   </section>
 
-  <div class="max-w-3xl mx-auto px-4 prose">
-    <h2>The Timeline</h2>
+  <!-- The Problem -->
+  <section class="max-w-4xl mx-auto px-4 py-12 fade-up">
+    <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight mb-2">The Problem</h2>
+    <div class="w-16 h-1 bg-accent mb-8"></div>
+    <div class="prose max-w-none">
+      <p>Birmingham's Jewellery Quarter produces 40% of all UK-manufactured jewellery. That means fierce competition. This retailer had 15 years of trading behind them. Strong local reputation. Terrible website.</p>
+    </div>
+  </section>
 
-    <h3>Months 1-3: Foundations</h3>
-    <p>Technical audit done. Fixes deployed. Site speed at 1.8 seconds. Crawl errors gone. Google Business Profile optimised. Product schema live on 150+ pages. First content published. Long-tail rankings started moving — "handmade gold ring Birmingham", "diamond engagement ring Jewellery Quarter".</p>
+  <!-- Problem Cards -->
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card !bg-brand-light !border-gray-800 fade-up stagger-child" style="--i:0">
+          <h3 class="text-accent font-heading font-bold text-lg mb-2">6-second load time</h3>
+          <p class="text-gray-300 text-sm">Three times Google's threshold.</p>
+        </div>
+        <div class="service-card !bg-brand-light !border-gray-800 fade-up stagger-child" style="--i:1">
+          <h3 class="text-accent font-heading font-bold text-lg mb-2">Zero schema markup</h3>
+          <p class="text-gray-300 text-sm">Competitors showed prices and ratings in search. This retailer got plain blue links.</p>
+        </div>
+        <div class="service-card !bg-brand-light !border-gray-800 fade-up stagger-child" style="--i:2">
+          <h3 class="text-accent font-heading font-bold text-lg mb-2">200+ broken internal links</h3>
+          <p class="text-gray-300 text-sm">Orphaned product pages from discontinued lines.</p>
+        </div>
+        <div class="service-card !bg-brand-light !border-gray-800 fade-up stagger-child" style="--i:3">
+          <h3 class="text-accent font-heading font-bold text-lg mb-2">Weak local SEO</h3>
+          <p class="text-gray-300 text-sm">Incomplete Google Business Profile. No Birmingham directory listings. No Jewellery Quarter BID connection.</p>
+        </div>
+        <div class="service-card !bg-brand-light !border-gray-800 fade-up stagger-child" style="--i:4">
+          <h3 class="text-accent font-heading font-bold text-lg mb-2">No content</h3>
+          <p class="text-gray-300 text-sm">Product descriptions under 50 words. No guides. No educational content.</p>
+        </div>
+      </div>
+      <p class="text-gray-300 mt-8 max-w-3xl mx-auto text-center fade-up">Ernest Jones and Goldsmiths owned the search results. Online competitors like Brilliant Earth and Vashi took the rest. This retailer was nowhere for "engagement rings Birmingham" or "bespoke jewellery Jewellery Quarter".</p>
+    </div>
+  </section>
 
-    <h3>Months 4-6: Growth</h3>
-    <p>Content hub hit 15 guides covering buying decisions, metals, and Birmingham wedding planning. 25 local directory citations established. Google Business Profile appeared in the local 3-pack for "jewellers near me" in B1 and B3 postcodes. Traffic up 80% on baseline.</p>
-
-    <h3>Months 7-12: Acceleration</h3>
-    <p>Product schema rich results drove measurable CTR uplift. Image search became the third-largest channel. The content hub attracted backlinks from Birmingham wedding blogs and local media. By month 12: 340% traffic growth. Top 3 for 12 keywords including "engagement rings Birmingham", "bespoke jewellery quarter", and "gold jewellery Birmingham".</p>
-
-    <h2>What This Proves</h2>
-
-    <ul>
-      <li><strong>Technical health comes first.</strong> No amount of content fixes a 6-second load time. The technical work unlocked everything else.</li>
-      <li><strong>Product schema is non-negotiable for retail.</strong> Rich results with prices and ratings in search listings beat competitors without markup. Every time.</li>
-      <li><strong>Local SEO compounds.</strong> GBP, citations, and local content reinforce each other. The local pack appearance at month 5 accelerated enquiry growth for the rest of the campaign.</li>
-    </ul>
-
-    <p>These strategies work for any Birmingham retailer fighting national brands. Technical precision, structured data, and local market knowledge — that is the difference. See our <a href="/industries/">industry-specific SEO services</a> or check our <a href="/seo-pricing-birmingham/">Birmingham SEO pricing</a>.</p>
-
-    <div class="cta-box">
-      <h2 class="text-white text-2xl font-bold">Want Growth Like This?</h2>
-      <p class="text-gray-200">We will find your opportunities — the same way we did for this Jewellery Quarter retailer. Data first. Then action.</p>
-      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
+  <!-- What We Did -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-12 fade-up">
+      <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight mb-2">What We Did</h2>
+      <div class="w-16 h-1 bg-accent mx-auto"></div>
     </div>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
+    <div class="space-y-12">
+      <div class="flex gap-6 items-start fade-up stagger-child" style="--i:0">
+        <div class="flex-shrink-0 w-12 h-12 bg-brand text-accent font-heading font-extrabold text-xl flex items-center justify-center">1</div>
+        <div class="prose max-w-none">
+          <h3 class="!mt-0">Fixed the Technical Foundations</h3>
+          <p>Compressed images. Implemented lazy loading. Minified CSS and JavaScript. Migrated hosting. Load time dropped from 6 seconds to 1.8. Resolved all 200+ crawl errors. Set 301 redirects for discontinued products. Submitted a clean XML sitemap to Search Console. More on our approach to <a href="/technical-seo-birmingham/">technical SEO in Birmingham</a>.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start fade-up stagger-child" style="--i:1">
+        <div class="flex-shrink-0 w-12 h-12 bg-brand text-accent font-heading font-extrabold text-xl flex items-center justify-center">2</div>
+        <div class="prose max-w-none">
+          <h3 class="!mt-0">Deployed Product Schema</h3>
+          <p>Every product page got structured data — Product, Offer, and AggregateRating schemas. Google started showing prices, availability, and customer ratings directly in search listings. For a visual category like jewellery, that drives clicks.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start fade-up stagger-child" style="--i:2">
+        <div class="flex-shrink-0 w-12 h-12 bg-brand text-accent font-heading font-extrabold text-xl flex items-center justify-center">3</div>
+        <div class="prose max-w-none">
+          <h3 class="!mt-0">Rebuilt Local SEO</h3>
+          <p>Rewrote the Google Business Profile. Professional photography. Accurate hours. Precise categories. Weekly posts featuring new collections. Secured listings with the Jewellery Quarter BID, Birmingham Chamber of Commerce, and specialist jewellery trade directories. Audited and corrected citation consistency across all platforms.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start fade-up stagger-child" style="--i:3">
+        <div class="flex-shrink-0 w-12 h-12 bg-brand text-accent font-heading font-extrabold text-xl flex items-center justify-center">4</div>
+        <div class="prose max-w-none">
+          <h3 class="!mt-0">Built a Content Hub</h3>
+          <p>Buying guides for engagement rings, wedding bands, anniversary gifts. Care guides for metals and gemstones. Birmingham-specific content on wedding jewellery traditions and Jewellery Quarter history. Every piece linked to relevant product pages.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start fade-up stagger-child" style="--i:4">
+        <div class="flex-shrink-0 w-12 h-12 bg-brand text-accent font-heading font-extrabold text-xl flex items-center justify-center">5</div>
+        <div class="prose max-w-none">
+          <h3 class="!mt-0">Optimised Image SEO</h3>
+          <p>Jewellery is visual. Descriptive alt text on every product image. Image sitemap built. WebP with JPEG fallback. This opened Google Image Search as a major traffic channel — customers browse visually before they buy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Stats -->
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight !text-white mb-2">What Happened</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="stat-card !bg-brand-light fade-up stagger-child" style="--i:0">
+          <span class="counter-value" data-count="340" data-suffix="%">0%</span>
+          <span class="text-sm text-gray-300 mt-2 block">Organic traffic increase</span>
+          <span class="text-xs text-gray-400">(12 months)</span>
+        </div>
+        <div class="stat-card !bg-brand-light fade-up stagger-child" style="--i:1">
+          <span class="counter-value" data-count="156" data-suffix="%">0%</span>
+          <span class="text-sm text-gray-300 mt-2 block">More online enquiries</span>
+        </div>
+        <div class="stat-card !bg-brand-light fade-up stagger-child" style="--i:2">
+          <span class="counter-value" data-count="12" data-suffix="">0</span>
+          <span class="text-sm text-gray-300 mt-2 block">Keywords in top 3</span>
+        </div>
+        <div class="stat-card !bg-brand-light fade-up stagger-child" style="--i:3">
+          <span class="counter-value text-2xl md:text-3xl">AI Overview</span>
+          <span class="text-sm text-gray-300 mt-2 block">Featured for "engagement rings Birmingham"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="text-center mb-12 fade-up">
+      <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight mb-2">The Timeline</h2>
+      <div class="w-16 h-1 bg-accent mx-auto"></div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gray-200"></div>
+
+      <div class="space-y-12">
+        <div class="relative pl-16 md:pl-20 fade-up stagger-child" style="--i:0">
+          <div class="absolute left-0 top-0 w-12 md:w-16 h-12 md:h-16 bg-brand text-accent font-heading font-extrabold text-sm md:text-base flex items-center justify-center z-10">1-3</div>
+          <h3 class="text-xl font-heading font-bold mb-2">Months 1-3: Foundations</h3>
+          <p class="text-text-muted">Technical audit done. Fixes deployed. Site speed at 1.8 seconds. Crawl errors gone. Google Business Profile optimised. Product schema live on 150+ pages. First content published. Long-tail rankings started moving — "handmade gold ring Birmingham", "diamond engagement ring Jewellery Quarter".</p>
+        </div>
+
+        <div class="relative pl-16 md:pl-20 fade-up stagger-child" style="--i:1">
+          <div class="absolute left-0 top-0 w-12 md:w-16 h-12 md:h-16 bg-brand text-accent font-heading font-extrabold text-sm md:text-base flex items-center justify-center z-10">4-6</div>
+          <h3 class="text-xl font-heading font-bold mb-2">Months 4-6: Growth</h3>
+          <p class="text-text-muted">Content hub hit 15 guides covering buying decisions, metals, and Birmingham wedding planning. 25 local directory citations established. Google Business Profile appeared in the local 3-pack for "jewellers near me" in B1 and B3 postcodes. Traffic up 80% on baseline.</p>
+        </div>
+
+        <div class="relative pl-16 md:pl-20 fade-up stagger-child" style="--i:2">
+          <div class="absolute left-0 top-0 w-12 md:w-16 h-12 md:h-16 bg-accent text-brand font-heading font-extrabold text-sm md:text-base flex items-center justify-center z-10">7-12</div>
+          <h3 class="text-xl font-heading font-bold mb-2">Months 7-12: Acceleration</h3>
+          <p class="text-text-muted">Product schema rich results drove measurable CTR uplift. Image search became the third-largest channel. The content hub attracted backlinks from Birmingham wedding blogs and local media. By month 12: 340% traffic growth. Top 3 for 12 keywords including "engagement rings Birmingham", "bespoke jewellery quarter", and "gold jewellery Birmingham".</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Proves -->
+  <section class="bg-surface-alt py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="text-3xl md:text-4xl font-heading font-extrabold tracking-tight mb-2">What This Proves</h2>
+        <div class="w-16 h-1 bg-accent mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="service-card fade-up stagger-child" style="--i:0">
+          <h3 class="text-lg font-heading font-bold mb-3">Technical health comes first</h3>
+          <p class="text-text-muted text-sm">No amount of content fixes a 6-second load time. The technical work unlocked everything else.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:1">
+          <h3 class="text-lg font-heading font-bold mb-3">Product schema is non-negotiable for retail</h3>
+          <p class="text-text-muted text-sm">Rich results with prices and ratings in search listings beat competitors without markup. Every time.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:2">
+          <h3 class="text-lg font-heading font-bold mb-3">Local SEO compounds</h3>
+          <p class="text-text-muted text-sm">GBP, citations, and local content reinforce each other. The local pack appearance at month 5 accelerated enquiry growth for the rest of the campaign.</p>
+        </div>
+      </div>
+
+      <div class="prose max-w-3xl mx-auto mt-8 text-center fade-up">
+        <p>These strategies work for any Birmingham retailer fighting national brands. Technical precision, structured data, and local market knowledge — that is the difference. See our <a href="/industries/">industry-specific SEO services</a> or check our <a href="/seo-pricing-birmingham/">Birmingham SEO pricing</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-4xl mx-auto px-4 py-16 fade-up">
+    <div class="cta-box">
+      <h2 class="text-white text-2xl md:text-3xl font-bold">Want Growth Like This?</h2>
+      <p class="text-gray-200">We will find your opportunities — the same way we did for this Jewellery Quarter retailer. Data first. Then action.</p>
+      <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-4 pb-16 fade-up">
+    <div class="faq-section">
+      <h2 class="text-2xl md:text-3xl font-heading font-extrabold tracking-tight mb-6">Frequently Asked Questions</h2>
       {faqData.map((faq) => (
         <details>
           <summary>{faq.question}</summary>
@@ -164,8 +307,12 @@ const schema = [articleSchema, reviewSchema, faqSchema];
           </div>
         </details>
       ))}
-    </section>
+    </div>
+  </section>
 
-    <p>Back to <a href="/case-studies/">case studies</a> for more Birmingham SEO results. Or <a href="/contact/">contact us</a> to talk about your project. See our <a href="/services/">SEO services</a> and how we help businesses across <a href="/">Birmingham</a> and the West Midlands.</p>
+  <!-- Footer Links -->
+  <div class="max-w-3xl mx-auto px-4 pb-16 fade-up">
+    <p class="text-text-muted">Back to <a href="/case-studies/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">case studies</a> for more Birmingham SEO results. Or <a href="/contact/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">contact us</a> to talk about your project. See our <a href="/services/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">SEO services</a> and how we help businesses across <a href="/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">Birmingham</a> and the West Midlands.</p>
   </div>
+
 </Base>

@@ -62,117 +62,267 @@ const schema = [articleSchema, reviewSchema, faqSchema];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="article">
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Colmore Law Firm: #1 Local Pack in 8 Months</h1>
 
-    <p class="text-sm text-text-muted italic border-l-2 border-gray-300 pl-4 mb-6">This case study is illustrative, drawn from composite results across real client engagements. Business details have been anonymised.</p>
-
-    <div class="quick-answer">
-      <strong>#1 local pack. 8 practice areas. 210% more leads. 12 to 59 Google reviews. 89% more directions clicks.</strong> A mid-size Colmore Business District law firm went from invisible to dominant. Here is how.
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="relative max-w-5xl mx-auto px-4 py-24 md:py-32 text-center">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">Case Study</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 fade-up" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">
+        Colmore Law Firm:<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">#1 Local Pack</span> in 8 Months
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-6 fade-up stagger-child" style="--i:2;">A mid-size Colmore Business District law firm went from invisible to dominant. Here is how.</p>
+      <p class="text-sm text-zinc-500 italic fade-up stagger-child" style="--i:3;">This case study is illustrative, drawn from composite results across real client engagements. Business details have been anonymised.</p>
     </div>
+  </section>
 
-    <h2>The Problem</h2>
-
-    <p>Colmore Business District is Birmingham's legal centre. Pinsent Masons, DLA Piper, Eversheds Sutherland — they all operate here. That makes it one of the most competitive legal SEO environments in the UK outside London.</p>
-
-    <p>This firm had operated from Colmore Row for over a decade. Strong credentials. Loyal clients. Zero local search visibility.</p>
-
-    <ul>
-      <li><strong>No local pack presence.</strong> Not appearing in Google's top 3 for any practice area. Located in the heart of Birmingham's legal district — invisible.</li>
-      <li><strong>12 Google reviews.</strong> Competitors averaged 40+.</li>
-      <li><strong>Inconsistent citations.</strong> Wrong addresses. Wrong phone numbers. Former office details still live across directories.</li>
-      <li><strong>Duplicate content cannibalisation.</strong> "Family solicitor Birmingham" and "family solicitor Edgbaston" had near-identical copy. Pages fighting each other instead of competitors.</li>
-      <li><strong>Incomplete GBP.</strong> Missing categories. No posts. Limited photos. Empty Q&A.</li>
-    </ul>
-
-    <p>Over 50 law firms within a one-mile radius. Without a systematic local SEO approach, this firm stayed buried.</p>
-
-    <h2>What We Did</h2>
-
-    <h3>Rebuilt Google Business Profile</h3>
-    <p>From scratch. Precise categories — Solicitor, Family Law Attorney, Employment Attorney. Professional photography. Keyword-rich description. Weekly posts covering legal updates, case outcomes, community involvement. Pre-populated Q&A with common enquiries and detailed answers.</p>
-
-    <h3>Cleaned Up Citations</h3>
-    <p>Audited every existing citation. Corrected NAP inconsistencies across 40+ directories. Secured listings in legal-specific directories: Law Society Find a Solicitor, SRA records, Birmingham Law Society, Chambers UK, Legal 500. Birmingham-specific citations through Birmingham Chamber of Commerce and the Colmore Business District BID. Monthly consistency checks.</p>
-
-    <h3>Built Practice Area Content Hubs</h3>
-    <p>Killed the duplicate location-variant pages. Replaced them with one authoritative hub per practice area. Each page targeted "[practice area] solicitor Birmingham" with 1,500+ words of genuinely useful content — process explanations, common questions, relevant case law. Cannibalisation eliminated. User intent served. Linked to the firm's <a href="/services/">broader service positioning</a>.</p>
-
-    <h3>Fixed the Technical Issues</h3>
-    <p>Canonical tags on duplicate content. Thin location pages consolidated into main practice area pages with geographic context woven into the copy. Internal linking restructured to flow authority from homepage through service categories to practice area pages. Speed optimised. Mobile fixed.</p>
-
-    <h3>Deployed Schema</h3>
-    <p>LegalService schema on every practice area page. Review schema surfacing testimonials in search. Structured data helped Google understand the firm's services, expertise, and geographic coverage precisely. Our <a href="/seo-audit-birmingham/">audit process</a> always includes a schema assessment.</p>
-
-    <h3>Launched Review Generation</h3>
-    <p>Every satisfied client got a follow-up email with a direct Google review link. Reception trained to request reviews at case completion. Negative reviews received prompt, professional responses. Systematic. Consistent. Effective.</p>
-  </div>
-
-  <section class="max-w-4xl mx-auto px-4 py-10">
-    <h2 class="text-2xl font-bold text-brand-dark text-center mb-8">What Happened</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">#1</span>
-        <span class="text-sm text-text-muted mt-1 block">Local pack position</span>
-        <span class="text-xs text-text-muted">8 practice areas</span>
-      </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">210%</span>
-        <span class="text-sm text-text-muted mt-1 block">More organic leads</span>
-      </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">12 &rarr; 59</span>
-        <span class="text-sm text-text-muted mt-1 block">Google reviews</span>
-        <span class="text-xs text-text-muted">All 5-star</span>
-      </div>
-      <div class="bg-surface-alt rounded-xl p-6 text-center">
-        <span class="block text-3xl md:text-4xl font-bold text-brand">89%</span>
-        <span class="text-sm text-text-muted mt-1 block">More directions clicks</span>
-        <span class="text-xs text-text-muted">From GBP</span>
+  <!-- Stat counters -->
+  <section class="bg-surface py-16 fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="stat-card text-center">
+          <span class="block text-4xl md:text-5xl font-extrabold text-accent" style="font-family: var(--font-heading);">#1</span>
+          <span class="text-sm text-zinc-400 mt-2 block">Local pack position</span>
+          <span class="text-xs text-zinc-500">8 practice areas</span>
+        </div>
+        <div class="stat-card text-center">
+          <span class="counter-value block text-4xl md:text-5xl font-extrabold text-accent" data-count="210" data-suffix="%" style="font-family: var(--font-heading);">210%</span>
+          <span class="text-sm text-zinc-400 mt-2 block">More organic leads</span>
+        </div>
+        <div class="stat-card text-center">
+          <span class="block text-4xl md:text-5xl font-extrabold text-accent" style="font-family: var(--font-heading);">12 &rarr; 59</span>
+          <span class="text-sm text-zinc-400 mt-2 block">Google reviews</span>
+          <span class="text-xs text-zinc-500">All 5-star</span>
+        </div>
+        <div class="stat-card text-center">
+          <span class="counter-value block text-4xl md:text-5xl font-extrabold text-accent" data-count="89" data-suffix="%" style="font-family: var(--font-heading);">89%</span>
+          <span class="text-sm text-zinc-400 mt-2 block">More directions clicks</span>
+          <span class="text-xs text-zinc-500">From GBP</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="max-w-3xl mx-auto px-4 prose">
-    <h2>The Timeline</h2>
-
-    <h3>Months 1-2: Audit and Foundations</h3>
-    <p>Full technical audit. Citation cleanup. GBP rebuilt. Duplicate content identified, canonical strategy deployed. NAP corrections across 40+ directories. Review generation launched. Schema on all practice area pages.</p>
-
-    <h3>Months 3-4: Content and Authority</h3>
-    <p>Eight practice area hubs published. Duplicate pages killed. Internal links restructured. First local pack appearances for lower-competition areas — wills and probate, conveyancing. Review count hit 30. Citations verified consistent. The firm started showing in <a href="/areas/">area-specific searches</a> across Birmingham.</p>
-
-    <h3>Months 5-8: Dominance</h3>
-    <p>Local pack #1 for family law, employment law, and personal injury — the three hardest practice areas. Reviews hit 59. Weekly GBP posts driving engagement. Organic leads up 210%. Directions clicks up 89% — local searchers actively planning visits. By month 8: #1 in the local pack for all eight targeted practice areas.</p>
-
-    <h2>What This Proves</h2>
-
-    <ul>
-      <li><strong>Citation consistency is foundational.</strong> Inconsistent NAP data actively kills local authority. The cleanup alone moved the firm from invisible to appearing in the local pack within 8 weeks.</li>
-      <li><strong>Reviews are a weapon.</strong> 12 to 59 five-star reviews created a ranking signal and a trust signal. In legal services, visible social proof converts browsers into enquiries.</li>
-      <li><strong>Duplicate content cannibalisation is a silent killer.</strong> Practice area pages duplicated across locations were fighting each other. One authoritative page per practice area produced immediate ranking gains.</li>
-    </ul>
-
-    <p>Legal SEO in Birmingham demands precision. The competition is concentrated and sophisticated. These strategies apply to any professional services firm in a dense urban market. See our <a href="/industries/">industry-specific approaches</a> or read our <a href="/case-studies/">other case studies</a>.</p>
-
-    <div class="cta-box">
-      <h2 class="text-white text-2xl font-bold">Not in the Local Pack?</h2>
-      <p class="text-gray-200">If your Birmingham business is missing from Google's top 3, you are losing leads to competitors who are there. We will show you exactly what needs to change.</p>
-      <a href="/free-seo-audit-birmingham/">Get the Audit</a>
+  <!-- Quick answer -->
+  <section class="max-w-4xl mx-auto px-4 py-16 fade-up">
+    <div class="quick-answer">
+      <strong>#1 local pack. 8 practice areas. 210% more leads. 12 to 59 Google reviews. 89% more directions clicks.</strong> A mid-size Colmore Business District law firm went from invisible to dominant. Here is how.
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      {faqData.map((faq) => (
-        <details>
-          <summary>{faq.question}</summary>
-          <div class="faq-answer">
-            <p>{faq.answer}</p>
+  <!-- The Problem -->
+  <section class="bg-brand text-white py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-8 fade-up" style="font-family: var(--font-heading);">The Problem</h2>
+      <p class="text-zinc-300 text-lg mb-6 fade-up stagger-child" style="--i:1;">Colmore Business District is Birmingham's legal centre. Pinsent Masons, DLA Piper, Eversheds Sutherland — they all operate here. That makes it one of the most competitive legal SEO environments in the UK outside London.</p>
+      <p class="text-zinc-300 text-lg mb-8 fade-up stagger-child" style="--i:2;">This firm had operated from Colmore Row for over a decade. Strong credentials. Loyal clients. Zero local search visibility.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="service-card fade-up stagger-child" style="--i:3;">
+          <h3 class="text-accent font-bold text-lg mb-2" style="font-family: var(--font-heading);">No local pack presence</h3>
+          <p class="text-zinc-400">Not appearing in Google's top 3 for any practice area. Located in the heart of Birmingham's legal district — invisible.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:4;">
+          <h3 class="text-accent font-bold text-lg mb-2" style="font-family: var(--font-heading);">12 Google reviews</h3>
+          <p class="text-zinc-400">Competitors averaged 40+.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:5;">
+          <h3 class="text-accent font-bold text-lg mb-2" style="font-family: var(--font-heading);">Inconsistent citations</h3>
+          <p class="text-zinc-400">Wrong addresses. Wrong phone numbers. Former office details still live across directories.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:6;">
+          <h3 class="text-accent font-bold text-lg mb-2" style="font-family: var(--font-heading);">Duplicate content cannibalisation</h3>
+          <p class="text-zinc-400">"Family solicitor Birmingham" and "family solicitor Edgbaston" had near-identical copy. Pages fighting each other instead of competitors.</p>
+        </div>
+        <div class="service-card fade-up stagger-child md:col-span-2" style="--i:7;">
+          <h3 class="text-accent font-bold text-lg mb-2" style="font-family: var(--font-heading);">Incomplete GBP</h3>
+          <p class="text-zinc-400">Missing categories. No posts. Limited photos. Empty Q&A.</p>
+        </div>
+      </div>
+
+      <p class="text-zinc-300 text-lg fade-up">Over 50 law firms within a one-mile radius. Without a systematic local SEO approach, this firm stayed buried.</p>
+    </div>
+  </section>
+
+  <!-- What We Did -->
+  <section class="bg-surface py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-center fade-up" style="font-family: var(--font-heading);">What We Did</h2>
+
+      <div class="space-y-12">
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:1;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">01</span>
           </div>
-        </details>
-      ))}
-    </section>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Rebuilt Google Business Profile</h3>
+            <p class="text-zinc-600">From scratch. Precise categories — Solicitor, Family Law Attorney, Employment Attorney. Professional photography. Keyword-rich description. Weekly posts covering legal updates, case outcomes, community involvement. Pre-populated Q&A with common enquiries and detailed answers.</p>
+          </div>
+        </div>
 
-    <p>See our <a href="/services/">full SEO services</a>, read our <a href="/case-studies/">other Birmingham case studies</a>, or <a href="/contact/">get in touch</a>. We work with law firms and professional services across <a href="/">Birmingham</a> and the <a href="/areas/">wider West Midlands</a>.</p>
-  </div>
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:2;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">02</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Cleaned Up Citations</h3>
+            <p class="text-zinc-600">Audited every existing citation. Corrected NAP inconsistencies across 40+ directories. Secured listings in legal-specific directories: Law Society Find a Solicitor, SRA records, Birmingham Law Society, Chambers UK, Legal 500. Birmingham-specific citations through Birmingham Chamber of Commerce and the Colmore Business District BID. Monthly consistency checks.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:3;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">03</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Built Practice Area Content Hubs</h3>
+            <p class="text-zinc-600">Killed the duplicate location-variant pages. Replaced them with one authoritative hub per practice area. Each page targeted "[practice area] solicitor Birmingham" with 1,500+ words of genuinely useful content — process explanations, common questions, relevant case law. Cannibalisation eliminated. User intent served. Linked to the firm's <a href="/services/" class="text-accent hover:underline">broader service positioning</a>.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:4;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">04</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Fixed the Technical Issues</h3>
+            <p class="text-zinc-600">Canonical tags on duplicate content. Thin location pages consolidated into main practice area pages with geographic context woven into the copy. Internal linking restructured to flow authority from homepage through service categories to practice area pages. Speed optimised. Mobile fixed.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:5;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">05</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Deployed Schema</h3>
+            <p class="text-zinc-600">LegalService schema on every practice area page. Review schema surfacing testimonials in search. Structured data helped Google understand the firm's services, expertise, and geographic coverage precisely. Our <a href="/seo-audit-birmingham/" class="text-accent hover:underline">audit process</a> always includes a schema assessment.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-[auto_1fr] gap-6 items-start fade-up stagger-child" style="--i:6;">
+          <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-accent font-extrabold text-xl" style="font-family: var(--font-heading);">06</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Launched Review Generation</h3>
+            <p class="text-zinc-600">Every satisfied client got a follow-up email with a direct Google review link. Reception trained to request reviews at case completion. Negative reviews received prompt, professional responses. Systematic. Consistent. Effective.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="bg-brand text-white py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-center fade-up" style="font-family: var(--font-heading);">The Timeline</h2>
+
+      <div class="relative">
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-zinc-700 -translate-x-1/2"></div>
+
+        <div class="space-y-12 md:space-y-16">
+          <!-- Phase 1 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 fade-up stagger-child" style="--i:1;">
+            <div class="md:text-right md:pr-8">
+              <span class="inline-block bg-accent text-brand font-extrabold text-sm px-3 py-1 rounded mb-3" style="font-family: var(--font-heading);">Months 1-2</span>
+              <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Audit and Foundations</h3>
+            </div>
+            <div class="md:pl-8 md:border-l md:border-zinc-700">
+              <p class="text-zinc-300">Full technical audit. Citation cleanup. GBP rebuilt. Duplicate content identified, canonical strategy deployed. NAP corrections across 40+ directories. Review generation launched. Schema on all practice area pages.</p>
+            </div>
+            <div class="hidden md:block absolute left-1/2 top-2 w-4 h-4 bg-accent rounded-full -translate-x-1/2 ring-4 ring-brand"></div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 fade-up stagger-child" style="--i:2;">
+            <div class="md:text-right md:pr-8">
+              <span class="inline-block bg-accent text-brand font-extrabold text-sm px-3 py-1 rounded mb-3" style="font-family: var(--font-heading);">Months 3-4</span>
+              <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Content and Authority</h3>
+            </div>
+            <div class="md:pl-8 md:border-l md:border-zinc-700">
+              <p class="text-zinc-300">Eight practice area hubs published. Duplicate pages killed. Internal links restructured. First local pack appearances for lower-competition areas — wills and probate, conveyancing. Review count hit 30. Citations verified consistent. The firm started showing in <a href="/areas/" class="text-accent hover:underline">area-specific searches</a> across Birmingham.</p>
+            </div>
+            <div class="hidden md:block absolute left-1/2 top-2 w-4 h-4 bg-accent rounded-full -translate-x-1/2 ring-4 ring-brand"></div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="relative md:grid md:grid-cols-2 md:gap-12 fade-up stagger-child" style="--i:3;">
+            <div class="md:text-right md:pr-8">
+              <span class="inline-block bg-accent text-brand font-extrabold text-sm px-3 py-1 rounded mb-3" style="font-family: var(--font-heading);">Months 5-8</span>
+              <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">Dominance</h3>
+            </div>
+            <div class="md:pl-8 md:border-l md:border-zinc-700">
+              <p class="text-zinc-300">Local pack #1 for family law, employment law, and personal injury — the three hardest practice areas. Reviews hit 59. Weekly GBP posts driving engagement. Organic leads up 210%. Directions clicks up 89% — local searchers actively planning visits. By month 8: #1 in the local pack for all eight targeted practice areas.</p>
+            </div>
+            <div class="hidden md:block absolute left-1/2 top-2 w-4 h-4 bg-accent rounded-full -translate-x-1/2 ring-4 ring-brand"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Proves -->
+  <section class="bg-surface py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center fade-up" style="font-family: var(--font-heading);">What This Proves</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="service-card fade-up stagger-child" style="--i:1;">
+          <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Citation consistency is foundational</h3>
+          <p class="text-zinc-600">Inconsistent NAP data actively kills local authority. The cleanup alone moved the firm from invisible to appearing in the local pack within 8 weeks.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:2;">
+          <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Reviews are a weapon</h3>
+          <p class="text-zinc-600">12 to 59 five-star reviews created a ranking signal and a trust signal. In legal services, visible social proof converts browsers into enquiries.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i:3;">
+          <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Duplicate content cannibalisation is a silent killer</h3>
+          <p class="text-zinc-600">Practice area pages duplicated across locations were fighting each other. One authoritative page per practice area produced immediate ranking gains.</p>
+        </div>
+      </div>
+
+      <p class="text-zinc-600 text-lg max-w-3xl mx-auto text-center fade-up">Legal SEO in Birmingham demands precision. The competition is concentrated and sophisticated. These strategies apply to any professional services firm in a dense urban market. See our <a href="/industries/" class="text-accent hover:underline">industry-specific approaches</a> or read our <a href="/case-studies/" class="text-accent hover:underline">other case studies</a>.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 fade-up">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="cta-box">
+        <h2 class="text-white text-2xl md:text-3xl font-bold" style="font-family: var(--font-heading);">Not in the Local Pack?</h2>
+        <p class="text-gray-200 text-lg">If your Birmingham business is missing from Google's top 3, you are losing leads to competitors who are there. We will show you exactly what needs to change.</p>
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-brand text-white py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center fade-up" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        {faqData.map((faq, i) => (
+          <details class="group border border-zinc-700 rounded-lg fade-up stagger-child" style={`--i:${i + 1}`}>
+            <summary class="cursor-pointer px-6 py-4 font-bold text-lg flex items-center justify-between" style="font-family: var(--font-heading);">
+              {faq.question}
+              <span class="text-accent ml-4 transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
+            </summary>
+            <div class="px-6 pb-4 text-zinc-300">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom links -->
+  <section class="bg-surface py-16 fade-up">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <p class="text-zinc-600 text-lg">See our <a href="/services/" class="text-accent hover:underline">full SEO services</a>, read our <a href="/case-studies/" class="text-accent hover:underline">other Birmingham case studies</a>, or <a href="/contact/" class="text-accent hover:underline">get in touch</a>. We work with law firms and professional services across <a href="/" class="text-accent hover:underline">Birmingham</a> and the <a href="/areas/" class="text-accent hover:underline">wider West Midlands</a>.</p>
+    </div>
+  </section>
+
 </Base>

@@ -73,47 +73,57 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
 <body class="bg-white min-h-screen flex flex-col">
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="bg-brand text-white sticky top-0 z-50">
+  <!-- Header -->
+  <header class="bg-brand text-white sticky top-0 z-50 border-b border-zinc-800" id="site-header">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="text-xl font-extrabold tracking-tight hover:text-accent transition-colors" style="font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.03em;">
-        SEO Birmingham
+      <a href="/" class="flex items-center gap-2 group" style="font-family: 'Bricolage Grotesque', sans-serif;">
+        <span class="inline-flex items-center justify-center w-8 h-8 bg-accent text-brand font-extrabold text-sm tracking-tight">S</span>
+        <span class="text-lg font-extrabold tracking-tight" style="letter-spacing: -0.03em;">SEO Birmingham</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold uppercase tracking-wide" aria-label="Main navigation">
-        <a href="/services/" class="hover:text-accent transition-colors">Services</a>
-        <a href="/areas/" class="hover:text-accent transition-colors">Areas</a>
-        <a href="/industries/" class="hover:text-accent transition-colors">Industries</a>
-        <a href="/seo-pricing-birmingham/" class="hover:text-accent transition-colors">Pricing</a>
-        <a href="/case-studies/" class="hover:text-accent transition-colors">Case Studies</a>
-        <a href="/about/" class="hover:text-accent transition-colors">About</a>
-        <a href="/contact/" class="hover:text-accent transition-colors">Contact</a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium" aria-label="Main navigation">
+        <a href="/services/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Services</a>
+        <a href="/areas/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Areas</a>
+        <a href="/industries/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Industries</a>
+        <a href="/seo-pricing-birmingham/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Pricing</a>
+        <a href="/case-studies/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Case Studies</a>
+        <a href="/about/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">About</a>
+        <a href="/contact/" class="px-3 py-1.5 rounded hover:bg-zinc-800 hover:text-accent transition-colors duration-150">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="/free-seo-audit-birmingham/" class="hidden sm:inline-block bg-accent text-brand px-4 py-2 font-extrabold text-sm uppercase tracking-wide hover:bg-accent-light transition-colors" style="font-family: 'Bricolage Grotesque', sans-serif;">
+        <a href="/free-seo-audit-birmingham/" class="hidden sm:inline-block btn-shimmer !py-2 !px-5 !text-xs !shadow-none">
           Get the Audit
         </a>
-        <button id="menu-toggle" class="md:hidden p-2 hover:bg-brand-light transition-colors" aria-label="Toggle menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="menu-toggle" class="lg:hidden p-2 rounded hover:bg-zinc-800 transition-colors" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-open-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="menu-close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="md:hidden hidden bg-brand-light px-4 pb-4" aria-label="Mobile navigation">
-      <a href="/services/" class="block py-2 hover:text-accent transition-colors">Services</a>
-      <a href="/areas/" class="block py-2 hover:text-accent transition-colors">Areas</a>
-      <a href="/industries/" class="block py-2 hover:text-accent transition-colors">Industries</a>
-      <a href="/seo-pricing-birmingham/" class="block py-2 hover:text-accent transition-colors">Pricing</a>
-      <a href="/case-studies/" class="block py-2 hover:text-accent transition-colors">Case Studies</a>
-      <a href="/about/" class="block py-2 hover:text-accent transition-colors">About</a>
-      <a href="/contact/" class="block py-2 hover:text-accent transition-colors">Contact</a>
-      <a href="/free-seo-audit-birmingham/" class="block py-2 text-accent font-bold">Get the Audit</a>
+    <nav id="mobile-menu" class="lg:hidden hidden bg-brand border-t border-zinc-800" aria-label="Mobile navigation">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
+        <a href="/services/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Services</a>
+        <a href="/areas/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Areas</a>
+        <a href="/industries/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Industries</a>
+        <a href="/seo-pricing-birmingham/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Pricing</a>
+        <a href="/case-studies/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Case Studies</a>
+        <a href="/about/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">About</a>
+        <a href="/contact/" class="py-2.5 px-3 rounded hover:bg-zinc-800 hover:text-accent transition-colors font-medium">Contact</a>
+        <div class="pt-2 mt-2 border-t border-zinc-800">
+          <a href="/free-seo-audit-birmingham/" class="block text-center btn-shimmer !text-sm">Get the Audit</a>
+        </div>
+      </div>
     </nav>
   </header>
 
+  <!-- Breadcrumbs -->
   {currentPath !== '/' && (
     <nav class="bg-surface border-b border-zinc-200" aria-label="Breadcrumb">
       <div class="max-w-3xl mx-auto px-4 py-2 text-sm text-text-muted">
         {breadcrumbItems.map((item, i) => (
           <>
-            {i > 0 && <span class="mx-1">/</span>}
+            {i > 0 && <span class="mx-1.5 text-zinc-300">/</span>}
             {i === breadcrumbItems.length - 1 ? (
               <span class="text-brand font-semibold">{item.name}</span>
             ) : (
@@ -129,54 +139,157 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
     <slot />
   </main>
 
-  <footer class="bg-brand text-white mt-16">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="grid md:grid-cols-3 gap-8">
+  <!-- Footer -->
+  <footer class="bg-brand text-white mt-16 relative overflow-hidden">
+    <!-- Dot grid background -->
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <!-- Amber glow -->
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-[0.06] blur-[80px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 pt-16 pb-8">
+      <!-- Top section with logo and tagline -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-8 border-b border-zinc-800">
         <div>
-          <h3 class="text-lg font-extrabold mb-3 text-white" style="font-family: 'Bricolage Grotesque', sans-serif;">SEO Birmingham</h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            We get Birmingham businesses found. Higher rankings. More traffic. Better leads. That is what we do.
-          </p>
+          <div class="flex items-center gap-2 mb-3" style="font-family: 'Bricolage Grotesque', sans-serif;">
+            <span class="inline-flex items-center justify-center w-10 h-10 bg-accent text-brand font-extrabold text-lg">S</span>
+            <span class="text-2xl font-extrabold tracking-tight" style="letter-spacing: -0.03em;">SEO Birmingham</span>
+          </div>
+          <p class="text-zinc-400 max-w-md">Higher rankings. More traffic. Better leads. We get Birmingham businesses found.</p>
         </div>
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer !text-sm self-start md:self-auto">Get the Audit</a>
+      </div>
+
+      <!-- Link columns -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">Services</h3>
-          <ul class="text-sm text-zinc-400 space-y-1.5">
-            <li><a href="/technical-seo-birmingham/" class="hover:text-accent transition-colors">Technical SEO</a></li>
-            <li><a href="/seo-audit-birmingham/" class="hover:text-accent transition-colors">SEO Audit</a></li>
-            <li><a href="/ai-search-optimisation-birmingham/" class="hover:text-accent transition-colors">AI Search Optimisation</a></li>
-            <li><a href="/seo-pricing-birmingham/" class="hover:text-accent transition-colors">Pricing</a></li>
-            <li><a href="/free-seo-audit-birmingham/" class="hover:text-accent transition-colors">Free Audit</a></li>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4">Services</h3>
+          <ul class="text-sm text-zinc-400 space-y-2.5">
+            <li><a href="/technical-seo-birmingham/" class="hover:text-white transition-colors">Technical SEO</a></li>
+            <li><a href="/seo-audit-birmingham/" class="hover:text-white transition-colors">SEO Audit</a></li>
+            <li><a href="/ai-search-optimisation-birmingham/" class="hover:text-white transition-colors">AI Search Optimisation</a></li>
+            <li><a href="/seo-pricing-birmingham/" class="hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="/free-seo-audit-birmingham/" class="hover:text-white transition-colors">Free Audit</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-bold mb-3 text-white">Coverage</h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            Birmingham &middot; Solihull &middot; Edgbaston &middot; Digbeth &middot; Jewellery Quarter &middot; Sutton Coldfield &middot; Wolverhampton &middot; Coventry &middot; Walsall &middot; Dudley
-          </p>
-          <div class="mt-4">
-            <a href="/contact/" class="text-accent hover:text-accent-light text-sm font-bold uppercase tracking-wide transition-colors">Talk to us &rarr;</a>
-          </div>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4">Company</h3>
+          <ul class="text-sm text-zinc-400 space-y-2.5">
+            <li><a href="/about/" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="/case-studies/" class="hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="/contact/" class="hover:text-white transition-colors">Contact</a></li>
+            <li><a href="/industries/" class="hover:text-white transition-colors">Industries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4">Areas</h3>
+          <ul class="text-sm text-zinc-400 space-y-2.5">
+            <li><a href="/areas/" class="hover:text-white transition-colors">Birmingham</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Solihull</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Edgbaston</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Jewellery Quarter</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Digbeth</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-4">West Midlands</h3>
+          <ul class="text-sm text-zinc-400 space-y-2.5">
+            <li><a href="/areas/" class="hover:text-white transition-colors">Wolverhampton</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Coventry</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Walsall</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Sutton Coldfield</a></li>
+            <li><a href="/areas/" class="hover:text-white transition-colors">Dudley</a></li>
+          </ul>
         </div>
       </div>
-      <div class="border-t border-zinc-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500">
+
+      <!-- Bottom bar -->
+      <div class="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500 gap-2">
         <p>&copy; {new Date().getFullYear()} SEO Birmingham. All rights reserved.</p>
-        <div class="flex gap-4 mt-2 sm:mt-0">
+        <div class="flex gap-4">
           <a href="/sitemap-index.xml" class="hover:text-accent transition-colors">Sitemap</a>
-          <span>Last updated: May 2026</span>
+          <a href="/llms.txt" class="hover:text-accent transition-colors">llms.txt</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
+    // Mobile menu toggle
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
-    if (toggle && menu) {
+    const openIcon = document.getElementById('menu-open-icon');
+    const closeIcon = document.getElementById('menu-close-icon');
+    if (toggle && menu && openIcon && closeIcon) {
       toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
         menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
       });
+    }
+
+    // Scroll animations
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+    // Animated counters
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = parseInt(el.getAttribute('data-count') || '0');
+      const suffix = el.getAttribute('data-suffix') || '';
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            let current = 0;
+            const step = Math.ceil(target / 40);
+            const interval = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(interval);
+              }
+              el.textContent = current.toLocaleString() + suffix;
+            }, 30);
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(el);
+    });
+
+    // Growth line animation
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('animate');
+          lineObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.growth-line').forEach(el => lineObserver.observe(el));
+
+    // Header shrink on scroll
+    const header = document.getElementById('site-header');
+    if (header) {
+      let lastScroll = 0;
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 100) {
+          header.classList.add('shadow-lg', 'shadow-black/20');
+        } else {
+          header.classList.remove('shadow-lg', 'shadow-black/20');
+        }
+        lastScroll = scrollY;
+      }, { passive: true });
     }
   </script>
 </body>

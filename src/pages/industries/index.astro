@@ -61,118 +61,404 @@ const faqSchema = {
     },
   })),
 };
+
+const industries = [
+  {
+    id: 'financial',
+    name: 'Financial Services SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+  },
+  {
+    id: 'legal',
+    name: 'Legal SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>',
+  },
+  {
+    id: 'jewellery',
+    name: 'Jewellery SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l3.057-3 3.943 3h4l3.943-3L23 3l-4 8-7 10L5 11 1 3h4zm2 0l5 8 5-8"/>',
+  },
+  {
+    id: 'manufacturing',
+    name: 'Manufacturing & Automotive SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>',
+  },
+  {
+    id: 'tech',
+    name: 'Tech & Digital SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>',
+  },
+  {
+    id: 'healthcare',
+    name: 'Healthcare SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>',
+  },
+  {
+    id: 'retail',
+    name: 'Retail & Hospitality SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>',
+  },
+  {
+    id: 'construction',
+    name: 'Construction & Trade SEO',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>',
+  },
+];
 ---
 
 <Base title={title} description={description} schema={[serviceSchema, faqSchema]}>
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Sector-Specific SEO for Birmingham Industries</h1>
 
-    <div class="quick-answer">
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden py-20 md:py-28">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute top-[-20%] left-[-10%] w-[400px] h-[400px] rounded-full opacity-[0.06] blur-[100px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%); animation: aurora-1 8s ease-in-out infinite;"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">SEO Birmingham</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 fade-up" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">
+        Sector-Specific SEO for<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Birmingham Industries</span>
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-8 fade-up stagger-child" style="--i:2;">
+        We build SEO strategies shaped by your sector's competitive dynamics, content standards, and customer search behaviour. Every industry gets a different playbook because every industry faces different ranking factors.
+      </p>
+      <div class="flex flex-wrap gap-4 fade-up stagger-child" style="--i:3;">
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+        <a href="/contact/" class="inline-block border-2 border-zinc-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-accent hover:text-accent transition-colors duration-200" style="font-family: var(--font-heading);">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="bg-brand border-y border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center fade-up" style="--i:0;">
+        <div class="counter-value" data-count="8" data-suffix="">0</div>
+        <p class="text-zinc-400 text-sm mt-2">sectors we specialise in</p>
+      </div>
+      <div class="text-center fade-up" style="--i:1;">
+        <div class="counter-value" data-count="500" data-suffix="+">0</div>
+        <p class="text-zinc-400 text-sm mt-2">businesses in the Jewellery Quarter</p>
+      </div>
+      <div class="text-center fade-up" style="--i:2;">
+        <div class="counter-value" data-count="40" data-suffix="%">0%</div>
+        <p class="text-zinc-400 text-sm mt-2">of UK jewellery produced in Birmingham</p>
+      </div>
+      <div class="text-center fade-up" style="--i:3;">
+        <div class="counter-value" data-count="36" data-suffix="m+">0</div>
+        <p class="text-zinc-400 text-sm mt-2">annual Bullring visitors</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick answer -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="quick-answer fade-up">
       <strong>Quick answer:</strong> We build SEO strategies shaped by your sector's competitive dynamics, content standards, and customer search behaviour. Finance in Colmore Business District, jewellery in the Jewellery Quarter, startups at the Custard Factory — every industry gets a different playbook because every industry faces different ranking factors.
     </div>
+  </section>
 
-    <section>
-      <p>Birmingham's economy is one of the most diversified in the UK. That diversity kills generic SEO. The ranking factors that win in healthcare are irrelevant to jewellery retail. The content that ranks for B2B manufacturing would sink a hospitality site. Legal services demand local pack dominance. Tech startups need rapid authority on zero budget. Different sectors. Different problems. Different strategies.</p>
-
-      <p>We have delivered SEO across all of Birmingham's major industries. We know what works in each. The breakdowns below cover the sectors powering this city's economy. If yours is not listed, <a href="/contact/">talk to us</a> — the principles of data-driven, commercially focused SEO apply everywhere.</p>
-    </section>
-
-    <section>
-      <h2>Financial Services SEO</h2>
-
-      <p>Colmore Business District is home to HSBC's UK headquarters, offices for Deutsche Bank, Goldman Sachs, PwC, and dozens of independent advisory firms. That concentration makes Birmingham one of the most contested financial services SEO markets in the country.</p>
-
-      <p>Financial content triggers Google's YMYL classification. The bar is high. Content must demonstrate genuine expertise, cite authoritative sources, and be attributable to qualified professionals. Thin financial content does not last — core updates strip it out.</p>
-
-      <p>We address technical compliance (security, performance, accessibility), content that clears YMYL standards, local SEO for Birmingham-specific queries, and link building from financial publications and directories. We also optimise for AI search citation — users increasingly ask ChatGPT and Perplexity for financial guidance and provider recommendations. Our <a href="/ai-search-optimisation-birmingham/">AI search optimisation</a> service has the detail.</p>
-    </section>
-
-    <section>
-      <h2>Legal SEO</h2>
-
-      <p>Birmingham is a top-three UK legal hub. Pinsent Masons, DLA Piper, Eversheds Sutherland, Shoosmiths, Gowling WLG — plus hundreds of smaller practices all fighting for visibility. Outside London, this is one of the toughest legal SEO markets in the country.</p>
-
-      <p>Local pack competition is brutal for "solicitor Birmingham" and practice-area terms. Google Business Profile optimisation, review generation, and citations are non-negotiable for map pack visibility. Organic rankings require authoritative content across practice areas, disciplined internal linking, and E-E-A-T signals that prove real legal expertise.</p>
-
-      <p>We build legal strategies that combine local dominance with organic authority. Content is structured around practice areas and client questions. FAQ schema and how-to content target featured snippets. For firms pursuing national rankings alongside Birmingham presence, we develop a tiered content strategy that scales from local authority outward.</p>
-    </section>
-
-    <section>
-      <h2>Jewellery SEO</h2>
-
-      <p>The Jewellery Quarter produces roughly 40% of UK jewellery and hosts over 500 trade businesses. SEO here is a fundamentally different discipline to professional services — it centres on product visibility, visual search, and e-commerce conversion.</p>
-
-      <p>Product schema markup — price, availability, reviews, material specs — is critical for rich results and Google Shopping. Image SEO matters more here than in almost any other sector. Customers search visually. Optimised product photography with descriptive alt text and structured data pulls significant traffic from Google Images.</p>
-
-      <p>We cover product page optimisation, category architecture, Google Shopping feed management, and content targeting both commercial queries ("buy engagement ring Birmingham") and informational queries ("how to choose a diamond"). For bespoke jewellers, we build topical authority around craftsmanship and materials expertise. Our <a href="/services/">services overview</a> has the full technical and content methodology.</p>
-    </section>
-
-    <section>
-      <h2>Manufacturing and Automotive SEO</h2>
-
-      <p>Jaguar Land Rover operates from Castle Bromwich and Solihull. The M42 corridor runs with advanced manufacturing. A dense network of precision engineering and component suppliers feeds the sector. This creates a substantial B2B search market — and most manufacturers barely touch it.</p>
-
-      <p>Manufacturing SEO is B2B. The audience is procurement managers, engineers, and decision-makers searching for specific capabilities, certifications, and specs. Content strategy means technical depth: materials data, process descriptions, case studies, capability pages answering the precise queries these buyers type.</p>
-
-      <p>We build manufacturing programmes around long-tail technical keywords, specification-rich content, and authority signals proving genuine expertise. Lead generation is the metric that matters — we track enquiry quality alongside ranking positions. This is not a traffic-volume game. It is about reaching the right buyers with the right content at the right moment in procurement.</p>
-    </section>
-
-    <section>
-      <h2>Tech and Digital SEO</h2>
-
-      <p>Birmingham's tech sector clusters around the Custard Factory in Digbeth and Innovation Birmingham Campus in Aston. SaaS companies, digital agencies, fintech startups, enterprise software providers — each with different SEO requirements and different budgets.</p>
-
-      <p>Startup SEO means building authority fast on limited spend. We find low-competition long-tail keywords that deliver relevant traffic while the domain matures. We build content programmes that establish thought leadership. We secure early backlinks from tech publications. For SaaS, we target comparison keywords, feature-specific landing pages, and content for each stage of the buyer journey.</p>
-
-      <p>Established tech companies benefit from scaled content production, competitive keyword capture, and programmatic SEO assets covering the long tail. We integrate <a href="/ai-search-optimisation-birmingham/">AI search optimisation</a> from day one for tech businesses — their audience adopts AI search tools earliest.</p>
-    </section>
-
-    <section>
-      <h2>Healthcare SEO</h2>
-
-      <p>Queen Elizabeth Hospital, Birmingham Children's Hospital, multiple NHS trusts, private clinics, dental practices, and specialist providers across the city. Healthcare SEO faces the tightest YMYL requirements of any sector. Google does not compromise here.</p>
-
-      <p>Google's quality raters require healthcare content authored by qualified medical professionals, citing peer-reviewed sources, making no unsupported claims. Content that fails these standards gets suppressed regardless of how good the technical SEO is.</p>
-
-      <p>We build healthcare strategies that satisfy YMYL while still driving patient enquiries and bookings. Author bio schema linked to professional registrations. Content review processes. Local SEO for practice visibility. Conversion optimisation that respects the sensitivity of healthcare decisions. For private practices competing with NHS services in search, positioning and content differentiation are critical.</p>
-    </section>
-
-    <section>
-      <h2>Retail and Hospitality SEO</h2>
-
-      <p>The Bullring and Grand Central pull over 36 million visitors a year. Beyond these anchors, Birmingham sustains a vibrant independent retail scene across the Jewellery Quarter, Digbeth, and suburban high streets. The hospitality sector — led by the Balti Triangle, Brindleyplace, and a growing fine dining scene — runs hot.</p>
-
-      <p>Retail SEO splits between e-commerce (product pages, Shopping feeds, category optimisation) and local SEO (Google Business Profile, maps, reviews, footfall queries). For hospitality, local SEO dominates. Profile completeness, review velocity, and menu/booking structured data are the main ranking factors.</p>
-
-      <p>We tailor to the operating model. Pure e-commerce gets product schema, Shopping feed optimisation, and category content. Brick-and-mortar gets citation building and Profile management. Restaurants and bars get review strategy, event schema, and local content targeting cuisine and occasion queries. Our <a href="/areas/">area coverage</a> page details location-specific approaches.</p>
-    </section>
-
-    <section>
-      <h2>Construction and Trade SEO</h2>
-
-      <p>HS2 infrastructure. Commercial regeneration across the city centre. Residential demand that never stops. Birmingham's construction sector drives sustained search volume for trades and specialist contractors.</p>
-
-      <p>Trade businesses get massive value from local SEO. "Plumber near me" and "builder Birmingham" are high-intent queries that drive calls and form fills directly. Google Business Profile, reviews, and local landing pages form the foundation. For larger construction firms chasing commercial contracts, B2B content strategy and industry directories become the priority levers.</p>
-
-      <p>We build trade SEO around lead generation efficiency. Every page has a defined conversion path. Schema markup supports rich results in local search. Content targets the service queries that produce paying customers. The metric is cost per lead — not vanity traffic.</p>
-    </section>
-
-    <div class="cta-box">
-      <h2 style="color: white; margin-top: 0;">Get the Audit</h2>
-      <p>Every industry has different SEO challenges. Our audit finds the sector-specific opportunities and technical gaps holding your Birmingham business back in search.</p>
-      <a href="/contact/">Get the Audit</a>
+  <!-- Intro -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <div class="max-w-3xl">
+      <p class="text-text-muted leading-relaxed mb-4 fade-up">Birmingham's economy is one of the most diversified in the UK. That diversity kills generic SEO. The ranking factors that win in healthcare are irrelevant to jewellery retail. The content that ranks for B2B manufacturing would sink a hospitality site. Legal services demand local pack dominance. Tech startups need rapid authority on zero budget. Different sectors. Different problems. Different strategies.</p>
+      <p class="text-text-muted leading-relaxed fade-up stagger-child" style="--i:1;">We have delivered SEO across all of Birmingham's major industries. We know what works in each. The breakdowns below cover the sectors powering this city's economy. If yours is not listed, <a href="/contact/" class="text-accent hover:text-accent-light font-bold transition-colors">talk to us</a> — the principles of data-driven, commercially focused SEO apply everywhere.</p>
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      {faqData.map((faq) => (
-        <details>
-          <summary>{faq.question}</summary>
-          <div class="faq-answer">
-            <p>{faq.answer}</p>
+  <!-- Industry grid -->
+  <section class="bg-surface py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Industries We Serve</h2>
+      <p class="text-text-muted max-w-2xl mb-12 fade-up stagger-child" style="--i:1;">Each sector has unique ranking factors, content standards, and competitive dynamics. We build around them.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {industries.map((ind, i) => (
+          <a href={`#${ind.id}`} class="service-card group fade-up stagger-child" style={`--i:${i}`}>
+            <div class="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={ind.icon}/>
+            </div>
+            <h3 class="text-base font-extrabold mb-1" style="font-family: var(--font-heading);">{ind.name}</h3>
+            <span class="inline-block mt-2 text-accent text-sm font-bold group-hover:translate-x-1 transition-transform duration-200">Read more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Services -->
+  <section id="financial" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Financial Services SEO</h2>
           </div>
-        </details>
-      ))}
-    </section>
-  </div>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">Colmore Business District is home to HSBC's UK headquarters, offices for Deutsche Bank, Goldman Sachs, PwC, and dozens of independent advisory firms. That concentration makes Birmingham one of the most contested financial services SEO markets in the country.</p>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Financial content triggers Google's YMYL classification. The bar is high. Content must demonstrate genuine expertise, cite authoritative sources, and be attributable to qualified professionals. Thin financial content does not last — core updates strip it out.</p>
+          <p class="text-text-muted leading-relaxed fade-up stagger-child" style="--i:3;">We address technical compliance (security, performance, accessibility), content that clears YMYL standards, local SEO for Birmingham-specific queries, and link building from financial publications and directories. We also optimise for AI search citation — users increasingly ask ChatGPT and Perplexity for financial guidance and provider recommendations. Our <a href="/ai-search-optimisation-birmingham/" class="text-accent hover:text-accent-light font-bold transition-colors">AI search optimisation</a> service has the detail.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Key Focus</p>
+            <p class="text-lg font-extrabold" style="font-family: var(--font-heading);">YMYL Compliance</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">District</p>
+            <p class="text-lg font-extrabold" style="font-family: var(--font-heading);">Colmore Business District</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal -->
+  <section id="legal" class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Legal SEO</h2>
+          </div>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">Birmingham is a top-three UK legal hub. Pinsent Masons, DLA Piper, Eversheds Sutherland, Shoosmiths, Gowling WLG — plus hundreds of smaller practices all fighting for visibility. Outside London, this is one of the toughest legal SEO markets in the country.</p>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Local pack competition is brutal for "solicitor Birmingham" and practice-area terms. Google Business Profile optimisation, review generation, and citations are non-negotiable for map pack visibility. Organic rankings require authoritative content across practice areas, disciplined internal linking, and E-E-A-T signals that prove real legal expertise.</p>
+          <p class="text-zinc-300 leading-relaxed fade-up stagger-child" style="--i:3;">We build legal strategies that combine local dominance with organic authority. Content is structured around practice areas and client questions. FAQ schema and how-to content target featured snippets. For firms pursuing national rankings alongside Birmingham presence, we develop a tiered content strategy that scales from local authority outward.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Competition</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">Top-3 UK Legal Hub</p>
+          </div>
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Priority</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">Local Pack + E-E-A-T</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jewellery -->
+  <section id="jewellery" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3l3.057-3 3.943 3h4l3.943-3L23 3l-4 8-7 10L5 11 1 3h4zm2 0l5 8 5-8"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Jewellery SEO</h2>
+          </div>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">The Jewellery Quarter produces roughly 40% of UK jewellery and hosts over 500 trade businesses. SEO here is a fundamentally different discipline to professional services — it centres on product visibility, visual search, and e-commerce conversion.</p>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Product schema markup — price, availability, reviews, material specs — is critical for rich results and Google Shopping. Image SEO matters more here than in almost any other sector. Customers search visually. Optimised product photography with descriptive alt text and structured data pulls significant traffic from Google Images.</p>
+          <p class="text-text-muted leading-relaxed fade-up stagger-child" style="--i:3;">We cover product page optimisation, category architecture, Google Shopping feed management, and content targeting both commercial queries ("buy engagement ring Birmingham") and informational queries ("how to choose a diamond"). For bespoke jewellers, we build topical authority around craftsmanship and materials expertise. Our <a href="/services/" class="text-accent hover:text-accent-light font-bold transition-colors">services overview</a> has the full technical and content methodology.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">UK Jewellery Share</p>
+            <div class="counter-value text-left" data-count="40" data-suffix="%" style="font-size: 2rem;">0%</div>
+          </div>
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Trade Businesses</p>
+            <div class="counter-value text-left" data-count="500" data-suffix="+" style="font-size: 2rem;">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing -->
+  <section id="manufacturing" class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute bottom-[-15%] right-[-5%] w-[300px] h-[300px] rounded-full opacity-[0.05] blur-[80px]"
+         style="background: radial-gradient(circle, #FBBF24, transparent 70%); animation: aurora-2 12s ease-in-out infinite;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Manufacturing and Automotive SEO</h2>
+          </div>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">Jaguar Land Rover operates from Castle Bromwich and Solihull. The M42 corridor runs with advanced manufacturing. A dense network of precision engineering and component suppliers feeds the sector. This creates a substantial B2B search market — and most manufacturers barely touch it.</p>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Manufacturing SEO is B2B. The audience is procurement managers, engineers, and decision-makers searching for specific capabilities, certifications, and specs. Content strategy means technical depth: materials data, process descriptions, case studies, capability pages answering the precise queries these buyers type.</p>
+          <p class="text-zinc-300 leading-relaxed fade-up stagger-child" style="--i:3;">We build manufacturing programmes around long-tail technical keywords, specification-rich content, and authority signals proving genuine expertise. Lead generation is the metric that matters — we track enquiry quality alongside ranking positions. This is not a traffic-volume game. It is about reaching the right buyers with the right content at the right moment in procurement.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Anchor</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">JLR + M42 Corridor</p>
+          </div>
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Metric</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">Lead Quality, Not Volume</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section id="tech" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Tech and Digital SEO</h2>
+          </div>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">Birmingham's tech sector clusters around the Custard Factory in Digbeth and Innovation Birmingham Campus in Aston. SaaS companies, digital agencies, fintech startups, enterprise software providers — each with different SEO requirements and different budgets.</p>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Startup SEO means building authority fast on limited spend. We find low-competition long-tail keywords that deliver relevant traffic while the domain matures. We build content programmes that establish thought leadership. We secure early backlinks from tech publications. For SaaS, we target comparison keywords, feature-specific landing pages, and content for each stage of the buyer journey.</p>
+          <p class="text-text-muted leading-relaxed fade-up stagger-child" style="--i:3;">Established tech companies benefit from scaled content production, competitive keyword capture, and programmatic SEO assets covering the long tail. We integrate <a href="/ai-search-optimisation-birmingham/" class="text-accent hover:text-accent-light font-bold transition-colors">AI search optimisation</a> from day one for tech businesses — their audience adopts AI search tools earliest.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Hubs</p>
+            <p class="text-lg font-extrabold" style="font-family: var(--font-heading);">Custard Factory + Innovation Campus</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Strategy</p>
+            <p class="text-lg font-extrabold" style="font-family: var(--font-heading);">Authority Fast, Scale Later</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Healthcare -->
+  <section id="healthcare" class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Healthcare SEO</h2>
+          </div>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">Queen Elizabeth Hospital, Birmingham Children's Hospital, multiple NHS trusts, private clinics, dental practices, and specialist providers across the city. Healthcare SEO faces the tightest YMYL requirements of any sector. Google does not compromise here.</p>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Google's quality raters require healthcare content authored by qualified medical professionals, citing peer-reviewed sources, making no unsupported claims. Content that fails these standards gets suppressed regardless of how good the technical SEO is.</p>
+          <p class="text-zinc-300 leading-relaxed fade-up stagger-child" style="--i:3;">We build healthcare strategies that satisfy YMYL while still driving patient enquiries and bookings. Author bio schema linked to professional registrations. Content review processes. Local SEO for practice visibility. Conversion optimisation that respects the sensitivity of healthcare decisions. For private practices competing with NHS services in search, positioning and content differentiation are critical.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Classification</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">YMYL — Strictest Standards</p>
+          </div>
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Requirement</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">Author Schema + Credentials</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retail & Hospitality -->
+  <section id="retail" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Retail and Hospitality SEO</h2>
+          </div>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">The Bullring and Grand Central pull over 36 million visitors a year. Beyond these anchors, Birmingham sustains a vibrant independent retail scene across the Jewellery Quarter, Digbeth, and suburban high streets. The hospitality sector — led by the Balti Triangle, Brindleyplace, and a growing fine dining scene — runs hot.</p>
+          <p class="text-text-muted leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Retail SEO splits between e-commerce (product pages, Shopping feeds, category optimisation) and local SEO (Google Business Profile, maps, reviews, footfall queries). For hospitality, local SEO dominates. Profile completeness, review velocity, and menu/booking structured data are the main ranking factors.</p>
+          <p class="text-text-muted leading-relaxed fade-up stagger-child" style="--i:3;">We tailor to the operating model. Pure e-commerce gets product schema, Shopping feed optimisation, and category content. Brick-and-mortar gets citation building and Profile management. Restaurants and bars get review strategy, event schema, and local content targeting cuisine and occasion queries. Our <a href="/areas/" class="text-accent hover:text-accent-light font-bold transition-colors">area coverage</a> page details location-specific approaches.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Bullring Visitors</p>
+            <div class="counter-value text-left" data-count="36" data-suffix="m+" style="font-size: 2rem;">0</div>
+          </div>
+          <div class="stat-card">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Focus</p>
+            <p class="text-lg font-extrabold" style="font-family: var(--font-heading);">Local Pack + Reviews</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Construction -->
+  <section id="construction" class="bg-brand text-white py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] rounded-full opacity-[0.06] blur-[80px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%); animation: aurora-2 10s ease-in-out infinite;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-4 mb-6 fade-up">
+            <div class="w-12 h-12 bg-accent/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Construction and Trade SEO</h2>
+          </div>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:1;">HS2 infrastructure. Commercial regeneration across the city centre. Residential demand that never stops. Birmingham's construction sector drives sustained search volume for trades and specialist contractors.</p>
+          <p class="text-zinc-300 leading-relaxed mb-4 fade-up stagger-child" style="--i:2;">Trade businesses get massive value from local SEO. "Plumber near me" and "builder Birmingham" are high-intent queries that drive calls and form fills directly. Google Business Profile, reviews, and local landing pages form the foundation. For larger construction firms chasing commercial contracts, B2B content strategy and industry directories become the priority levers.</p>
+          <p class="text-zinc-300 leading-relaxed fade-up stagger-child" style="--i:3;">We build trade SEO around lead generation efficiency. Every page has a defined conversion path. Schema markup supports rich results in local search. Content targets the service queries that produce paying customers. The metric is cost per lead — not vanity traffic.</p>
+        </div>
+        <div class="space-y-4 fade-up stagger-child" style="--i:4;">
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Driver</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">HS2 + Regeneration</p>
+          </div>
+          <div class="border border-zinc-800 p-5">
+            <p class="text-xs uppercase tracking-widest text-zinc-500 mb-1 font-bold">Metric</p>
+            <p class="text-lg font-extrabold text-white" style="font-family: var(--font-heading);">Cost Per Lead</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="cta-box">
+        <h2 style="color: white; margin-top: 0; font-family: var(--font-heading); font-size: 2rem; letter-spacing: -0.03em;" class="fade-up">Get the Audit</h2>
+        <p class="fade-up stagger-child" style="--i:1;">Every industry has different SEO challenges. Our audit finds the sector-specific opportunities and technical gaps holding your Birmingham business back in search.</p>
+        <a href="/contact/" class="fade-up stagger-child" style="--i:2;">Get the Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-surface py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-8 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Frequently Asked Questions</h2>
+
+      <div class="faq-section">
+        {faqData.map((faq) => (
+          <details>
+            <summary>{faq.question}</summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
 </Base>

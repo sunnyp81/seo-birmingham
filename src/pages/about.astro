@@ -50,105 +50,179 @@ const faqSchema = {
 };
 
 const schema = [orgSchema, faqSchema];
+
+const phases = [
+  { num: '01', title: 'Audit', text: 'We tear your site apart. Technical health, on-page optimisation, content quality, backlink profile, competitor positioning, local presence. We use Google Search Console, Ahrefs, Bing Webmaster Tools, and our own monitoring infrastructure. The output is a clear baseline and a prioritised list of what\'s broken and what\'s leaving money on the table.' },
+  { num: '02', title: 'Fix', text: 'We resolve the technical issues holding you back. Site speed. Crawlability. Indexation errors. Mobile usability. Structured data gaps. Content gets fixed on a broken foundation — we sort the foundation first. Every fix has a projected impact. Every fix gets tracked.' },
+  { num: '03', title: 'Grow', text: 'Once the foundation is solid, we push. Content production targeting verified keyword clusters. Local SEO — Google Business Profile management, citation building, review strategy, location-targeted content. Link acquisition through digital PR, partnerships, and outreach. AI search optimisation to surface your business in ChatGPT, Perplexity, and Google AI Overviews. Every action maps to a commercial outcome.' },
+  { num: '04', title: 'Report', text: 'You see everything. Monthly reports cover what we did, what moved, and what\'s next. Rankings, organic traffic, click-through rates, conversions, revenue. If something\'s underperforming, we flag it and present the adjustment plan. No black boxes. No jargon. Just numbers that matter.' },
+];
+
+const differentiators = [
+  { title: 'Birmingham-Specific Knowledge', text: 'We work in this market daily. We know that Colmore Business District has professional services competition rivalling central London. We know the Jewellery Quarter packs 400+ businesses into a square mile. We know Digbeth is the creative and tech hub. We know how Google handles the overlapping search areas across Solihull, Wolverhampton, Coventry, and the Black Country. That local intelligence shapes everything we build.' },
+  { title: 'AI Search Capability', text: 'ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot — these platforms are changing how people find businesses. We optimise your structured data, entity authority, and content architecture so AI systems cite and recommend you. Most agencies haven\'t caught up yet. We have.' },
+  { title: 'No Lock-In', text: 'We keep clients through results, not penalty clauses. Our engagements run month to month. You stay because the work delivers ROI, not because a contract forces you. Performance is the only retention mechanism we need.' },
+  { title: 'Full Transparency', text: 'You see what we do, why we do it, and what it produces. Every recommendation is backed by data. Every report shows the evidence. No unexplained line items. No vague "optimisation activities". Specifics only.' },
+  { title: 'Direct Access', text: 'You talk to the team doing the work. No account management layers. Questions answered within one business day.' },
+];
+
+const industries = [
+  { label: 'Financial and Professional Services', desc: 'accountants, solicitors, financial advisers, consultants' },
+  { label: 'Legal Services', desc: 'family law, commercial litigation, personal injury, employment law, conveyancing' },
+  { label: 'Jewellery and Luxury Retail', desc: 'engagement rings, bespoke jewellery, watch retail, luxury accessories' },
+  { label: 'Manufacturing and Engineering', desc: 'precision engineering, industrial supplies, contract manufacturing' },
+  { label: 'Healthcare and Dental', desc: 'private dental practices, specialist clinics, physiotherapy, cosmetic treatments' },
+  { label: 'Hospitality and Food', desc: 'restaurants, hotels, event venues, catering' },
+  { label: 'Technology and SaaS', desc: 'software companies, digital agencies, IT services' },
+  { label: 'Construction and Property', desc: 'building contractors, estate agents, property management, architects' },
+];
+
+const areas = [
+  { name: 'Birmingham City Centre', detail: 'Colmore Business District, Bullring, Grand Central, The Mailbox, Eastside' },
+  { name: 'Edgbaston', detail: 'professional services, healthcare, education' },
+  { name: 'Jewellery Quarter', detail: 'retail, creative, hospitality' },
+  { name: 'Digbeth', detail: 'tech, creative agencies, food and drink' },
+  { name: 'Solihull, Sutton Coldfield, Wolverhampton, Coventry', detail: '' },
+  { name: 'Walsall, Dudley, West Bromwich, Sandwell', detail: '' },
+];
 ---
 
 <Base title={title} description={description} schema={schema}>
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
 
-    <h1>About SEO Birmingham</h1>
+  <!-- Hero -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+      <h1 class="fade-up text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6" style="--i:0">About SEO Birmingham</h1>
+      <p class="fade-up text-lg md:text-xl text-zinc-300 max-w-2xl" style="--i:1">We make Birmingham businesses visible where their customers search. Data drives every decision. Results are measured by revenue, not vanity metrics.</p>
+    </div>
+    <!-- Growth line accent -->
+    <svg class="absolute bottom-0 left-0 w-full h-2" viewBox="0 0 1200 8" preserveAspectRatio="none">
+      <path class="growth-line" d="M0 4 L1200 4" stroke="#F59E0B" stroke-width="4" fill="none"/>
+    </svg>
+  </section>
 
-    <div class="quick-answer">
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="fade-up quick-answer" style="--i:0">
       <strong>Quick Answer:</strong> We're a specialist SEO agency in Birmingham. We get West Midlands businesses found on Google, Maps, and AI search platforms. Data drives every decision. Results are measured by revenue, not vanity metrics. No lock-in contracts.
     </div>
+  </section>
 
-    <section>
-      <h2>What We Do</h2>
+  <!-- What We Do -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-4 border-b-[3px] border-accent inline-block pb-2" style="--i:0">What We Do</h2>
+    <p class="fade-up text-lg text-text-muted max-w-3xl mt-4" style="--i:1">We specialise in technical SEO, local search, and AI search optimisation. That's it — we don't dilute our focus with web design, social media, or paid ads.</p>
+  </section>
 
-      <p>We make Birmingham businesses visible where their customers search. We specialise in technical SEO, local search, and AI search optimisation. That's it — we don't dilute our focus with web design, social media, or paid ads.</p>
-    </section>
+  <!-- Stats bar -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="fade-up stat-card" style="--i:0">
+          <span class="counter-value" data-count="4" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Clear phases</p>
+        </div>
+        <div class="fade-up stat-card" style="--i:1">
+          <span class="counter-value" data-count="400" data-suffix="+">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Jewellery Quarter businesses</p>
+        </div>
+        <div class="fade-up stat-card" style="--i:2">
+          <span class="counter-value" data-count="8" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Industry verticals</p>
+        </div>
+        <div class="fade-up stat-card" style="--i:3">
+          <span class="counter-value" data-count="0" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Lock-in contracts</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>How We Work</h2>
+  <!-- How We Work — 4 Phases -->
+  <section class="max-w-6xl mx-auto px-4 py-20">
+    <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-4 border-b-[3px] border-accent inline-block pb-2" style="--i:0">How We Work</h2>
+    <p class="fade-up text-lg text-text-muted max-w-3xl mt-4 mb-12" style="--i:1">Every engagement follows four phases. No shortcuts. No mystery.</p>
 
-      <p>Every engagement follows four phases. No shortcuts. No mystery.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      {phases.map((phase, i) => (
+        <div class="fade-up service-card" style={`--i:${i}`}>
+          <span class="text-5xl font-extrabold text-accent/20 absolute top-4 right-6" style="font-family: var(--font-heading);">{phase.num}</span>
+          <h3 class="text-xl font-bold mb-3">{phase.num}. {phase.title}</h3>
+          <p class="text-text-muted leading-relaxed">{phase.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
-      <h3>1. Audit</h3>
-      <p>We tear your site apart. Technical health, on-page optimisation, content quality, backlink profile, competitor positioning, local presence. We use Google Search Console, Ahrefs, Bing Webmaster Tools, and our own monitoring infrastructure. The output is a clear baseline and a prioritised list of what's broken and what's leaving money on the table.</p>
+  <!-- What Makes Us Different -->
+  <section class="bg-surface-alt">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-12 border-b-[3px] border-accent inline-block pb-2" style="--i:0">What Makes Us Different</h2>
 
-      <h3>2. Fix</h3>
-      <p>We resolve the technical issues holding you back. Site speed. Crawlability. Indexation errors. Mobile usability. Structured data gaps. Content gets fixed on a broken foundation — we sort the foundation first. Every fix has a projected impact. Every fix gets tracked.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {differentiators.map((d, i) => (
+          <div class="fade-up service-card" style={`--i:${i}`}>
+            <h3 class="text-lg font-bold mb-3">{d.title}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{d.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>3. Grow</h3>
-      <p>Once the foundation is solid, we push. Content production targeting verified keyword clusters. Local SEO — Google Business Profile management, citation building, review strategy, location-targeted content. Link acquisition through digital PR, partnerships, and outreach. AI search optimisation to surface your business in ChatGPT, Perplexity, and Google AI Overviews. Every action maps to a commercial outcome.</p>
+  <!-- Industries -->
+  <section class="max-w-6xl mx-auto px-4 py-20">
+    <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-4 border-b-[3px] border-accent inline-block pb-2" style="--i:0">Industries We Serve</h2>
+    <p class="fade-up text-lg text-text-muted max-w-3xl mt-4 mb-12" style="--i:1">Birmingham's economy is commercially diverse. We maintain sector-specific keyword research, competitive intelligence, and content frameworks for these verticals:</p>
 
-      <h3>4. Report</h3>
-      <p>You see everything. Monthly reports cover what we did, what moved, and what's next. Rankings, organic traffic, click-through rates, conversions, revenue. If something's underperforming, we flag it and present the adjustment plan. No black boxes. No jargon. Just numbers that matter.</p>
-    </section>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {industries.map((ind, i) => (
+        <div class="fade-up service-card" style={`--i:${i}`}>
+          <h3 class="text-base font-bold mb-2">{ind.label}</h3>
+          <p class="text-text-muted text-sm">{ind.desc}</p>
+        </div>
+      ))}
+    </div>
 
-    <section>
-      <h2>What Makes Us Different</h2>
+    <p class="fade-up text-text-muted mt-8" style="--i:0">Each sector has its own content authority requirements, keyword difficulty profile, and conversion patterns. Our vertical experience means we deploy proven strategies instead of starting from scratch. <a href="/industries/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">View all industries</a>.</p>
+  </section>
 
-      <h3>Birmingham-Specific Knowledge</h3>
-      <p>We work in this market daily. We know that <strong>Colmore Business District</strong> has professional services competition rivalling central London. We know the <strong>Jewellery Quarter</strong> packs 400+ businesses into a square mile. We know <strong>Digbeth</strong> is the creative and tech hub. We know how Google handles the overlapping search areas across Solihull, Wolverhampton, Coventry, and the Black Country. That local intelligence shapes everything we build.</p>
+  <!-- Coverage — Dark section -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20">
+      <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-4 border-b-[3px] border-accent inline-block pb-2 text-white" style="--i:0">Coverage</h2>
+      <p class="fade-up text-lg text-zinc-300 max-w-3xl mt-4 mb-12" style="--i:1">We serve businesses across Birmingham and the wider West Midlands:</p>
 
-      <h3>AI Search Capability</h3>
-      <p>ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot — these platforms are changing how people find businesses. We optimise your structured data, entity authority, and content architecture so AI systems cite and recommend you. Most agencies haven't caught up yet. We have.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {areas.map((area, i) => (
+          <div class="fade-up bg-zinc-900/60 border border-zinc-800 p-5 hover:border-accent/40 transition-colors" style={`--i:${i}`}>
+            <h3 class="font-bold text-white mb-1">{area.name}</h3>
+            {area.detail && <p class="text-zinc-400 text-sm">{area.detail}</p>}
+          </div>
+        ))}
+      </div>
 
-      <h3>No Lock-In</h3>
-      <p>We keep clients through results, not penalty clauses. Our engagements run month to month. You stay because the work delivers ROI, not because a contract forces you. Performance is the only retention mechanism we need.</p>
+      <p class="fade-up text-zinc-300 mt-8" style="--i:0">Search dynamics differ sharply between these areas. We build strategies that account for each geography's competitive landscape. <a href="/areas/" class="text-accent underline underline-offset-2 hover:text-accent-light transition-colors">View all areas</a>.</p>
+    </div>
+  </section>
 
-      <h3>Full Transparency</h3>
-      <p>You see what we do, why we do it, and what it produces. Every recommendation is backed by data. Every report shows the evidence. No unexplained line items. No vague "optimisation activities". Specifics only.</p>
-
-      <h3>Direct Access</h3>
-      <p>You talk to the team doing the work. No account management layers. Questions answered within one business day.</p>
-    </section>
-
-    <section>
-      <h2>Industries We Serve</h2>
-
-      <p>Birmingham's economy is commercially diverse. We maintain sector-specific keyword research, competitive intelligence, and content frameworks for these verticals:</p>
-
-      <ul>
-        <li><strong>Financial and Professional Services</strong> — accountants, solicitors, financial advisers, consultants</li>
-        <li><strong>Legal Services</strong> — family law, commercial litigation, personal injury, employment law, conveyancing</li>
-        <li><strong>Jewellery and Luxury Retail</strong> — engagement rings, bespoke jewellery, watch retail, luxury accessories</li>
-        <li><strong>Manufacturing and Engineering</strong> — precision engineering, industrial supplies, contract manufacturing</li>
-        <li><strong>Healthcare and Dental</strong> — private dental practices, specialist clinics, physiotherapy, cosmetic treatments</li>
-        <li><strong>Hospitality and Food</strong> — restaurants, hotels, event venues, catering</li>
-        <li><strong>Technology and SaaS</strong> — software companies, digital agencies, IT services</li>
-        <li><strong>Construction and Property</strong> — building contractors, estate agents, property management, architects</li>
-      </ul>
-
-      <p>Each sector has its own content authority requirements, keyword difficulty profile, and conversion patterns. Our vertical experience means we deploy proven strategies instead of starting from scratch. <a href="/industries/">View all industries</a>.</p>
-    </section>
-
-    <section>
-      <h2>Coverage</h2>
-
-      <p>We serve businesses across Birmingham and the wider West Midlands:</p>
-
-      <ul>
-        <li><strong>Birmingham City Centre</strong> — Colmore Business District, Bullring, Grand Central, The Mailbox, Eastside</li>
-        <li><strong>Edgbaston</strong> — professional services, healthcare, education</li>
-        <li><strong>Jewellery Quarter</strong> — retail, creative, hospitality</li>
-        <li><strong>Digbeth</strong> — tech, creative agencies, food and drink</li>
-        <li><strong>Solihull, Sutton Coldfield, Wolverhampton, Coventry</strong></li>
-        <li><strong>Walsall, Dudley, West Bromwich, Sandwell</strong></li>
-      </ul>
-
-      <p>Search dynamics differ sharply between these areas. We build strategies that account for each geography's competitive landscape. <a href="/areas/">View all areas</a>.</p>
-    </section>
-
-    <div class="cta-box">
-      <h2 style="color: white; margin-top: 0;">Get the Audit</h2>
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-4 py-20">
+    <div class="fade-up cta-box" style="--i:0">
+      <h2 class="relative z-10" style="color: white; margin-top: 0;">Get the Audit</h2>
       <p>Find out where you stand in Birmingham search. We'll assess your technical health, local visibility, and competitive positioning. No obligation. We reply within one business day.</p>
       <a href="/free-seo-audit-birmingham/">Get the Audit</a>
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
+  <!-- FAQ -->
+  <section class="max-w-6xl mx-auto px-4 pb-20">
+    <h2 class="fade-up text-3xl md:text-4xl font-extrabold mb-8 border-b-[3px] border-accent inline-block pb-2" style="--i:0">Frequently Asked Questions</h2>
 
+    <div class="fade-up faq-section max-w-3xl" style="--i:1">
       {faqItems.map((item) => (
         <details>
           <summary>{item.question}</summary>
@@ -157,7 +231,7 @@ const schema = [orgSchema, faqSchema];
           </div>
         </details>
       ))}
-    </section>
+    </div>
+  </section>
 
-  </div>
 </Base>

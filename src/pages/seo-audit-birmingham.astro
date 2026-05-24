@@ -69,6 +69,42 @@ const faqSchema = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+const auditAreas = [
+  { title: 'Technical SEO Analysis', icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`, desc: 'We crawl the entire site. We find indexation issues, broken links, redirect chains, duplicate content, slow pages, Core Web Vitals failures, mobile usability problems, and structured data errors. This mirrors our dedicated <a href="/technical-seo-birmingham/" class="text-accent hover:underline">technical SEO service</a>, but within the broader audit framework.' },
+  { title: 'Content Quality Assessment', icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`, desc: 'We evaluate every indexable page for keyword targeting, content depth, heading structure, internal linking, and topical relevance. Thin content, cannibalisation, and content gaps relative to Birmingham competitors are all flagged with specific fixes.' },
+  { title: 'Backlink Profile Review', icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>`, desc: 'We pull Ahrefs data. We assess domain authority, referring domain quality, anchor text distribution, and toxic link risk. We benchmark your backlink profile against the top-ranking Birmingham competitors for your target keywords. You see exactly where the gaps are.' },
+  { title: 'Local SEO Assessment', icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`, desc: 'For Birmingham businesses, local SEO is often the highest-ROI area. We audit Google Business Profile completeness, NAP consistency across directories, local citation presence, review profile, and local pack eligibility for your target queries.' },
+  { title: 'Competitor Benchmarking', icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>`, desc: 'We identify your top 5 organic competitors in Birmingham. We analyse their content strategy, technical setup, backlink sources, and local SEO presence. You get specific, actionable insights on where the gaps exist and how to exploit them.' },
+];
+
+const steps = [
+  { num: '01', title: 'Access and configuration', desc: 'You grant read-only access to Google Search Console and GA4. We configure crawling tools and begin data collection. One working day.' },
+  { num: '02', title: 'Technical crawl and data gathering', desc: 'Full site crawl. Sixteen months of search performance data. Backlink profile export. Google Business Profile audit. Two to three days, run in parallel.' },
+  { num: '03', title: 'Manual analysis and annotation', desc: 'We review every data point. Cross-reference findings. Write specific recommendations for your business. No generic advice. Every recommendation references actual pages, keywords, and Birmingham competitors. Three to five working days.' },
+  { num: '04', title: 'Report compilation', desc: 'Findings compiled into a structured PDF. Executive summary. Detailed section breakdowns. Priority action plan ranked by estimated impact and implementation difficulty.' },
+  { num: '05', title: 'Walkthrough call', desc: 'Thirty-minute video call. We present key findings, answer your questions, and discuss implementation priorities. The call is recorded so you can share it with your team or developers.' },
+];
+
+const deliverables = [
+  { title: 'PDF audit report', desc: 'typically 30 to 50 pages covering all five areas with screenshots, data tables, and specific recommendations' },
+  { title: 'Priority action plan', desc: 'as a standalone spreadsheet, ranked by impact (high/medium/low) and effort (quick fix/medium/complex)' },
+  { title: '30-minute video walkthrough call', desc: 'recorded for reference' },
+  { title: 'Raw data exports', desc: 'including crawl data, keyword rankings, and backlink profile' },
+];
+
+const scenarios = [
+  { title: 'New Businesses Launching in Birmingham', desc: 'Audit the staging site before go-live. We catch indexation blockers, missing redirects from legacy domains, and local SEO configuration gaps before they damage your rankings.' },
+  { title: 'Losing Organic Traffic', desc: 'Traffic dropped after an algorithm update. Something is wrong. We pinpoint whether the cause is technical, content-related, or penalty-related. No guessing.' },
+  { title: 'Website Redesign or Platform Migration', desc: 'Migrating CMS platforms is the single most dangerous moment for SEO. A pre-migration audit ensures redirect maps are complete. A post-migration audit catches what slipped through. We handle both.' },
+  { title: 'Missing from Birmingham\'s Local Pack', desc: 'Your competitors appear in Google\'s local 3-pack. You do not. We identify the specific local ranking factors responsible. Inconsistent NAP data. Incomplete Google Business Profile. Missing local schema markup. We find the cause.' },
+];
+
+const districts = [
+  { title: 'Colmore Business District Professional Services', desc: 'Law firms, accountancies, and consultancies in the Colmore district compete intensely for high-value keywords. We benchmark your site against the top-ranking Colmore competitors. Content depth. Schema usage. Local citation profiles. We expose the gaps you can exploit.' },
+  { title: 'Jewellery Quarter Retail and E-Commerce', desc: 'Product-heavy sites with complex filtering and pagination. We identify crawl budget waste, product schema opportunities, and image optimisation problems that cost visibility against national jewellery retailers.' },
+  { title: 'NEC and Event-Based Businesses', desc: 'Seasonal search demand. Event schema. Landing page freshness. Historical event pages returning 404s instead of being properly archived. We audit all of it.' },
+];
 ---
 
 <Base
@@ -77,134 +113,230 @@ const faqSchema = {
   schema={[serviceSchema, faqSchema]}
   ogType="website"
 >
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>SEO Audit Birmingham</h1>
 
-    <p>Your site is underperforming. You suspect it but you do not know why. We find out. Our SEO audit is a systematic examination of every factor that influences your search visibility. You get a prioritised roadmap that tells you exactly what to fix and in what order.</p>
-
-    <div class="quick-answer">
-      <strong>Quick Answer:</strong> We audit your technical health, content quality, backlink profile, local SEO, and competitors. You get a detailed PDF report, a priority action plan ranked by impact, and a 30-minute video walkthrough call. One-off price: <strong>£497</strong>. <a href="/free-seo-audit-birmingham/">Get the audit</a>.
+  <!-- Hero -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full opacity-[0.06] blur-[100px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+      <div class="max-w-3xl">
+        <p class="text-accent font-semibold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">Comprehensive SEO Audit</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 fade-up" style="line-height: 1.05;">SEO Audit Birmingham</h1>
+        <p class="text-lg md:text-xl text-zinc-300 mb-8 max-w-2xl fade-up">Your site is underperforming. You suspect it but you do not know why. We find out. Our SEO audit is a systematic examination of every factor that influences your search visibility. You get a prioritised roadmap that tells you exactly what to fix and in what order.</p>
+        <div class="flex flex-wrap gap-4 fade-up">
+          <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+          <a href="#scope" class="inline-flex items-center gap-2 text-accent font-bold hover:underline" style="font-family: var(--font-heading);">See full scope
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <section>
-      <h2>Audit Scope and Methodology</h2>
+  <!-- Stats -->
+  <section class="bg-surface border-b border-zinc-200">
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-up">
+        <div class="stat-card">
+          <span class="counter-value" data-count="5" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Audit areas covered</p>
+        </div>
+        <div class="stat-card">
+          <span class="counter-value" data-count="50" data-suffix="+">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Page PDF report</p>
+        </div>
+        <div class="stat-card">
+          <span class="counter-value" data-count="497" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">One-off price (GBP)</p>
+        </div>
+        <div class="stat-card">
+          <span class="counter-value" data-count="10" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">Working days max</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>Every audit follows the same rigorous methodology, applied to the specific context of your Birmingham business. We do not rely on automated reports alone. Every section is manually reviewed and annotated with specific, evidence-based recommendations.</p>
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="quick-answer fade-up">
+      <strong>Quick Answer:</strong> We audit your technical health, content quality, backlink profile, local SEO, and competitors. You get a detailed PDF report, a priority action plan ranked by impact, and a 30-minute video walkthrough call. One-off price: <strong>£497</strong>. <a href="/free-seo-audit-birmingham/" class="text-accent hover:underline">Get the audit</a>.
+    </div>
+  </section>
 
-      <h3>Technical SEO Analysis</h3>
-      <p>We crawl the entire site. We find indexation issues, broken links, redirect chains, duplicate content, slow pages, Core Web Vitals failures, mobile usability problems, and structured data errors. This mirrors our dedicated <a href="/technical-seo-birmingham/">technical SEO service</a>, but within the broader audit framework.</p>
+  <!-- Audit Scope -->
+  <section id="scope" class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20">
+      <div class="text-center mb-14 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Audit Scope and Methodology</h2>
+        <p class="text-zinc-400 max-w-2xl mx-auto text-lg">Every audit follows the same rigorous methodology, applied to the specific context of your Birmingham business. We do not rely on automated reports alone. Every section is manually reviewed and annotated with specific, evidence-based recommendations.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {auditAreas.map((area, i) => (
+          <div class="service-card !bg-brand-light !border-zinc-800 fade-up stagger-child" style={`--i: ${i}`}>
+            <div class="text-accent mb-4" set:html={area.icon} />
+            <h3 class="text-xl font-bold text-white mb-3" style="font-family: var(--font-heading);">{area.title}</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed" set:html={area.desc} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>Content Quality Assessment</h3>
-      <p>We evaluate every indexable page for keyword targeting, content depth, heading structure, internal linking, and topical relevance. Thin content, cannibalisation, and content gaps relative to Birmingham competitors are all flagged with specific fixes.</p>
+  <!-- Audit Process -->
+  <section class="bg-surface">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <div class="text-center mb-14 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Audit Process</h2>
+        <p class="text-text-muted text-lg">Five steps. Start to finish.</p>
+      </div>
+      <div class="relative max-w-3xl mx-auto">
+        <div class="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-zinc-200" aria-hidden="true"></div>
+        {steps.map((step, i) => (
+          <div class="relative flex gap-6 md:gap-8 mb-10 last:mb-0 fade-up stagger-child" style={`--i: ${i}`}>
+            <div class="relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-brand text-accent flex items-center justify-center font-extrabold text-lg md:text-xl" style="font-family: var(--font-heading);">
+              {step.num}
+            </div>
+            <div class="pt-1 md:pt-3">
+              <h3 class="text-lg md:text-xl font-bold mb-2">{step.title}</h3>
+              <p class="text-text-muted">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>Backlink Profile Review</h3>
-      <p>We pull Ahrefs data. We assess domain authority, referring domain quality, anchor text distribution, and toxic link risk. We benchmark your backlink profile against the top-ranking Birmingham competitors for your target keywords. You see exactly where the gaps are.</p>
+  <!-- Deliverables -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <div class="text-center mb-14 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Deliverables</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto">Everything is designed for immediate action. Whether you implement changes yourself, brief a developer, or engage us for ongoing SEO.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {deliverables.map((d, i) => (
+          <div class="service-card fade-up stagger-child" style={`--i: ${i}`}>
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 bg-accent/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">{d.title}</h3>
+                <p class="text-text-muted text-sm">{d.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>Local SEO Assessment</h3>
-      <p>For Birmingham businesses, local SEO is often the highest-ROI area. We audit Google Business Profile completeness, NAP consistency across directories, local citation presence, review profile, and local pack eligibility for your target queries.</p>
+  <!-- When an SEO Audit Delivers ROI -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20">
+      <div class="text-center mb-14 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">When an SEO Audit Delivers ROI</h2>
+        <p class="text-zinc-400 text-lg max-w-2xl mx-auto">An audit is most valuable at specific moments. These are the ones where the return is measurable.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        {scenarios.map((s, i) => (
+          <div class="service-card !bg-brand-light !border-zinc-800 fade-up stagger-child" style={`--i: ${i}`}>
+            <h3 class="text-xl font-bold text-white mb-3" style="font-family: var(--font-heading);">{s.title}</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>Competitor Benchmarking</h3>
-      <p>We identify your top 5 organic competitors in Birmingham. We analyse their content strategy, technical setup, backlink sources, and local SEO presence. You get specific, actionable insights on where the gaps exist and how to exploit them.</p>
-    </section>
+  <!-- Birmingham-Specific -->
+  <section class="bg-surface">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <div class="text-center mb-14 fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Birmingham-Specific Audit Considerations</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto">Every city has a different competitive landscape. We account for what makes the West Midlands market distinct.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        {districts.map((d, i) => (
+          <div class="service-card fade-up stagger-child" style={`--i: ${i}`}>
+            <div class="w-full h-1 bg-accent mb-6"></div>
+            <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">{d.title}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{d.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Audit Process</h2>
+  <!-- Pricing -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <div class="max-w-2xl mx-auto text-center fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Pricing</h2>
+        <div class="stat-card mb-8">
+          <span class="counter-value text-5xl md:text-6xl" data-count="497" data-suffix="">0</span>
+          <p class="text-zinc-400 text-sm mt-2 relative z-10">One-off. All deliverables included.</p>
+        </div>
+        <div class="text-left space-y-4 text-text-muted">
+          <p>The one-off SEO audit is <strong class="text-brand">£497</strong>. All deliverables included. No ongoing commitment. No hidden subscription.</p>
+          <p>If you proceed with implementation, the audit cost is credited against the first month of any ongoing SEO retainer. View our full <a href="/seo-pricing-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">SEO pricing</a> for retainer options.</p>
+          <p>Want a quick snapshot first? Our <a href="/free-seo-audit-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">free SEO audit</a> gives you an automated health check at no cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p>Five steps. Start to finish.</p>
-
-      <ol>
-        <li><strong>Access and configuration.</strong> You grant read-only access to Google Search Console and GA4. We configure crawling tools and begin data collection. One working day.</li>
-        <li><strong>Technical crawl and data gathering.</strong> Full site crawl. Sixteen months of search performance data. Backlink profile export. Google Business Profile audit. Two to three days, run in parallel.</li>
-        <li><strong>Manual analysis and annotation.</strong> We review every data point. Cross-reference findings. Write specific recommendations for your business. No generic advice. Every recommendation references actual pages, keywords, and Birmingham competitors. Three to five working days.</li>
-        <li><strong>Report compilation.</strong> Findings compiled into a structured PDF. Executive summary. Detailed section breakdowns. Priority action plan ranked by estimated impact and implementation difficulty.</li>
-        <li><strong>Walkthrough call.</strong> Thirty-minute video call. We present key findings, answer your questions, and discuss implementation priorities. The call is recorded so you can share it with your team or developers.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Deliverables</h2>
-
-      <p>Everything is designed for immediate action. Whether you implement changes yourself, brief a developer, or engage us for ongoing SEO.</p>
-
-      <ul>
-        <li><strong>PDF audit report</strong> (typically 30 to 50 pages) covering all five areas with screenshots, data tables, and specific recommendations</li>
-        <li><strong>Priority action plan</strong> as a standalone spreadsheet, ranked by impact (high/medium/low) and effort (quick fix/medium/complex)</li>
-        <li><strong>30-minute video walkthrough call</strong> recorded for reference</li>
-        <li><strong>Raw data exports</strong> including crawl data, keyword rankings, and backlink profile</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>When an SEO Audit Delivers ROI</h2>
-
-      <p>An audit is most valuable at specific moments. These are the ones where the return is measurable.</p>
-
-      <h3>New Businesses Launching in Birmingham</h3>
-      <p>Audit the staging site before go-live. We catch indexation blockers, missing redirects from legacy domains, and local SEO configuration gaps before they damage your rankings.</p>
-
-      <h3>Losing Organic Traffic</h3>
-      <p>Traffic dropped after an algorithm update. Something is wrong. We pinpoint whether the cause is technical, content-related, or penalty-related. No guessing.</p>
-
-      <h3>Website Redesign or Platform Migration</h3>
-      <p>Migrating CMS platforms is the single most dangerous moment for SEO. A pre-migration audit ensures redirect maps are complete. A post-migration audit catches what slipped through. We handle both.</p>
-
-      <h3>Missing from Birmingham's Local Pack</h3>
-      <p>Your competitors appear in Google's local 3-pack. You do not. We identify the specific local ranking factors responsible. Inconsistent NAP data. Incomplete Google Business Profile. Missing local schema markup. We find the cause.</p>
-    </section>
-
-    <section>
-      <h2>Birmingham-Specific Audit Considerations</h2>
-
-      <p>Every city has a different competitive landscape. We account for what makes the West Midlands market distinct.</p>
-
-      <h3>Colmore Business District Professional Services</h3>
-      <p>Law firms, accountancies, and consultancies in the Colmore district compete intensely for high-value keywords. We benchmark your site against the top-ranking Colmore competitors. Content depth. Schema usage. Local citation profiles. We expose the gaps you can exploit.</p>
-
-      <h3>Jewellery Quarter Retail and E-Commerce</h3>
-      <p>Product-heavy sites with complex filtering and pagination. We identify crawl budget waste, product schema opportunities, and image optimisation problems that cost visibility against national jewellery retailers.</p>
-
-      <h3>NEC and Event-Based Businesses</h3>
-      <p>Seasonal search demand. Event schema. Landing page freshness. Historical event pages returning 404s instead of being properly archived. We audit all of it.</p>
-    </section>
-
-    <section>
-      <h2>Pricing</h2>
-
-      <p>The one-off SEO audit is <strong>£497</strong>. All deliverables included. No ongoing commitment. No hidden subscription.</p>
-
-      <p>If you proceed with implementation, the audit cost is credited against the first month of any ongoing SEO retainer. View our full <a href="/seo-pricing-birmingham/">SEO pricing</a> for retainer options.</p>
-
-      <p>Want a quick snapshot first? Our <a href="/free-seo-audit-birmingham/">free SEO audit</a> gives you an automated health check at no cost.</p>
-    </section>
-
-    <div class="cta-box">
-      <h2 style="color: white; margin-top: 0;">Get the Audit</h2>
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="cta-box fade-up">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white relative z-10" style="margin-top: 0;">Get the Audit</h2>
       <p>Find out exactly what is holding your site back. Comprehensive. Manual. Actionable.</p>
       <a href="/free-seo-audit-birmingham/">Get the audit</a>
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      {faqs.map((faq) => (
-        <details>
-          <summary>{faq.q}</summary>
-          <div class="faq-answer">
-            <p>{faq.a}</p>
-          </div>
-        </details>
-      ))}
-    </section>
+  <!-- FAQ -->
+  <section class="bg-surface">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center fade-up">Frequently Asked Questions</h2>
+        <div class="faq-section fade-up">
+          {faqs.map((faq) => (
+            <details>
+              <summary>{faq.q}</summary>
+              <div class="faq-answer">
+                <p>{faq.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Related Services</h2>
-      <ul>
-        <li><a href="/">SEO Birmingham</a> — full SEO services overview</li>
-        <li><a href="/services/">All SEO Services</a></li>
-        <li><a href="/technical-seo-birmingham/">Technical SEO Birmingham</a></li>
-        <li><a href="/free-seo-audit-birmingham/">Free SEO Audit Birmingham</a> — automated health check</li>
-        <li><a href="/seo-pricing-birmingham/">SEO Pricing</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-      </ul>
-    </section>
-  </div>
+  <!-- Related Services -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center fade-up">Related Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { href: '/', label: 'SEO Birmingham', desc: 'Full SEO services overview' },
+          { href: '/services/', label: 'All SEO Services', desc: 'Browse our complete offering' },
+          { href: '/technical-seo-birmingham/', label: 'Technical SEO Birmingham', desc: 'Deep technical optimisation' },
+          { href: '/free-seo-audit-birmingham/', label: 'Free SEO Audit Birmingham', desc: 'Automated health check' },
+          { href: '/seo-pricing-birmingham/', label: 'SEO Pricing', desc: 'Retainer and project pricing' },
+          { href: '/contact/', label: 'Contact Us', desc: 'Get in touch' },
+        ].map((link, i) => (
+          <a href={link.href} class="service-card group fade-up stagger-child" style={`--i: ${i}; text-decoration: none;`}>
+            <h3 class="text-lg font-bold mb-1 group-hover:text-accent transition-colors" style="font-family: var(--font-heading);">{link.label}</h3>
+            <p class="text-text-muted text-sm">{link.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
 </Base>

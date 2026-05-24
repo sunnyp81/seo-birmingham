@@ -60,6 +60,14 @@ const faqSchema = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+const benefits = [
+  { title: 'Indexation Status', desc: 'How many of your pages has Google indexed versus how many exist? If Google is only seeing a fraction of your content, nothing else matters until that is fixed.' },
+  { title: 'Mobile Usability', desc: 'Most local searches in Birmingham come from mobile devices. Your site must render correctly on smartphones. We test mobile performance and flag usability issues that cost you rankings and conversions.' },
+  { title: 'Core Web Vitals', desc: 'We measure speed, interactivity, and visual stability against Google\'s thresholds. These are a confirmed ranking factor. Slow sites lose visitors. In competitive Birmingham markets, searchers have alternatives and they use them.' },
+  { title: 'Google Business Profile Review', desc: 'For Birmingham businesses targeting local customers, your Google Business Profile carries as much weight as your website. We check profile completeness, category accuracy, review volume, and common configuration errors that block you from the local 3-pack.' },
+  { title: 'Three Prioritised Quick Wins', desc: 'Every free audit includes three specific, actionable recommendations. Not generic suggestions. Precise changes with clear instructions, selected because they deliver the highest impact for the least effort on your specific site.' },
+];
 ---
 
 <Base
@@ -68,172 +76,307 @@ const faqSchema = {
   schema={[serviceSchema, faqSchema]}
   ogType="website"
 >
-  <div class="max-w-3xl mx-auto px-4 py-12 prose">
-    <h1>Free SEO Audit Birmingham</h1>
 
-    <p>Five minutes of your time. A full picture of your SEO. We run a rapid health check on your Birmingham business website and deliver three actions you can implement straight away. No cost. No obligation.</p>
+  <!-- Hero -->
+  <section class="bg-brand text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full opacity-[0.07] blur-[100px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 sm:py-24">
+      <div class="max-w-2xl fade-up">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6" style="color: white; letter-spacing: -0.03em;">Free SEO Audit Birmingham</h1>
+        <p class="text-lg sm:text-xl text-zinc-300 mb-8 leading-relaxed">Five minutes of your time. A full picture of your SEO. We run a rapid health check on your Birmingham business website and deliver three actions you can implement straight away. No cost. No obligation.</p>
+        <a href="#audit-form" class="btn-shimmer">Get the Audit</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-10 fade-up">
     <div class="quick-answer">
       <strong>Quick Answer:</strong> Submit your website below. Get a free SEO health check within 48 hours. We cover indexation status, mobile usability, Core Web Vitals, Google Business Profile, and three prioritised quick wins. No cost. No obligation. No unsolicited follow-up.
     </div>
+  </section>
 
-    <section>
-      <h2>What the Free Audit Covers</h2>
+  <!-- Stats -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-up">
+      <div class="stat-card">
+        <span class="counter-value" data-count="5" data-suffix="">0</span>
+        <p class="text-zinc-400 text-sm mt-2 relative z-1">Areas Analysed</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter-value" data-count="48" data-suffix="h">0</span>
+        <p class="text-zinc-400 text-sm mt-2 relative z-1">Turnaround</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter-value" data-count="3" data-suffix="">0</span>
+        <p class="text-zinc-400 text-sm mt-2 relative z-1">Quick Wins Included</p>
+      </div>
+      <div class="stat-card">
+        <span class="counter-value" data-count="0" data-suffix="">£0</span>
+        <p class="text-zinc-400 text-sm mt-2 relative z-1">Cost</p>
+      </div>
+    </div>
+  </section>
 
-      <p>Five areas. Each one has a direct, measurable impact on whether your Birmingham business appears in search results.</p>
+  <!-- What the Free Audit Covers -->
+  <section class="bg-surface-alt py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4" style="border: none; display: block;">What the Free Audit Covers</h2>
+        <p class="text-text-muted max-w-2xl mx-auto">Five areas. Each one has a direct, measurable impact on whether your Birmingham business appears in search results.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {benefits.map((b, i) => (
+          <div class="service-card fade-up stagger-child" style={`--i: ${i}`}>
+            <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">{b.title}</h3>
+            <p class="text-text-muted text-sm leading-relaxed">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <h3>Indexation Status</h3>
-      <p>How many of your pages has Google indexed versus how many exist? If Google is only seeing a fraction of your content, nothing else matters until that is fixed.</p>
+  <!-- Form Section (dark, 2-col) -->
+  <section class="bg-brand text-white relative overflow-hidden py-20" id="audit-form">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -top-32 left-1/4 w-[400px] h-[400px] rounded-full opacity-[0.06] blur-[80px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-      <h3>Mobile Usability</h3>
-      <p>Most local searches in Birmingham come from mobile devices. Your site must render correctly on smartphones. We test mobile performance and flag usability issues that cost you rankings and conversions.</p>
+        <!-- Left: benefits summary -->
+        <div class="fade-up">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-6" style="color: white; border: none;">Get the Audit</h2>
+          <p class="text-zinc-300 text-lg mb-8 leading-relaxed">Fill in the form. We deliver your free SEO health check within 48 hours.</p>
 
-      <h3>Core Web Vitals</h3>
-      <p>We measure speed, interactivity, and visual stability against Google's thresholds. These are a confirmed ranking factor. Slow sites lose visitors. In competitive Birmingham markets, searchers have alternatives and they use them.</p>
-
-      <h3>Google Business Profile Review</h3>
-      <p>For Birmingham businesses targeting local customers, your Google Business Profile carries as much weight as your website. We check profile completeness, category accuracy, review volume, and common configuration errors that block you from the local 3-pack.</p>
-
-      <h3>Three Prioritised Quick Wins</h3>
-      <p>Every free audit includes three specific, actionable recommendations. Not generic suggestions. Precise changes with clear instructions, selected because they deliver the highest impact for the least effort on your specific site.</p>
-    </section>
-
-    <section>
-      <h2>What the Free Audit Does Not Cover</h2>
-
-      <p>The free audit is an automated snapshot. It does not include:</p>
-
-      <ul>
-        <li>Manual content quality review</li>
-        <li>Backlink profile analysis</li>
-        <li>Competitor benchmarking</li>
-        <li>Detailed technical crawl of every page</li>
-        <li>Keyword cannibalisation checks</li>
-        <li>Walkthrough call</li>
-      </ul>
-
-      <p>For a thorough, manually reviewed audit with a full action plan, our <a href="/seo-audit-birmingham/">paid SEO audit</a> at £497 covers all of the above. The free audit tells you whether a deeper investigation is worth it.</p>
-    </section>
-
-    <section>
-      <h2>Who This Audit Is For</h2>
-
-      <p>Birmingham businesses in any of these situations:</p>
-
-      <ul>
-        <li>Never had an SEO audit. Need a baseline.</li>
-        <li>Considering investing in SEO but want evidence of specific issues first.</li>
-        <li>Just launched a new website and need a quick sanity check.</li>
-        <li>A Digbeth startup, Jewellery Quarter retailer, or Colmore professional firm wanting a baseline before committing to ongoing SEO.</li>
-        <li>Need to compare site health against Birmingham competitors.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Get the Audit</h2>
-
-      <p>Fill in the form. We deliver your free SEO health check within 48 hours.</p>
-
-      <form action="#" method="POST" class="not-prose bg-surface rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm mt-6 mb-8">
-        <div class="space-y-5">
-          <div>
-            <label for="name" class="block text-sm font-semibold text-brand-dark mb-1.5">Full Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Jane Smith"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
-            />
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-accent text-brand font-extrabold text-sm" style="font-family: var(--font-heading);">1</span>
+              <div>
+                <p class="font-bold text-white mb-1" style="font-family: var(--font-heading);">Submit your website</p>
+                <p class="text-zinc-400 text-sm">Takes under a minute. No CMS access needed.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-accent text-brand font-extrabold text-sm" style="font-family: var(--font-heading);">2</span>
+              <div>
+                <p class="font-bold text-white mb-1" style="font-family: var(--font-heading);">We run the audit</p>
+                <p class="text-zinc-400 text-sm">Five areas checked using publicly available data.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-accent text-brand font-extrabold text-sm" style="font-family: var(--font-heading);">3</span>
+              <div>
+                <p class="font-bold text-white mb-1" style="font-family: var(--font-heading);">Get your report</p>
+                <p class="text-zinc-400 text-sm">Delivered via email within 48 hours with three prioritised quick wins.</p>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <label for="email" class="block text-sm font-semibold text-brand-dark mb-1.5">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="jane@example.co.uk"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
-            />
+          <div class="mt-10 pt-8 border-t border-zinc-800">
+            <p class="text-zinc-500 text-xs uppercase tracking-widest font-bold mb-3">Trusted by businesses in</p>
+            <p class="text-zinc-400 text-sm">Digbeth, Jewellery Quarter, Colmore Row, Edgbaston, Solihull, and across the West Midlands.</p>
           </div>
-
-          <div>
-            <label for="website" class="block text-sm font-semibold text-brand-dark mb-1.5">Website URL</label>
-            <input
-              type="url"
-              id="website"
-              name="website"
-              required
-              placeholder="https://www.yourbusiness.co.uk"
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
-            />
-          </div>
-
-          <div>
-            <label for="business_type" class="block text-sm font-semibold text-brand-dark mb-1.5">Business Type</label>
-            <select
-              id="business_type"
-              name="business_type"
-              required
-              class="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow appearance-none"
-            >
-              <option value="" disabled selected>Select your industry</option>
-              <option value="professional-services">Professional Services (Legal, Accounting, Consulting)</option>
-              <option value="retail-ecommerce">Retail and E-Commerce</option>
-              <option value="hospitality">Hospitality (Restaurants, Hotels, Bars)</option>
-              <option value="healthcare">Healthcare and Medical</option>
-              <option value="construction-trades">Construction and Trades</option>
-              <option value="manufacturing">Manufacturing and Engineering</option>
-              <option value="education-training">Education and Training</option>
-              <option value="technology">Technology and SaaS</option>
-              <option value="property">Property and Estate Agents</option>
-              <option value="events-entertainment">Events and Entertainment</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full bg-brand text-white font-bold py-3.5 px-6 rounded-lg hover:bg-brand-light transition-colors text-base cursor-pointer shadow-md hover:shadow-lg"
-          >
-            Get the Audit
-          </button>
-
-          <p class="text-xs text-text-muted text-center mt-3">No spam. No obligation. Report delivered within 48 hours to hello@seo-birmingham.uk.</p>
         </div>
-      </form>
-    </section>
 
+        <!-- Right: form -->
+        <div class="fade-up" style="--i: 1">
+          <form action="#" method="POST" class="bg-brand-light rounded-xl p-6 sm:p-8 border border-zinc-800 shadow-2xl shadow-black/40">
+            <div class="space-y-5">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-zinc-300 mb-1.5">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Jane Smith"
+                  class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-zinc-300 mb-1.5">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="jane@example.co.uk"
+                  class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+                />
+              </div>
+
+              <div>
+                <label for="website" class="block text-sm font-semibold text-zinc-300 mb-1.5">Website URL</label>
+                <input
+                  type="url"
+                  id="website"
+                  name="website"
+                  required
+                  placeholder="https://www.yourbusiness.co.uk"
+                  class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
+                />
+              </div>
+
+              <div>
+                <label for="business_type" class="block text-sm font-semibold text-zinc-300 mb-1.5">Business Type</label>
+                <select
+                  id="business_type"
+                  name="business_type"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow appearance-none"
+                >
+                  <option value="" disabled selected>Select your industry</option>
+                  <option value="professional-services">Professional Services (Legal, Accounting, Consulting)</option>
+                  <option value="retail-ecommerce">Retail and E-Commerce</option>
+                  <option value="hospitality">Hospitality (Restaurants, Hotels, Bars)</option>
+                  <option value="healthcare">Healthcare and Medical</option>
+                  <option value="construction-trades">Construction and Trades</option>
+                  <option value="manufacturing">Manufacturing and Engineering</option>
+                  <option value="education-training">Education and Training</option>
+                  <option value="technology">Technology and SaaS</option>
+                  <option value="property">Property and Estate Agents</option>
+                  <option value="events-entertainment">Events and Entertainment</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                class="btn-shimmer w-full text-center !py-3.5 !text-base cursor-pointer"
+              >
+                Get the Audit
+              </button>
+
+              <p class="text-xs text-zinc-500 text-center mt-3">No spam. No obligation. Report delivered within 48 hours to hello@seo-birmingham.uk.</p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What the Free Audit Does Not Cover -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="fade-up">
+        <h2 class="text-3xl font-extrabold tracking-tight mb-6" style="border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">What the Free Audit Does Not Cover</h2>
+        <p class="text-text-muted mb-6">The free audit is an automated snapshot. It does not include:</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Manual content quality review
+          </li>
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Backlink profile analysis
+          </li>
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Competitor benchmarking
+          </li>
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Detailed technical crawl of every page
+          </li>
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Keyword cannibalisation checks
+          </li>
+          <li class="flex items-start gap-3 text-text-muted">
+            <span class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2.5"></span>
+            Walkthrough call
+          </li>
+        </ul>
+        <p class="text-text-muted">For a thorough, manually reviewed audit with a full action plan, our <a href="/seo-audit-birmingham/" class="text-brand underline decoration-accent decoration-2 underline-offset-2 hover:decoration-brand transition-colors">paid SEO audit</a> at £497 covers all of the above. The free audit tells you whether a deeper investigation is worth it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Audit Is For -->
+  <section class="bg-surface-alt py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">Who This Audit Is For</h2>
+        <p class="text-text-muted">Birmingham businesses in any of these situations:</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card fade-up stagger-child" style="--i: 0">
+          <p class="text-text-muted text-sm leading-relaxed">Never had an SEO audit. Need a baseline.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i: 1">
+          <p class="text-text-muted text-sm leading-relaxed">Considering investing in SEO but want evidence of specific issues first.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i: 2">
+          <p class="text-text-muted text-sm leading-relaxed">Just launched a new website and need a quick sanity check.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i: 3">
+          <p class="text-text-muted text-sm leading-relaxed">A Digbeth startup, Jewellery Quarter retailer, or Colmore professional firm wanting a baseline before committing to ongoing SEO.</p>
+        </div>
+        <div class="service-card fade-up stagger-child" style="--i: 4">
+          <p class="text-text-muted text-sm leading-relaxed">Need to compare site health against Birmingham competitors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="max-w-6xl mx-auto px-4 py-16 fade-up">
     <div class="cta-box">
       <h2 style="color: white; margin-top: 0;">Need the Full Picture?</h2>
       <p>The free audit is a starting point. For a manual deep-dive with a detailed action plan and walkthrough call, see our paid SEO audit.</p>
       <a href="/seo-audit-birmingham/">Get the full audit — £497</a>
     </div>
+  </section>
 
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      {faqs.map((faq) => (
-        <details>
-          <summary>{faq.q}</summary>
-          <div class="faq-answer">
-            <p>{faq.a}</p>
-          </div>
-        </details>
-      ))}
-    </section>
+  <!-- FAQ -->
+  <section class="bg-surface-alt py-20">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-section fade-up">
+        {faqs.map((faq) => (
+          <details>
+            <summary>{faq.q}</summary>
+            <div class="faq-answer">
+              <p>{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Related Pages</h2>
-      <ul>
-        <li><a href="/">SEO Birmingham</a> — full services overview</li>
-        <li><a href="/services/">All SEO Services</a></li>
-        <li><a href="/seo-audit-birmingham/">SEO Audit Birmingham</a> — comprehensive analysis</li>
-        <li><a href="/seo-pricing-birmingham/">SEO Pricing</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-      </ul>
-    </section>
-  </div>
+  <!-- Related Pages -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-extrabold tracking-tight mb-8 fade-up" style="border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Related Pages</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 fade-up">
+        <a href="/" class="service-card group block">
+          <p class="font-bold mb-1" style="font-family: var(--font-heading);">SEO Birmingham</p>
+          <p class="text-text-muted text-sm">Full services overview</p>
+        </a>
+        <a href="/services/" class="service-card group block">
+          <p class="font-bold mb-1" style="font-family: var(--font-heading);">All SEO Services</p>
+          <p class="text-text-muted text-sm">Browse our complete service range</p>
+        </a>
+        <a href="/seo-audit-birmingham/" class="service-card group block">
+          <p class="font-bold mb-1" style="font-family: var(--font-heading);">SEO Audit Birmingham</p>
+          <p class="text-text-muted text-sm">Comprehensive analysis</p>
+        </a>
+        <a href="/seo-pricing-birmingham/" class="service-card group block">
+          <p class="font-bold mb-1" style="font-family: var(--font-heading);">SEO Pricing</p>
+          <p class="text-text-muted text-sm">Transparent pricing packages</p>
+        </a>
+        <a href="/contact/" class="service-card group block">
+          <p class="font-bold mb-1" style="font-family: var(--font-heading);">Contact Us</p>
+          <p class="text-text-muted text-sm">Get in touch</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </Base>
