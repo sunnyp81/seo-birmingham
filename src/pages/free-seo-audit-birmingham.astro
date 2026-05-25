@@ -113,7 +113,7 @@ const benefits = [
         <p class="text-zinc-400 text-sm mt-2 relative z-1">Quick Wins Included</p>
       </div>
       <div class="stat-card">
-        <span class="counter-value" data-count="0" data-suffix="">£0</span>
+        <span class="counter-value" data-count="0" data-prefix="£" data-suffix="">£0</span>
         <p class="text-zinc-400 text-sm mt-2 relative z-1">Cost</p>
       </div>
     </div>
@@ -181,7 +181,11 @@ const benefits = [
 
         <!-- Right: form -->
         <div class="fade-up" style="--i: 1">
-          <form action="#" method="POST" class="bg-brand-light rounded-xl p-6 sm:p-8 border border-zinc-800 shadow-2xl shadow-black/40">
+          <form action="https://api.staticforms.xyz/submit" method="POST" class="bg-brand-light rounded-xl p-6 sm:p-8 border border-zinc-800 shadow-2xl shadow-black/40">
+            <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
+            <input type="hidden" name="subject" value="SEO Birmingham — Free Audit Request" />
+            <input type="hidden" name="redirectTo" value="https://seo-birmingham.uk/free-seo-audit-birmingham/?sent=1" />
+            <input type="text" name="honeypot" style="display:none" />
             <div class="space-y-5">
               <div>
                 <label for="name" class="block text-sm font-semibold text-zinc-300 mb-1.5">Full Name</label>
@@ -202,7 +206,7 @@ const benefits = [
                   id="email"
                   name="email"
                   required
-                  placeholder="jane@example.co.uk"
+                  placeholder="name@yourbusiness.co.uk"
                   class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                 />
               </div>
@@ -214,7 +218,7 @@ const benefits = [
                   id="website"
                   name="website"
                   required
-                  placeholder="https://www.yourbusiness.co.uk"
+                  placeholder="https://yourbusiness.co.uk"
                   class="w-full px-4 py-3 rounded-lg border border-zinc-700 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-shadow"
                 />
               </div>

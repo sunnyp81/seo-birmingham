@@ -1,0 +1,352 @@
+---
+import Base from '../layouts/Base.astro';
+
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SEO ROI Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://seo-birmingham.uk/seo-roi-calculator/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SEO Birmingham",
+    "url": "https://seo-birmingham.uk"
+  },
+  "description": "Calculate the return on investment from SEO for your Birmingham business. Enter your budget, customer value, and traffic to see projected revenue and ROI."
+};
+---
+
+<Base
+  title="SEO ROI Calculator | SEO Birmingham"
+  description="Calculate your return on SEO investment. Enter your budget and traffic data to see projected revenue, leads, and payback period for Birmingham businesses."
+  schema={[appSchema]}
+>
+
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full opacity-[0.08] blur-[80px]" style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">SEO ROI Calculator</h1>
+      <p class="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto fade-up stagger-child" style="--i:1">See exactly what SEO could return for your Birmingham business. Enter your numbers, get projected revenue, leads, and payback period in seconds.</p>
+    </div>
+  </section>
+
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 -mt-6 relative z-10 fade-up">
+    <div class="quick-answer rounded-none md:rounded-lg shadow-xl">
+      <strong>What this calculator does:</strong> Enter your monthly SEO budget, average customer value, and current traffic. The calculator projects your additional visitors, leads, monthly revenue, 12-month ROI, and payback period. All calculations run instantly in your browser &mdash; no data is sent anywhere.
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-10 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Calculate Your SEO Return</h2>
+
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+
+      <!-- Inputs -->
+      <div class="bg-white rounded-lg border border-zinc-200 p-6 md:p-8 fade-up stagger-child" style="--i:0">
+        <div class="space-y-6">
+
+          <!-- Monthly SEO Investment -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="font-family: var(--font-heading);">Monthly SEO Investment</label>
+            <div class="flex items-center gap-3">
+              <span class="text-text-muted font-semibold">&pound;</span>
+              <input type="number" id="calc-investment" value="750" min="300" max="5000" step="50" class="w-full border border-zinc-300 rounded-lg px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition" />
+            </div>
+            <input type="range" id="calc-investment-range" min="300" max="5000" step="50" value="750" class="w-full mt-2 accent-amber-500" />
+            <div class="flex justify-between text-xs text-text-muted mt-1">
+              <span>&pound;300</span>
+              <span>&pound;5,000</span>
+            </div>
+          </div>
+
+          <!-- Average Customer Value -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="font-family: var(--font-heading);">Average Customer Value</label>
+            <div class="flex items-center gap-3">
+              <span class="text-text-muted font-semibold">&pound;</span>
+              <input type="number" id="calc-customer-value" value="500" min="10" max="100000" step="10" class="w-full border border-zinc-300 rounded-lg px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition" />
+            </div>
+          </div>
+
+          <!-- Current Monthly Visitors -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="font-family: var(--font-heading);">Current Monthly Organic Visitors</label>
+            <input type="number" id="calc-current-visitors" value="500" min="0" max="1000000" step="10" class="w-full border border-zinc-300 rounded-lg px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition" />
+          </div>
+
+          <!-- Expected Traffic Increase -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="font-family: var(--font-heading);">Expected Traffic Increase</label>
+            <div class="flex items-center gap-3">
+              <input type="range" id="calc-traffic-increase" min="20" max="300" step="5" value="80" class="flex-1 accent-amber-500" />
+              <span id="calc-traffic-increase-label" class="text-sm font-bold text-accent w-14 text-right">80%</span>
+            </div>
+            <div class="flex justify-between text-xs text-text-muted mt-1">
+              <span>20%</span>
+              <span>300%</span>
+            </div>
+          </div>
+
+          <!-- Conversion Rate -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" style="font-family: var(--font-heading);">Conversion Rate</label>
+            <div class="flex items-center gap-3">
+              <input type="number" id="calc-conversion-rate" value="2" min="0.5" max="10" step="0.1" class="w-full border border-zinc-300 rounded-lg px-4 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition" />
+              <span class="text-text-muted font-semibold">%</span>
+            </div>
+          </div>
+
+          <button id="calc-btn" class="btn-shimmer w-full text-center">Calculate ROI</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="fade-up stagger-child" style="--i:1">
+        <div class="stat-card rounded-lg p-6 md:p-8">
+          <h3 class="text-lg font-bold text-white mb-6" style="font-family: var(--font-heading);">Your Projected SEO Returns</h3>
+          <div class="space-y-5">
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4">
+              <span class="text-zinc-400 text-sm">New Monthly Visitors</span>
+              <span class="counter-value text-2xl" id="result-new-visitors">900</span>
+            </div>
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4">
+              <span class="text-zinc-400 text-sm">Additional Leads / Month</span>
+              <span class="counter-value text-2xl" id="result-leads">8</span>
+            </div>
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4">
+              <span class="text-zinc-400 text-sm">Additional Monthly Revenue</span>
+              <span class="counter-value text-2xl" id="result-revenue">&pound;4,000</span>
+            </div>
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4">
+              <span class="text-zinc-400 text-sm">12-Month ROI</span>
+              <span class="counter-value text-3xl" id="result-roi">433%</span>
+            </div>
+            <div class="flex justify-between items-end pb-2">
+              <span class="text-zinc-400 text-sm">Payback Period</span>
+              <span class="counter-value text-2xl" id="result-payback">3 months</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-text-muted mt-4 italic">This calculator provides estimates based on industry averages. Actual results vary by sector, competition, and starting position.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How We Calculate -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 relative">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">How We Calculate This</h2>
+      <div class="max-w-3xl space-y-4 text-zinc-300">
+        <p class="fade-up">The formula is straightforward. No black boxes.</p>
+        <ol class="list-decimal list-inside space-y-3 fade-up stagger-child" style="--i:1">
+          <li><strong class="text-white">New visitors</strong> = current visitors &times; (1 + traffic increase %)</li>
+          <li><strong class="text-white">Additional leads</strong> = extra visitors &times; conversion rate</li>
+          <li><strong class="text-white">Additional revenue</strong> = new leads &times; average customer value</li>
+          <li><strong class="text-white">12-month ROI</strong> = ((annual revenue gain &minus; annual SEO cost) &divide; annual SEO cost) &times; 100</li>
+          <li><strong class="text-white">Payback period</strong> = annual SEO cost &divide; monthly revenue gain</li>
+        </ol>
+        <p class="fade-up stagger-child" style="--i:2">We use your inputs directly. The only assumption is that traffic growth and conversion rates remain stable across the period. In practice, SEO compounds &mdash; month 6 typically outperforms month 1 by a wide margin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why SEO Compounds -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Why SEO Compounds</h2>
+    <div class="max-w-3xl space-y-4 text-text-muted mb-10">
+      <p class="text-lg fade-up">SEO is not a linear channel. Every page you optimise, every backlink you earn, and every technical fix you ship strengthens the entire domain. Month 3 builds on month 2. Month 6 builds on everything before it.</p>
+      <p class="text-lg fade-up">Paid ads stop the moment you stop paying. SEO traffic keeps arriving. A Birmingham law firm ranking page one for "commercial solicitors Birmingham" earns clicks every single day without a per-click fee. That is the compounding advantage.</p>
+    </div>
+
+    <!-- Growth visual -->
+    <div class="grid grid-cols-6 gap-2 max-w-xl items-end fade-up" role="img" aria-label="SEO growth compounds over 6 months">
+      <div class="text-center">
+        <div class="bg-amber-500/20 border border-amber-500/40 rounded-t-md mx-auto" style="height: 30px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M1</span>
+      </div>
+      <div class="text-center">
+        <div class="bg-amber-500/30 border border-amber-500/50 rounded-t-md mx-auto" style="height: 50px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M2</span>
+      </div>
+      <div class="text-center">
+        <div class="bg-amber-500/40 border border-amber-500/60 rounded-t-md mx-auto" style="height: 80px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M3</span>
+      </div>
+      <div class="text-center">
+        <div class="bg-amber-500/55 border border-amber-500/70 rounded-t-md mx-auto" style="height: 115px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M4</span>
+      </div>
+      <div class="text-center">
+        <div class="bg-amber-500/70 border border-amber-500/80 rounded-t-md mx-auto" style="height: 155px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M5</span>
+      </div>
+      <div class="text-center">
+        <div class="bg-amber-500 border border-amber-400 rounded-t-md mx-auto" style="height: 200px; width: 100%;"></div>
+        <span class="text-xs text-text-muted mt-2 block">M6</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Benchmarks -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 relative">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4 fade-up" style="font-family: var(--font-heading); border-bottom: 3px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem;">Birmingham Industry Benchmarks</h2>
+      <p class="text-zinc-300 mb-10 max-w-3xl fade-up">Typical organic conversion rates by sector. Use these to calibrate the calculator for your industry.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:0">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Legal Services</h3>
+          <p class="counter-value text-2xl mb-2">3 &ndash; 5%</p>
+          <p class="text-text-muted text-sm">Family law, conveyancing, and commercial law firms in Colmore Row and the city centre.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:1">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Dental &amp; Healthcare</h3>
+          <p class="counter-value text-2xl mb-2">4 &ndash; 6%</p>
+          <p class="text-text-muted text-sm">Private dental practices, clinics, and specialist healthcare providers across the West Midlands.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:2">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Jewellery &amp; Retail</h3>
+          <p class="counter-value text-2xl mb-2">2 &ndash; 3%</p>
+          <p class="text-text-muted text-sm">Jewellery Quarter retailers, independent shops, and ecommerce brands based in Birmingham.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:3">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Professional Services</h3>
+          <p class="counter-value text-2xl mb-2">2 &ndash; 4%</p>
+          <p class="text-text-muted text-sm">Accountants, consultants, financial advisors, and B2B service firms.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:4">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Hospitality &amp; Leisure</h3>
+          <p class="counter-value text-2xl mb-2">1 &ndash; 2%</p>
+          <p class="text-text-muted text-sm">Hotels, restaurants, event venues, and leisure businesses around Broad Street and the NEC corridor.</p>
+        </div>
+        <div class="service-card rounded-lg fade-up stagger-child" style="--i:5">
+          <h3 class="text-lg font-bold mb-1" style="font-family: var(--font-heading);">Manufacturing &amp; B2B</h3>
+          <p class="counter-value text-2xl mb-2">1 &ndash; 3%</p>
+          <p class="text-text-muted text-sm">Engineering firms, industrial suppliers, and B2B manufacturers across the Black Country and wider Midlands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-20 fade-up">
+    <div class="cta-box rounded-lg p-8 md:p-12 text-center text-white">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4" style="font-family: var(--font-heading);">Ready to Turn Those Numbers Into Reality?</h2>
+      <p class="text-zinc-300 max-w-2xl mx-auto mb-8">Start with a free SEO audit. We will show you exactly where your traffic is leaking and how to fix it &mdash; before you spend a penny on a retainer.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get Your Free Audit</a>
+        <a href="/seo-pricing-birmingham/" class="inline-flex items-center gap-2 border border-zinc-600 text-white px-6 py-3 rounded-lg font-semibold hover:border-amber-500 transition">View Pricing</a>
+      </div>
+      <p class="text-sm text-zinc-400 mt-6">Or explore our full <a href="/services/" class="text-amber-500 hover:underline">SEO services</a> to see how we work.</p>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+  function initCalculator() {
+    const els = {
+      investment: document.getElementById('calc-investment'),
+      investmentRange: document.getElementById('calc-investment-range'),
+      customerValue: document.getElementById('calc-customer-value'),
+      currentVisitors: document.getElementById('calc-current-visitors'),
+      trafficIncrease: document.getElementById('calc-traffic-increase'),
+      trafficIncreaseLabel: document.getElementById('calc-traffic-increase-label'),
+      conversionRate: document.getElementById('calc-conversion-rate'),
+      resultNewVisitors: document.getElementById('result-new-visitors'),
+      resultLeads: document.getElementById('result-leads'),
+      resultRevenue: document.getElementById('result-revenue'),
+      resultRoi: document.getElementById('result-roi'),
+      resultPayback: document.getElementById('result-payback'),
+    };
+
+    // Sync range <-> number for investment
+    els.investment.addEventListener('input', () => {
+      els.investmentRange.value = els.investment.value;
+      calculate();
+    });
+    els.investmentRange.addEventListener('input', () => {
+      els.investment.value = els.investmentRange.value;
+      calculate();
+    });
+
+    // Update traffic increase label
+    els.trafficIncrease.addEventListener('input', () => {
+      els.trafficIncreaseLabel.textContent = els.trafficIncrease.value + '%';
+      calculate();
+    });
+
+    // Recalculate on any input change
+    [els.customerValue, els.currentVisitors, els.conversionRate].forEach(el => {
+      el.addEventListener('input', calculate);
+    });
+
+    function animateValue(el, target, prefix, suffix) {
+      const duration = 400;
+      const start = performance.now();
+      const from = parseInt(el.dataset.current) || 0;
+
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(from + (target - from) * eased);
+        el.textContent = prefix + current.toLocaleString('en-GB') + suffix;
+        el.dataset.current = current;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function calculate() {
+      const monthlyInvestment = parseFloat(els.investment.value) || 0;
+      const customerValue = parseFloat(els.customerValue.value) || 0;
+      const currentVisitors = parseFloat(els.currentVisitors.value) || 0;
+      const trafficIncrease = parseFloat(els.trafficIncrease.value) || 0;
+      const conversionRate = parseFloat(els.conversionRate.value) || 0;
+
+      const newVisitors = Math.round(currentVisitors * (1 + trafficIncrease / 100));
+      const additionalVisitors = newVisitors - currentVisitors;
+      const additionalLeads = additionalVisitors * (conversionRate / 100);
+      const additionalRevenue = additionalLeads * customerValue;
+      const annualRevenue = additionalRevenue * 12;
+      const annualCost = monthlyInvestment * 12;
+      const roi = annualCost > 0 ? Math.round(((annualRevenue - annualCost) / annualCost) * 100) : 0;
+      const paybackMonths = additionalRevenue > 0 ? Math.ceil(annualCost / additionalRevenue) : 0;
+
+      animateValue(els.resultNewVisitors, newVisitors, '', '');
+      animateValue(els.resultLeads, Math.round(additionalLeads), '', '');
+      animateValue(els.resultRevenue, Math.round(additionalRevenue), '£', '');
+      animateValue(els.resultRoi, roi, '', '%');
+
+      if (additionalRevenue > 0) {
+        els.resultPayback.textContent = paybackMonths + (paybackMonths === 1 ? ' month' : ' months');
+      } else {
+        els.resultPayback.textContent = 'N/A';
+      }
+    }
+
+    // Initial calculation
+    calculate();
+  }
+
+  document.addEventListener('astro:page-load', initCalculator);
+  if (document.readyState !== 'loading') {
+    initCalculator();
+  } else {
+    document.addEventListener('DOMContentLoaded', initCalculator);
+  }
+</script>

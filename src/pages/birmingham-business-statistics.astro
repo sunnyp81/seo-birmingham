@@ -1,0 +1,378 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Birmingham Business Statistics — The Numbers Behind England\'s Second City';
+const description = 'Key Birmingham business statistics: 40,000+ businesses, £28.1bn GDP, 100,000+ in financial services. Data from ONS, WMCA, and Greater Birmingham Chambers of Commerce.';
+
+const datasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'Birmingham Business Statistics',
+  description: 'Curated collection of Birmingham business, economic, and digital search statistics compiled from ONS, West Midlands Combined Authority, Greater Birmingham Chambers of Commerce, and published reports.',
+  url: 'https://seo-birmingham.uk/birmingham-business-statistics/',
+  creator: {
+    '@type': 'Organization',
+    name: 'SEO Birmingham',
+    url: 'https://seo-birmingham.uk',
+  },
+  temporalCoverage: '2015/2025',
+  spatialCoverage: {
+    '@type': 'Place',
+    name: 'Birmingham, West Midlands, United Kingdom',
+  },
+  keywords: ['Birmingham business statistics', 'Birmingham economy', 'West Midlands GDP', 'Birmingham employment data', 'Birmingham digital landscape'],
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+};
+
+const schema = [datasetSchema];
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute top-[-20%] right-[-10%] w-[400px] h-[400px] rounded-full opacity-[0.06] blur-[100px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%);"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">SEO Birmingham</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 fade-up stagger-child" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">
+        Birmingham Business Statistics<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">The Numbers Behind England's Second City</span>
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl fade-up stagger-child" style="--i:2;">
+        Hard data on Birmingham's economy, business landscape, key industries, infrastructure, and digital search behaviour. Every number sourced. Every stat linkable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Quick Answer -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="quick-answer fade-up">
+      <strong>What this page covers:</strong> Birmingham's GDP contribution, business registrations, employment by sector, infrastructure projects, and digital search trends. Use these statistics to benchmark your business against the city's economy, build investor decks, or understand the commercial landscape before entering the Birmingham market.
+    </div>
+  </section>
+
+  <!-- Hero Stats Row -->
+  <section class="bg-brand border-y border-zinc-800">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center fade-up" style="--i:0;">
+        <div class="counter-value" data-count="1100000" data-suffix="">0</div>
+        <p class="text-zinc-400 text-sm mt-2">Population</p>
+      </div>
+      <div class="text-center fade-up" style="--i:1;">
+        <div class="counter-value" data-count="40" data-suffix="k+">0</div>
+        <p class="text-zinc-400 text-sm mt-2">Registered Businesses</p>
+      </div>
+      <div class="text-center fade-up" style="--i:2;">
+        <div class="counter-value" data-count="28" data-suffix="bn">0</div>
+        <p class="text-zinc-400 text-sm mt-2">GDP Contribution</p>
+      </div>
+      <div class="text-center fade-up" style="--i:3;">
+        <div class="counter-value" data-count="6" data-suffix="th">0</div>
+        <p class="text-zinc-400 text-sm mt-2">Largest City Economy in Europe</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Economy Overview (Light) -->
+  <section class="bg-surface py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Economy Overview</h2>
+      <p class="text-text-muted max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Birmingham is the economic engine of the West Midlands. These figures show why the city consistently attracts investment and talent from across the UK and beyond.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="stat-card fade-up stagger-child" style="--i:1;">
+          <div class="counter-value" data-count="28" data-suffix=".1bn">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Annual GDP contribution to the UK economy</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:2;">
+          <div class="counter-value" data-count="5" data-suffix=".1bn">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Foreign direct investment (2015-2022)</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:3;">
+          <div class="counter-value" data-count="2" data-suffix=".9m">0</div>
+          <p class="text-zinc-400 text-sm mt-2">West Midlands Combined Authority population</p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-white border border-zinc-200 overflow-hidden fade-up stagger-child" style="--i:4;">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-zinc-50 text-left">
+              <th class="px-4 py-3 font-bold" style="font-family: var(--font-heading);">Metric</th>
+              <th class="px-4 py-3 font-bold" style="font-family: var(--font-heading);">Figure</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-100">
+            <tr><td class="px-4 py-3">Annual GDP</td><td class="px-4 py-3 font-bold text-accent">£28.1 billion</td></tr>
+            <tr><td class="px-4 py-3">European city economy ranking</td><td class="px-4 py-3 font-bold text-accent">6th largest</td></tr>
+            <tr><td class="px-4 py-3">FDI (2015-2022)</td><td class="px-4 py-3 font-bold text-accent">£5.1 billion</td></tr>
+            <tr><td class="px-4 py-3">WMCA population</td><td class="px-4 py-3 font-bold text-accent">2.9 million</td></tr>
+            <tr><td class="px-4 py-3">Regional economy growth</td><td class="px-4 py-3 font-bold text-accent">One of the fastest-growing in the UK</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Landscape (Dark) -->
+  <section class="bg-brand text-white py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Business Landscape</h2>
+      <p class="text-zinc-400 max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Birmingham's business base is broad, deep, and growing. SMEs dominate — which means local search visibility is a competitive advantage, not a luxury.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="stat-card fade-up stagger-child" style="--i:1;">
+          <div class="counter-value" data-count="40" data-suffix="k+">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Registered businesses</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:2;">
+          <div class="counter-value" data-count="90" data-suffix="%">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">Are SMEs (under 50 employees)</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:3;">
+          <div class="counter-value" data-count="4" data-suffix="k+">0</div>
+          <p class="text-zinc-400 text-sm mt-2">New registrations per year</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:4;">
+          <div class="text-accent font-extrabold text-2xl" style="font-family: var(--font-heading);">#1</div>
+          <p class="text-zinc-400 text-sm mt-2">Financial services businesses per capita outside London</p>
+        </div>
+      </div>
+
+      <div class="mt-8 fade-up stagger-child" style="--i:5;">
+        <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Key Sectors</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Professional Services</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Manufacturing</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Digital &amp; Tech</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Healthcare</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Retail</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Construction</span>
+          <span class="bg-zinc-800 border border-zinc-700 px-4 py-2 text-sm text-zinc-300">Hospitality</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Industry Sectors (Light) -->
+  <section class="bg-surface py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Key Industry Sectors</h2>
+      <p class="text-text-muted max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Birmingham's economy is diversified across six major sectors. Each one represents significant search demand and commercial opportunity for businesses competing locally.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card fade-up stagger-child" style="--i:1;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Financial &amp; Professional Services</h3>
+          <div class="counter-value !text-brand" data-count="100" data-suffix="k+" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">employed in the sector</p>
+          <p class="text-sm text-zinc-600">Colmore Business District is the UK's second-largest financial centre after the City of London. Major employers include PwC, HSBC, Deutsche Bank, and KPMG.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:2;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Manufacturing</h3>
+          <div class="counter-value !text-brand" data-count="4" data-suffix=".5bn GVA" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">gross value added</p>
+          <p class="text-sm text-zinc-600">Accounts for 10% of regional employment. Jaguar Land Rover, Cadbury (Mondelez), and a strong advanced manufacturing corridor drive output.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:3;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Digital &amp; Creative</h3>
+          <div class="counter-value !text-brand" data-count="35" data-suffix="k+" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">employed in the sector</p>
+          <p class="text-sm text-zinc-600">Birmingham's fastest-growing sector. Custard Factory and Digbeth are the creative epicentre. Tech startups are scaling across Eastside and the Innovation Campus.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:4;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Jewellery Quarter</h3>
+          <div class="counter-value !text-brand" data-count="400" data-suffix="+" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">businesses in the Quarter</p>
+          <p class="text-sm text-zinc-600">Produces 40% of all UK jewellery. A unique concentration of specialist retailers, workshops, and showrooms — all competing for local search visibility.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:5;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Retail</h3>
+          <div class="counter-value !text-brand" data-count="36" data-suffix="m visitors" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">annually at Bullring &amp; Grand Central</p>
+          <p class="text-sm text-zinc-600">Birmingham is the UK's top retail destination outside London. The Bullring, Grand Central, and Mailbox form a retail core that drives massive footfall and search volume.</p>
+        </div>
+
+        <div class="service-card fade-up stagger-child" style="--i:6;">
+          <h3 class="text-lg font-bold mb-2" style="font-family: var(--font-heading);">Healthcare &amp; Life Sciences</h3>
+          <div class="counter-value !text-brand" data-count="50" data-suffix="k+" style="font-size: 2rem;">0</div>
+          <p class="text-sm text-text-muted mt-1 mb-3">employed across the sector</p>
+          <p class="text-sm text-zinc-600">Anchored by University Hospitals Birmingham NHS Foundation Trust and a network of research institutions. A major hub for clinical trials and MedTech innovation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infrastructure & Connectivity (Dark) -->
+  <section class="bg-brand text-white py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Infrastructure &amp; Connectivity</h2>
+      <p class="text-zinc-400 max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Birmingham's transport links and institutions underpin its commercial strength. Every metric here translates to footfall, search demand, and business opportunity.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="stat-card fade-up stagger-child" style="--i:1;">
+          <div class="counter-value" data-count="49" data-suffix=" min">0</div>
+          <p class="text-zinc-400 text-sm mt-2">London travel time with HS2</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:2;">
+          <div class="counter-value" data-count="12" data-suffix="m">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Birmingham Airport passengers annually</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:3;">
+          <div class="counter-value" data-count="6" data-suffix="m">0</div>
+          <p class="text-zinc-400 text-sm mt-2">NEC visitors per year</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:4;">
+          <div class="counter-value" data-count="5" data-suffix="">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Universities</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:5;">
+          <div class="counter-value" data-count="80" data-suffix="k+">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Students across the city</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:6;">
+          <div class="counter-value" data-count="170" data-suffix="k">0</div>
+          <p class="text-zinc-400 text-sm mt-2">Daily passengers at New Street</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital & Search Landscape (Light) -->
+  <section class="bg-surface py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Digital &amp; Search Landscape</h2>
+      <p class="text-text-muted max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Search behaviour in Birmingham mirrors national trends — but the local angle intensifies everything. These numbers show why local SEO and AI search optimisation are no longer optional.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="stat-card fade-up stagger-child" style="--i:1;">
+          <div class="counter-value" data-count="46" data-suffix="%">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">of all Google searches carry local intent</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:2;">
+          <div class="counter-value" data-count="78" data-suffix="%">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">of local mobile searches lead to an offline purchase within 24 hours</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:3;">
+          <div class="counter-value" data-count="150" data-suffix="%+">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">growth in Birmingham "near me" searches over 5 years</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:4;">
+          <div class="counter-value" data-count="89" data-suffix="%">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">of consumers read reviews before visiting a local business</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:5;">
+          <div class="text-accent font-extrabold text-2xl" style="font-family: var(--font-heading);">#1</div>
+          <p class="text-zinc-400 text-sm mt-2">Google Maps is the top discovery tool for local services</p>
+        </div>
+        <div class="stat-card fade-up stagger-child" style="--i:6;">
+          <div class="counter-value" data-count="15" data-suffix="%+">0%</div>
+          <p class="text-zinc-400 text-sm mt-2">of commercial queries now influenced by AI search (ChatGPT, Perplexity)</p>
+        </div>
+      </div>
+
+      <div class="quick-answer mt-10 fade-up stagger-child" style="--i:7;">
+        <strong>What this means:</strong> Nearly half of all searches are local. Most of those searches convert within a day. If your Birmingham business is not visible on Google Maps, in the local pack, and in AI search platforms — you are leaving revenue on the table. <a href="/services/" class="text-accent hover:underline">See our services</a>.
+      </div>
+    </div>
+  </section>
+
+  <!-- Regeneration & Growth (Dark) -->
+  <section class="bg-brand text-white py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="relative max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Regeneration &amp; Growth</h2>
+      <p class="text-zinc-400 max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">Billions of pounds are flowing into Birmingham's regeneration. Each project creates new commercial spaces, new businesses, and new search demand.</p>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="service-card !bg-zinc-900 !border-zinc-800 fade-up stagger-child" style="--i:1;">
+          <h3 class="text-lg font-bold mb-2 text-white" style="font-family: var(--font-heading);">Smithfield</h3>
+          <div class="text-accent font-extrabold text-2xl mb-2" style="font-family: var(--font-heading);">£1.9 billion</div>
+          <p class="text-sm text-zinc-400">The single largest regeneration project in Birmingham's history. Mixed-use development on the former wholesale markets site, creating a new city quarter with retail, leisure, and commercial space.</p>
+        </div>
+
+        <div class="service-card !bg-zinc-900 !border-zinc-800 fade-up stagger-child" style="--i:2;">
+          <h3 class="text-lg font-bold mb-2 text-white" style="font-family: var(--font-heading);">Paradise</h3>
+          <div class="text-accent font-extrabold text-2xl mb-2" style="font-family: var(--font-heading);">£700 million</div>
+          <p class="text-sm text-zinc-400">A 17-acre city centre development delivering 1.8 million sq ft of mixed-use space. Phase One already occupied by PwC and HMRC. Grade-A office demand is strong.</p>
+        </div>
+
+        <div class="service-card !bg-zinc-900 !border-zinc-800 fade-up stagger-child" style="--i:3;">
+          <h3 class="text-lg font-bold mb-2 text-white" style="font-family: var(--font-heading);">Digbeth</h3>
+          <div class="text-accent font-extrabold text-lg mb-2" style="font-family: var(--font-heading);">Creative Quarter Transformation</div>
+          <p class="text-sm text-zinc-400">Birmingham's creative and cultural district is being reshaped around the HS2 Curzon Street station. New studios, co-working spaces, and mixed-use developments are driving demand from digital and creative businesses.</p>
+        </div>
+
+        <div class="service-card !bg-zinc-900 !border-zinc-800 fade-up stagger-child" style="--i:4;">
+          <h3 class="text-lg font-bold mb-2 text-white" style="font-family: var(--font-heading);">Eastside</h3>
+          <div class="text-accent font-extrabold text-lg mb-2" style="font-family: var(--font-heading);">Tech &amp; Innovation Corridor</div>
+          <p class="text-sm text-zinc-400">Adjacent to Aston University, Eastside is emerging as Birmingham's tech corridor. STEAMhouse and the Innovation Campus are anchoring a new wave of startups and scale-ups.</p>
+        </div>
+      </div>
+
+      <p class="text-zinc-400 text-sm mt-8 fade-up stagger-child" style="--i:5;">
+        Every regeneration zone creates new businesses that need to be found online. Whether you are an established company in <a href="/areas/" class="text-accent hover:underline">Colmore Row</a> or a startup in Digbeth, search visibility determines your share of the new demand these projects generate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Internal Links (Light) -->
+  <section class="bg-surface py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Use These Statistics</h2>
+      <p class="text-text-muted max-w-2xl mb-10 fade-up stagger-child" style="--i:1;">These numbers are not just data points. They are the commercial context for every SEO decision we make for Birmingham businesses.</p>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="/areas/" class="service-card group fade-up stagger-child" style="--i:1;">
+          <h3 class="text-lg font-bold mb-2 group-hover:text-accent transition-colors" style="font-family: var(--font-heading);">SEO by Area</h3>
+          <p class="text-sm text-zinc-600">Local SEO strategies for Birmingham's key business districts — from Colmore Row to Digbeth, Jewellery Quarter to Solihull.</p>
+        </a>
+        <a href="/industries/" class="service-card group fade-up stagger-child" style="--i:2;">
+          <h3 class="text-lg font-bold mb-2 group-hover:text-accent transition-colors" style="font-family: var(--font-heading);">SEO by Industry</h3>
+          <p class="text-sm text-zinc-600">Sector-specific SEO for financial services, manufacturing, healthcare, retail, and digital businesses in Birmingham.</p>
+        </a>
+        <a href="/services/" class="service-card group fade-up stagger-child" style="--i:3;">
+          <h3 class="text-lg font-bold mb-2 group-hover:text-accent transition-colors" style="font-family: var(--font-heading);">Our Services</h3>
+          <p class="text-sm text-zinc-600">Technical SEO, local search, AI optimisation, and SEO audits. Everything a Birmingham business needs to get found.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="cta-box fade-up">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4" style="font-family: var(--font-heading); letter-spacing: -0.03em;">
+          40,000+ businesses. One question: can yours be found?
+        </h2>
+        <p class="text-zinc-400 max-w-xl mx-auto mb-6">
+          Get a free SEO audit and find out where your Birmingham business stands against the competition. No obligation. No fluff. Just data.
+        </p>
+        <a href="/free-seo-audit-birmingham/" class="btn-shimmer">Get the Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Source Note -->
+  <section class="bg-surface border-t border-zinc-200 py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-xs text-text-muted">
+        Data compiled from ONS, West Midlands Combined Authority, Greater Birmingham Chambers of Commerce, and published reports. Figures are latest available as of 2025. This page is maintained by <a href="/" class="text-accent hover:underline">SEO Birmingham</a> as a public resource for businesses, journalists, and researchers.
+      </p>
+    </div>
+  </section>
+
+</Base>

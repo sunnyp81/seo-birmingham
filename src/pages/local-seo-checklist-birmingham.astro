@@ -1,0 +1,430 @@
+---
+import Base from '../layouts/Base.astro';
+
+const sections = [
+  {
+    id: 'gbp',
+    title: 'Google Business Profile',
+    items: [
+      { label: 'Claim and verify your GBP listing', desc: 'Google will not show your business in the local pack until your listing is verified by postcard, phone, or video.' },
+      { label: 'Choose the most specific primary category', desc: 'A generic category like "Business" loses to a specific one like "Emergency Plumber" every time in local rankings.' },
+      { label: 'Add 3-5 secondary categories', desc: 'Secondary categories expand the queries your profile can appear for without diluting your primary signal.' },
+      { label: 'Write a keyword-rich business description (750 chars)', desc: 'Front-load your main service and location within the first sentence so Google and users both see it immediately.' },
+      { label: 'Add your Birmingham address and service area', desc: 'Set your physical address for map placement and define service areas for each Birmingham neighbourhood you cover.' },
+      { label: 'Set accurate business hours (including special hours)', desc: 'Incorrect hours trigger "might be closed" warnings that kill click-through rates from the local pack.' },
+      { label: 'Upload 10+ high-quality photos (exterior, interior, team, products)', desc: 'Listings with photos receive 42% more direction requests and 35% more click-throughs than those without.' },
+      { label: 'Add products or services with descriptions', desc: 'The products and services tab gives Google additional keyword signals and gives users a reason to choose you over competitors.' },
+      { label: 'Enable messaging', desc: 'Messaging lets customers contact you directly from your GBP listing without visiting your website first.' },
+      { label: 'Create your first 3 Google Posts', desc: 'Google Posts signal activity and relevance; an inactive profile with no posts looks abandoned to both Google and searchers.' },
+      { label: 'Respond to all existing reviews within 48 hours', desc: 'Review response rate is a ranking factor in the local algorithm and shows potential customers you are engaged.' },
+      { label: 'Add the Q&A section with your top 5 FAQs', desc: 'Pre-populating Q&A prevents competitors from posting misleading questions and gives Google more content to index.' },
+    ],
+  },
+  {
+    id: 'onsite',
+    title: 'On-Site Local SEO',
+    items: [
+      { label: 'Include city + service in your title tag', desc: 'A title like "Plumber Birmingham | 24/7 Emergency Repairs" tells Google and users exactly what you do and where.' },
+      { label: 'Write a unique meta description mentioning Birmingham', desc: 'Meta descriptions do not affect rankings directly but a compelling one with your city name increases click-through rate.' },
+      { label: 'Add LocalBusiness schema markup (JSON-LD)', desc: 'Structured data helps search engines understand your business type, address, hours, and service area programmatically.' },
+      { label: 'Create a dedicated contact page with full NAP', desc: 'Name, address, and phone number on a dedicated contact page gives Google a clear signal of your physical presence.' },
+      { label: 'Embed a Google Map on your contact page', desc: 'An embedded map reinforces your location signal and helps customers find your premises without leaving your site.' },
+      { label: 'Add Birmingham-specific content to your homepage', desc: 'Mentioning Birmingham landmarks, areas, and local context on your homepage prevents it reading like a generic template.' },
+      { label: 'Create location pages for each area you serve', desc: 'Individual pages for Edgbaston, Solihull, Sutton Coldfield, and other areas capture long-tail local searches.' },
+      { label: 'Include local phone number (not 0800)', desc: 'A local 0121 number builds trust with Birmingham customers and sends a geo-relevance signal to search engines.' },
+      { label: 'Add driving directions from major Birmingham landmarks', desc: 'Directions from New Street Station, the Bullring, or the NEC add natural local keyword context to your contact page.' },
+      { label: 'Ensure NAP is in your site footer', desc: 'A consistent name, address, and phone number in the footer appears on every page, reinforcing your local presence site-wide.' },
+    ],
+  },
+  {
+    id: 'citations',
+    title: 'Citations and Directories',
+    items: [
+      { label: 'List on Yell.com with correct NAP', desc: 'Yell is still one of the highest-authority UK business directories and a consistent listing there strengthens your citation profile.' },
+      { label: 'List on Thomson Local', desc: 'Thomson Local remains a trusted citation source for UK businesses and feeds data to other platforms.' },
+      { label: 'Submit to Bing Places for Business', desc: 'Bing powers search results in Copilot, DuckDuckGo, and Alexa devices; ignoring it means missing a growing share of local queries.' },
+      { label: 'Submit to Apple Maps Connect', desc: 'Apple Maps results appear in Siri, Safari, and the default Maps app on every iPhone; this is free traffic you are currently missing.' },
+      { label: 'List on industry-specific directories', desc: 'Trade directories like Checkatrade, Bark, or TrustATrader carry topical authority that generic directories do not.' },
+      { label: 'Ensure NAP consistency across all listings', desc: 'Even minor differences in your business name or address format across directories confuse search engines and weaken your profile.' },
+      { label: 'Remove duplicate listings', desc: 'Duplicate listings split your review signals and create conflicting NAP data that suppresses your rankings.' },
+      { label: 'Add to Birmingham-specific directories', desc: 'Visit Birmingham, Greater Birmingham Chambers of Commerce, and Birmingham Forward carry strong local relevance signals.' },
+    ],
+  },
+  {
+    id: 'reviews',
+    title: 'Reviews and Reputation',
+    items: [
+      { label: 'Set up a review generation process', desc: 'Systematic follow-up emails or SMS after service delivery produce a steady flow of reviews instead of relying on chance.' },
+      { label: 'Create a short review link for Google', desc: 'A direct link removes friction; customers are far more likely to leave a review when it takes two taps instead of five.' },
+      { label: 'Respond to every review (positive and negative)', desc: 'Response rate is a local ranking signal and shows prospective customers that you value feedback and resolve issues.' },
+      { label: 'Add review schema markup to your site', desc: 'AggregateRating schema can trigger star ratings in search results, increasing your click-through rate significantly.' },
+      { label: 'Display reviews and testimonials on your website', desc: 'On-site social proof converts visitors who arrive from organic search and reinforces trust for first-time visitors.' },
+      { label: 'Monitor reviews across platforms weekly', desc: 'New negative reviews left unaddressed for more than a few days damage both your rankings and your reputation.' },
+    ],
+  },
+  {
+    id: 'content',
+    title: 'Content and Links',
+    items: [
+      { label: 'Publish a Birmingham-focused blog post monthly', desc: 'Regular local content signals freshness and builds topical authority around your service area over time.' },
+      { label: 'Create a local resource or guide', desc: 'A comprehensive guide to your industry in Birmingham attracts backlinks naturally and positions you as the local authority.' },
+      { label: 'Get listed in local news or PR', desc: 'A mention in Birmingham Mail, Birmingham Live, or West Midlands outlets carries editorial authority that directories cannot match.' },
+      { label: 'Sponsor or participate in a Birmingham event', desc: 'Event sponsorship earns backlinks from event pages, press coverage, and social media mentions with strong local relevance.' },
+      { label: 'Join the Greater Birmingham Chambers of Commerce', desc: 'Chamber membership provides a high-authority .co.uk backlink and signals legitimacy to both search engines and customers.' },
+      { label: 'Build relationships with complementary local businesses', desc: 'Cross-referrals and reciprocal links from relevant Birmingham businesses create natural, high-quality local link signals.' },
+      { label: 'Create case studies featuring Birmingham clients', desc: 'Case studies with named locations and measurable results attract links and demonstrate proven local expertise.' },
+      { label: 'Guest post on Birmingham business blogs', desc: 'Contributing to local business publications builds your authority profile and places your brand in front of a relevant audience.' },
+    ],
+  },
+  {
+    id: 'technical',
+    title: 'Technical Foundations',
+    items: [
+      { label: 'Ensure mobile-friendly design', desc: 'Google uses mobile-first indexing; if your site does not work on a phone, your desktop version is irrelevant to rankings.' },
+      { label: 'Achieve LCP under 2.5 seconds', desc: 'Largest Contentful Paint is a Core Web Vital and a confirmed ranking factor; slow sites lose positions to faster competitors.' },
+      { label: 'Fix all broken links (404s)', desc: 'Broken links waste crawl budget, create dead ends for users, and signal neglect to search engines.' },
+      { label: 'Submit XML sitemap to Google Search Console', desc: 'A sitemap tells Google exactly which pages exist and when they were last updated, accelerating indexation.' },
+      { label: 'Submit XML sitemap to Bing Webmaster Tools', desc: 'Bing processes sitemaps independently from Google; submitting to both ensures full coverage across all search platforms.' },
+      { label: 'Set up Google Analytics 4', desc: 'Without analytics you cannot measure which pages drive enquiries, which keywords convert, or where you are losing visitors.' },
+      { label: 'Verify in Google Search Console', desc: 'Search Console provides indexation status, crawl errors, and search performance data you cannot get from any other source.' },
+      { label: 'Implement HTTPS across all pages', desc: 'HTTPS is a ranking signal and a trust signal; browsers flag HTTP sites as "Not Secure" which kills conversion rates.' },
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'AI Search Readiness',
+    items: [
+      { label: 'Add structured data (Organization, LocalBusiness, FAQ schemas)', desc: 'AI models like ChatGPT, Perplexity, and Google AI Overviews rely on structured data to understand and cite your business.' },
+      { label: 'Create an llms.txt file', desc: 'An llms.txt file tells AI crawlers what your business does in a machine-readable format they can ingest directly.' },
+      { label: 'Write content that directly answers common questions', desc: 'AI search engines pull concise, authoritative answers; vague marketing copy gets skipped in favour of direct responses.' },
+      { label: 'Build entity authority (consistent brand mentions across the web)', desc: 'AI models build entity profiles from multiple sources; consistent mentions of your brand, location, and services strengthen yours.' },
+      { label: 'Ensure your content is cited in AI-generated answers', desc: 'Test your brand in ChatGPT, Copilot, and Perplexity; if you are not cited, your content is not structured for AI consumption.' },
+      { label: 'Allow AI crawlers in robots.txt (GPTBot, ClaudeBot, PerplexityBot)', desc: 'Blocking AI crawlers prevents your content from appearing in AI search results where a growing share of queries now start.' },
+    ],
+  },
+];
+
+const totalItems = sections.reduce((sum, s) => sum + s.items.length, 0);
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Local SEO Checklist for Birmingham Businesses',
+  description: 'A 58-item local SEO checklist covering Google Business Profile, on-site optimisation, citations, reviews, content, technical foundations, and AI search readiness for Birmingham businesses.',
+  totalTime: 'P30D',
+  step: sections.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.title,
+    text: s.items.map((item) => item.label).join('. ') + '.',
+  })),
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does it take to complete a local SEO checklist?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most Birmingham businesses can complete the full 58-item checklist within 30 days. The Google Business Profile section takes one to two days. On-site changes depend on your CMS. Citations and directories take one to two weeks for processing. The key is to start with GBP and on-site work since those have the fastest impact on local rankings.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to complete every item on the checklist?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. The items are ordered by impact within each section. A business that completes the Google Business Profile and on-site sections alone will see measurable improvement. However, businesses competing in saturated Birmingham markets like legal, dental, or trades will need to complete all sections to outrank established competitors.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does local SEO cost in Birmingham?',
+      acceptedAnswer: { '@type': 'Answer', text: 'DIY local SEO using this checklist costs nothing beyond your time. Professional local SEO services in Birmingham typically range from £500 to £2,000 per month depending on competition level and the number of locations. A one-off audit and setup starts from £500.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the most important local SEO ranking factor?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Google Business Profile signals are the single biggest factor for local pack rankings. Relevance (category and keywords), distance (proximity to the searcher), and prominence (reviews, citations, and links) determine where you appear. For organic local results below the pack, on-site optimisation and content quality carry more weight.' },
+    },
+  ],
+};
+---
+
+<Base
+  title="Local SEO Checklist Birmingham | 58-Item Guide | SEO Birmingham"
+  description="Complete 58-item local SEO checklist for Birmingham businesses. Google Business Profile, on-site SEO, citations, reviews, and AI search readiness. Track your progress."
+  schema={[howToSchema, faqSchema]}
+>
+
+  <!-- Hero -->
+  <section class="relative bg-brand text-white overflow-hidden min-h-[60vh] flex items-center">
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full opacity-[0.07] blur-[100px]"
+         style="background: radial-gradient(circle, #F59E0B, transparent 70%); animation: aurora-1 8s ease-in-out infinite;"></div>
+    <div class="absolute bottom-[-15%] right-[-5%] w-[400px] h-[400px] rounded-full opacity-[0.05] blur-[80px]"
+         style="background: radial-gradient(circle, #FBBF24, transparent 70%); animation: aurora-2 12s ease-in-out infinite;"></div>
+    <div class="absolute inset-0 opacity-[0.03]"
+         style="background-image: radial-gradient(circle, rgba(245,158,11,0.5) 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32 w-full">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest mb-4 fade-up" style="font-family: var(--font-heading);">SEO Birmingham</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 fade-up" style="--i:1; font-family: var(--font-heading); letter-spacing: -0.04em;">
+        Local SEO Checklist for<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-light">Birmingham Businesses</span>
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-8 fade-up stagger-child" style="--i:2;">
+        {totalItems} actionable items across seven categories. Check them off as you go. Your progress saves automatically. No account needed. No fluff. Just the work that moves your business up the local rankings in Birmingham.
+      </p>
+      <div class="flex flex-wrap gap-4 fade-up stagger-child" style="--i:3;">
+        <a href="#checklist" class="btn-shimmer">Start the Checklist</a>
+        <a href="/free-seo-audit-birmingham/" class="inline-block border-2 border-zinc-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-accent hover:text-accent transition-colors duration-200" style="font-family: var(--font-heading);">Get a Free Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Answer -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <div class="quick-answer fade-up">
+      <strong>What this checklist covers:</strong> Everything a Birmingham business needs to rank in the local pack and organic results. From claiming your Google Business Profile to preparing for AI search engines like ChatGPT and Perplexity. Built for business owners, marketing managers, and anyone handling their own SEO. Each item includes a one-line explanation of why it matters. <a href="/services/">Need someone to do it for you?</a>
+    </div>
+  </section>
+
+  <!-- Progress Tracker -->
+  <section id="checklist" class="max-w-4xl mx-auto px-4 pb-12">
+    <div class="bg-white border border-zinc-200 p-6 fade-up" id="progress-container">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-lg font-extrabold text-brand" style="font-family: var(--font-heading);">Your Progress</h2>
+        <span id="progress-text" class="text-sm font-bold text-zinc-500">0 of {totalItems} items completed</span>
+      </div>
+      <div class="w-full bg-zinc-200 h-3 overflow-hidden">
+        <div id="progress-bar" class="h-full bg-accent transition-all duration-300 ease-out" style="width: 0%;"></div>
+      </div>
+      <p id="progress-percent" class="text-xs text-zinc-400 mt-2 text-right">0%</p>
+    </div>
+  </section>
+
+  <!-- Checklist Sections -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    {sections.map((section, sIdx) => (
+      <details class="faq-section mb-4 group" open={sIdx === 0} data-section={section.id}>
+        <summary class="cursor-pointer list-none flex items-center justify-between p-5 bg-white border border-zinc-200 hover:border-accent/30 transition-colors duration-200 fade-up" style={`--i:${sIdx}`}>
+          <div class="flex items-center gap-3">
+            <span class="section-check hidden w-6 h-6 bg-green-500 text-white text-xs font-bold flex items-center justify-center flex-shrink-0" data-section-check={section.id}>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <h2 class="text-xl font-extrabold text-brand" style="font-family: var(--font-heading);">
+              {sIdx + 1}. {section.title}
+              <span class="text-sm font-normal text-zinc-400 ml-2">({section.items.length} items)</span>
+            </h2>
+          </div>
+          <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+
+        <div class="bg-white border border-t-0 border-zinc-200 divide-y divide-zinc-100">
+          {section.items.map((item, iIdx) => (
+            <label class="flex items-start gap-4 p-4 hover:bg-zinc-50 transition-colors duration-150 cursor-pointer fade-up stagger-child" style={`--i:${iIdx}`}>
+              <input
+                type="checkbox"
+                class="checklist-item mt-1 flex-shrink-0"
+                data-section={section.id}
+                data-index={`${section.id}-${iIdx}`}
+              />
+              <div>
+                <span class="font-bold text-brand text-[15px]" style="font-family: var(--font-heading);">{item.label}</span>
+                <p class="text-sm text-zinc-500 mt-1 leading-relaxed">{item.desc}</p>
+              </div>
+            </label>
+          ))}
+        </div>
+      </details>
+    ))}
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <h2 class="text-3xl font-extrabold text-brand mb-8 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Frequently Asked Questions</h2>
+
+    <details class="faq-section mb-3 group fade-up" style="--i:0">
+      <summary class="cursor-pointer list-none flex items-center justify-between p-5 bg-white border border-zinc-200 hover:border-accent/30 transition-colors">
+        <span class="font-bold text-brand pr-4" style="font-family: var(--font-heading);">How long does it take to complete a local SEO checklist?</span>
+        <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="p-5 bg-white border border-t-0 border-zinc-200 text-zinc-600 leading-relaxed">
+        Most Birmingham businesses can complete the full 58-item checklist within 30 days. The Google Business Profile section takes one to two days. On-site changes depend on your CMS. Citations and directories take one to two weeks for processing. Start with GBP and on-site work since those have the fastest impact on local rankings.
+      </div>
+    </details>
+
+    <details class="faq-section mb-3 group fade-up" style="--i:1">
+      <summary class="cursor-pointer list-none flex items-center justify-between p-5 bg-white border border-zinc-200 hover:border-accent/30 transition-colors">
+        <span class="font-bold text-brand pr-4" style="font-family: var(--font-heading);">Do I need to complete every item on the checklist?</span>
+        <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="p-5 bg-white border border-t-0 border-zinc-200 text-zinc-600 leading-relaxed">
+        Not necessarily. The items are ordered by impact within each section. A business that completes the Google Business Profile and on-site sections alone will see measurable improvement. However, businesses competing in saturated Birmingham markets like legal, dental, or trades will need to complete all sections to outrank established competitors.
+      </div>
+    </details>
+
+    <details class="faq-section mb-3 group fade-up" style="--i:2">
+      <summary class="cursor-pointer list-none flex items-center justify-between p-5 bg-white border border-zinc-200 hover:border-accent/30 transition-colors">
+        <span class="font-bold text-brand pr-4" style="font-family: var(--font-heading);">How much does local SEO cost in Birmingham?</span>
+        <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="p-5 bg-white border border-t-0 border-zinc-200 text-zinc-600 leading-relaxed">
+        DIY local SEO using this checklist costs nothing beyond your time. Professional local SEO services in Birmingham typically range from £500 to £2,000 per month depending on competition level and the number of locations. A one-off audit and setup starts from <a href="/seo-pricing-birmingham/" class="text-accent hover:underline">£500</a>.
+      </div>
+    </details>
+
+    <details class="faq-section mb-3 group fade-up" style="--i:3">
+      <summary class="cursor-pointer list-none flex items-center justify-between p-5 bg-white border border-zinc-200 hover:border-accent/30 transition-colors">
+        <span class="font-bold text-brand pr-4" style="font-family: var(--font-heading);">What is the most important local SEO ranking factor?</span>
+        <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <div class="p-5 bg-white border border-t-0 border-zinc-200 text-zinc-600 leading-relaxed">
+        Google Business Profile signals are the single biggest factor for local pack rankings. Relevance (category and keywords), distance (proximity to the searcher), and prominence (reviews, citations, and links) determine where you appear. For organic local results below the pack, on-site optimisation and content quality carry more weight.
+      </div>
+    </details>
+  </section>
+
+  <!-- Internal Links -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <h2 class="text-2xl font-extrabold text-brand mb-6 fade-up" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Need Help With Your Local SEO?</h2>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <a href="/services/" class="service-card fade-up stagger-child block no-underline" style="--i:0;">
+        <h3 class="text-lg font-extrabold text-brand mb-2" style="font-family: var(--font-heading);">Our SEO Services</h3>
+        <p class="text-zinc-500 text-sm">Full-service local SEO for Birmingham businesses. We handle every item on this checklist and more.</p>
+      </a>
+      <a href="/technical-seo-birmingham/" class="service-card fade-up stagger-child block no-underline" style="--i:1;">
+        <h3 class="text-lg font-extrabold text-brand mb-2" style="font-family: var(--font-heading);">Technical SEO</h3>
+        <p class="text-zinc-500 text-sm">Site speed, Core Web Vitals, crawlability, and structured data audits from £500.</p>
+      </a>
+      <a href="/ai-search-optimisation-birmingham/" class="service-card fade-up stagger-child block no-underline" style="--i:2;">
+        <h3 class="text-lg font-extrabold text-brand mb-2" style="font-family: var(--font-heading);">AI Search Optimisation</h3>
+        <p class="text-zinc-500 text-sm">Get your Birmingham business cited in ChatGPT, Copilot, Perplexity, and Google AI Overviews.</p>
+      </a>
+      <a href="/free-seo-audit-birmingham/" class="service-card fade-up stagger-child block no-underline" style="--i:3;">
+        <h3 class="text-lg font-extrabold text-brand mb-2" style="font-family: var(--font-heading);">Free SEO Audit</h3>
+        <p class="text-zinc-500 text-sm">Find out where your site stands. We audit your local SEO and show you what to fix first.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-4xl mx-auto px-4 pb-20">
+    <div class="cta-box fade-up">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4" style="font-family: var(--font-heading); letter-spacing: -0.03em;">Rather Have Us Do It?</h2>
+      <p class="text-zinc-400 max-w-xl mb-8">This checklist works. But it takes time you might not have. We handle local SEO for Birmingham businesses every day. One call to scope the work. One fixed quote. No ongoing commitment unless you want one.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="btn-shimmer">Get in Touch</a>
+        <a href="/seo-pricing-birmingham/" class="inline-block border-2 border-zinc-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:border-accent hover:text-accent transition-colors duration-200" style="font-family: var(--font-heading);">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const STORAGE_KEY = 'seo-bham-checklist';
+      const checkboxes = document.querySelectorAll<HTMLInputElement>('.checklist-item');
+      const progressBar = document.getElementById('progress-bar') as HTMLElement;
+      const progressText = document.getElementById('progress-text') as HTMLElement;
+      const progressPercent = document.getElementById('progress-percent') as HTMLElement;
+      const total = checkboxes.length;
+
+      // Load saved state
+      let saved: Record<string, boolean> = {};
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) saved = JSON.parse(raw);
+      } catch {}
+
+      // Apply saved state
+      checkboxes.forEach((cb) => {
+        const key = cb.dataset.index || '';
+        if (saved[key]) cb.checked = true;
+      });
+
+      function updateProgress() {
+        let checked = 0;
+        checkboxes.forEach((cb) => { if (cb.checked) checked++; });
+        const pct = Math.round((checked / total) * 100);
+        progressBar.style.width = pct + '%';
+        progressText.textContent = `${checked} of ${total} items completed`;
+        progressPercent.textContent = pct + '%';
+
+        // Save state
+        const state: Record<string, boolean> = {};
+        checkboxes.forEach((cb) => {
+          const key = cb.dataset.index || '';
+          if (cb.checked) state[key] = true;
+        });
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+
+        // Section completion checks
+        const sectionIds = new Set<string>();
+        checkboxes.forEach((cb) => { if (cb.dataset.section) sectionIds.add(cb.dataset.section); });
+
+        sectionIds.forEach((sid) => {
+          const sectionCbs = document.querySelectorAll<HTMLInputElement>(`.checklist-item[data-section="${sid}"]`);
+          let allDone = true;
+          sectionCbs.forEach((cb) => { if (!cb.checked) allDone = false; });
+
+          const badge = document.querySelector(`[data-section-check="${sid}"]`);
+          if (badge) {
+            if (allDone) {
+              badge.classList.remove('hidden');
+              badge.classList.add('flex');
+            } else {
+              badge.classList.add('hidden');
+              badge.classList.remove('flex');
+            }
+          }
+        });
+      }
+
+      checkboxes.forEach((cb) => {
+        cb.addEventListener('change', updateProgress);
+      });
+
+      updateProgress();
+    });
+  </script>
+
+  <!-- Checkbox custom styles -->
+  <style>
+    .checklist-item {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #d4d4d8;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.15s ease;
+      background: #fff;
+    }
+    .checklist-item:checked {
+      background: #F59E0B;
+      border-color: #F59E0B;
+    }
+    .checklist-item:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 6px;
+      height: 12px;
+      border: solid #fff;
+      border-width: 0 2.5px 2.5px 0;
+      transform: rotate(45deg);
+    }
+    .checklist-item:hover {
+      border-color: #F59E0B;
+    }
+    .checklist-item:focus-visible {
+      outline: 2px solid #F59E0B;
+      outline-offset: 2px;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+
+</Base>
