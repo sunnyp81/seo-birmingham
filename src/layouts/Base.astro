@@ -71,7 +71,15 @@ const allSchemas = [breadcrumbSchema, webPageSchema, ...schema];
   {allSchemas.map((s) => (
     <script type="application/ld+json" set:html={JSON.stringify(s)} />
   ))}
-</head>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCK810TMEC"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CCK810TMEC');
+    </script>
+  </head>
 <body class="bg-white min-h-screen flex flex-col">
   <a href="#main" class="skip-link">Skip to content</a>
 
