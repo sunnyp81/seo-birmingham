@@ -10,7 +10,7 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, canonical, schema = [], ogType = 'website', noindex = true } = Astro.props;
+const { title, description, canonical, schema = [], ogType = 'website', noindex = false } = Astro.props;
 const currentPath = Astro.url.pathname;
 const siteUrl = 'https://seo-birmingham.uk';
 const fullCanonical = canonical || `${siteUrl}${currentPath}`;
