@@ -79,7 +79,7 @@ const faqSchema = {
       <div class="lg:col-span-2 flex flex-col gap-6">
 
         <div class="fade-up">
-          <p class="text-text leading-relaxed mb-6">We work with businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or AI search readiness — tell us what you're after. We'll come back with an honest assessment.</p>
+          <p class="text-text leading-relaxed mb-6">We work with businesses across Birmingham, Solihull, and the wider West Midlands. Whether you need a technical audit, a local SEO strategy, or AI search readiness, tell us what you're after. We'll come back with an honest assessment.</p>
           <p class="text-text leading-relaxed">We serve professional services firms in <strong>Colmore Business District</strong>, retailers in the <strong>Jewellery Quarter</strong>, tech companies in <strong>Digbeth</strong>, dental practices in <strong>Edgbaston</strong>, and manufacturers across the <strong>Black Country</strong>. Every engagement starts with understanding your goals and your current search performance.</p>
         </div>
 
@@ -94,13 +94,13 @@ const faqSchema = {
         <div class="service-card fade-up" style="--i:2">
           <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-3" style="font-family: var(--font-heading);">Working Hours</h3>
           <p class="text-lg font-bold text-brand-dark" style="font-family: var(--font-heading);">Monday to Friday, 9am to 5pm</p>
-          <p class="text-text-muted text-sm mt-2">Birmingham-based, remote-first.</p>
+          <p class="text-text-muted text-sm mt-2">Serving Birmingham, working remotely.</p>
         </div>
 
         <!-- Location Card -->
         <div class="service-card fade-up" style="--i:3">
           <h3 class="text-xs font-bold uppercase tracking-widest text-accent mb-3" style="font-family: var(--font-heading);">Our Location</h3>
-          <p class="text-text-muted text-sm">We operate from Birmingham and serve businesses across the city and the wider West Midlands.</p>
+          <p class="text-text-muted text-sm">We serve businesses across Birmingham and the wider West Midlands, working remotely.</p>
         </div>
 
         <!-- Stats Row -->
@@ -124,6 +124,10 @@ const faqSchema = {
           <div class="relative z-10">
             <h2 class="text-white text-2xl sm:text-3xl font-extrabold mb-1 tracking-tight" style="font-family: var(--font-heading); letter-spacing: -0.03em; border: none; display: block; padding: 0;">Send Us Your Details</h2>
             <p class="text-zinc-400 text-sm mb-8">All fields marked <span class="text-red-400">*</span> are required.</p>
+
+            <div id="form-sent-banner" class="hidden mb-6 p-4 border border-green-500 bg-green-500/10 text-green-400 text-sm font-semibold" role="status">
+              Thanks, your message has been sent. We reply within one business day.
+            </div>
 
             <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-5">
               <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
@@ -239,4 +243,11 @@ const faqSchema = {
     </div>
   </section>
 
+  <script is:inline>
+    // Client-side confirmation: static build cannot read query params server-side.
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+      var b = document.getElementById('form-sent-banner');
+      if (b) { b.classList.remove('hidden'); b.scrollIntoView({ block: 'center' }); }
+    }
+  </script>
 </Base>

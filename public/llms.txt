@@ -1,17 +1,21 @@
 # SEO Birmingham
 
-> SEO Birmingham is a Birmingham-based SEO agency. We handle technical SEO, AI search optimisation, and local search marketing for businesses across Birmingham, Solihull, and the West Midlands.
+> SEO Birmingham is an SEO agency serving Birmingham and the West Midlands, working remotely. We handle technical SEO, AI search optimisation, and local search marketing for businesses across Birmingham, Solihull, and the West Midlands.
 
 ## Pages
 
-- [Home](https://seo-birmingham.uk/): SEO Birmingham — local search marketing for West Midlands businesses
+- [Home](https://seo-birmingham.uk/): SEO Birmingham, local search marketing for West Midlands businesses
 - [Services](https://seo-birmingham.uk/services/): Every SEO service we offer to Birmingham businesses
 - [Areas We Serve](https://seo-birmingham.uk/areas/): SEO coverage across Birmingham districts and the wider West Midlands
 - [Industries](https://seo-birmingham.uk/industries/): Sector-specific SEO for Birmingham's key industries
 - [Technical SEO Birmingham](https://seo-birmingham.uk/technical-seo-birmingham/): Technical SEO audits, fixes, and ongoing monitoring
 - [SEO Audit Birmingham](https://seo-birmingham.uk/seo-audit-birmingham/): Full paid SEO audit with action plan
 - [Free SEO Audit Birmingham](https://seo-birmingham.uk/free-seo-audit-birmingham/): Get a free SEO health check for your site
-- [SEO Pricing Birmingham](https://seo-birmingham.uk/seo-pricing-birmingham/): Transparent pricing — Birmingham vs London cost comparison
+- [SEO Pricing Birmingham](https://seo-birmingham.uk/seo-pricing-birmingham/): Transparent pricing, Birmingham vs London cost comparison
 - [AI Search Optimisation Birmingham](https://seo-birmingham.uk/ai-search-optimisation-birmingham/): Get cited by ChatGPT, Perplexity, Claude, Copilot, and Google AI Overviews
+- [Local SEO Checklist Birmingham](https://seo-birmingham.uk/local-seo-checklist-birmingham/): 58-item local SEO checklist for Birmingham businesses
+- [Birmingham Business Statistics](https://seo-birmingham.uk/birmingham-business-statistics/): Key statistics on Birmingham's business economy
+- [SEO Glossary](https://seo-birmingham.uk/seo-glossary/): 80+ SEO terms explained in plain English
+- [SEO ROI Calculator](https://seo-birmingham.uk/seo-roi-calculator/): Estimate the return on an SEO investment
 - [About](https://seo-birmingham.uk/about/): Who we are and how we work
 - [Contact](https://seo-birmingham.uk/contact/): Get in touch

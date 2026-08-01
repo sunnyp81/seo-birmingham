@@ -174,13 +174,16 @@ const benefits = [
           </div>
 
           <div class="mt-10 pt-8 border-t border-zinc-800">
-            <p class="text-zinc-500 text-xs uppercase tracking-widest font-bold mb-3">Trusted by businesses in</p>
+            <p class="text-zinc-500 text-xs uppercase tracking-widest font-bold mb-3">Serving businesses in</p>
             <p class="text-zinc-400 text-sm">Digbeth, Jewellery Quarter, Colmore Row, Edgbaston, Solihull, and across the West Midlands.</p>
           </div>
         </div>
 
         <!-- Right: form -->
         <div class="fade-up" style="--i: 1">
+          <div id="form-sent-banner" class="hidden mb-6 p-4 border border-green-500 bg-green-500/10 text-green-400 text-sm font-semibold" role="status">
+            Thanks, your audit request has been sent. Your report will be with you within 48 hours.
+          </div>
           <form action="https://api.staticforms.xyz/submit" method="POST" class="bg-brand-light rounded-xl p-6 sm:p-8 border border-zinc-800 shadow-2xl shadow-black/40">
             <input type="hidden" name="accessKey" value="sf_9e906eb6c00416b9d3354749" />
             <input type="hidden" name="_site" value="seo-birmingham.uk" />
@@ -332,7 +335,7 @@ const benefits = [
     <div class="cta-box">
       <h2 style="color: white; margin-top: 0;">Need the Full Picture?</h2>
       <p>The free audit is a starting point. For a manual deep-dive with a detailed action plan and walkthrough call, see our paid SEO audit.</p>
-      <a href="/seo-audit-birmingham/">Get the full audit — £497</a>
+      <a href="/seo-audit-birmingham/">Get the full audit: £497</a>
     </div>
   </section>
 
@@ -384,4 +387,11 @@ const benefits = [
     </div>
   </section>
 
+  <script is:inline>
+    // Client-side confirmation: static build cannot read query params server-side.
+    if (new URLSearchParams(window.location.search).get('sent') === '1') {
+      var b = document.getElementById('form-sent-banner');
+      if (b) { b.classList.remove('hidden'); b.scrollIntoView({ block: 'center' }); }
+    }
+  </script>
 </Base>
